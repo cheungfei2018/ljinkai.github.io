@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Chrome Notification | ljinkai</title>
+  <meta name="author" content="ljinkai">
+  
+  <meta name="description" content="Chrome在42+的版本上支持了Notification的功能，这个功能不是基于chrome插件和chrome扩展的，而是基于chrome的service work功能，一个运行在chrome后台的服务，再利用chrome的Google Cloud Messaging for Android、 Cloud Messaging for Chrome提供的服务来实现，用网页也能提醒到用户的通知功能, 也支持android系统的手机，需要安装chrome42+。">
+  
+  <meta name="keywords" content="前端开发,javascript,css3,html5,微信,博客">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Chrome Notification"/>
+  <meta property="og:site_name" content="ljinkai"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="ljinkai" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">ljinkai</a></h1>
+  <h2><a href="/">Brave &amp; Discover &amp; Move</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/2015/03/13/DemoHub/">Demo</a></li>
+    
+      <li><a href="/2015/02/28/new/">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-05-25T06:26:10.000Z"><a href="/2015/05/25/chrome-notification/">May 25 2015</a></time>
+      
+      
+  
+    <h1 class="title">Chrome Notification</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Chrome在42+的版本上支持了Notification的功能，这个功能不是基于chrome插件和chrome扩展的，而是基于chrome的<br>service work功能，一个运行在chrome后台的服务，再利用chrome的Google Cloud Messaging for Android、 Cloud Messaging for Chrome<br>提供的服务来实现，用网页也能提醒到用户的通知功能, 也支持android系统的手机，需要安装chrome42+。<br><a id="more"></a></p>
+<p>好处是在浏览器关闭的时候你的网站也能发送通知到用户，这样就能让你的用户再次点击打开你的网站，是不是很酷？</p>
+<p>下面我们就看看怎么来实现这样一个通知功能，首先需要一些准备工作。</p>
+<p><b>1、 在<a href="https://console.developers.google.com/" target="_blank" rel="external">Google Developer Console</a> 创建一个项目，获得这个project number</b></p>
+ <center><br> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_1.png" alt="project number"><br> </center>
+
+<p><b>2、 在API &amp; auth- &gt; api 启用 Google Cloud Messaging for Android、Cloud Messaging for Chrome.</b></p>
+ <center><br> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_2.png" alt="api"><br> </center>
+
+<p><b>3、 在 Credentials 下创建一个key,并选择server类型</b></p>
+<p> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_3.png" alt="api"></p>
+<p><b>4、 <a href="https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications" target="_blank" rel="external">下载官方实例代码</a></b></p>
+<ul>
+<li>复制一份<code>config.sample.js</code> 并重命名为 config.js</li>
+<li>复制一份<code>manifest.sample.json</code>并重命名为 manifest.json</li>
+<li>在 <code>config.js</code> 文件中，替换 “<your public="" api="" key="" ...="">“ 为3步骤中的project number</your></li>
+<li>在 <code>manifest.json</code> 文件中，替换 “<your project="" number="" ...="">“ 为1步骤中的key</your></li>
+</ul>
+<p><b>5、本地用localhost方式打开，正常打开的话，并Enable Push Message会显示如下：</b></p>
+ <center><br>  <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_屏幕快照 2015-05-25 下午2.52.04.png" alt=""><br> </center>
+
+<p><b>6、然后拷贝提示的给你的命令，我这的是</b></p>
+<p><code>curl --header &quot;Authorization: key=AIzaSyAYEz9hsORDlEAiOPJZoLbA_YWLYsVxr6g&quot; --header Content-Type:&quot;application/json&quot; https://android.googleapis.com/gcm/send -d &quot;{\&quot;registration_ids\&quot;:[\&quot;APA91bE359pv1hrC97l3avpCCfEVOC2H_JVC5eltBtbF6UcKbirzJjcbABu1Upp93O3I7dPI7INuR7eXQJbITNSC_gbMEyfJVvR_5ahe3Keyy9b6-xuP_a6WPfOGbZNclRcdl8ZbrNgLSKws3sQNKHpOlPagRm4MQnwQ-McbVILrZ4Ac8Wz6lDQ\&quot;]}&quot;</code></p>
+<p>拷贝你自己的命令在一个<b>可以翻墙的服务器</b>里面执行，原因你懂得</p>
+ <center><br> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_9C8765A4-3C52-48EB-B8A5-C336A18F6C13.png" alt=""><br> </center>
+
+<p><b>7、 然后就可以看到屏幕的右上角会pop出一个提示，就说明成功了</b></p>
+ <center><br> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_屏幕快照 2015-05-25 上午11.29.21.png" alt=""><br> </center>
+
+<p><b>注意：<br>google的提醒服务是需要安全地址的，所以它要求如下：</b></p>
+ <center><br> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_屏幕快照 2015-05-25 下午12.37.06.png" alt=""><br> </center>
+
+<p>参考：</p>
+<ul>
+<li><a href="http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web" target="_blank" rel="external">Push Notifications on the Open Web</a></li>
+<li><a href="http://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features" target="_blank" rel="external">Prefer Secure Origins For Powerful New Features</a></li>
+<li><a href="https://simple-push-demo.appspot.com/" target="_blank" rel="external">Push Demo</a></li>
+<li><a href="https://github.com/jieyou/remote_inspect_web_on_real_device#%E8%B0%83%E8%AF%95android%E4%B8%8A%E7%9A%84chrome" target="_blank" rel="external">真机远程调试</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/HTML5/">HTML5</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/HTML5/">HTML5</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+    <style>
+        #ds-thread #ds-reset .ds-login-buttons .ds-social-links {width: 250px;}
+        #ds-thread #ds-reset .ds-login-buttons .ds-service-list li:nth-child(3){ display: none}
+    </style>
+
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2015/05/25/chrome-notification/" data-title="Chrome Notification" data-url=""></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"ljinkai"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:ljinkai.github.io">
+  </form>
+</div>
+
+  <div class="widget tag">
+  <h3 class="title">About</h3>
+  <ul class="entry">
+    <li>前端工程师 - 独立之人格,自由之思想</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank">凯凯刘</a></li>
+    <li>微信公众号：<br>[前端开发知识]: HTML5、CSS3、JS、Node.js</li>
+    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/h5_qrcode_for_gh_0fd5deb0e08b_430.jpg' width='120px'></li>
+    <li><a href="http://limujiang.cc" target="_blank" title="换个角度看自己">[狸木匠]：程序员健康品牌</a></li>
+    <li><img src='http://www.limujiang.cc/images/pub/qrcode_430.jpg' width='120px'></li>
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/categories/Discover/">Discover</a><small>15</small></li>
+  
+    <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/categories/Info/">Info</a><small>1</small></li>
+  
+    <li><a href="/categories/JS/">JS</a><small>7</small></li>
+  
+    <li><a href="/categories/Summary/">Summary</a><small>4</small></li>
+  
+    <li><a href="/categories/Think/">Think</a><small>3</small></li>
+  
+    <li><a href="/categories/Tools/">Tools</a><small>4</small></li>
+  
+    <li><a href="/categories/木工/">木工</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/API/">API</a><small>1</small></li>
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/tags/Discover/">Discover</a><small>10</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/tags/JS/">JS</a><small>8</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/tags/Tools/">Tools</a><small>5</small></li>
+  
+    <li><a href="/tags/个人/">个人</a><small>1</small></li>
+  
+    <li><a href="/tags/前端/">前端</a><small>15</small></li>
+  
+    <li><a href="/tags/思考/">思考</a><small>3</small></li>
+  
+    <li><a href="/tags/木工/">木工</a><small>2</small></li>
+  
+    <li><a href="/tags/汇总/">汇总</a><small>1</small></li>
+  
+    <li><a href="/tags/设计/">设计</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 ljinkai
+  
+</div>
+&nbsp;&nbsp;&nbsp;<a href="http://limujiang.cc" title="程序员健康品牌">狸木匠</a>
+&nbsp;&nbsp;&nbsp;<a href="https://coollist.cn" title="分享酷的链接">酷粒</a>
+<div class="clearfix"></div>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</footer>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>OSGI插件开发示例 | ljinkai</title>
+  <meta name="author" content="ljinkai">
+  
+  <meta name="description" content="环境搭建
+eclipse  开发工具
+Felix Framework OSGI插件运行环境  安装运行步骤:
+
+下载felix">
+  
+  <meta name="keywords" content="前端开发,javascript,css3,html5,微信,博客">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="OSGI插件开发示例"/>
+  <meta property="og:site_name" content="ljinkai"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="ljinkai" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">ljinkai</a></h1>
+  <h2><a href="/">Brave &amp; Discover &amp; Move</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/2015/03/13/DemoHub/">Demo</a></li>
+    
+      <li><a href="/2015/02/28/new/">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-03-03T08:51:32.000Z"><a href="/2015/03/03/OSGI插件开发示例/">Mar 3 2015</a></time>
+      
+      
+  
+    <h1 class="title">OSGI插件开发示例</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><ul>
+<li>eclipse  开发工具</li>
+<li><p><a href="http://mirror.olnevhost.net/pub/apache//felix/org.apache.felix.main.distribution-4.6.0.tar.gz" target="_blank" rel="external">Felix Framework</a> <code>OSGI插件运行环境</code><br>  安装运行步骤:</p>
+<ul>
+<li><p>下载felix</p>
+<a id="more"></a>
+<p>  wget <a href="http://mirror.olnevhost.net/pub/apache//felix/" target="_blank" rel="external">http://mirror.olnevhost.net/pub/apache//felix/</a>        org.apache.felix.main.distribution-4.6.0.tar.gz</p>
+</li>
+<li><p>解压文件</p>
+<p>  tar -zxvf org.apache.felix.main.distribution-4.6.0.tar.gz</p>
+</li>
+<li><p>运行felix</p>
+<p>  cd felix-framework-4.6.0<br>  java -jar bin/felix.jar</p>
+<p><strong>显示: “Welcome to Apache Felix Gogo” 表明安装成功.</strong><br>至此,环境搭建完毕.</p>
+<h3 id="开发步骤"><a href="#开发步骤" class="headerlink" title="开发步骤"></a>开发步骤</h3></li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p>创建plugin project</p>
+<pre><code>![image](http://7wy48o.com1.z0.glb.clouddn.com/plugin-create.png-blogpic)
+创建成功后，会生成如下目录：
+
+    SampleOne                    //工程名
+        ├── META-INF
+        │   └── MANIFEST.MF    //plugin配置文件，负现包目录的导入与导出，以及第三方jar的加载
+        ├── bin                    //编译目录
+        │   └── sampleone
+        │       └── Activator.class
+        ├── build.properties
+        └── src                    //源代码目录
+                 └── sampleone
+                └── Activator.java
+</code></pre></li>
+<li><p>编辑源码及配置文件：</p>
+<ul>
+<li><p>编辑<code>Activator.java</code><br>此文件为插件装载启动或停止时，调用对应的start及stop方法。可以start方法中执行一些服务注册或初始化工作，以及在stop方法中。</p>
+<pre><code>public class Activator implements BundleActivator {
+
+    private static BundleContext context;
+
+    static BundleContext getContext() {
+        return context;
+    }
+</code></pre></li>
+</ul>
+</li>
+</ol>
+<pre><code>    public void start(BundleContext bundleContext) throws Exception {
+        Activator.context = bundleContext;
+
+        while(true){
+            System.out.println(&quot;current time:&quot;+new Date());
+
+            Thread.sleep(1000);
+        }
+    }
+
+
+    public void stop(BundleContext bundleContext) throws Exception {
+        Activator.context = null;
+    }
+}
+</code></pre><ul>
+<li><p>编辑配置文件</p>
+<pre><code>  Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SampleOne
+Bundle-SymbolicName: SampleOne
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: sampleone.Activator    //注册初始化加载类，需要扩展实现BundleActivator.非必须配置
+Import-Package: org.osgi.framework;version=&quot;1.3.0&quot;
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+</code></pre></li>
+</ul>
+<ol>
+<li>打包</li>
+</ol>
+<ul>
+<li>选择打包的工程，右击export</li>
+<li>在弹出的窗口，选中要打包的工程，填写jar包所要生成的目录</li>
+<li><p>点击finish,打包完成.<br>注：<code>打包过程，会在选择目录中生成一个plugins文件夹，而生成的jar就在此文件夹中。</code></p>
+<h3 id="示例运行"><a href="#示例运行" class="headerlink" title="示例运行"></a>示例运行</h3><ul>
+<li>将上述生成的jar复制到felix-framework-4.6.0/bundle文件夹中</li>
+<li><p>运行osgi容器</p>
+<pre><code>java -jar bin/felix.jar
+</code></pre></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Discover/">Discover</a>
+  </div>
+
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+    <style>
+        #ds-thread #ds-reset .ds-login-buttons .ds-social-links {width: 250px;}
+        #ds-thread #ds-reset .ds-login-buttons .ds-service-list li:nth-child(3){ display: none}
+    </style>
+
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2015/03/03/OSGI插件开发示例/" data-title="OSGI插件开发示例" data-url=""></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"ljinkai"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:ljinkai.github.io">
+  </form>
+</div>
+
+  <div class="widget tag">
+  <h3 class="title">About</h3>
+  <ul class="entry">
+    <li>前端工程师 - 独立之人格,自由之思想</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank">凯凯刘</a></li>
+    <li>微信公众号：<br>[前端开发知识]: HTML5、CSS3、JS、Node.js</li>
+    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/h5_qrcode_for_gh_0fd5deb0e08b_430.jpg' width='120px'></li>
+    <li><a href="http://limujiang.cc" target="_blank" title="换个角度看自己">[狸木匠]：程序员健康品牌</a></li>
+    <li><img src='http://www.limujiang.cc/images/pub/qrcode_430.jpg' width='120px'></li>
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/categories/Discover/">Discover</a><small>15</small></li>
+  
+    <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/categories/Info/">Info</a><small>1</small></li>
+  
+    <li><a href="/categories/JS/">JS</a><small>7</small></li>
+  
+    <li><a href="/categories/Summary/">Summary</a><small>4</small></li>
+  
+    <li><a href="/categories/Think/">Think</a><small>3</small></li>
+  
+    <li><a href="/categories/Tools/">Tools</a><small>4</small></li>
+  
+    <li><a href="/categories/木工/">木工</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/API/">API</a><small>1</small></li>
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/tags/Discover/">Discover</a><small>10</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/tags/JS/">JS</a><small>8</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/tags/Tools/">Tools</a><small>5</small></li>
+  
+    <li><a href="/tags/个人/">个人</a><small>1</small></li>
+  
+    <li><a href="/tags/前端/">前端</a><small>15</small></li>
+  
+    <li><a href="/tags/思考/">思考</a><small>3</small></li>
+  
+    <li><a href="/tags/木工/">木工</a><small>2</small></li>
+  
+    <li><a href="/tags/汇总/">汇总</a><small>1</small></li>
+  
+    <li><a href="/tags/设计/">设计</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 ljinkai
+  
+</div>
+&nbsp;&nbsp;&nbsp;<a href="http://limujiang.cc" title="程序员健康品牌">狸木匠</a>
+&nbsp;&nbsp;&nbsp;<a href="https://coollist.cn" title="分享酷的链接">酷粒</a>
+<div class="clearfix"></div>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</footer>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

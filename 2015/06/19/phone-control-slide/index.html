@@ -1,0 +1,453 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>通过Node.js和Socket.io来实现手机的远程控制 | ljinkai</title>
+  <meta name="author" content="ljinkai">
+  
+  <meta name="description" content="###Demo  &amp;nbsp;&amp;nbsp;&amp;nbsp;Download
+用手机来实现远程控制是不是很酷？你不需要去写一个APP应用来实现这种功能-现在的手机浏览器已经支出了web socket技术，这提供了很多的可能。这篇文章我们将用Node.js和Socket.io来实现手机控制PC的效果。">
+  
+  <meta name="keywords" content="前端开发,javascript,css3,html5,Node.js,博客">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="通过Node.js和Socket.io来实现手机的远程控制"/>
+  <meta property="og:site_name" content="ljinkai"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="ljinkai" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">ljinkai</a></h1>
+  <h2><a href="/">Brave &amp; Discover &amp; Move</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/2015/03/13/DemoHub/">Demo</a></li>
+    
+      <li><a href="/2015/02/28/new/">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-06-19T07:23:09.000Z"><a href="/2015/06/19/phone-control-slide/">Jun 19 2015</a></time>
+      
+      
+  
+    <h1 class="title">通过Node.js和Socket.io来实现手机的远程控制</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_smartphone-remote-control-for-your-presentation.png" alt=""></p>
+<p>###<a href="http://tz-smartphone-remote-control.herokuapp.com/" target="_blank" rel="external">Demo</a>  &nbsp;&nbsp;&nbsp;<a href="http://cdn.demo.tutorialzine.com/2015/02/smartphone-remote-control-for-presentations/smartphone-remote-control-presentation.zip" target="_blank" rel="external">Download</a></p>
+<p>用手机来实现远程控制是不是很酷？你不需要去写一个APP应用来实现这种功能-现在的手机浏览器已经支出了web socket技术，这提供了很多的可能。<br>这篇文章我们将用Node.js和<a href="http://socket.io/" target="_blank" rel="external">Socket.io</a>来实现手机控制PC的效果。<br><a id="more"></a></p>
+<p>我们不必到处寻找基于HTML5的这种应用库。我们将使用<a href="https://github.com/hakimel/reveal.js/" target="_blank" rel="external">Reveal.js</a>-它来处理幻灯片动画效果，并支持键盘和触摸事件。</p>
+<p>我们不必自己来实现远程控制的接口，我们将实现手机和电脑的同步。这样不仅能控制进度，也能同步的显示在你的手机上。</p>
+<p>##实现思路</p>
+<p>技术上很简单。Reveal.js让当前的幻灯片序号在URL的hash上(e.g. <code>http://example.com/#/1</code>).我们将这个hash发送到所有连接的设备上，<br>对应的将会根据这个hash来自动的显示响应幻灯片。这样的话，别人可以方便的直接通过url来直接访问到显示的页面，所有我们需要输入一个验证码<br>在连接之前进行验证。</p>
+<p>要说的是Reveal.js已经有一套API,我们可以直接调用来同步。但是hash变化的技术很简单，我们可以直接来实现。</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_rsz_slideshow-1024x573.jpg" alt=""></p>
+<p>##运行</p>
+<p>你可以本地运行示例，或者部署到能提供node.js环境的服务器上。本地运行更简单些，但是必须本地有node.js并执行<code>npm install</code>.</p>
+<p>###运行本地代码</p>
+<ul>
+<li>下载示例代码</li>
+<li>确保本地已经安装node.js。如果没有，请安装</li>
+<li>解压刚才下载的代码包</li>
+<li>打开终端进入相应的文件夹</li>
+<li>运行<code>npm install</code>来安装依赖包</li>
+<li>运行<code>node app.js</code>来启动应用</li>
+<li>PC端在浏览器打开<code>http://localhost:8080</code>，并输入连接码(默认是<code>kittens</code>)</li>
+<li>在手机端浏览器打开<code>http://&lt;your computer’s local ip address&gt;</code>，并输入连接码</li>
+<li>请享受</li>
+</ul>
+<p>##代码</p>
+<p>思路说完，让我们来看看代码。这主要涉及2个js文件-app.js服务端控制，script.js浏览器端。你可以运行这个应用在Node.js 1.10+或者io.js.</p>
+<p>后端，我们用到了<a href="http://expressjs.com/" target="_blank" rel="external">express</a>和<a href="http://socket.io/" target="_blank" rel="external">Socket.io</a>.它主要用来响应socket.io的事件监听。用<a href="http://expressjs.com/guide/using-middleware.html#middleware.built-in" target="_blank" rel="external">express.static</a>来让public下的文件可以访问到。<br><code>public/index.html</code>文件保护显示的代码。express.static将会让它自动显示，所以我们不需要<code>/</code>来路由。</p>
+<p><code>app.js</code></p>
+<pre><code>// This is the server-side file of our mobile remote controller app.
+// It initializes socket.io and a new express instance.
+// Start it by running &apos;node app.js&apos; from your terminal.
+
+
+// Creating an express server
+
+var express = require(&apos;express&apos;),
+    app = express();
+
+// This is needed if the app is run on heroku and other cloud providers:
+
+var port = process.env.PORT || 8080;
+
+// Initialize a new socket.io object. It is bound to
+// the express app, which allows them to coexist.
+
+var io = require(&apos;socket.io&apos;).listen(app.listen(port));
+
+
+// App Configuration
+
+// Make the files in the public folder available to the world
+app.use(express.static(__dirname + &apos;/public&apos;));
+
+
+// This is a secret key that prevents others from opening your presentation
+// and controlling it. Change it to something that only you know.
+
+var secret = &apos;kittens&apos;;
+
+// Initialize a new socket.io application
+
+var presentation = io.on(&apos;connection&apos;, function (socket) {
+
+    // A new client has come online. Check the secret key and
+    // emit a &quot;granted&quot; or &quot;denied&quot; message.
+
+    socket.on(&apos;load&apos;, function(data){
+
+        socket.emit(&apos;access&apos;, {
+            access: (data.key === secret ? &quot;granted&quot; : &quot;denied&quot;)
+        });
+
+    });
+
+    // Clients send the &apos;slide-changed&apos; message whenever they navigate to a new slide.
+
+    socket.on(&apos;slide-changed&apos;, function(data){
+
+        // Check the secret key again
+
+        if(data.key === secret) {
+
+            // Tell all connected clients to navigate to the new slide
+
+            presentation.emit(&apos;navigate&apos;, {
+                hash: data.hash
+            });
+        }
+    });
+});
+
+console.log(&apos;Your presentation is running on http://localhost:&apos; + port);
+</code></pre><p>下面是前端的js文件，将监听<a href="https://developer.mozilla.org/en-US/docs/Web/Events/hashchange" target="_blank" rel="external">hashchange</a>事件，并发送<code>socket.io</code>消息到服务器端。</p>
+<p><code>public/assets/js/script.js</code></p>
+<pre><code>$(function() {
+
+    // Apply a CSS filter with our blur class (see our assets/css/styles.css)
+
+    var blurredElements = $(&apos;.homebanner, div.reveal&apos;).addClass(&apos;blur&apos;);
+
+    // Initialize the Reveal.js library with the default config options
+    // See more here https://github.com/hakimel/reveal.js#configuration
+
+    Reveal.initialize({
+        history: true        // Every slide will change the URL
+    });
+
+    // Connect to the socket
+
+    var socket = io();
+
+    // Variable initialization
+
+    var form = $(&apos;form.login&apos;),
+        secretTextBox = form.find(&apos;input[type=text]&apos;);
+
+    var key = &quot;&quot;, animationTimeout;
+
+    // When the page is loaded it asks you for a key and sends it to the server
+
+    form.submit(function(e){
+
+        e.preventDefault();
+
+        key = secretTextBox.val().trim();
+
+        // If there is a key, send it to the server-side
+        // through the socket.io channel with a &apos;load&apos; event.
+
+        if(key.length) {
+            socket.emit(&apos;load&apos;, {
+                key: key
+            });
+        }
+
+    });
+
+    // The server will either grant or deny access, depending on the secret key
+
+    socket.on(&apos;access&apos;, function(data){
+
+        // Check if we have &quot;granted&quot; access.
+        // If we do, we can continue with the presentation.
+
+        if(data.access === &quot;granted&quot;) {
+
+            // Unblur everything
+            blurredElements.removeClass(&apos;blurred&apos;);
+
+            form.hide();
+
+            var ignore = false;
+
+            $(window).on(&apos;hashchange&apos;, function(){
+
+                // Notify other clients that we have navigated to a new slide
+                // by sending the &quot;slide-changed&quot; message to socket.io
+
+                if(ignore){
+                    // You will learn more about &quot;ignore&quot; in a bit
+                    return;
+                }
+
+                var hash = window.location.hash;
+
+                socket.emit(&apos;slide-changed&apos;, {
+                    hash: hash,
+                    key: key
+                });
+            });
+
+            socket.on(&apos;navigate&apos;, function(data){
+
+                // Another device has changed its slide. Change it in this browser, too:
+
+                window.location.hash = data.hash;
+
+                // The &quot;ignore&quot; variable stops the hash change from
+                // triggering our hashchange handler above and sending
+                // us into a never-ending cycle.
+
+                ignore = true;
+
+                setInterval(function () {
+                    ignore = false;
+                },100);
+
+            });
+
+        }
+        else {
+
+            // Wrong secret key
+
+            clearTimeout(animationTimeout);
+
+            // Addding the &quot;animation&quot; class triggers the CSS keyframe
+            // animation that shakes the text input.
+
+            secretTextBox.addClass(&apos;denied animation&apos;);
+
+            animationTimeout = setTimeout(function(){
+                secretTextBox.removeClass(&apos;animation&apos;);
+            }, 1000);
+
+            form.show();
+        }
+
+    });
+
+});
+</code></pre><p>##现在是幻灯片放映时间</p>
+<p>手机远程访问控制已经可以了。希望你能从中得到有趣的体验。</p>
+<p>参考：</p>
+<p><code>http://tutorialzine.com/2015/02/smartphone-remote-control-for-presentations/</code><br><code>https://github.com/hakimel/reveal.js/wiki/Example-Presentations</code></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/Node-js/">Node.js</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+    <style>
+        #ds-thread #ds-reset .ds-login-buttons .ds-social-links {width: 250px;}
+        #ds-thread #ds-reset .ds-login-buttons .ds-service-list li:nth-child(3){ display: none}
+    </style>
+
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2015/06/19/phone-control-slide/" data-title="通过Node.js和Socket.io来实现手机的远程控制" data-url=""></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"ljinkai"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:ljinkai.github.io">
+  </form>
+</div>
+
+  <div class="widget tag">
+  <h3 class="title">About</h3>
+  <ul class="entry">
+    <li>前端工程师 - 独立之人格,自由之思想</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank">凯凯刘</a></li>
+    <li>微信公众号：<br>[前端开发知识]: HTML5、CSS3、JS、Node.js</li>
+    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/h5_qrcode_for_gh_0fd5deb0e08b_430.jpg' width='120px'></li>
+    <li><a href="http://limujiang.cc" target="_blank" title="换个角度看自己">[狸木匠]：程序员健康品牌</a></li>
+    <li><img src='http://www.limujiang.cc/images/pub/qrcode_430.jpg' width='120px'></li>
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/categories/Discover/">Discover</a><small>15</small></li>
+  
+    <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/categories/Info/">Info</a><small>1</small></li>
+  
+    <li><a href="/categories/JS/">JS</a><small>7</small></li>
+  
+    <li><a href="/categories/Summary/">Summary</a><small>4</small></li>
+  
+    <li><a href="/categories/Think/">Think</a><small>3</small></li>
+  
+    <li><a href="/categories/Tools/">Tools</a><small>4</small></li>
+  
+    <li><a href="/categories/木工/">木工</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/API/">API</a><small>1</small></li>
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/tags/Discover/">Discover</a><small>10</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/tags/JS/">JS</a><small>8</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/tags/Tools/">Tools</a><small>5</small></li>
+  
+    <li><a href="/tags/个人/">个人</a><small>1</small></li>
+  
+    <li><a href="/tags/前端/">前端</a><small>15</small></li>
+  
+    <li><a href="/tags/思考/">思考</a><small>3</small></li>
+  
+    <li><a href="/tags/木工/">木工</a><small>2</small></li>
+  
+    <li><a href="/tags/汇总/">汇总</a><small>1</small></li>
+  
+    <li><a href="/tags/设计/">设计</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 ljinkai
+  
+</div>
+&nbsp;&nbsp;&nbsp;<a href="http://limujiang.cc" title="程序员健康品牌">狸木匠</a>
+&nbsp;&nbsp;&nbsp;<a href="https://coollist.cn" title="分享酷的链接">酷粒</a>
+<div class="clearfix"></div>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</footer>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

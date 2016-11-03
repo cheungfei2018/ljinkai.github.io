@@ -1,0 +1,322 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Chrome的扩展插件 | ljinkai</title>
+  <meta name="author" content="ljinkai">
+  
+  <meta name="description" content="##用处
+本质就是web页面，调用web上的原有api还有浏览器提供的一些接口(像右键菜单、桌面通知、覆盖页面等等)。做一些工具性的插件。
+###manifest.json
+{
+    &amp;quot;name&amp;quot;: &amp;quot;My Extension&amp;quot;,
+    &amp;quot;version&amp;quot;: &amp;quot;2.1&amp;quot;,
+    &amp;quot;description&amp;quot;: &amp;quot;Gets information from Google.&amp;quot;,
+    &amp;quot;icons&amp;quot;: { &amp;quot;128&amp;quot;: &amp;quot;icon_128.png&amp;quot; },
+    &amp;quot;background_page&amp;quot;: &amp;quot;bg.html&amp;quot;,
+    &amp;quot;permissions&amp;quot;: [&amp;quot;http://*.google.com/&amp;quot;, &amp;quot;https://        *.google.com/&amp;quot;],
+    &amp;quot;browser_action&amp;quot;: {
+        &amp;quot;default_title&amp;quot;: &amp;quot;&amp;quot;,
+        &amp;quot;default_icon&amp;quot;: &amp;quot;icon_19.png&amp;quot;,
+        &amp;quot;default_popup&amp;quot;: &amp;quot;popup.html&amp;quot;
+    }
+}
+参数说明">
+  
+  <meta name="keywords" content="前端开发,javascript,css3,html5,微信,博客">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Chrome的扩展插件"/>
+  <meta property="og:site_name" content="ljinkai"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="ljinkai" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">ljinkai</a></h1>
+  <h2><a href="/">Brave &amp; Discover &amp; Move</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/2015/03/13/DemoHub/">Demo</a></li>
+    
+      <li><a href="/2015/02/28/new/">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-09-05T04:52:34.000Z"><a href="/2016/09/05/chrome-extention-learning/">Sep 5 2016</a></time>
+      
+      
+  
+    <h1 class="title">Chrome的扩展插件</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>##用处</p>
+<p>本质就是web页面，调用web上的原有api还有浏览器提供的一些接口(像右键菜单、桌面通知、覆盖页面等等)。做一些工具性的插件。</p>
+<p>###<strong>manifest.json</strong></p>
+<pre><code>{
+    &quot;name&quot;: &quot;My Extension&quot;,
+    &quot;version&quot;: &quot;2.1&quot;,
+    &quot;description&quot;: &quot;Gets information from Google.&quot;,
+    &quot;icons&quot;: { &quot;128&quot;: &quot;icon_128.png&quot; },
+    &quot;background_page&quot;: &quot;bg.html&quot;,
+    &quot;permissions&quot;: [&quot;http://*.google.com/&quot;, &quot;https://        *.google.com/&quot;],
+    &quot;browser_action&quot;: {
+        &quot;default_title&quot;: &quot;&quot;,
+        &quot;default_icon&quot;: &quot;icon_19.png&quot;,
+        &quot;default_popup&quot;: &quot;popup.html&quot;
+    }
+}
+</code></pre><p><a href="http://open.chrome.360.cn/extension_dev/manifest.html" target="_blank" rel="external">参数说明</a><br><a id="more"></a></p>
+<p>###<strong>和chrome app的差别</strong></p>
+<p>用html、js、css来实现和native相似的交互体验。应用到Desktop和mobile(Cordava)</p>
+<p>##实现方式</p>
+<ul>
+<li><p><code>chrome://extensions/</code> -&gt; <code>开发者模式</code>可以在本地调试</p>
+</li>
+<li><p>示例：</p>
+<pre><code>{
+  &quot;manifest_version&quot;: 2,
+
+  &quot;name&quot;: &quot;Json To Excel String&quot;,
+  &quot;description&quot;: &quot;json to excel string of keys and values&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+
+  &quot;browser_action&quot;: {
+    &quot;default_icon&quot;: &quot;icon.png&quot;,
+    &quot;default_popup&quot;: &quot;JsonToExcel.html&quot;
+  },
+  &quot;permissions&quot;: [
+    &quot;activeTab&quot;
+  ]
+}
+</code></pre></li>
+</ul>
+<ul>
+<li>文件：</li>
+</ul>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2016-09-01-201609013.png?imageView2/2/w/600" alt=""></p>
+<ul>
+<li>效果</li>
+</ul>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2016-09-01-201609012.png?imageView2/2/w/600" alt=""></p>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/json-to-excel-string/dkocgbkpkphbmikkmobgbhnneeclnjia" target="_blank" rel="external">chrome商店查看</a></li>
+<li><a href="http://open.chrome.360.cn/extension_dev/samples.html" target="_blank" rel="external">其它一些示例代码</a></li>
+</ul>
+<p>##认证上传<br>在开发应用（扩展）时，需要把这些文件都放到同一个目录下。发布应用（扩展）时，这个目录全部打包到一个应用（扩展）名是.crx的压缩文件中。如果使用<a href="https://chrome.google.com/webstore/developer/dashboard" target="_blank" rel="external">Chrome Developer Dashboard</a>,上传应用（扩展），可以自动生成.crx文件。</p>
+<ul>
+<li>认证需要$5的开发认证费</li>
+<li>按提示长传zip包即可</li>
+<li>可以选择双币信用卡，中国大陆选择（香港-香港岛）就可以了</li>
+</ul>
+<p>##文档参考：</p>
+<p>1、<a href="https://developer.chrome.com/extensions" target="_blank" rel="external">What are extentions?</a></p>
+<p>2、<a href="https://developer.chrome.com/apps/about_apps" target="_blank" rel="external">What Are Chrome Apps?</a></p>
+<p>3、<a href="http://open.chrome.360.cn/extension_dev/overview.html" target="_blank" rel="external">360翻译Chrome扩展插件文档</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/HTML5/">HTML5</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/HTML5/">HTML5</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+    <style>
+        #ds-thread #ds-reset .ds-login-buttons .ds-social-links {width: 250px;}
+        #ds-thread #ds-reset .ds-login-buttons .ds-service-list li:nth-child(3){ display: none}
+    </style>
+
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/09/05/chrome-extention-learning/" data-title="Chrome的扩展插件" data-url=""></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"ljinkai"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:ljinkai.github.io">
+  </form>
+</div>
+
+  <div class="widget tag">
+  <h3 class="title">About</h3>
+  <ul class="entry">
+    <li>前端工程师 - 独立之人格,自由之思想</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank">凯凯刘</a></li>
+    <li>微信公众号：<br>[前端开发知识]: HTML5、CSS3、JS、Node.js</li>
+    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/h5_qrcode_for_gh_0fd5deb0e08b_430.jpg' width='120px'></li>
+    <li><a href="http://limujiang.cc" target="_blank" title="换个角度看自己">[狸木匠]：程序员健康品牌</a></li>
+    <li><img src='http://www.limujiang.cc/images/pub/qrcode_430.jpg' width='120px'></li>
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/categories/Discover/">Discover</a><small>15</small></li>
+  
+    <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/categories/Info/">Info</a><small>1</small></li>
+  
+    <li><a href="/categories/JS/">JS</a><small>7</small></li>
+  
+    <li><a href="/categories/Summary/">Summary</a><small>4</small></li>
+  
+    <li><a href="/categories/Think/">Think</a><small>3</small></li>
+  
+    <li><a href="/categories/Tools/">Tools</a><small>4</small></li>
+  
+    <li><a href="/categories/木工/">木工</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/API/">API</a><small>1</small></li>
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/tags/Discover/">Discover</a><small>10</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/tags/JS/">JS</a><small>8</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/tags/Tools/">Tools</a><small>5</small></li>
+  
+    <li><a href="/tags/个人/">个人</a><small>1</small></li>
+  
+    <li><a href="/tags/前端/">前端</a><small>15</small></li>
+  
+    <li><a href="/tags/思考/">思考</a><small>3</small></li>
+  
+    <li><a href="/tags/木工/">木工</a><small>2</small></li>
+  
+    <li><a href="/tags/汇总/">汇总</a><small>1</small></li>
+  
+    <li><a href="/tags/设计/">设计</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 ljinkai
+  
+</div>
+&nbsp;&nbsp;&nbsp;<a href="http://limujiang.cc" title="程序员健康品牌">狸木匠</a>
+&nbsp;&nbsp;&nbsp;<a href="https://coollist.cn" title="分享酷的链接">酷粒</a>
+<div class="clearfix"></div>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</footer>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

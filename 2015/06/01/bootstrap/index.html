@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Bootstrap的12栅格 | ljinkai</title>
+  <meta name="author" content="ljinkai">
+  
+  <meta name="description" content="对使用bootstap的12栅格是什么？对col-xs-6、col-sm-6、col-md-6、col-lg-6所代表的含义又是什么？
+首先，bootstrap是移动优先的，记住这个概念，对理解那几个列定义有用处。">
+  
+  <meta name="keywords" content="前端开发,javascript,css3,html5,微信,博客">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Bootstrap的12栅格"/>
+  <meta property="og:site_name" content="ljinkai"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="ljinkai" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">ljinkai</a></h1>
+  <h2><a href="/">Brave &amp; Discover &amp; Move</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/2015/03/13/DemoHub/">Demo</a></li>
+    
+      <li><a href="/2015/02/28/new/">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-06-01T07:08:30.000Z"><a href="/2015/06/01/bootstrap/">Jun 1 2015</a></time>
+      
+      
+  
+    <h1 class="title">Bootstrap的12栅格</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>对使用bootstap的12栅格是什么？对<code>col-xs-6</code>、<code>col-sm-6</code>、<code>col-md-6</code>、<code>col-lg-6</code>所代表的含义又是什么？</p>
+<p>首先，bootstrap是移动优先的，记住这个概念，对理解那几个列定义有用处。<br><a id="more"></a></p>
+<p>####这几个class的解释对应：</p>
+<ul>
+<li>xs：对应手机</li>
+<li>sm：平板类的小屏幕设备</li>
+<li>md：桌面</li>
+<li>lg：超大大屏幕</li>
+</ul>
+<p>这几个应用的时候是根据屏幕分辨率的大小的。</p>
+<p>比如：</p>
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-xs-6&quot;&gt;col-xs-6&lt;/div&gt;
+  &lt;div class=&quot;col-xs-6&quot;&gt;col-xs-6&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>是指在从手机小屏到大屏的时候都是按6/12显示。</p>
+<p>再比如：</p>
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-6&quot;&gt;col-sm-6&lt;/div&gt;
+  &lt;div class=&quot;col-sm-6&quot;&gt;col-sm-6&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>是指从平板类屏幕大小到超大屏幕是按6/12显示，而手机屏幕是按12显示。这也就是说从当前的设定自动与更大屏上显示一致。</p>
+<p>具体显示的示例可以参考：<a href="http://jsfiddle.net/ljinkai/sq1e816f/4/" target="_blank" rel="external">示例</a></p>
+<p>####那所谓的几个屏幕的规格具体是多少呢：</p>
+<pre><code>/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+</code></pre><p>####最外层容器的.container和.container_fluid的解释.</p>
+<p>布局容器Bootstrap 需要为页面内容和栅格系统包裹一个 .container 容器。我们提供了两个作此用处的类。</p>
+<p>注意，由于 padding 等属性的原因，这两种 容器类不能互相嵌套。</p>
+<p><code>.container</code> 类用于固定宽度并支持响应式布局的容器。</p>
+<pre><code>&lt;div class=&quot;container&quot;&gt;  ...&lt;/div&gt;
+</code></pre><p><code>.container-fluid</code> 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
+<pre><code>&lt;div class=&quot;container-fluid&quot;&gt;  ...&lt;/div&gt;
+</code></pre><p>一些官网解释说明：</p>
+<p><code>The Bootstrap 3 grid system has four tiers of classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops). You can use nearly any combination of these classes to create more dynamic and flexible layouts.
+Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</code></p>
+<p><a href="http://v3.bootcss.com/examples/grid/" target="_blank" rel="external">官网的示例</a></p>
+<p><a href="http://v3.bootcss.com/" target="_blank" rel="external">中文官网</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/前端/">前端</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+    <style>
+        #ds-thread #ds-reset .ds-login-buttons .ds-social-links {width: 250px;}
+        #ds-thread #ds-reset .ds-login-buttons .ds-service-list li:nth-child(3){ display: none}
+    </style>
+
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2015/06/01/bootstrap/" data-title="Bootstrap的12栅格" data-url=""></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"ljinkai"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:ljinkai.github.io">
+  </form>
+</div>
+
+  <div class="widget tag">
+  <h3 class="title">About</h3>
+  <ul class="entry">
+    <li>前端工程师 - 独立之人格,自由之思想</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank">凯凯刘</a></li>
+    <li>微信公众号：<br>[前端开发知识]: HTML5、CSS3、JS、Node.js</li>
+    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/h5_qrcode_for_gh_0fd5deb0e08b_430.jpg' width='120px'></li>
+    <li><a href="http://limujiang.cc" target="_blank" title="换个角度看自己">[狸木匠]：程序员健康品牌</a></li>
+    <li><img src='http://www.limujiang.cc/images/pub/qrcode_430.jpg' width='120px'></li>
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/categories/Discover/">Discover</a><small>15</small></li>
+  
+    <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/categories/Info/">Info</a><small>1</small></li>
+  
+    <li><a href="/categories/JS/">JS</a><small>7</small></li>
+  
+    <li><a href="/categories/Summary/">Summary</a><small>4</small></li>
+  
+    <li><a href="/categories/Think/">Think</a><small>3</small></li>
+  
+    <li><a href="/categories/Tools/">Tools</a><small>4</small></li>
+  
+    <li><a href="/categories/木工/">木工</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/API/">API</a><small>1</small></li>
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/tags/Discover/">Discover</a><small>10</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/tags/JS/">JS</a><small>8</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/tags/Tools/">Tools</a><small>5</small></li>
+  
+    <li><a href="/tags/个人/">个人</a><small>1</small></li>
+  
+    <li><a href="/tags/前端/">前端</a><small>15</small></li>
+  
+    <li><a href="/tags/思考/">思考</a><small>3</small></li>
+  
+    <li><a href="/tags/木工/">木工</a><small>2</small></li>
+  
+    <li><a href="/tags/汇总/">汇总</a><small>1</small></li>
+  
+    <li><a href="/tags/设计/">设计</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 ljinkai
+  
+</div>
+&nbsp;&nbsp;&nbsp;<a href="http://limujiang.cc" title="程序员健康品牌">狸木匠</a>
+&nbsp;&nbsp;&nbsp;<a href="https://coollist.cn" title="分享酷的链接">酷粒</a>
+<div class="clearfix"></div>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</footer>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

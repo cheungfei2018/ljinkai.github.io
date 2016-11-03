@@ -1,0 +1,592 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>前端 | ljinkai</title>
+  <meta name="author" content="ljinkai">
+  
+  
+  <meta name="keywords" content="ljinkai,前端开发,javascript,css3,html5,微信,博客">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="ljinkai"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="ljinkai" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">ljinkai</a></h1>
+  <h2><a href="/">Brave &amp; Discover &amp; Move</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/2015/03/13/DemoHub/">Demo</a></li>
+    
+      <li><a href="/2015/02/28/new/">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+<h2 class="archive-title tag">前端</h2>
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-11-03T16:18:42.000Z"><a href="/2016/11/04/package-json-explain/">Nov 4 2016</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2016/11/04/package-json-explain/">Package.json详解</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>每个项目的根目录下面，一般都有一个<code>package.json</code>文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）。<code>npm install</code>命令根据这个配置文件，自动下载所需的模块，也就是配置项目所需的运行和开发环境。</p>
+<p>下面是一个最简单的package.json文件，只定义两项元数据：项目名称和项目版本。</p>
+<pre><code>{
+     &quot;name&quot; : &quot;xxx&quot;,
+      &quot;version&quot; : &quot;0.0.0&quot;,
+}
+</code></pre><p>上面代码说明，<code>package.json</code>文件内部就是一个JSON对象，该对象的每一个成员就是当前项目的一项设置。比如<code>name</code>就是项目名称，<code>version</code>是版本（遵守“大版本.次要版本.小版本”的格式）。<br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2016/11/04/package-json-explain/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-04-27T14:27:34.000Z"><a href="/2016/04/27/progressive-web-app/">Apr 27 2016</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2016/04/27/progressive-web-app/">Web新技术：PWA-Progressive Web App</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>##什么是Progressive Web App?<br>Progressive Web App是一个利用现代浏览器的能力来达到类似APP的用户体验的技术，由Google实现，让浏览器打开的网址像APP一样运行在手机上。让Web App和Native App之间的差距更小。</p>
+<p>概览特性：</p>
+<ul>
+<li>添加到屏幕</li>
+<li>从屏幕点击启动</li>
+<li>加载屏</li>
+<li>支持离线应用</li>
+<li>支持Push Notification</li>
+</ul>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/pwa-general-0-@1x.jpg?imageView2/2/w/600" alt=""></p>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2016/04/27/progressive-web-app/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-07-30T04:06:35.000Z"><a href="/2015/07/30/front-end-interview/">Jul 30 2015</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/07/30/front-end-interview/">web前端面试题集锦</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="前端开发面试知识点大纲："><a href="#前端开发面试知识点大纲：" class="headerlink" title="前端开发面试知识点大纲："></a>前端开发面试知识点大纲：</h2><pre><code>HTML&amp;CSS：  对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级及使用、HTML5、CSS3、移动端适应。
+
+JavaScript：   数据类型、面向对象、继承、闭包、插件、作用域、跨域、原型链、模块化、自定义事件、内存泄漏、事件机制、异步装载回调、模板引擎、Nodejs、JSON、ajax等。
+
+其他：  HTTP、安全、正则、优化、重构、响应式、移动端、团队协作、可维护、SEO、UED、架构、职业生涯
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/07/30/front-end-interview/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-07-24T10:46:16.000Z"><a href="/2015/07/24/mobile-develope-standard/">Jul 24 2015</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/07/24/mobile-develope-standard/">移动开发规范概述</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>以下规范建议，均是<code>Alloyteam</code>在日常开发过程中总结提炼出的经验，规范具备较好的项目实践，强烈推荐使用</p>
+<p>##字体设置<br>使用无衬线字体</p>
+<pre><code>body {
+    font-family: &quot;Helvetica Neue&quot;, Helvetica, STHeiTi, sans-serif;
+}
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/07/24/mobile-develope-standard/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-07-15T09:57:23.000Z"><a href="/2015/07/15/good-look-for-hybrid/">Jul 15 2015</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/07/15/good-look-for-hybrid/">我为什么看好Hybrid - 献给web前端工程师</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_573927477530511668.jpg?imageView2/2/w/600" alt=""><br>web从最开始，用html标签这种最简单的方式搭建门户网站、论坛，那时候能做个网站感觉很牛叉的样子。后来又有了ajax方式，可以动态的获取数据，让网页能不刷新而完成更新。之后又有了html5，结合js、css3到达另一个高度，通过web可以用很炫的方式实现不错的功能效果。这是PC时代；现在到了移动互联网时代，有人唱衰web，也有人高唱web。不管怎么样，web在以它的方式而野蛮生长着。生长的方式不是以我们的主观意愿的，而是这个时代需要web，需要这种方式来实现一些东西，人们希望有这么一个东西能像一个树，在这个炎热的夏天提供一处阴凉，愿意为它施肥浇水，让它再大些再高些。因为需要所以产生，而不是因为存在所以可用。<br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/07/15/good-look-for-hybrid/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-07-06T07:06:04.000Z"><a href="/2015/07/06/2015-frameworkds-need-to-learn/">Jul 6 2015</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/07/06/2015-frameworkds-need-to-learn/">2015年需要了解的前端框架和语言</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>##语言/平台<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_2015_new屏幕快照 2015-07-09 上午7.34.52.png?imageView2/2/w/600" alt=""></p>
+<p>Node.js第一，PHP第二，JavaScript第三。因为Node.js的社区很多，所以这个结果你也不用太意外。如果你知道JavaScript,你已经一只脚踏进了用Node.js来构建Web APP的可能。<br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/07/06/2015-frameworkds-need-to-learn/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-06-16T11:14:18.000Z"><a href="/2015/06/16/git-source/">Jun 16 2015</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/06/16/git-source/">前端开发关注的github资源</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_gela1.png" alt=""></p>
+<p>##资源</p>
+<ul>
+<li><a href="https://github.com/justjavac/free-programming-books-zh_CN">免费的计算机编程类中文书籍</a></li>
+<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books-zh.md">免费编程书籍</a></li>
+<li><a href="https://github.com/papers-we-love/papers-we-love">计算机科学论文</a></li>
+<li><a href="https://github.com/hzlzh/Best-App">app应用推荐</a></li>
+<li><a href="https://github.com/nemoTyrant/manong">码农周刊整理</a></li>
+<li><a href="https://github.com/aosabook/500lines">500 Lines or Less</a>一些不错的代码
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/06/16/git-source/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-06-16T10:14:18.000Z"><a href="/2015/06/16/hybird-app-skill/">Jun 16 2015</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/06/16/hybird-app-skill/">Hybrid App开发技巧</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>###框架推荐</p>
+<ul>
+<li><p><a href="http://reapp.io/">Reapp</a><br>Reapp 与 React Native 有着惊人的相似之处，二者都使用 React 来创建应用程序用户界面的框架。然而，在底层机制上这两个框架之间却具有明显的哲学差异。React Native 将 React 组件绑定到原生 UI 控件中，构建与设备操作系统匹配的界面。而 Reapp 却是将 React 组件绑定到一个跨平台的 UI-Kit 来创建混搭应用。</p>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/06/16/hybird-app-skill/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-06-16T07:38:37.000Z"><a href="/2015/06/16/chrome-dev-skill/">Jun 16 2015</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/06/16/chrome-dev-skill/">【译】15个必须知道的chrome开发者技巧(GIF)</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_15-chrome-devtools-tips-and-tricks_thumb.jpg" alt=""><br>在Web开发者中，Google Chrome是使用最广泛的浏览器。六周一次的发布周期和一套强大的不断扩大开发功能，使其成为了web开发者必备的工具。你可能已经熟悉了它的部分功能，如使用console和debugger在线编辑CSS。在这篇文章中，我们将分享15个有助于改进你的开发流程的技巧。<br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/06/16/chrome-dev-skill/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-06-06T10:14:18.000Z"><a href="/2015/06/06/mobile-web-skill/">Jun 6 2015</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/06/06/mobile-web-skill/">移动端web开发技巧</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><em><code>这是一个最好的时代，因为我们站在潮流中；但也是一个最坏的时代，因为我们站在潮头上。</code></em></p>
+<p>###META相关</p>
+<p>####1. 添加到主屏后的标题（IOS）<br>    <meta name="apple-mobile-web-app-title" content="标题"> </p>
+<p>####2. 启用 WebApp 全屏模式（IOS）<br>当网站添加到主屏幕后再点击进行启动时，可隐藏地址栏（从浏览器跳转或输入链接进入并没有此效果）</p>
+<pre><code>&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt; 
+&lt;meta name=&quot;apple-touch-fullscreen&quot; content=&quot;yes&quot; /&gt; 
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/06/06/mobile-web-skill/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+
+  <nav id="pagination">
+  
+  
+    <a href="/tags/前端/page/2/" class="alignright next">Next</a>
+  
+  <div class="clearfix"></div>
+</nav>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:ljinkai.github.io">
+  </form>
+</div>
+
+  <div class="widget tag">
+  <h3 class="title">About</h3>
+  <ul class="entry">
+    <li>前端工程师 - 独立之人格,自由之思想</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank">凯凯刘</a></li>
+    <li>微信公众号：<br>[前端开发知识]: HTML5、CSS3、JS、Node.js</li>
+    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/h5_qrcode_for_gh_0fd5deb0e08b_430.jpg' width='120px'></li>
+    <li><a href="http://limujiang.cc" target="_blank" title="换个角度看自己">[狸木匠]：程序员健康品牌</a></li>
+    <li><img src='http://www.limujiang.cc/images/pub/qrcode_430.jpg' width='120px'></li>
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/categories/Discover/">Discover</a><small>15</small></li>
+  
+    <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/categories/Info/">Info</a><small>1</small></li>
+  
+    <li><a href="/categories/JS/">JS</a><small>7</small></li>
+  
+    <li><a href="/categories/Summary/">Summary</a><small>4</small></li>
+  
+    <li><a href="/categories/Think/">Think</a><small>3</small></li>
+  
+    <li><a href="/categories/Tools/">Tools</a><small>4</small></li>
+  
+    <li><a href="/categories/木工/">木工</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/API/">API</a><small>1</small></li>
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/tags/Discover/">Discover</a><small>10</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/tags/JS/">JS</a><small>8</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/tags/Tools/">Tools</a><small>5</small></li>
+  
+    <li><a href="/tags/个人/">个人</a><small>1</small></li>
+  
+    <li><a href="/tags/前端/">前端</a><small>15</small></li>
+  
+    <li><a href="/tags/思考/">思考</a><small>3</small></li>
+  
+    <li><a href="/tags/木工/">木工</a><small>2</small></li>
+  
+    <li><a href="/tags/汇总/">汇总</a><small>1</small></li>
+  
+    <li><a href="/tags/设计/">设计</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 ljinkai
+  
+</div>
+&nbsp;&nbsp;&nbsp;<a href="http://limujiang.cc" title="程序员健康品牌">狸木匠</a>
+&nbsp;&nbsp;&nbsp;<a href="https://coollist.cn" title="分享酷的链接">酷粒</a>
+<div class="clearfix"></div>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</footer>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

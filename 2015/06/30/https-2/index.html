@@ -1,0 +1,366 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>https的免费申请流程 | ljinkai</title>
+  <meta name="author" content="ljinkai">
+  
+  <meta name="description" content="这篇文章包含3个主要内容：
+
+如何用nodejs创建https服务器；
+如何免费申请到ssl证书；
+nginx如何设置https服务器。
+
+如果想了解https原理部分，可以查看之前的文章介绍htts原理">
+  
+  <meta name="keywords" content="https免费申请流程,javascript,css3,html5,微信,博客">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="https的免费申请流程"/>
+  <meta property="og:site_name" content="ljinkai"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="ljinkai" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">ljinkai</a></h1>
+  <h2><a href="/">Brave &amp; Discover &amp; Move</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/2015/03/13/DemoHub/">Demo</a></li>
+    
+      <li><a href="/2015/02/28/new/">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-06-30T09:58:25.000Z"><a href="/2015/06/30/https-2/">Jun 30 2015</a></time>
+      
+      
+  
+    <h1 class="title">https的免费申请流程</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>这篇文章包含3个主要内容：</p>
+<ul>
+<li>如何用nodejs创建https服务器；</li>
+<li>如何免费申请到ssl证书；</li>
+<li>nginx如何设置https服务器。</li>
+</ul>
+<p>如果想了解https原理部分，可以查看之前的文章介绍<a href="http://ljinkai.github.io/2015/05/15/https-1/">htts原理</a><br><a id="more"></a></p>
+<p>#1、用Nodejs创建HTTPS服务器<br>在Nodejs中，我们可以通过内置的https库，来实现HTTPS服务器。<br>Nodejs的HTTPS使用文档：<a href="http://nodejs.org/api/https.html" target="_blank" rel="external">http://nodejs.org/api/https.html</a></p>
+<pre><code>~ cd /home/conan/nodejs
+~ sudo npm install
+</code></pre><p>用openssl生成证书文件</p>
+<pre><code>~ openssl version -a
+OpenSSL 1.0.1 14 Mar 2012
+built on: Tue Jun  4 07:26:06 UTC 2013
+platform: debian-amd64
+options:  bn(64,64) rc4(16x,int) des(idx,cisc,16,int) blowfish(idx)
+compiler: cc -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -m64 -DL_ENDIAN -DTERMIO -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -D_FORTIFY_SOURCE=2 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wa,--noexecstack -Wall -DOPENSSL_NO_TLS1_2_CLIENT -DOPENSSL_MAX_TLS1_2_CIPHER_LENGTH=50 -DMD32_REG_T=int -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM
+OPENSSLDIR: &quot;/usr/lib/ssl&quot;
+
+~ openssl genrsa -out privatekey.pem 1024
+~ openssl req -new -key privatekey.pem -out certrequest.csr
+~ openssl x509 -req -in certrequest.csr -signkey privatekey.pem -out certificate.pem
+</code></pre><p>修改文件app.js</p>
+<pre><code>~ vi app.js
+
+//在最下面
+var https = require(&apos;https&apos;)
+    ,fs = require(&quot;fs&quot;);
+
+var options = {
+    key: fs.readFileSync(&apos;./privatekey.pem&apos;),
+    cert: fs.readFileSync(&apos;./certificate.pem&apos;)
+};
+
+https.createServer(options, app).listen(3011, function () {
+    console.log(&apos;Https server listening on port &apos; + 3011);
+});
+</code></pre><p>启动服务器</p>
+<pre><code>~ node app.js
+
+Express server listening on port 3000
+Https server listening on port 3011
+</code></pre><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https213EE475-565E-4351-AF23-739C11C4B683.png" alt=""></p>
+<p>#2、申请免费的SSL证书</p>
+<p><em>HTTPS和HTTP的区别</em></p>
+<p><code>https协议需要到ca申请证书，一般免费证书很少，需要交费。
+http是超文本传输协议，信息是明文传输，https 则是具有安全性的ssl加密传输协议。
+http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。
+http的连接很简单，是无状态的；HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。</code></p>
+<p>目前网上也有一些免费的证书，可以申请的到，下面是通过startssl申请免费一年ssl证书，对于理解整个过程还是很有帮助的。</p>
+<p><a href="http://www.startssl.com/" target="_blank" rel="external">StartSSL</a>（ 网址：<a href="http://www.startssl.com" target="_blank" rel="external">http://www.startssl.com</a>，公司名：StartCom ）也是一家CA机构，它的根证书很 久之前就被一些具有开源背景的浏览器支持（Firefox浏览器、谷歌Chrome浏览器、苹果Safari浏览器等）。</p>
+<p>###1、打开<a href="http://www.startssl.com/" target="_blank" rel="external">http://www.startssl.com/</a></p>
+<p>###2、点击StartSSL Free(Class 1)</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https84D7196A-A620-47EA-91FF-3F7B9B2435C7.png" alt=""></p>
+<p>###3、点击Certificate Control Panel进入控制面板，或直接访问<code>http://www.startssl.com/?app=12</code>也可以。</p>
+<p>###4、点击sign-up注册一个帐号</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsE2F80A09-C82D-415F-A3B7-DEBBAC9D7B89.png" alt=""></p>
+<p>###5、填写注册信息，要用英文格式填写<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsABCA0A43-4576-43BC-8215-95A7A8963478.png" alt=""></p>
+<p>###6、信息填写完成后，会给注册的邮箱发送一封电子邮件，此时不要关闭startssl的这个页面，检查邮箱输入验证码<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https80FC431C-0176-4D40-B578-E0B48883CE41.png" alt=""></p>
+<p>###7、等待StartComm人工审核注册的个人信息，如果审核成功会收到第二个邮件<br>例如：</p>
+<pre><code>StartSSL Account Request
+
+To XXXX,
+Your request for an account at StartSSL (www.startssl.com) has been approved and is available during the next 24 hours at the following location:
+https://www.startssl.com/?app=12&amp;action=release&amp;id=XXXXXX&amp;auth=XXXXXXXXXXXXXXXX
+The verification code in order to continue the process is XXXXXXXXXXXXXXXX
+Thank you!
+</code></pre><p>startssl审批很快，稍等会儿就能收到邮件。访问邮件中的链接地址，再次输入验证码。</p>
+<p>###8、建立私钥</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsE2DFF3B0-38D6-4D3B-8DBC-28B59E7B6853.png" alt=""><br>选择高级，点击continue。</p>
+<p>###9、安装证书<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsAD7AFB3A-D84F-4E86-AE6F-AA81A2056885.png" alt=""></p>
+<p>###10、安装完成<br>安装完成后，会有一个提示框：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsD1C59C57-3643-459B-B1B1-9E7EE6A8EF95.png" alt=""></p>
+<p>页面会提示：</p>
+<pre><code>Your first client certificate has been installed into your browser. This is a bootstrapping certificate for authentication purpose.
+Backup this certificate to an external media, otherwise you might not be able to regain access to your account. Please read these instructions from our FAQ page on how to do that.
+</code></pre><p>点击页面上的Finish。</p>
+<p>###11、随后页面会跳到F.A.Q.页面<br>点击How do I backup my client certificates?看下如何备份证书<br>firefox：工具-选项-高级-查看证书-您的证书，下面就有需要备份的证书。以后登录startssl要凭浏览器上前面安装的证书登录。丢失证书后只能重新注册。</p>
+<p>以后要登录，点击Authenticate凭证书登录：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https3DA33F3F-3463-4ED6-8624-D5EB74BF8208.png" alt=""></p>
+<p>###12、开始申请免费ssl证书<br>回到startssl的控制面板，我们看到有三个选项卡：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https405B4941-3ACE-4660-A23D-5076984BDC63.png" alt=""></p>
+<p>大致流程如下：<br>1）先到Validations Wizard验证域名的所有权<br>2）再到Certificates Wizard选择要申请证书的类型<br>3）再到Tool Box选项卡，使用里面的小工具生成证书</p>
+<p>###13、点击Validations Wizard<br>选择Domain name validation，点击Continue。<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https6D16DD47-4585-4285-A585-6E65BEB97C80.png" alt=""></p>
+<p>输入要申请的域名，点击Continue。<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsB12BFB0D-1985-4088-BAE2-D299D751C5FE.png" alt=""></p>
+<p>选择一个验证的邮箱，有postmaster@域名、hostmaster@域名、webmaster@域名、和注册域名时的邮箱。<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https2E0C0469-CB9D-418E-906D-22A08495BAD5.png" alt=""></p>
+<p>检查邮箱，输入验证码：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsDE92C674-28E4-4A78-A491-66DA2371B92D.png" alt=""></p>
+<p>验证成功：</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsA2B7AE34-0287-4A76-BF38-73575E45B941.png" alt=""><br>域名验证成功，这次验证在30天内有效，过期了要重新验证。点击Finish回到控制面板。</p>
+<p>###14、点击Certificates Wizard<br>选择WEB Server SSL/TSL Certifites：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsB6B3D4CE-CF18-47E4-833F-9900C2E6ACCD.png" alt=""></p>
+<p>生成私钥，为私钥提供一个密码，最少10位，最大32位：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsE4814398-AAE8-4D4C-90F3-B2513EFF14B6.png" alt=""></p>
+<p>将显示内容保存为ssl.key（这个私钥是加密的）：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https55F298A6-B6A3-4717-9620-B842C1B713D1.png" alt=""></p>
+<p>选择域名：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https38468FD3-C622-44CD-B6E3-5396DBB39C58.png" alt=""></p>
+<p>输入一个需要ssl证书的子域名：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsDAEABA8D-E785-47CC-9C54-B0A9443B3A3C.png" alt=""></p>
+<p>然后确认前面用于申请证书的域名。</p>
+<p>最后会提示：</p>
+<pre><code>Additional Check Required!
+
+You successfully finished the process for your certificate. However your certificate request has been marked for approval by our personnel. Please wait for a mail notification from us within the next 3 hours (the most). We might contact you for further questions or issue the certificate within that time. Thank you for your understanding!
+</code></pre><p>随后就等邮件通知。</p>
+<p>###15、收到邮件后点击Tool Box<br>使用Tool Box - Decrypt Private Key，将前面生成的ssl.key的内容解密。将结果保存为.key文件。比如ssl2.key。</p>
+<p>保存证书：<br>Tool Box - Retrieve Certificate，选择申请证书的域名，将框中的内容保存为.crt文件。比如ssl.crt。这个就是证书文件啦。</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https5FF89AC4-2ECB-489D-A622-512A600C9E71.png" alt=""></p>
+<p>#3、nginx配置ssh证书</p>
+<p>在nginx.conf文件里修改配置位置：</p>
+<pre><code>server {
+    listen       443;
+    server_name  localhost;
+    ssl on;
+    ssl_certificate ssl/ssl2.crt;
+    ssl_certificate_key ssl/ssl2.key;
+ }
+</code></pre><p>https默认是监听443端口的。<br><code>nginx -s reload</code>下如果没有任何提示，就说明配置成功了。</p>
+<p>如果我们需要将原先的http的链接自动跳转到https，可以增加如下配置。</p>
+<pre><code>server {
+    listen 80;
+    server_name coollist.cn;
+    rewrite ^/(.*) https://$server_name/$1 permanent;    #跳转到Https
+}
+</code></pre><p>参考：<br><a href="http://www.startssl.com/" target="_blank" rel="external">http://www.startssl.com/</a><br><a href="http://blog.fens.me/nodejs-https-server/" target="_blank" rel="external">http://blog.fens.me/nodejs-https-server/</a><br><a href="http://www.live-in.org/archives/1296.html" target="_blank" rel="external">http://www.live-in.org/archives/1296.html</a><br><a href="http://blog.sina.com.cn/s/blog_61b0aafd0100wz9z.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_61b0aafd0100wz9z.html</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Discover/">Discover</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Discover/">Discover</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+    <style>
+        #ds-thread #ds-reset .ds-login-buttons .ds-social-links {width: 250px;}
+        #ds-thread #ds-reset .ds-login-buttons .ds-service-list li:nth-child(3){ display: none}
+    </style>
+
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2015/06/30/https-2/" data-title="https的免费申请流程" data-url=""></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"ljinkai"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:ljinkai.github.io">
+  </form>
+</div>
+
+  <div class="widget tag">
+  <h3 class="title">About</h3>
+  <ul class="entry">
+    <li>前端工程师 - 独立之人格,自由之思想</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank">凯凯刘</a></li>
+    <li>微信公众号：<br>[前端开发知识]: HTML5、CSS3、JS、Node.js</li>
+    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/h5_qrcode_for_gh_0fd5deb0e08b_430.jpg' width='120px'></li>
+    <li><a href="http://limujiang.cc" target="_blank" title="换个角度看自己">[狸木匠]：程序员健康品牌</a></li>
+    <li><img src='http://www.limujiang.cc/images/pub/qrcode_430.jpg' width='120px'></li>
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/categories/Discover/">Discover</a><small>15</small></li>
+  
+    <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/categories/Info/">Info</a><small>1</small></li>
+  
+    <li><a href="/categories/JS/">JS</a><small>7</small></li>
+  
+    <li><a href="/categories/Summary/">Summary</a><small>4</small></li>
+  
+    <li><a href="/categories/Think/">Think</a><small>3</small></li>
+  
+    <li><a href="/categories/Tools/">Tools</a><small>4</small></li>
+  
+    <li><a href="/categories/木工/">木工</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/API/">API</a><small>1</small></li>
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/tags/Discover/">Discover</a><small>10</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/tags/JS/">JS</a><small>8</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/tags/Tools/">Tools</a><small>5</small></li>
+  
+    <li><a href="/tags/个人/">个人</a><small>1</small></li>
+  
+    <li><a href="/tags/前端/">前端</a><small>15</small></li>
+  
+    <li><a href="/tags/思考/">思考</a><small>3</small></li>
+  
+    <li><a href="/tags/木工/">木工</a><small>2</small></li>
+  
+    <li><a href="/tags/汇总/">汇总</a><small>1</small></li>
+  
+    <li><a href="/tags/设计/">设计</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 ljinkai
+  
+</div>
+&nbsp;&nbsp;&nbsp;<a href="http://limujiang.cc" title="程序员健康品牌">狸木匠</a>
+&nbsp;&nbsp;&nbsp;<a href="https://coollist.cn" title="分享酷的链接">酷粒</a>
+<div class="clearfix"></div>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</footer>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

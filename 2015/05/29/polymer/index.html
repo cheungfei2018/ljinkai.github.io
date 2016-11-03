@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Polymer 前端开发框架 | ljinkai</title>
+  <meta name="author" content="ljinkai">
+  
+  <meta name="description" content="初识Polymer 是在 Google I/O 2013 发布的一个新的 Web UI 框架。2015-5-29日，也就是昨天在Google I/O 2015将Polymer升级到了1.0版本。Polymer的核心原则是 “Everything is an element”。它是一款实用、基于事件驱动、封装性和互操作性强的 Web UI 开发框架。
+在了解 Polymer 之前，如果你没有了解过 Web Components ，推荐去了解下 Web Components 规范。可以通过 Web Components Wiki了解，Polymer 用到的有 Shadom Dom,Custom Elements,HTML Imports 等 Web Components 技术。">
+  
+  <meta name="keywords" content="前端开发,javascript,css3,html5,微信,博客">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Polymer 前端开发框架"/>
+  <meta property="og:site_name" content="ljinkai"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="ljinkai" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">ljinkai</a></h1>
+  <h2><a href="/">Brave &amp; Discover &amp; Move</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/2015/03/13/DemoHub/">Demo</a></li>
+    
+      <li><a href="/2015/02/28/new/">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-05-29T10:23:01.000Z"><a href="/2015/05/29/polymer/">May 29 2015</a></time>
+      
+      
+  
+    <h1 class="title">Polymer 前端开发框架</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h3><p><code>Polymer</code> 是在 <code>Google I/O 2013</code> 发布的一个新的 Web UI 框架。2015-5-29日，也就是昨天在<a href="https://events.google.com/io2015/" target="_blank" rel="external"><code>Google I/O 2015</code></a>将Polymer升级到了1.0版本。Polymer的核心原则是 <code>“Everything is an element”</code>。它是一款实用、基于事件驱动、封装性和互操作性强的 Web UI 开发框架。</p>
+<p>在了解 Polymer 之前，如果你没有了解过 <code>Web Components</code> ，推荐去了解下 Web Components 规范。可以通过 <a href="http://www.w3.org/TR/components-intro/" target="_blank" rel="external">Web Components Wiki</a>了解，Polymer 用到的有 <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank" rel="external">Shadom Dom</a>,<a href="http://w3c.github.io/webcomponents/spec/custom/" target="_blank" rel="external">Custom Elements</a>,<a href="http://w3c.github.io/webcomponents/spec/imports/" target="_blank" rel="external">HTML Imports</a> 等 <code>Web Components</code> 技术。<br><a id="more"></a></p>
+<p>###1、 安装 Polymer<br>Polymer 提供几种方式安装源码。</p>
+<ul>
+<li><p>Bower 安装，推荐使用此方法安装。如果您对bower不熟悉，可以自行Google了解。如果已经安装bower，可以使用命令直接安装：bower install –save Polymer/polymer</p>
+</li>
+<li><p>直接下载zip包，<a href="https://www.polymer-project.org/docs/start/getting-the-code.html#using-zip" target="_blank" rel="external">zip 下载地址</a>。</p>
+</li>
+<li><p>GitHub Polymer源码，<a href="https://github.com/Polymer/polymer" target="_blank" rel="external">Polymer 链接</a>。</p>
+</li>
+</ul>
+<p>###2、 构建自己的 Polymer 应用</p>
+<h5 id="创建一个-Polymer-元素"><a href="#创建一个-Polymer-元素" class="headerlink" title="创建一个 Polymer 元素"></a>创建一个 Polymer 元素</h5><p>Polyer支持创建自定义元素，在外部看来就像其他的 DOM 元素，但是在内部，提供便利的数据绑定和其他丰富的功能，使用更加少的代码，构建复杂的应用。</p>
+<p>创建一个新的 Polyer 元素，需要：</p>
+<ol>
+<li>引入 Polymer 核心组件，polymer.html</li>
+<li>使用<polymer-element>声明自定义元素</polymer-element></li>
+</ol>
+<p>下面例子，将创建一个名字为 my-element 的元素：</p>
+<pre><code>&lt;link rel=&quot;import&quot; href=&quot;../bower_components/polymer/polymer.html&quot;&gt;
+    &lt;polymer-element name=&quot;my-element&quot;&gt;
+    &lt;template&gt;
+        &lt;span&gt;This is element content&lt;/span&gt;
+    &lt;/template&gt;
+    &lt;script&gt;
+      Polymer({ ready: function() {
+        //...
+      }})
+    &lt;/script&gt;
+&lt;/polymer-element&gt;
+</code></pre><p>Polymer元素主要由俩部分构成,<code>&lt;template&gt;</code>和<code>&lt;script&gt;</code>,其中<code>&lt;template&gt;</code>是Polymer元素的HTML模板，<code>&lt;script&gt;</code>是模板对应的 javascript代码。</p>
+<p>注意到<code>&lt;script&gt;</code>标签中的Polymer构造方法，Polymer构造方法是一个对<code>document.registerElement</code>的包装，并且提供一些特殊的功能，比如数据绑定和事件映射，Polymer构造方法接受一个对象参数，定义该元素的prototype。</p>
+<p>有些 Polymer元素并不需要 javascript 代码，可以使用<code>noscript</code>属性声明：</p>
+<pre><code>&lt;polymer-element name=&quot;my-element&quot; noscript&gt;
+...
+&lt;/polymer-element&gt;
+</code></pre><p>你可以在这里查看Polymer的 <a href="http://polymer.github.io/polymer/" target="_blank" rel="external">API</a> 。</p>
+<h5 id="使用自定义的-Polymer-元素"><a href="#使用自定义的-Polymer-元素" class="headerlink" title="使用自定义的 Polymer 元素"></a>使用自定义的 Polymer 元素</h5><p>定义好自己的 Polymer元素之后，就可以通过import的方式引入它（通过import引入的文件，即使引入多次，浏览器也只会请求一次。）。在 HTML代码中引入自定义的元素并且使用它。首先需要引入 webcomponents.js依赖。</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;script src=&quot;webcomponents.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;import&quot; href=&quot;/elements/my-element/my-element.html&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;my-element&gt;&lt;/my-element&gt;
+&lt;/body
+&lt;/html&gt;
+</code></pre><p>遵循Everything is an element的原则，在HTML页面中，我们会很少看到需要写一些 javascript代码，这样就使得 HTML 文件代码看起来很清爽。</p>
+<p>虽然上面例子看起来只有短短几行简单的代码，但是Polymer支持创建丰富的可复用的组件，其中Polymer官网就提供许多供使用和学习的<a href="https://elements.polymer-project.org/" target="_blank" rel="external">基础组件</a>。</p>
+<p>###3、 更多功能</p>
+<h5 id="Shadow-DOM"><a href="#Shadow-DOM" class="headerlink" title="Shadow DOM"></a>Shadow DOM</h5><p>在Polymer可以使用Shadow DOM从模板中分离视图内容，创建一个使用Shadow DOM的template十分简单，使用 <content></content>来选择需要替换的元素即可。</p>
+<pre><code>&lt;polymer-element name=&quot;my-element&quot; noscript&gt;
+  &lt;template&gt;
+    &lt;span&gt;This is content: &lt;/span&gt;
+      &lt;content select=&quot;q&quot;&gt;&lt;/content&gt;
+  &lt;/template&gt;
+&lt;/polymer-element&gt;
+</code></pre><p>使用的时候，只需要在Polymer标签内部嵌入Light DOM。</p>
+<pre><code>&lt;my-element&gt;
+  &lt;q&gt;Hello World&lt;/q&gt; &lt;!--Light DOM--&gt;
+&lt;/my-element&gt;
+</code></pre><h5 id="布局属性"><a href="#布局属性" class="headerlink" title="布局属性"></a>布局属性</h5><p>Polymer使用CSS Flexbox定义了一系列基础布局样式。<br>只需要简单的在标签上引入布局属性就可以轻松使用。</p>
+<pre><code>&lt;div horizontal layout&gt;
+  &lt;div&gt;A&lt;/div&gt;
+  &lt;div&gt;B&lt;/div&gt;
+  &lt;div&gt;C&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>#####模板表达式</p>
+<p>Polymer支持在模板中使用<code>\{\{ \}\}</code>执行javascript表达式，基础支持有：</p>
+<ul>
+<li>标示符和路径。比如：<code>foo 、match.set.game</code></li>
+<li>数组访问。比如：<code>array[i]</code></li>
+<li>非逻辑。比如：<code>!</code></li>
+<li>一元表达式。比如：<code>+i,-a</code></li>
+<li>二进制操作。比如：<code>+,-,*,/,%</code></li>
+<li>比较操作。比如：<code>==,&lt;,&gt;,&lt;=,&gt;=,!=,===,!==</code></li>
+<li>逻辑比较。比如:<code>foo &amp;&amp; bar,foo || bar</code></li>
+<li>三元表达式。比如：<code>a ? b : c</code></li>
+<li>分组。比如：<code>(a + b) * (c + d)</code></li>
+<li>字符值（数字、字符，<code>null,undefined</code>）。</li>
+<li>数组和对象。如：<code>[foo, 1],{id: 1, foo: bar}</code></li>
+<li>函数。如：<code>reverse(my_list)</code></li>
+</ul>
+<p>Polymer 还支持以下表达式：</p>
+<ul>
+<li>计算表达式。可以直接使用类似 NaN的方式，也可以使用如下方式处理比较复杂的计算：</li>
+</ul>
+<pre><code>&lt;link rel=&quot;import&quot; href=&quot;../bower_components/polymer/polymer.html&quot;&gt;
+&lt;polymer-element name=&quot;my-element&quot; &gt;
+    &lt;template&gt;
+        &lt;span&gt;The result is {{result}}&lt;/span&gt;
+    &lt;/template&gt;
+    &lt;script&gt;
+      Polymer({
+        computed: {
+            result: &apos;1 + 100&apos;
+        }
+      })
+    &lt;/script&gt;
+&lt;/polymer-element&gt;
+</code></pre><ul>
+<li>表达式 Scope</li>
+<li>Filter 表达式。使用 { {expression | filterName } }执行 Filter 表达式，跟 Angular 的Filter有些类似.</li>
+</ul>
+<p>#####数据绑定</p>
+<p>Polymer 提供多种数据绑定方法。</p>
+<ul>
+<li><p>单模板实例。使用bind属性绑定一个对象到模板实例。</p>
+<pre><code>&lt;template&gt;
+      &lt;template bind=&quot;\{\{person\}\}&quot;&gt;
+        He&apos;s name is \{\{name\}\}.
+      &lt;/template&gt;
+&lt;/template&gt;
+</code></pre></li>
+<li><p>还可以使用as为对象创建一个命名空间：</p>
+<pre><code>&lt;template&gt;
+      &lt;template bind=&quot;\{\{person as p\}\}&quot;&gt;
+        He&apos;s name is \{\{p.name\}\}.
+      &lt;/template&gt;
+&lt;/template&gt;
+</code></pre></li>
+<li><p>模板迭代。使用repeat属性迭代，详见这里：</p>
+<pre><code>&lt;template&gt;
+  &lt;template repeat=&quot;\{\{user in users\}\}&quot;&gt;
+    {{user.name}}
+  &lt;/template&gt;
+&lt;/template&gt;
+</code></pre></li>
+<li><p>条件绑定。使用if属性有条件的绑定模板实例：</p>
+<pre><code>&lt;template&gt;
+      &lt;template if=&quot;\{\{conditional\}\}&quot;&gt;
+         The conditional is true
+      &lt;/template&gt;
+&lt;/template&gt;
+</code></pre></li>
+</ul>
+<p>Polymer不仅提供以上的方式绑定数据，而且提供了很多其他的方法，使得模板之间的复用十分便利。更多关于数据绑定可以查看<a href="https://www.polymer-project.org/1.0/" target="_blank" rel="external">官网</a></p>
+<p>###总结</p>
+<p>Polymer拥有许多基础模板和很强的组件模型。作为一款还在成长中的Web UI框架，其很多设计思想值得学习和思考。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/前端/">前端</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+    <style>
+        #ds-thread #ds-reset .ds-login-buttons .ds-social-links {width: 250px;}
+        #ds-thread #ds-reset .ds-login-buttons .ds-service-list li:nth-child(3){ display: none}
+    </style>
+
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2015/05/29/polymer/" data-title="Polymer 前端开发框架" data-url=""></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"ljinkai"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:ljinkai.github.io">
+  </form>
+</div>
+
+  <div class="widget tag">
+  <h3 class="title">About</h3>
+  <ul class="entry">
+    <li>前端工程师 - 独立之人格,自由之思想</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank">凯凯刘</a></li>
+    <li>微信公众号：<br>[前端开发知识]: HTML5、CSS3、JS、Node.js</li>
+    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/h5_qrcode_for_gh_0fd5deb0e08b_430.jpg' width='120px'></li>
+    <li><a href="http://limujiang.cc" target="_blank" title="换个角度看自己">[狸木匠]：程序员健康品牌</a></li>
+    <li><img src='http://www.limujiang.cc/images/pub/qrcode_430.jpg' width='120px'></li>
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/categories/Discover/">Discover</a><small>15</small></li>
+  
+    <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/categories/Info/">Info</a><small>1</small></li>
+  
+    <li><a href="/categories/JS/">JS</a><small>7</small></li>
+  
+    <li><a href="/categories/Summary/">Summary</a><small>4</small></li>
+  
+    <li><a href="/categories/Think/">Think</a><small>3</small></li>
+  
+    <li><a href="/categories/Tools/">Tools</a><small>4</small></li>
+  
+    <li><a href="/categories/木工/">木工</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/API/">API</a><small>1</small></li>
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/tags/Discover/">Discover</a><small>10</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/tags/JS/">JS</a><small>8</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/tags/Tools/">Tools</a><small>5</small></li>
+  
+    <li><a href="/tags/个人/">个人</a><small>1</small></li>
+  
+    <li><a href="/tags/前端/">前端</a><small>15</small></li>
+  
+    <li><a href="/tags/思考/">思考</a><small>3</small></li>
+  
+    <li><a href="/tags/木工/">木工</a><small>2</small></li>
+  
+    <li><a href="/tags/汇总/">汇总</a><small>1</small></li>
+  
+    <li><a href="/tags/设计/">设计</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 ljinkai
+  
+</div>
+&nbsp;&nbsp;&nbsp;<a href="http://limujiang.cc" title="程序员健康品牌">狸木匠</a>
+&nbsp;&nbsp;&nbsp;<a href="https://coollist.cn" title="分享酷的链接">酷粒</a>
+<div class="clearfix"></div>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</footer>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
