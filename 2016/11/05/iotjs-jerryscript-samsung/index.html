@@ -3,19 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Chromecast的杀手级特性 — NFC | ljinkai</title>
+  <title>JerryScript 和 IoT.js：来自三星的物联网JavaScript | ljinkai</title>
   <meta name="author" content="ljinkai">
   
-  <meta name="description" content="##Chromecast + NFC
-
-
-新版本的Chromecast已经发布。我已经喜欢上了新版本中存在的的JavaScript API。新的设计让我产生了一些想法。其中一个特性他们应该给予更多的支持和普遍的应用：更多的支持NFC.">
+  <meta name="description" content="三星开源了IoT.js和JerryScript。IoT.js是一个使用JavaScript语言编写的物联网应用平台；JerryScript是一个适用于嵌入式设备的小型JavaScript引擎。
+三星创建这两个项目的目的，是为了让JavaScript开发者能够构建物联网应用。物联网设备在CPU性能和内存空间上都有着严重的制约。因此，三星设计了JerryScript引擎，它能够运行在小于64KB内存上，且全部代码能够存储在不足200KB的只读存储（ROM）上。在JerryScript引擎上运行JavaScript代码看上去是这样的：">
   
-  <meta name="keywords" content="前端开发,javascript,css3,html5,微信,博客">
+  <meta name="keywords" content="JerryScript,IoT.js,javascript,css3,html5,微信,博客">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Chromecast的杀手级特性 — NFC"/>
+  <meta property="og:title" content="JerryScript 和 IoT.js：来自三星的物联网JavaScript"/>
   <meta property="og:site_name" content="ljinkai"/>
 
   
@@ -55,30 +53,54 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-10-15T09:44:59.000Z"><a href="/2015/10/15/chromecast-nfc/">Oct 15 2015</a></time>
+        <time datetime="2016-11-05T01:48:12.000Z"><a href="/2016/11/05/iotjs-jerryscript-samsung/">Nov 5 2016</a></time>
       
       
   
-    <h1 class="title">Chromecast的杀手级特性 — NFC</h1>
+    <h1 class="title">JerryScript 和 IoT.js：来自三星的物联网JavaScript</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>##Chromecast + NFC</p>
-<div style="text-align:center;width:100%;"><br><embed src="http://static.video.qq.com/TPout.swf?vid=u01688i659v&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"><br></div>
+        <p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/jerrylogo.png" alt=""></p>
+<p>三星开源了<a href="https://github.com/Samsung/iotjs" target="_blank" rel="external">IoT.js</a>和<a href="https://github.com/Samsung/jerryscript" target="_blank" rel="external">JerryScript</a>。IoT.js是一个使用JavaScript语言编写的物联网应用平台；JerryScript是一个适用于嵌入式设备的小型JavaScript引擎。</p>
+<p>三星创建这两个项目的目的，是为了让JavaScript开发者能够构建物联网应用。物联网设备在CPU性能和内存空间上都有着严重的制约。因此，三星设计了JerryScript引擎，它能够运行在小于64KB内存上，且全部代码能够存储在不足200KB的只读存储（ROM）上。在JerryScript引擎上运行JavaScript代码看上去是这样的：<br><a id="more"></a></p>
+<pre><code>{
+      jerry_init (JERRY_FLAG_ENABLE_LOG);
 
-<p>新版本的<a href="https://www.google.com/intl/en_us/chromecast" target="_blank" rel="external">Chromecast</a>已经发布。我已经喜欢上了新版本中存在的的JavaScript API。新的设计让我产生了一些想法。其中一个特性他们应该给予更多的支持和普遍的应用：更多的支持NFC.</p>
-<a id="more"></a>
-<p>为啥？怎么做？<br>好吧，多数的人(包括开发者)认为Chromecast仅仅是传递音频和视频。这是不完整的，它可以显示web应用，这更让人兴奋。</p>
-<p>想象一下，一个大电视，但是你不能和它交互。用Chromecast你就可以显示一个web应用。装上Liwe任何人就可以用手机来控制它了。你的应用可以帮助用户发现他们想要的或者任何其它的体验。</p>
-<p>想象一下NFC被支持并可以用JavsScript来控制web应用。这将使设备可以直接访问一个产品页面或者是远程的web应用。通过Chromecast,你只需轻轻一点就可以访问这些信息。</p>
-<p>在走进人们的卧室之后，它可以应用到很多地方，像商店、促销、公司等等。</p>
-<p>对于我们前端开发者来说，这又拓展了我们的装备级别，又可以好好玩耍一番了。</p>
-<p>##Liwe</p>
-<div style="text-align:center;width:100%;"><br><embed src="http://static.video.qq.com/TPout.swf?vid=o0168kf3tqy&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"><br></div>
+      char script [] = &quot;print (&apos;Hello, World!&apos;);&quot;;
+      jerry_parse (script, strlen (script));
 
-<p><a href="http://liwe.co/" target="_blank" rel="external">Liwe</a>为web开发者提供可以通过手机远程控制webapp的服务。不需要额外的服务或者插件，仅仅需要JavaScript，更大的自由发挥来提供交互的方式。<br>他的代码都是开源的，后台server用的是Node.js,你可以开心的玩耍了<a href="https://github.com/liwe" target="_blank" rel="external">github source code</a></p>
+      jerry_run ();
+
+      jerry_cleanup ();
+}
+</code></pre><p>IoT.js平台使用JerryScript引擎来运行JavaScript代码，使用<a href="https://github.com/Samsung/libuv" target="_blank" rel="external">libuv</a>库来实现异步I/O。这样的结构让开发者能够创建物联网服务，让设备与设备、外界之间交互。IoT.js目前运行在Linux和<a href="http://nuttx.org/" target="_blank" rel="external">NuttX</a>（一个实时操作系统），目标设备为树莓派2（Raspberry Pi 2）和<a href="http://www.st.com/web/en/catalog/tools/FM116/SC959/SS1532/LN1848/PF252419?s_searchtype=keyword" target="_blank" rel="external">意法半导体开发板</a>（ST board），后续计划支持其他微控制器（MCU）和物联网设备。IoT.js <a href="https://github.com/Samsung/iotjs/wiki/IoT.js%20API%20Reference" target="_blank" rel="external">API</a>提供了缓冲、控制台、事件、通用输入输出接口（GPIO）、流（stream）、定时器等功能。</p>
+<p>下图展示了运行在IoT.js/JerryScript平台上的JavaScript应用内部架构和相同应用在IoT.js和Node.js平台上运行的比较。</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/jerryscript.png?imageView2/2/w/500" alt=""></p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/jerryscript2.png?imageView2/2/w/500" alt=""></p>
+<p>我们联系了三星，了解了更多关于这些项目的信息。</p>
+<p><strong>InfoQ：运行在只有64KB内存上的JavaScript引擎非常受限，你们是怎么做到这一点的？</strong></p>
+<pre><code>三星：针对JavaScript引擎需要考虑许多质量属性。当前，最重要的是性能属性，因为我们希望运行在浏览器中的应用看起来像原生应用。
+
+从物联网的角度，我们只关注内存占用。
+
+JerryScript和当前多级自适应即时编译（JIT）引擎相比，是一个纯粹的解释器。所以它没有保存编译后代码的开销，甚至它的解析器也不保存抽象语法树（AST）。它直接将源码按行解释成字节码。对于数据表现，JerryScript中的对象在大小上做了优化。JerryScript使用压缩的指针、固定大小的字节码块、预分配对象池和数值对象的多种表示等方式同时达到遵守标准和内存优化。我们将持续不断的用各种方式减少内存消耗。你们可以在http://samsung.github.io/jerryscript/internals/查看到JerryScript内部实现细节。
+</code></pre><p><strong>InfoQ：在物联网领域使用JavaScript语言有什么优势？</strong></p>
+<pre><code>三星：JavaScript是当今最著名的编程语言之一，大量前端开发者对它非常熟悉。因此使用JavaScript可以方便的扩大物联网开发者社区规模。Android使用Java语言开发就是一个很好的历史事例。
+
+另一方面，JavaScript在嵌入式设备开发中是非常便利的。它支持异步函数回调和异步I/O，这对基于事件驱动的硬件编程是非常有用的。
+
+最后，JavaScript是网页编程中使用最广的语言。将物联网设备和互联网生态系统（web ecosystem）相互配合，对于构建物联网生态系统来说是一个明智的选择。因此，许多互联网标准，如HTTP、JSON、REST已经成为物联网连接标准化的中心，唯一缺少的就是JavaScript。我们认为JavaScript在应用程序和服务互通层上是最重要的一环。
+</code></pre><p><strong>InfoQ：IoT.js提供了哪些功能？</strong></p>
+<pre><code>三星：IoT.js的核心是向下兼容Node.js。为了做到这一点，IoT.js遵守CommonJS规范中的模块化编程，并且支持Node.js API中核心功能的子集。针对物联网，我们正在定义嵌入式设备控制和物联网编程的标准模块。截至目前，我们定义了第一个通用输入输出接口（GPIO）访问API的候选规范，并且实现了它的原型。我们认为，为了体现它的真正价值，这些活动应该在物联网社区的共识下完成。这就是我们开源IoT.js的原因。请参阅GitHub上关于这个问题的讨论（https://goo.gl/7V8jNp）。
+
+我们也会提供物联网连接层接口协议实现，如OIC/IoTivity、AllSeen联盟（AllSeen Alliance）等。它们将会以npm模块的方式发布。
+</code></pre><p>转自：<a href="http://www.infoq.com/cn/news/2015/08/iotjs-jerryscript-samsung" target="_blank" rel="external">infoq.cn</a></p>
+<p>补充资源：</p>
+<p><a href="http://jerryscript.net/" target="_blank" rel="external">JerryScript官网</a></p>
+<p><a href="https://github.com/Samsung/jerryscript" target="_blank" rel="external">github开源地址</a></p>
 
       
     </div>
@@ -111,7 +133,7 @@
     </style>
 
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2015/10/15/chromecast-nfc/" data-title="Chromecast的杀手级特性 — NFC" data-url=""></div>
+    <div class="ds-thread" data-thread-key="2016/11/05/iotjs-jerryscript-samsung/" data-title="JerryScript 和 IoT.js：来自三星的物联网JavaScript" data-url=""></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
