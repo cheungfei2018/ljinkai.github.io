@@ -65,7 +65,7 @@
       
         <h3 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h3><p><code>Polymer</code> 是在 <code>Google I/O 2013</code> 发布的一个新的 Web UI 框架。2015-5-29日，也就是昨天在<a href="https://events.google.com/io2015/" target="_blank" rel="external"><code>Google I/O 2015</code></a>将Polymer升级到了1.0版本。Polymer的核心原则是 <code>“Everything is an element”</code>。它是一款实用、基于事件驱动、封装性和互操作性强的 Web UI 开发框架。</p>
 <p>在了解 Polymer 之前，如果你没有了解过 <code>Web Components</code> ，推荐去了解下 Web Components 规范。可以通过 <a href="http://www.w3.org/TR/components-intro/" target="_blank" rel="external">Web Components Wiki</a>了解，Polymer 用到的有 <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank" rel="external">Shadom Dom</a>,<a href="http://w3c.github.io/webcomponents/spec/custom/" target="_blank" rel="external">Custom Elements</a>,<a href="http://w3c.github.io/webcomponents/spec/imports/" target="_blank" rel="external">HTML Imports</a> 等 <code>Web Components</code> 技术。<br><a id="more"></a></p>
-<p>###1、 安装 Polymer<br>Polymer 提供几种方式安装源码。</p>
+<h3 id="1、-安装-Polymer"><a href="#1、-安装-Polymer" class="headerlink" title="1、 安装 Polymer"></a>1、 安装 Polymer</h3><p>Polymer 提供几种方式安装源码。</p>
 <ul>
 <li><p>Bower 安装，推荐使用此方法安装。如果您对bower不熟悉，可以自行Google了解。如果已经安装bower，可以使用命令直接安装：bower install –save Polymer/polymer</p>
 </li>
@@ -74,8 +74,7 @@
 <li><p>GitHub Polymer源码，<a href="https://github.com/Polymer/polymer" target="_blank" rel="external">Polymer 链接</a>。</p>
 </li>
 </ul>
-<p>###2、 构建自己的 Polymer 应用</p>
-<h5 id="创建一个-Polymer-元素"><a href="#创建一个-Polymer-元素" class="headerlink" title="创建一个 Polymer 元素"></a>创建一个 Polymer 元素</h5><p>Polyer支持创建自定义元素，在外部看来就像其他的 DOM 元素，但是在内部，提供便利的数据绑定和其他丰富的功能，使用更加少的代码，构建复杂的应用。</p>
+<h3 id="2、-构建自己的-Polymer-应用"><a href="#2、-构建自己的-Polymer-应用" class="headerlink" title="2、 构建自己的 Polymer 应用"></a>2、 构建自己的 Polymer 应用</h3><h5 id="创建一个-Polymer-元素"><a href="#创建一个-Polymer-元素" class="headerlink" title="创建一个 Polymer 元素"></a>创建一个 Polymer 元素</h5><p>Polyer支持创建自定义元素，在外部看来就像其他的 DOM 元素，但是在内部，提供便利的数据绑定和其他丰富的功能，使用更加少的代码，构建复杂的应用。</p>
 <p>创建一个新的 Polyer 元素，需要：</p>
 <ol>
 <li>引入 Polymer 核心组件，polymer.html</li>
@@ -113,8 +112,7 @@
 &lt;/html&gt;
 </code></pre><p>遵循Everything is an element的原则，在HTML页面中，我们会很少看到需要写一些 javascript代码，这样就使得 HTML 文件代码看起来很清爽。</p>
 <p>虽然上面例子看起来只有短短几行简单的代码，但是Polymer支持创建丰富的可复用的组件，其中Polymer官网就提供许多供使用和学习的<a href="https://elements.polymer-project.org/" target="_blank" rel="external">基础组件</a>。</p>
-<p>###3、 更多功能</p>
-<h5 id="Shadow-DOM"><a href="#Shadow-DOM" class="headerlink" title="Shadow DOM"></a>Shadow DOM</h5><p>在Polymer可以使用Shadow DOM从模板中分离视图内容，创建一个使用Shadow DOM的template十分简单，使用 <content></content>来选择需要替换的元素即可。</p>
+<h3 id="3、-更多功能"><a href="#3、-更多功能" class="headerlink" title="3、 更多功能"></a>3、 更多功能</h3><h5 id="Shadow-DOM"><a href="#Shadow-DOM" class="headerlink" title="Shadow DOM"></a>Shadow DOM</h5><p>在Polymer可以使用Shadow DOM从模板中分离视图内容，创建一个使用Shadow DOM的template十分简单，使用 <content></content>来选择需要替换的元素即可。</p>
 <pre><code>&lt;polymer-element name=&quot;my-element&quot; noscript&gt;
   &lt;template&gt;
     &lt;span&gt;This is content: &lt;/span&gt;
@@ -131,8 +129,7 @@
   &lt;div&gt;B&lt;/div&gt;
   &lt;div&gt;C&lt;/div&gt;
 &lt;/div&gt;
-</code></pre><p>#####模板表达式</p>
-<p>Polymer支持在模板中使用<code>\{\{ \}\}</code>执行javascript表达式，基础支持有：</p>
+</code></pre><h5 id="模板表达式"><a href="#模板表达式" class="headerlink" title="模板表达式"></a>模板表达式</h5><p>Polymer支持在模板中使用<code>\{\{ \}\}</code>执行javascript表达式，基础支持有：</p>
 <ul>
 <li>标示符和路径。比如：<code>foo 、match.set.game</code></li>
 <li>数组访问。比如：<code>array[i]</code></li>
@@ -168,8 +165,7 @@
 <li>表达式 Scope</li>
 <li>Filter 表达式。使用 { {expression | filterName } }执行 Filter 表达式，跟 Angular 的Filter有些类似.</li>
 </ul>
-<p>#####数据绑定</p>
-<p>Polymer 提供多种数据绑定方法。</p>
+<h5 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h5><p>Polymer 提供多种数据绑定方法。</p>
 <ul>
 <li><p>单模板实例。使用bind属性绑定一个对象到模板实例。</p>
 <pre><code>&lt;template&gt;
@@ -201,8 +197,7 @@
 </code></pre></li>
 </ul>
 <p>Polymer不仅提供以上的方式绑定数据，而且提供了很多其他的方法，使得模板之间的复用十分便利。更多关于数据绑定可以查看<a href="https://www.polymer-project.org/1.0/" target="_blank" rel="external">官网</a></p>
-<p>###总结</p>
-<p>Polymer拥有许多基础模板和很强的组件模型。作为一款还在成长中的Web UI框架，其很多设计思想值得学习和思考。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Polymer拥有许多基础模板和很强的组件模型。作为一款还在成长中的Web UI框架，其很多设计思想值得学习和思考。</p>
 
       
     </div>
@@ -275,14 +270,14 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Categorías</h3>
   <ul class="entry">
   
     <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
   
     <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/categories/Discover/">Discover</a><small>16</small></li>
+    <li><a href="/categories/Discover/">Discover</a><small>17</small></li>
   
     <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
   
@@ -304,7 +299,7 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Tags</h3>
+  <h3 class="title">Etiquetas</h3>
   <ul class="entry">
   
     <li><a href="/tags/API/">API</a><small>1</small></li>
@@ -313,7 +308,7 @@
   
     <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/tags/Discover/">Discover</a><small>11</small></li>
+    <li><a href="/tags/Discover/">Discover</a><small>12</small></li>
   
     <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
   

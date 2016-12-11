@@ -7,8 +7,7 @@
   <meta name="author" content="ljinkai">
   
   <meta name="description" content="通过网络获取内容既缓慢，成本又高：大的响应需要在客户端和服务器之间进行多次往返通信，这拖延了浏览器可以使用和处理内容的时间，同时也增加了访问者的数据成本。因此，缓存和重用以前获取的资源的能力成为优化性能很关键的一个方面。
-###在这篇指南中
-
+在这篇指南中
 使用 ETag 验证缓存的响应
 Cache-Control
 定义最优 Cache-Control 策略
@@ -72,8 +71,7 @@ Cache-Control
     <div class="entry">
       
         <p>通过网络获取内容既缓慢，成本又高：大的响应需要在客户端和服务器之间进行多次往返通信，这拖延了浏览器可以使用和处理内容的时间，同时也增加了访问者的数据成本。因此，缓存和重用以前获取的资源的能力成为优化性能很关键的一个方面。</p>
-<p>###在这篇指南中</p>
-<ul>
+<h3 id="在这篇指南中"><a href="#在这篇指南中" class="headerlink" title="在这篇指南中"></a>在这篇指南中</h3><ul>
 <li>使用 ETag 验证缓存的响应</li>
 <li>Cache-Control</li>
 <li>定义最优 Cache-Control 策略</li>
@@ -97,18 +95,16 @@ Cache-Control
 <ul>
 <li>提示：HTML5 Boilerplate 项目包含了所有最流行的服务器的<a href="https://github.com/h5bp/server-configs" target="_blank" rel="external">配置文件样例</a>，并且为每个配置标志和设置都提供了详细的注释：在列表中找到您喜欢的服务器，查找适合的设置，然后复制/确认您的服务器配置了推荐的设置。</li>
 </ul>
-<p>##Cache-Control</p>
-<p>每个资源都可以通过 Cache-Control HTTP 头来定义自己的缓存策略<br>Cache-Control 指令控制谁在什么条件下可以缓存响应以及可以缓存多久<br>最好的请求是不必与服务器进行通信的请求：通过响应的本地副本，我们可以避免所有的网络延迟以及数据传输的数据成本。为此，HTTP 规范允许服务器返回 <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9" target="_blank" rel="external">一系列不同的 Cache-Control 指令</a>，控制浏览器或者其他中继缓存如何缓存某个响应以及缓存多长时间。</p>
+<h2 id="Cache-Control"><a href="#Cache-Control" class="headerlink" title="Cache-Control"></a>Cache-Control</h2><p>每个资源都可以通过 Cache-Control HTTP 头来定义自己的缓存策略<br>Cache-Control 指令控制谁在什么条件下可以缓存响应以及可以缓存多久<br>最好的请求是不必与服务器进行通信的请求：通过响应的本地副本，我们可以避免所有的网络延迟以及数据传输的数据成本。为此，HTTP 规范允许服务器返回 <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9" target="_blank" rel="external">一系列不同的 Cache-Control 指令</a>，控制浏览器或者其他中继缓存如何缓存某个响应以及缓存多长时间。</p>
 <p><strong>注意</strong></p>
 <ul>
 <li>Cache-Control 头在 HTTP/1.1 规范中定义，取代了之前用来定义响应缓存策略的头（例如 Expires）。当前的所有浏览器都支持 Cache-Control，因此，使用它就够了。</li>
 </ul>
 <p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_http-cache-control-highlight.png" alt=""></p>
-<p>###no-cache 和 no-store<br><code>no-cache</code>表示必须先与服务器确认返回的响应是否被更改，然后才能使用该响应来满足后续对同一个网址的请求。因此，如果存在合适的验证令牌 (ETag)，no-cache 会发起往返通信来验证缓存的响应，如果资源未被更改，可以避免下载。<br>相比之下，<code>no-store</code>更加简单，直接禁止浏览器和所有中继缓存存储返回的任何版本的响应 - 例如：一个包含个人隐私数据或银行数据的响应。每次用户请求该资源时，都会向服务器发送一个请求，每次都会下载完整的响应。</p>
-<p>###public和 private###<br>如果响应被标记为public，即使有关联的 HTTP 认证，甚至响应状态码无法正常缓存，响应也可以被缓存。大多数情况下，public不是必须的，因为明确的缓存信息（例如max-age）已表示 响应可以被缓存。<br>相比之下，浏览器可以缓存private响应，但是通常只为单个用户缓存，因此，不允许任何中继缓存对其进行缓存 - 例如，用户浏览器可以缓存包含用户私人信息的 HTML 网页，但是 CDN 不能缓存。</p>
+<h3 id="no-cache-和-no-store"><a href="#no-cache-和-no-store" class="headerlink" title="no-cache 和 no-store"></a>no-cache 和 no-store</h3><p><code>no-cache</code>表示必须先与服务器确认返回的响应是否被更改，然后才能使用该响应来满足后续对同一个网址的请求。因此，如果存在合适的验证令牌 (ETag)，no-cache 会发起往返通信来验证缓存的响应，如果资源未被更改，可以避免下载。<br>相比之下，<code>no-store</code>更加简单，直接禁止浏览器和所有中继缓存存储返回的任何版本的响应 - 例如：一个包含个人隐私数据或银行数据的响应。每次用户请求该资源时，都会向服务器发送一个请求，每次都会下载完整的响应。</p>
+<h3 id="public和-private"><a href="#public和-private" class="headerlink" title="public和 private"></a>public和 private</h3><p>如果响应被标记为public，即使有关联的 HTTP 认证，甚至响应状态码无法正常缓存，响应也可以被缓存。大多数情况下，public不是必须的，因为明确的缓存信息（例如max-age）已表示 响应可以被缓存。<br>相比之下，浏览器可以缓存private响应，但是通常只为单个用户缓存，因此，不允许任何中继缓存对其进行缓存 - 例如，用户浏览器可以缓存包含用户私人信息的 HTML 网页，但是 CDN 不能缓存。</p>
 <p>###max-age###<br>该指令指定从当前请求开始，允许获取的响应被重用的最长时间（单位为秒） - 例如：<code>max-age=60</code>表示响应可以再缓存和重用 60 秒。</p>
-<p>##定义最优 Cache-Control 策略</p>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_http-cache-decision-tree.png" alt=""></p>
+<h2 id="定义最优-Cache-Control-策略"><a href="#定义最优-Cache-Control-策略" class="headerlink" title="定义最优 Cache-Control 策略"></a>定义最优 Cache-Control 策略</h2><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_http-cache-decision-tree.png" alt=""></p>
 <p>按照上面的决策树来确定您的应用使用的特定资源或一组资源的最优缓存策略。理想情况下，目标应该是在客户端上缓存尽可能多的响应、缓存尽可能长的时间，并且为每个响应提供验证令牌，以便进行高效的重新验证。</p>
 <table border="1"><tr><td>Cache-Control指令</td><td>说明</td></tr><tr><td>max-age=86400</td><td>浏览器和任何中继缓存均可以将响应（如果是<code>public</code>的）<br>缓存长达一天（60 秒 x 60 分 x 24 小时）</td></tr><tr><td>private, max-age=600</td><td>客户端浏览器只能将响应缓存最长 10 分钟（60 秒 x 10 分）</td></tr><tr><td>no-store</td><td>不允许缓存响应，每个请求必须获取完整的响应。</td></tr></table>
 
@@ -211,14 +207,14 @@ Cache-Control
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Categorías</h3>
   <ul class="entry">
   
     <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
   
     <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/categories/Discover/">Discover</a><small>16</small></li>
+    <li><a href="/categories/Discover/">Discover</a><small>17</small></li>
   
     <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
   
@@ -240,7 +236,7 @@ Cache-Control
 
   
 <div class="widget tag">
-  <h3 class="title">Tags</h3>
+  <h3 class="title">Etiquetas</h3>
   <ul class="entry">
   
     <li><a href="/tags/API/">API</a><small>1</small></li>
@@ -249,7 +245,7 @@ Cache-Control
   
     <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/tags/Discover/">Discover</a><small>11</small></li>
+    <li><a href="/tags/Discover/">Discover</a><small>12</small></li>
   
     <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
   

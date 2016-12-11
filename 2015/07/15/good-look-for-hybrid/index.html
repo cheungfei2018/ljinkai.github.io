@@ -63,13 +63,13 @@
     <div class="entry">
       
         <p> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_573927477530511668.jpg?imageView2/2/w/600" alt=""><br>web从最开始，用html标签这种最简单的方式搭建门户网站、论坛，那时候能做个网站感觉很牛叉的样子。后来又有了ajax方式，可以动态的获取数据，让网页能不刷新而完成更新。之后又有了html5，结合js、css3到达另一个高度，通过web可以用很炫的方式实现不错的功能效果。这是PC时代；现在到了移动互联网时代，有人唱衰web，也有人高唱web。不管怎么样，web在以它的方式而野蛮生长着。生长的方式不是以我们的主观意愿的，而是这个时代需要web，需要这种方式来实现一些东西，人们希望有这么一个东西能像一个树，在这个炎热的夏天提供一处阴凉，愿意为它施肥浇水，让它再大些再高些。因为需要所以产生，而不是因为存在所以可用。<br><a id="more"></a></p>
-<p>##1、到达一个拐点<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_201408131115231257.jpg?imageView2/2/w/600" alt=""><br><em><strong>技术上：</strong></em> 从原先的一根筋变成现在的两头堵了。在 2014 年 10 月底，W3C 宣布 HTML5 正式定稿。这个时间，不晚不早，硬件性能更强、手机 OS 迭代速度下降。优势是跨平台，更新及时。可用和原生代码结合实现互相的调用，机制上是完全可以的。只是看你用不用而已。其中OS X Mavericks 和 iOS 7 引入了 JavaScriptCore 库，它把 WebKit 的 JavaScript 引擎用 Objective-C 封装，提供了简单，快速以及安全的方式接入世界上最流行的语言。不管你爱它还是恨它，JavaScript 的普遍存在使得程序员、工具以及融合到 OS X 和 iOS 里这样超快的虚拟机中资源的使用都大幅增长。</p>
+<h2 id="1、到达一个拐点"><a href="#1、到达一个拐点" class="headerlink" title="1、到达一个拐点"></a>1、到达一个拐点</h2><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_201408131115231257.jpg?imageView2/2/w/600" alt=""><br><em><strong>技术上：</strong></em> 从原先的一根筋变成现在的两头堵了。在 2014 年 10 月底，W3C 宣布 HTML5 正式定稿。这个时间，不晚不早，硬件性能更强、手机 OS 迭代速度下降。优势是跨平台，更新及时。可用和原生代码结合实现互相的调用，机制上是完全可以的。只是看你用不用而已。其中OS X Mavericks 和 iOS 7 引入了 JavaScriptCore 库，它把 WebKit 的 JavaScript 引擎用 Objective-C 封装，提供了简单，快速以及安全的方式接入世界上最流行的语言。不管你爱它还是恨它，JavaScript 的普遍存在使得程序员、工具以及融合到 OS X 和 iOS 里这样超快的虚拟机中资源的使用都大幅增长。</p>
 <p><em><strong>生态上：</strong></em> 很多的公司和个人在web这个领域一直的添砖加瓦，不管是<a href="https://cordova.apache.org/" target="_blank" rel="external">cordova</a>、<a href="http://www.appcan.cn/" target="_blank" rel="external">AppCan</a>、<a href="https://www.apicloud.com/" target="_blank" rel="external">ApiCloud</a>、<a href="https://trigger.io/" target="_blank" rel="external">trigger.io</a>、<a href="https://github.com/nwjs/nw.js/" target="_blank" rel="external">node-webkit</a>、<a href="https://facebook.github.io/react-native/" target="_blank" rel="external">ReactNative</a>等等，都在从各个方向突围，让大家看到了希望。</p>
 <p><em><strong>硬件上：</strong></em> 系统版本和浏览器已经可以很好的支持html5和css3硬件加速。Google 在 2013 年底发布的 Android 4.4，内置的 Webview 不再是蹩脚的 Android WebKit 浏览器，而是 Chromium，性能大幅提升。从最新的 Android 5.0 开始，Webview 可以通过 Google Play Store 实时更新，和 Chrome 的升级保持一致，用户就可以不刷机享受到最新的浏览器引擎；再看 Apple 方面，2012 年 iPhone 5 发布后，HTML5 在 iOS 上的表现已令人满意，Safari 独家的 JavaScript 加速引擎 Nitro 不再那么重要，不过在 iOS 8 发布后，苹果还是很识趣地取消了三方程序调用 Nitro 的限制，现在任意浏览器或应用调用 iOS 的 UIWebview 都可以利用 Nitro 加速，这样在前端使用 JS 做大型运算也成为可能。</p>
 <p><em><strong>实现上：</strong></em> 具体到这个层面，最初是直接嵌网页的方式；后来是打包js、html、css到本地；这两种方式都有优缺点，不能满足我们要求加载快而且实时更新。于是出现了第3种，可以用增量更新zip包的方式来实现本地加载和快速更新的目的。这些已经在超级app上实现，并且效果很好，下面内容有讲到。</p>
-<p>##2、需求要求这样<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_KAZAM_TROOPER_TABS-870x435.jpg?imageView2/2/w/600" alt=""><br>而对于开发者而言，开发者为什么不愿意开发 WP 版本，很多时候是因为工作量太大，除了版本适配，分辨率调整等，一旦有新版本推出，在原生 App 中开发者不得不等待多达两周时间去接受审核。另外内容维护上也很麻烦，这也是为什么有些媒体开始放弃原生 App 鼓励读者使用 Web App 的原因。除此之外，跨平台在多屏时代给开发者非常痛苦的体验，人们都期待当年 Java 的一次编译处处运行的理想情况。HTML5 目前正在扮演一个开发者救星的角色。<br>全新的互联网入口超级 App+Web App 的时代来临<br>你手机里装了多少 App，最常用的有哪些？<br>可能最多的回答是，我用「微信、QQ，或者其他浏览器」等等所谓的超级 App。<br>在超级APP里web正在扮演着重要的角色，发挥她的快速、跨平台、轻的特性。</p>
-<p>##3、已经被验证过<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_A2D35A03-F00C-45EA-9CFD-1B60CDB07052.png?imageView2/2/w/400" alt=""><br>手Q中群部落、吃喝玩乐、主题中心等核心业务。微信的[发现]。新版支付宝的[商家]、京东、淘宝这些电商更是用到了各处。这些超级APP已经在某些场景下用的不亦乐乎，发挥web的优势，为我们所用。</p>
-<p>##4、农村包围城市<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_893964526133138092.jpg?imageView2/2/w/600" alt=""><br>从PC到移动互联网时代，web正在符合时代的需求而生长着。没有一种语言是像web一样，随着时代的发展而不断的修订，并能符合这个时代发展的速度。Java做不到、Object-C也做不到。虽然出身草根，但是像水一样，随形而动，生命力旺盛。还是让我们拥抱变化，拥抱草根出身的web。</p>
+<h2 id="2、需求要求这样"><a href="#2、需求要求这样" class="headerlink" title="2、需求要求这样"></a>2、需求要求这样</h2><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_KAZAM_TROOPER_TABS-870x435.jpg?imageView2/2/w/600" alt=""><br>而对于开发者而言，开发者为什么不愿意开发 WP 版本，很多时候是因为工作量太大，除了版本适配，分辨率调整等，一旦有新版本推出，在原生 App 中开发者不得不等待多达两周时间去接受审核。另外内容维护上也很麻烦，这也是为什么有些媒体开始放弃原生 App 鼓励读者使用 Web App 的原因。除此之外，跨平台在多屏时代给开发者非常痛苦的体验，人们都期待当年 Java 的一次编译处处运行的理想情况。HTML5 目前正在扮演一个开发者救星的角色。<br>全新的互联网入口超级 App+Web App 的时代来临<br>你手机里装了多少 App，最常用的有哪些？<br>可能最多的回答是，我用「微信、QQ，或者其他浏览器」等等所谓的超级 App。<br>在超级APP里web正在扮演着重要的角色，发挥她的快速、跨平台、轻的特性。</p>
+<h2 id="3、已经被验证过"><a href="#3、已经被验证过" class="headerlink" title="3、已经被验证过"></a>3、已经被验证过</h2><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_A2D35A03-F00C-45EA-9CFD-1B60CDB07052.png?imageView2/2/w/400" alt=""><br>手Q中群部落、吃喝玩乐、主题中心等核心业务。微信的[发现]。新版支付宝的[商家]、京东、淘宝这些电商更是用到了各处。这些超级APP已经在某些场景下用的不亦乐乎，发挥web的优势，为我们所用。</p>
+<h2 id="4、农村包围城市"><a href="#4、农村包围城市" class="headerlink" title="4、农村包围城市"></a>4、农村包围城市</h2><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_893964526133138092.jpg?imageView2/2/w/600" alt=""><br>从PC到移动互联网时代，web正在符合时代的需求而生长着。没有一种语言是像web一样，随着时代的发展而不断的修订，并能符合这个时代发展的速度。Java做不到、Object-C也做不到。虽然出身草根，但是像水一样，随形而动，生命力旺盛。还是让我们拥抱变化，拥抱草根出身的web。</p>
 <p><em>献给一直坚守在web前端的工程师们</em></p>
 <p>扩展阅读:</p>
 <ul>
@@ -155,14 +155,14 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Categorías</h3>
   <ul class="entry">
   
     <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
   
     <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/categories/Discover/">Discover</a><small>16</small></li>
+    <li><a href="/categories/Discover/">Discover</a><small>17</small></li>
   
     <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
   
@@ -184,7 +184,7 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Tags</h3>
+  <h3 class="title">Etiquetas</h3>
   <ul class="entry">
   
     <li><a href="/tags/API/">API</a><small>1</small></li>
@@ -193,7 +193,7 @@
   
     <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/tags/Discover/">Discover</a><small>11</small></li>
+    <li><a href="/tags/Discover/">Discover</a><small>12</small></li>
   
     <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
   

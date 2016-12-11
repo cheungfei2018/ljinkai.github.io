@@ -6,8 +6,7 @@
   <title>&lt;picture&gt;-浏览器内置的响应式标签（翻译） | ljinkai</title>
   <meta name="author" content="ljinkai">
   
-  <meta name="description" content="###&amp;lt;picture&amp;gt;标签介绍
-&amp;lt;picture&amp;gt;标签提供可声明式的方式来加载图片。网页开发者不必非要用CSS和JS来处理响应式的图片加载。用这种方式的好处是提高加载速度—尤其是在移动端时网络情况不好的时候。
+  <meta name="description" content="&amp;lt;picture&amp;gt;标签介绍&amp;lt;picture&amp;gt;标签提供可声明式的方式来加载图片。网页开发者不必非要用CSS和JS来处理响应式的图片加载。用这种方式的好处是提高加载速度—尤其是在移动端时网络情况不好的时候。
 随着新的属性 srcset、sizes加入到&amp;lt;img&amp;gt;标签，&amp;lt;picture&amp;gt;标签给网页开发者更多的灵活性来定义图片的源。书写清晰的标记来让浏览器检测到下面不同的标记，忽略还是加载，来支持响应式设计并提高加载的时间：">
   
   <meta name="keywords" content="前端开发,javascript,css3,html5,微信,博客">
@@ -64,24 +63,22 @@
     </header>
     <div class="entry">
       
-        <p>###<code>&lt;picture&gt;</code>标签介绍</p>
-<p><code>&lt;picture&gt;</code>标签提供可声明式的方式来加载图片。网页开发者不必非要用CSS和JS来处理响应式的图片加载。用这种方式的好处是提高加载速度—尤其是在移动端时网络情况不好的时候。</p>
+        <h3 id="lt-picture-gt-标签介绍"><a href="#lt-picture-gt-标签介绍" class="headerlink" title="&lt;picture&gt;标签介绍"></a><code>&lt;picture&gt;</code>标签介绍</h3><p><code>&lt;picture&gt;</code>标签提供可声明式的方式来加载图片。网页开发者不必非要用CSS和JS来处理响应式的图片加载。用这种方式的好处是提高加载速度—尤其是在移动端时网络情况不好的时候。</p>
 <p>随着新的属性 <a href="http://developer.51cto.com/art/201309/410720.htm" target="_blank" rel="external">srcset</a>、sizes加入到<code>&lt;img&gt;</code>标签，<code>&lt;picture&gt;</code>标签给网页开发者更多的灵活性来定义图片的源。书写清晰的标记来让浏览器检测到下面不同的标记，忽略还是加载，来支持响应式设计并提高加载的时间：<br><a id="more"></a></p>
-<p>####<strong>艺术的选择</strong><br>这是一个手机端的应用还是一个桌面端的显示？ 根据浏览器规格优化图片的加载</p>
-<p>####<strong>设备像素比例的选择</strong><br>设备是否支持高DPI显示？加载分辨率更高的图片。</p>
-<p>####<strong>视窗的选择</strong><br>图片是否一直填充在视窗的一部分？相对于视窗的图片加载</p>
-<p>####<strong>图片格式的选择</strong><br>浏览器是否支持更小的图片类型？加载可替换的图片类型如：WebP</p>
-<p>####<strong>为美的设计而用</strong><br>最普遍的应用<picture>元素是在响应式设计中的美术设计。代替一张图片缩放来适应窗口的大小的方式，用多张图片的设计来适应浏览器的窗口。</picture></p>
+<h4 id="艺术的选择"><a href="#艺术的选择" class="headerlink" title="艺术的选择"></a><strong>艺术的选择</strong></h4><p>这是一个手机端的应用还是一个桌面端的显示？ 根据浏览器规格优化图片的加载</p>
+<h4 id="设备像素比例的选择"><a href="#设备像素比例的选择" class="headerlink" title="设备像素比例的选择"></a><strong>设备像素比例的选择</strong></h4><p>设备是否支持高DPI显示？加载分辨率更高的图片。</p>
+<h4 id="视窗的选择"><a href="#视窗的选择" class="headerlink" title="视窗的选择"></a><strong>视窗的选择</strong></h4><p>图片是否一直填充在视窗的一部分？相对于视窗的图片加载</p>
+<h4 id="图片格式的选择"><a href="#图片格式的选择" class="headerlink" title="图片格式的选择"></a><strong>图片格式的选择</strong></h4><p>浏览器是否支持更小的图片类型？加载可替换的图片类型如：WebP</p>
+<h4 id="为美的设计而用"><a href="#为美的设计而用" class="headerlink" title="为美的设计而用"></a><strong>为美的设计而用</strong></h4><p>最普遍的应用<picture>元素是在响应式设计中的美术设计。代替一张图片缩放来适应窗口的大小的方式，用多张图片的设计来适应浏览器的窗口。</picture></p>
 <p> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_CE74F3E2-BFFC-4CBD-8206-97DC41130370.png" alt=""></p>
 <p><small>用一张图片来适应不同屏幕窗口的大小</small></p>
 <p> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_A6392683-7986-41DD-B891-6A2531B31516.png" alt=""></p>
 <p><small>用多张不同的图片来适应不同窗口的大小</small></p>
-<p>####<strong>提高资源的加载性能</strong><br>当用<picture>或者用<img>的srcset和sizes属性，浏览器仅仅会下载对应明确的适合的图片。这种本地实现的方式可以很好的被解析并最好的使用浏览器级的缓存和预加载。</picture></p>
-<p>###查看在线示例</p>
-<p>事实上网络被创建用于加载一张猫的图片。用<picture>我们可以模拟难以想象的猫的能力来适应空间，不管网页多大或者多小。</picture></p>
+<h4 id="提高资源的加载性能"><a href="#提高资源的加载性能" class="headerlink" title="提高资源的加载性能"></a><strong>提高资源的加载性能</strong></h4><p>当用<picture>或者用<img>的srcset和sizes属性，浏览器仅仅会下载对应明确的适合的图片。这种本地实现的方式可以很好的被解析并最好的使用浏览器级的缓存和预加载。</picture></p>
+<h3 id="查看在线示例"><a href="#查看在线示例" class="headerlink" title="查看在线示例"></a>查看在线示例</h3><p>事实上网络被创建用于加载一张猫的图片。用<picture>我们可以模拟难以想象的猫的能力来适应空间，不管网页多大或者多小。</picture></p>
 <p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_40A94162-65F6-41A7-86F6-FA54772B0357.png" width="400px"></p>
 <p><a href="http://googlechrome.github.io/samples/picture-element/" target="_blank" rel="external">打开示例</a>页面用chrome38以上的版本。调整浏览器的视窗大小。<br>作为一个开始，这个例子仅仅突出了<picture>的最小的特性。让我们深入的开始钻研下吧。</picture></p>
-<p>####<code>&lt;picture&gt;</code>语法<br>下面的HTML和CSS的片段就是这个例子的代码实现：</p>
+<h4 id="lt-picture-gt-语法"><a href="#lt-picture-gt-语法" class="headerlink" title="&lt;picture&gt;语法"></a><code>&lt;picture&gt;</code>语法</h4><p>下面的HTML和CSS的片段就是这个例子的代码实现：</p>
 <pre><code>&lt;style&gt;
   img {display: block; margin: 0 auto;}
 &lt;/style&gt;
@@ -98,19 +95,16 @@
     alt=&quot;a cute kitten&quot;&gt;
 &lt;/picture&gt;
 </code></pre><p>注意下这没有用js和第三方的库。CSS的<code>&lt;style&gt;</code>块是用来定义image元素样式而且没有包含media queries.<code>&lt;picture&gt;</code>元素的本地实现意味这你可以只用HTML来声明响应式图片。</p>
-<p>####用<strong><code>&lt;source&gt;</code>元素</strong></p>
-<p><code>&lt;picture&gt;</code>标签它本身没有属性。神奇的地方是<code>&lt;picture&gt;</code>被用来当做<code>&lt;source&gt;</code>的容器。<br><code>&lt;source&gt;</code>元素，是用来加载多媒体的比如视频和音频，已经被更新用到图片的加载并且一些新的属性已经被添加：</p>
+<h4 id="用-lt-source-gt-元素"><a href="#用-lt-source-gt-元素" class="headerlink" title="用&lt;source&gt;元素"></a>用<strong><code>&lt;source&gt;</code>元素</strong></h4><p><code>&lt;picture&gt;</code>标签它本身没有属性。神奇的地方是<code>&lt;picture&gt;</code>被用来当做<code>&lt;source&gt;</code>的容器。<br><code>&lt;source&gt;</code>元素，是用来加载多媒体的比如视频和音频，已经被更新用到图片的加载并且一些新的属性已经被添加：</p>
 <p><strong>srcset (必需)</strong><br>接受单一的图片文件路径(如：srcset=”kitten.png”).<br>或者是逗号分隔的用像素密度描述的图片路径(如：srcset=”kitten.png, ketten@2x.ng 2x”),1x 的描述是默认不使用的。<br>关于</p>
 <p><strong>media (可选)</strong><br>接受任何验证的media query,你可以看到在CSS @media选择器(如：media=”(max-width:30em)”).<br>在之前的<a href=""><picture>语法</picture></a>的例子里已经用到了。</p>
 <p><strong>sizes（可选）</strong><br>接收单一的宽度描述(如：sizes=”100vw”)或者单一的media query宽度描述(如：sizes=”(max-width:30em) 100vw”).<br>或者逗号分隔的media query对宽度的描述(如：sizes=”(max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)”) 最后的一个被当做默认的。</p>
 <p>查看<a href="Combine with width descriptors">Combine with width descriptors</a>看如何使用</p>
 <p><strong>type(可选)</strong><br>接受支持的MIME类型(如: type=”image/webp” or type=”image/vnd.ms-photo”)</p>
 <p>查看<a href="Load alternative image file formats">Load alternative image file formats</a>看如何使用.<br>浏览器会根据这些提示和属性来加载确切的图片资源。根据标签的列表顺序。浏览器会使用第一个合适的<source>元素并忽略掉后面的<source>标签。</p>
-<p>####<strong>添加最后的<code>&lt;img&gt;</code>元素</strong></p>
-<p><code>&lt;img&gt;</code>元素在<code>&lt;picture&gt;</code>内部用来当浏览器不支持时或者没有源标签匹配时的显示。在<code>&lt;picture&gt;</code>内使用<code>&lt;img&gt;</code>标签是必须得，如果你忘记了，将不会有图片显示出来。</p>
+<h4 id="添加最后的-lt-img-gt-元素"><a href="#添加最后的-lt-img-gt-元素" class="headerlink" title="添加最后的&lt;img&gt;元素"></a><strong>添加最后的<code>&lt;img&gt;</code>元素</strong></h4><p><code>&lt;img&gt;</code>元素在<code>&lt;picture&gt;</code>内部用来当浏览器不支持时或者没有源标签匹配时的显示。在<code>&lt;picture&gt;</code>内使用<code>&lt;img&gt;</code>标签是必须得，如果你忘记了，将不会有图片显示出来。</p>
 <p>用<code>&lt;img&gt;</code>来声明默认的图片显示。将<code>&lt;img&gt;</code>标签放到<code>&lt;picture&gt;</code>内的最后，浏览器在找到<code>&lt;img&gt;</code>标签之前会忽略<code>&lt;source&gt;</code>的声明。这个图片标签也需要你写上它的alt属性。</p>
-<p>###嵌入使用像素密度描述</p>
-<p>增加高分辨率的像素密度描述，像 1x,1.5x,2x和3x. 新的srcset属性应用到<code>&lt;img&gt;</code>和<code>&lt;source&gt;</code>元素。</p>
+<h3 id="嵌入使用像素密度描述"><a href="#嵌入使用像素密度描述" class="headerlink" title="嵌入使用像素密度描述"></a>嵌入使用像素密度描述</h3><p>增加高分辨率的像素密度描述，像 1x,1.5x,2x和3x. 新的srcset属性应用到<code>&lt;img&gt;</code>和<code>&lt;source&gt;</code>元素。</p>
 <p>下面的例子支持1x,1.5x,和2x 的屏幕</p>
 <pre><code>&lt;picture&gt;
   &lt;source
@@ -129,8 +123,7 @@
             images/kitten-curled@2x.png 2x&quot;
     alt=&quot;a cute kitten&quot;&gt;
 &lt;/picture&gt;
-</code></pre><p>####<strong>整合使用宽度描述</strong></p>
-<p>网页基础深入的描述过<code>&lt;img&gt;</code>元素：</p>
+</code></pre><h4 id="整合使用宽度描述"><a href="#整合使用宽度描述" class="headerlink" title="整合使用宽度描述"></a><strong>整合使用宽度描述</strong></h4><p>网页基础深入的描述过<code>&lt;img&gt;</code>元素：</p>
 <p>“当图片最后的尺寸不知道的时候，确定图片源的密度是一件困难的事。特别是那些相对浏览器设置比例的图片，是依赖浏览器尺寸的。<br>代替固定图片的大小和密度，每一个图片的尺寸可以通过增加一个宽度描述来确定，让浏览器自动的精确计算像素密度并选择最合适的图片下载。”</p>
 <p>这是一个用sizes属性来设置图片比例相对窗口为80%的例子。它用srcset属性来响应4个版本的阳光房子的图片，宽度分别为160px,320px, 640px, 和 1280px：</p>
 <pre><code>&lt;img src=&quot;lighthouse-160.jpg&quot; alt=&quot;lighthouse&quot;
@@ -159,16 +152,13 @@
 </code></pre><p>在上面的例子中，当窗口在800px并且大于时，浏览器将会加载对应版本的图片：</p>
 <p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_500CE83D-809F-4C00-9928-1C64658061AE.png" width="550px"></p>
 <p><small>左边的时大于800px的窗口，所以对应版本的图片将显示出来</small></p>
-<p>####<strong>加载可改变的图片格式</strong></p>
-<p><code>&lt;source&gt;</code>元素的type属性可以用来加载可变图片文件格式，不过这并不是所有图片都支持。举个例子，你可以在支持的浏览器里使用<a href="https://developers.google.com/speed/webp/" target="_blank" rel="external">WebP</a>格式，在不支持的浏览器使用JPEG格式：</p>
+<h4 id="加载可改变的图片格式"><a href="#加载可改变的图片格式" class="headerlink" title="加载可改变的图片格式"></a><strong>加载可改变的图片格式</strong></h4><p><code>&lt;source&gt;</code>元素的type属性可以用来加载可变图片文件格式，不过这并不是所有图片都支持。举个例子，你可以在支持的浏览器里使用<a href="https://developers.google.com/speed/webp/" target="_blank" rel="external">WebP</a>格式，在不支持的浏览器使用JPEG格式：</p>
 <pre><code>&lt;picture&gt;
   &lt;source type=&quot;image/webp&quot; srcset=&quot;images/butterfly.webp&quot;&gt;
   &lt;img src=&quot;images/butterfly.jpg&quot; alt=&quot;a butterfly&quot;&gt;
 &lt;/picture&gt;
-</code></pre><p>###其他代码示例</p>
-<p>相关介绍对<a href="http://dev.opera.com/articles/responsive-images/" target="_blank" rel="external">响应式图片:从示例和带注释的代码片段开始</a>，在Dev.Opera博客有详细的关于<picture>和<img>的srcset,media,sizes以及type属性介绍。</picture></p>
-<p>###现在就试试吧</p>
-<p><code>&lt;picture&gt;</code>元素在Chrome38就可以使用了，用chrome的开发者工具模拟器开始尝试吧。</p>
+</code></pre><h3 id="其他代码示例"><a href="#其他代码示例" class="headerlink" title="其他代码示例"></a>其他代码示例</h3><p>相关介绍对<a href="http://dev.opera.com/articles/responsive-images/" target="_blank" rel="external">响应式图片:从示例和带注释的代码片段开始</a>，在Dev.Opera博客有详细的关于<picture>和<img>的srcset,media,sizes以及type属性介绍。</picture></p>
+<h3 id="现在就试试吧"><a href="#现在就试试吧" class="headerlink" title="现在就试试吧"></a>现在就试试吧</h3><p><code>&lt;picture&gt;</code>元素在Chrome38就可以使用了，用chrome的开发者工具模拟器开始尝试吧。</p>
 <p><a href="http://www.html5rocks.com/en/tutorials/responsive/picture-element/#disqus_thread" target="_blank" rel="external">英文原文</a></p>
 <p>欢迎关注微信订阅号：</p>
 <p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_qrcode_for_gh_0fd5deb0e08b_430.jpg" alt=""></p>
@@ -249,14 +239,14 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Categorías</h3>
   <ul class="entry">
   
     <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
   
     <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/categories/Discover/">Discover</a><small>16</small></li>
+    <li><a href="/categories/Discover/">Discover</a><small>17</small></li>
   
     <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
   
@@ -278,7 +268,7 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Tags</h3>
+  <h3 class="title">Etiquetas</h3>
   <ul class="entry">
   
     <li><a href="/tags/API/">API</a><small>1</small></li>
@@ -287,7 +277,7 @@
   
     <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/tags/Discover/">Discover</a><small>11</small></li>
+    <li><a href="/tags/Discover/">Discover</a><small>12</small></li>
   
     <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
   

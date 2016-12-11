@@ -69,7 +69,7 @@
 使用git协议，然后使用ssh密钥。这样可以省去每次都输密码。</code></p>
 <p>大概需要三个步骤：<br>一、本地生成密钥对；<br>二、设置github上的公钥；<br>三、修改git的remote url为git协议。</p>
 <a id="more"></a>
-<p>#一、生成密钥对。<br>大多数 Git 服务器都会选择使用 SSH 公钥来进行授权。系统中的每个用户都必须提供一个公钥用于授权，没有的话就要生成一个。生成公钥的过程在所有操作系统上都差不多。首先先确认一下是否已经有一个公钥了。SSH 公钥默认储存在账户的主目录下的 ~/.ssh 目录。进去看看：</p>
+<h1 id="一、生成密钥对。"><a href="#一、生成密钥对。" class="headerlink" title="一、生成密钥对。"></a>一、生成密钥对。</h1><p>大多数 Git 服务器都会选择使用 SSH 公钥来进行授权。系统中的每个用户都必须提供一个公钥用于授权，没有的话就要生成一个。生成公钥的过程在所有操作系统上都差不多。首先先确认一下是否已经有一个公钥了。SSH 公钥默认储存在账户的主目录下的 ~/.ssh 目录。进去看看：</p>
 <pre><code>$ cd ~/.ssh
 $ ls
 authorized_keys2  id_dsa       known_hosts config            id_dsa.pub
@@ -85,7 +85,7 @@ Enter file in which to save the key (/home/you/.ssh/id_rsa):
 <pre><code>Your public key has been saved in /home/you/.ssh/id_rsa.pub.
 The key fingerprint is: # 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@youremail.com
 </code></pre><p>这样。你本地生成密钥对的工作就做好了。</p>
-<p>#二、添加公钥到你的github帐户<br>1、查看你生成的公钥：大概如下：</p>
+<h1 id="二、添加公钥到你的github帐户"><a href="#二、添加公钥到你的github帐户" class="headerlink" title="二、添加公钥到你的github帐户"></a>二、添加公钥到你的github帐户</h1><p>1、查看你生成的公钥：大概如下：</p>
 <pre><code>$ cat ~/.ssh/id_rsa.pub
 
 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAklOUpkDHrfHY17SbrmTIpNLTGK9Tjom/BWDSU GPl+nafzlHDTYW7hdI4yZ5ew18JH4JW9jbhUFrviQzM7xlE
@@ -99,7 +99,7 @@ Attempts to ssh to github
 </code></pre><p>如果，看到：</p>
 <pre><code>Hi username! You&apos;ve successfully authenticated, but GitHub does not # provide shell access.
 </code></pre><p>就表示你的设置已经成功了。</p>
-<p>#三、修改你本地的ssh remote url. 不用https协议，改用git 协议<br>可以用git remote -v 查看你当前的remote url</p>
+<h1 id="三、修改你本地的ssh-remote-url-不用https协议，改用git-协议"><a href="#三、修改你本地的ssh-remote-url-不用https协议，改用git-协议" class="headerlink" title="三、修改你本地的ssh remote url. 不用https协议，改用git 协议"></a>三、修改你本地的ssh remote url. 不用https协议，改用git 协议</h1><p>可以用git remote -v 查看你当前的remote url</p>
 <pre><code>$ git remote -v
 origin https://github.com/someaccount/someproject.git (fetch)
 origin https://github.com/someaccount/someproject.git (push)
@@ -190,14 +190,14 @@ origin https://github.com/someaccount/someproject.git (push)
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Categorías</h3>
   <ul class="entry">
   
     <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
   
     <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/categories/Discover/">Discover</a><small>16</small></li>
+    <li><a href="/categories/Discover/">Discover</a><small>17</small></li>
   
     <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
   
@@ -219,7 +219,7 @@ origin https://github.com/someaccount/someproject.git (push)
 
   
 <div class="widget tag">
-  <h3 class="title">Tags</h3>
+  <h3 class="title">Etiquetas</h3>
   <ul class="entry">
   
     <li><a href="/tags/API/">API</a><small>1</small></li>
@@ -228,7 +228,7 @@ origin https://github.com/someaccount/someproject.git (push)
   
     <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/tags/Discover/">Discover</a><small>11</small></li>
+    <li><a href="/tags/Discover/">Discover</a><small>12</small></li>
   
     <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
   

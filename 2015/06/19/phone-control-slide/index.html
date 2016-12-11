@@ -6,8 +6,7 @@
   <title>通过Node.js和Socket.io来实现手机的远程控制 | ljinkai</title>
   <meta name="author" content="ljinkai">
   
-  <meta name="description" content="###Demo  &amp;nbsp;&amp;nbsp;&amp;nbsp;Download
-用手机来实现远程控制是不是很酷？你不需要去写一个APP应用来实现这种功能-现在的手机浏览器已经支出了web socket技术，这提供了很多的可能。这篇文章我们将用Node.js和Socket.io来实现手机控制PC的效果。">
+  <meta name="description" content="Demo  &amp;nbsp;&amp;nbsp;&amp;nbsp;Download用手机来实现远程控制是不是很酷？你不需要去写一个APP应用来实现这种功能-现在的手机浏览器已经支出了web socket技术，这提供了很多的可能。这篇文章我们将用Node.js和Socket.io来实现手机控制PC的效果。">
   
   <meta name="keywords" content="前端开发,javascript,css3,html5,Node.js,博客">
   
@@ -64,18 +63,14 @@
     <div class="entry">
       
         <p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_smartphone-remote-control-for-your-presentation.png" alt=""></p>
-<p>###<a href="http://tz-smartphone-remote-control.herokuapp.com/" target="_blank" rel="external">Demo</a>  &nbsp;&nbsp;&nbsp;<a href="http://cdn.demo.tutorialzine.com/2015/02/smartphone-remote-control-for-presentations/smartphone-remote-control-presentation.zip" target="_blank" rel="external">Download</a></p>
-<p>用手机来实现远程控制是不是很酷？你不需要去写一个APP应用来实现这种功能-现在的手机浏览器已经支出了web socket技术，这提供了很多的可能。<br>这篇文章我们将用Node.js和<a href="http://socket.io/" target="_blank" rel="external">Socket.io</a>来实现手机控制PC的效果。<br><a id="more"></a></p>
+<h3 id="Demo-nbsp-nbsp-nbsp-Download"><a href="#Demo-nbsp-nbsp-nbsp-Download" class="headerlink" title="Demo  &nbsp;&nbsp;&nbsp;Download"></a><a href="http://tz-smartphone-remote-control.herokuapp.com/" target="_blank" rel="external">Demo</a>  &nbsp;&nbsp;&nbsp;<a href="http://cdn.demo.tutorialzine.com/2015/02/smartphone-remote-control-for-presentations/smartphone-remote-control-presentation.zip" target="_blank" rel="external">Download</a></h3><p>用手机来实现远程控制是不是很酷？你不需要去写一个APP应用来实现这种功能-现在的手机浏览器已经支出了web socket技术，这提供了很多的可能。<br>这篇文章我们将用Node.js和<a href="http://socket.io/" target="_blank" rel="external">Socket.io</a>来实现手机控制PC的效果。<br><a id="more"></a></p>
 <p>我们不必到处寻找基于HTML5的这种应用库。我们将使用<a href="https://github.com/hakimel/reveal.js/" target="_blank" rel="external">Reveal.js</a>-它来处理幻灯片动画效果，并支持键盘和触摸事件。</p>
 <p>我们不必自己来实现远程控制的接口，我们将实现手机和电脑的同步。这样不仅能控制进度，也能同步的显示在你的手机上。</p>
-<p>##实现思路</p>
-<p>技术上很简单。Reveal.js让当前的幻灯片序号在URL的hash上(e.g. <code>http://example.com/#/1</code>).我们将这个hash发送到所有连接的设备上，<br>对应的将会根据这个hash来自动的显示响应幻灯片。这样的话，别人可以方便的直接通过url来直接访问到显示的页面，所有我们需要输入一个验证码<br>在连接之前进行验证。</p>
+<h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>技术上很简单。Reveal.js让当前的幻灯片序号在URL的hash上(e.g. <code>http://example.com/#/1</code>).我们将这个hash发送到所有连接的设备上，<br>对应的将会根据这个hash来自动的显示响应幻灯片。这样的话，别人可以方便的直接通过url来直接访问到显示的页面，所有我们需要输入一个验证码<br>在连接之前进行验证。</p>
 <p>要说的是Reveal.js已经有一套API,我们可以直接调用来同步。但是hash变化的技术很简单，我们可以直接来实现。</p>
 <p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_rsz_slideshow-1024x573.jpg" alt=""></p>
-<p>##运行</p>
-<p>你可以本地运行示例，或者部署到能提供node.js环境的服务器上。本地运行更简单些，但是必须本地有node.js并执行<code>npm install</code>.</p>
-<p>###运行本地代码</p>
-<ul>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>你可以本地运行示例，或者部署到能提供node.js环境的服务器上。本地运行更简单些，但是必须本地有node.js并执行<code>npm install</code>.</p>
+<h3 id="运行本地代码"><a href="#运行本地代码" class="headerlink" title="运行本地代码"></a>运行本地代码</h3><ul>
 <li>下载示例代码</li>
 <li>确保本地已经安装node.js。如果没有，请安装</li>
 <li>解压刚才下载的代码包</li>
@@ -86,8 +81,7 @@
 <li>在手机端浏览器打开<code>http://&lt;your computer’s local ip address&gt;</code>，并输入连接码</li>
 <li>请享受</li>
 </ul>
-<p>##代码</p>
-<p>思路说完，让我们来看看代码。这主要涉及2个js文件-app.js服务端控制，script.js浏览器端。你可以运行这个应用在Node.js 1.10+或者io.js.</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>思路说完，让我们来看看代码。这主要涉及2个js文件-app.js服务端控制，script.js浏览器端。你可以运行这个应用在Node.js 1.10+或者io.js.</p>
 <p>后端，我们用到了<a href="http://expressjs.com/" target="_blank" rel="external">express</a>和<a href="http://socket.io/" target="_blank" rel="external">Socket.io</a>.它主要用来响应socket.io的事件监听。用<a href="http://expressjs.com/guide/using-middleware.html#middleware.built-in" target="_blank" rel="external">express.static</a>来让public下的文件可以访问到。<br><code>public/index.html</code>文件保护显示的代码。express.static将会让它自动显示，所以我们不需要<code>/</code>来路由。</p>
 <p><code>app.js</code></p>
 <pre><code>// This is the server-side file of our mobile remote controller app.
@@ -273,8 +267,7 @@ console.log(&apos;Your presentation is running on http://localhost:&apos; + port
     });
 
 });
-</code></pre><p>##现在是幻灯片放映时间</p>
-<p>手机远程访问控制已经可以了。希望你能从中得到有趣的体验。</p>
+</code></pre><h2 id="现在是幻灯片放映时间"><a href="#现在是幻灯片放映时间" class="headerlink" title="现在是幻灯片放映时间"></a>现在是幻灯片放映时间</h2><p>手机远程访问控制已经可以了。希望你能从中得到有趣的体验。</p>
 <p>参考：</p>
 <p><code>http://tutorialzine.com/2015/02/smartphone-remote-control-for-presentations/</code><br><code>https://github.com/hakimel/reveal.js/wiki/Example-Presentations</code></p>
 
@@ -349,14 +342,14 @@ console.log(&apos;Your presentation is running on http://localhost:&apos; + port
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Categorías</h3>
   <ul class="entry">
   
     <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
   
     <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/categories/Discover/">Discover</a><small>16</small></li>
+    <li><a href="/categories/Discover/">Discover</a><small>17</small></li>
   
     <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
   
@@ -378,7 +371,7 @@ console.log(&apos;Your presentation is running on http://localhost:&apos; + port
 
   
 <div class="widget tag">
-  <h3 class="title">Tags</h3>
+  <h3 class="title">Etiquetas</h3>
   <ul class="entry">
   
     <li><a href="/tags/API/">API</a><small>1</small></li>
@@ -387,7 +380,7 @@ console.log(&apos;Your presentation is running on http://localhost:&apos; + port
   
     <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/tags/Discover/">Discover</a><small>11</small></li>
+    <li><a href="/tags/Discover/">Discover</a><small>12</small></li>
   
     <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
   

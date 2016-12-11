@@ -64,9 +64,12 @@
       
         <p>Draft.js是一个用React实现的富文本编辑器。由facebook出品。<br>Draft.js可以很容易的构建任何富文本的输入，甚至是多行的文本样式或者是复杂结构的文章。<br>在Draft.js的世界里，任何都是可定制的-提供可构建的区块来达到自定义的控制用户交互。<br><a id="more"></a></p>
 <p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_draft-js.png?imageView2/2/w/600" alt=""></p>
-<p>###安装：<br>    npm install –save draft-js react react-dom</p>
-<p>###使用：<br>    import React from ‘react’;<br>    import ReactDOM from ‘react-dom’;<br>    import {Editor, EditorState} from ‘draft-js’;</p>
-<pre><code>class MyEditor extends React.Component {
+<h3 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h3><pre><code>npm install --save draft-js react react-dom
+</code></pre><h3 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h3><pre><code>import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import {Editor, EditorState} from &apos;draft-js&apos;;
+
+class MyEditor extends React.Component {
   constructor(props) {
     super(props);
     this.state = {editorState: EditorState.createEmpty()};
@@ -82,8 +85,7 @@ ReactDOM.render(
   &lt;MyEditor /&gt;,
   document.getElementById(&apos;container&apos;)
 );
-</code></pre><p>###特性一览：</p>
-<ul>
+</code></pre><h3 id="特性一览："><a href="#特性一览：" class="headerlink" title="特性一览："></a>特性一览：</h3><ul>
 <li>实体</li>
 <li>装饰</li>
 <li>按键绑定</li>
@@ -183,14 +185,14 @@ ReactDOM.render(
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Categorías</h3>
   <ul class="entry">
   
     <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
   
     <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/categories/Discover/">Discover</a><small>16</small></li>
+    <li><a href="/categories/Discover/">Discover</a><small>17</small></li>
   
     <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
   
@@ -212,7 +214,7 @@ ReactDOM.render(
 
   
 <div class="widget tag">
-  <h3 class="title">Tags</h3>
+  <h3 class="title">Etiquetas</h3>
   <ul class="entry">
   
     <li><a href="/tags/API/">API</a><small>1</small></li>
@@ -221,7 +223,7 @@ ReactDOM.render(
   
     <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/tags/Discover/">Discover</a><small>11</small></li>
+    <li><a href="/tags/Discover/">Discover</a><small>12</small></li>
   
     <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
   

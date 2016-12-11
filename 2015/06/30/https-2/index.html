@@ -75,7 +75,7 @@ nginx如何设置https服务器。
 <li>nginx如何设置https服务器。</li>
 </ul>
 <p>如果想了解https原理部分，可以查看之前的文章介绍<a href="http://ljinkai.github.io/2015/05/15/https-1/">htts原理</a><br><a id="more"></a></p>
-<p>#1、用Nodejs创建HTTPS服务器<br>在Nodejs中，我们可以通过内置的https库，来实现HTTPS服务器。<br>Nodejs的HTTPS使用文档：<a href="http://nodejs.org/api/https.html" target="_blank" rel="external">http://nodejs.org/api/https.html</a></p>
+<h1 id="1、用Nodejs创建HTTPS服务器"><a href="#1、用Nodejs创建HTTPS服务器" class="headerlink" title="1、用Nodejs创建HTTPS服务器"></a>1、用Nodejs创建HTTPS服务器</h1><p>在Nodejs中，我们可以通过内置的https库，来实现HTTPS服务器。<br>Nodejs的HTTPS使用文档：<a href="http://nodejs.org/api/https.html" target="_blank" rel="external">http://nodejs.org/api/https.html</a></p>
 <pre><code>~ cd /home/conan/nodejs
 ~ sudo npm install
 </code></pre><p>用openssl生成证书文件</p>
@@ -111,23 +111,18 @@ https.createServer(options, app).listen(3011, function () {
 Express server listening on port 3000
 Https server listening on port 3011
 </code></pre><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https213EE475-565E-4351-AF23-739C11C4B683.png" alt=""></p>
-<p>#2、申请免费的SSL证书</p>
-<p><em>HTTPS和HTTP的区别</em></p>
+<h1 id="2、申请免费的SSL证书"><a href="#2、申请免费的SSL证书" class="headerlink" title="2、申请免费的SSL证书"></a>2、申请免费的SSL证书</h1><p><em>HTTPS和HTTP的区别</em></p>
 <p><code>https协议需要到ca申请证书，一般免费证书很少，需要交费。
 http是超文本传输协议，信息是明文传输，https 则是具有安全性的ssl加密传输协议。
 http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。
 http的连接很简单，是无状态的；HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。</code></p>
 <p>目前网上也有一些免费的证书，可以申请的到，下面是通过startssl申请免费一年ssl证书，对于理解整个过程还是很有帮助的。</p>
 <p><a href="http://www.startssl.com/" target="_blank" rel="external">StartSSL</a>（ 网址：<a href="http://www.startssl.com" target="_blank" rel="external">http://www.startssl.com</a>，公司名：StartCom ）也是一家CA机构，它的根证书很 久之前就被一些具有开源背景的浏览器支持（Firefox浏览器、谷歌Chrome浏览器、苹果Safari浏览器等）。</p>
-<p>###1、打开<a href="http://www.startssl.com/" target="_blank" rel="external">http://www.startssl.com/</a></p>
-<p>###2、点击StartSSL Free(Class 1)</p>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https84D7196A-A620-47EA-91FF-3F7B9B2435C7.png" alt=""></p>
-<p>###3、点击Certificate Control Panel进入控制面板，或直接访问<code>http://www.startssl.com/?app=12</code>也可以。</p>
-<p>###4、点击sign-up注册一个帐号</p>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsE2F80A09-C82D-415F-A3B7-DEBBAC9D7B89.png" alt=""></p>
-<p>###5、填写注册信息，要用英文格式填写<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsABCA0A43-4576-43BC-8215-95A7A8963478.png" alt=""></p>
-<p>###6、信息填写完成后，会给注册的邮箱发送一封电子邮件，此时不要关闭startssl的这个页面，检查邮箱输入验证码<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https80FC431C-0176-4D40-B578-E0B48883CE41.png" alt=""></p>
-<p>###7、等待StartComm人工审核注册的个人信息，如果审核成功会收到第二个邮件<br>例如：</p>
+<h3 id="1、打开http-www-startssl-com"><a href="#1、打开http-www-startssl-com" class="headerlink" title="1、打开http://www.startssl.com/"></a>1、打开<a href="http://www.startssl.com/" target="_blank" rel="external">http://www.startssl.com/</a></h3><h3 id="2、点击StartSSL-Free-Class-1"><a href="#2、点击StartSSL-Free-Class-1" class="headerlink" title="2、点击StartSSL Free(Class 1)"></a>2、点击StartSSL Free(Class 1)</h3><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https84D7196A-A620-47EA-91FF-3F7B9B2435C7.png" alt=""></p>
+<h3 id="3、点击Certificate-Control-Panel进入控制面板，或直接访问http-www-startssl-com-app-12也可以。"><a href="#3、点击Certificate-Control-Panel进入控制面板，或直接访问http-www-startssl-com-app-12也可以。" class="headerlink" title="3、点击Certificate Control Panel进入控制面板，或直接访问http://www.startssl.com/?app=12也可以。"></a>3、点击Certificate Control Panel进入控制面板，或直接访问<code>http://www.startssl.com/?app=12</code>也可以。</h3><h3 id="4、点击sign-up注册一个帐号"><a href="#4、点击sign-up注册一个帐号" class="headerlink" title="4、点击sign-up注册一个帐号"></a>4、点击sign-up注册一个帐号</h3><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsE2F80A09-C82D-415F-A3B7-DEBBAC9D7B89.png" alt=""></p>
+<h3 id="5、填写注册信息，要用英文格式填写"><a href="#5、填写注册信息，要用英文格式填写" class="headerlink" title="5、填写注册信息，要用英文格式填写"></a>5、填写注册信息，要用英文格式填写</h3><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsABCA0A43-4576-43BC-8215-95A7A8963478.png" alt=""></p>
+<h3 id="6、信息填写完成后，会给注册的邮箱发送一封电子邮件，此时不要关闭startssl的这个页面，检查邮箱输入验证码"><a href="#6、信息填写完成后，会给注册的邮箱发送一封电子邮件，此时不要关闭startssl的这个页面，检查邮箱输入验证码" class="headerlink" title="6、信息填写完成后，会给注册的邮箱发送一封电子邮件，此时不要关闭startssl的这个页面，检查邮箱输入验证码"></a>6、信息填写完成后，会给注册的邮箱发送一封电子邮件，此时不要关闭startssl的这个页面，检查邮箱输入验证码</h3><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https80FC431C-0176-4D40-B578-E0B48883CE41.png" alt=""></p>
+<h3 id="7、等待StartComm人工审核注册的个人信息，如果审核成功会收到第二个邮件"><a href="#7、等待StartComm人工审核注册的个人信息，如果审核成功会收到第二个邮件" class="headerlink" title="7、等待StartComm人工审核注册的个人信息，如果审核成功会收到第二个邮件"></a>7、等待StartComm人工审核注册的个人信息，如果审核成功会收到第二个邮件</h3><p>例如：</p>
 <pre><code>StartSSL Account Request
 
 To XXXX,
@@ -136,25 +131,24 @@ https://www.startssl.com/?app=12&amp;action=release&amp;id=XXXXXX&amp;auth=XXXXX
 The verification code in order to continue the process is XXXXXXXXXXXXXXXX
 Thank you!
 </code></pre><p>startssl审批很快，稍等会儿就能收到邮件。访问邮件中的链接地址，再次输入验证码。</p>
-<p>###8、建立私钥</p>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsE2DFF3B0-38D6-4D3B-8DBC-28B59E7B6853.png" alt=""><br>选择高级，点击continue。</p>
-<p>###9、安装证书<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsAD7AFB3A-D84F-4E86-AE6F-AA81A2056885.png" alt=""></p>
-<p>###10、安装完成<br>安装完成后，会有一个提示框：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsD1C59C57-3643-459B-B1B1-9E7EE6A8EF95.png" alt=""></p>
+<h3 id="8、建立私钥"><a href="#8、建立私钥" class="headerlink" title="8、建立私钥"></a>8、建立私钥</h3><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsE2DFF3B0-38D6-4D3B-8DBC-28B59E7B6853.png" alt=""><br>选择高级，点击continue。</p>
+<h3 id="9、安装证书"><a href="#9、安装证书" class="headerlink" title="9、安装证书"></a>9、安装证书</h3><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsAD7AFB3A-D84F-4E86-AE6F-AA81A2056885.png" alt=""></p>
+<h3 id="10、安装完成"><a href="#10、安装完成" class="headerlink" title="10、安装完成"></a>10、安装完成</h3><p>安装完成后，会有一个提示框：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsD1C59C57-3643-459B-B1B1-9E7EE6A8EF95.png" alt=""></p>
 <p>页面会提示：</p>
 <pre><code>Your first client certificate has been installed into your browser. This is a bootstrapping certificate for authentication purpose.
 Backup this certificate to an external media, otherwise you might not be able to regain access to your account. Please read these instructions from our FAQ page on how to do that.
 </code></pre><p>点击页面上的Finish。</p>
-<p>###11、随后页面会跳到F.A.Q.页面<br>点击How do I backup my client certificates?看下如何备份证书<br>firefox：工具-选项-高级-查看证书-您的证书，下面就有需要备份的证书。以后登录startssl要凭浏览器上前面安装的证书登录。丢失证书后只能重新注册。</p>
+<h3 id="11、随后页面会跳到F-A-Q-页面"><a href="#11、随后页面会跳到F-A-Q-页面" class="headerlink" title="11、随后页面会跳到F.A.Q.页面"></a>11、随后页面会跳到F.A.Q.页面</h3><p>点击How do I backup my client certificates?看下如何备份证书<br>firefox：工具-选项-高级-查看证书-您的证书，下面就有需要备份的证书。以后登录startssl要凭浏览器上前面安装的证书登录。丢失证书后只能重新注册。</p>
 <p>以后要登录，点击Authenticate凭证书登录：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https3DA33F3F-3463-4ED6-8624-D5EB74BF8208.png" alt=""></p>
-<p>###12、开始申请免费ssl证书<br>回到startssl的控制面板，我们看到有三个选项卡：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https405B4941-3ACE-4660-A23D-5076984BDC63.png" alt=""></p>
+<h3 id="12、开始申请免费ssl证书"><a href="#12、开始申请免费ssl证书" class="headerlink" title="12、开始申请免费ssl证书"></a>12、开始申请免费ssl证书</h3><p>回到startssl的控制面板，我们看到有三个选项卡：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https405B4941-3ACE-4660-A23D-5076984BDC63.png" alt=""></p>
 <p>大致流程如下：<br>1）先到Validations Wizard验证域名的所有权<br>2）再到Certificates Wizard选择要申请证书的类型<br>3）再到Tool Box选项卡，使用里面的小工具生成证书</p>
-<p>###13、点击Validations Wizard<br>选择Domain name validation，点击Continue。<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https6D16DD47-4585-4285-A585-6E65BEB97C80.png" alt=""></p>
+<h3 id="13、点击Validations-Wizard"><a href="#13、点击Validations-Wizard" class="headerlink" title="13、点击Validations Wizard"></a>13、点击Validations Wizard</h3><p>选择Domain name validation，点击Continue。<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https6D16DD47-4585-4285-A585-6E65BEB97C80.png" alt=""></p>
 <p>输入要申请的域名，点击Continue。<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsB12BFB0D-1985-4088-BAE2-D299D751C5FE.png" alt=""></p>
 <p>选择一个验证的邮箱，有postmaster@域名、hostmaster@域名、webmaster@域名、和注册域名时的邮箱。<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https2E0C0469-CB9D-418E-906D-22A08495BAD5.png" alt=""></p>
 <p>检查邮箱，输入验证码：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsDE92C674-28E4-4A78-A491-66DA2371B92D.png" alt=""></p>
 <p>验证成功：</p>
 <p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsA2B7AE34-0287-4A76-BF38-73575E45B941.png" alt=""><br>域名验证成功，这次验证在30天内有效，过期了要重新验证。点击Finish回到控制面板。</p>
-<p>###14、点击Certificates Wizard<br>选择WEB Server SSL/TSL Certifites：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsB6B3D4CE-CF18-47E4-833F-9900C2E6ACCD.png" alt=""></p>
+<h3 id="14、点击Certificates-Wizard"><a href="#14、点击Certificates-Wizard" class="headerlink" title="14、点击Certificates Wizard"></a>14、点击Certificates Wizard</h3><p>选择WEB Server SSL/TSL Certifites：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsB6B3D4CE-CF18-47E4-833F-9900C2E6ACCD.png" alt=""></p>
 <p>生成私钥，为私钥提供一个密码，最少10位，最大32位：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_httpsE4814398-AAE8-4D4C-90F3-B2513EFF14B6.png" alt=""></p>
 <p>将显示内容保存为ssl.key（这个私钥是加密的）：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https55F298A6-B6A3-4717-9620-B842C1B713D1.png" alt=""></p>
 <p>选择域名：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https38468FD3-C622-44CD-B6E3-5396DBB39C58.png" alt=""></p>
@@ -165,11 +159,10 @@ Backup this certificate to an external media, otherwise you might not be able to
 
 You successfully finished the process for your certificate. However your certificate request has been marked for approval by our personnel. Please wait for a mail notification from us within the next 3 hours (the most). We might contact you for further questions or issue the certificate within that time. Thank you for your understanding!
 </code></pre><p>随后就等邮件通知。</p>
-<p>###15、收到邮件后点击Tool Box<br>使用Tool Box - Decrypt Private Key，将前面生成的ssl.key的内容解密。将结果保存为.key文件。比如ssl2.key。</p>
+<h3 id="15、收到邮件后点击Tool-Box"><a href="#15、收到邮件后点击Tool-Box" class="headerlink" title="15、收到邮件后点击Tool Box"></a>15、收到邮件后点击Tool Box</h3><p>使用Tool Box - Decrypt Private Key，将前面生成的ssl.key的内容解密。将结果保存为.key文件。比如ssl2.key。</p>
 <p>保存证书：<br>Tool Box - Retrieve Certificate，选择申请证书的域名，将框中的内容保存为.crt文件。比如ssl.crt。这个就是证书文件啦。</p>
 <p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_https5FF89AC4-2ECB-489D-A622-512A600C9E71.png" alt=""></p>
-<p>#3、nginx配置ssh证书</p>
-<p>在nginx.conf文件里修改配置位置：</p>
+<h1 id="3、nginx配置ssh证书"><a href="#3、nginx配置ssh证书" class="headerlink" title="3、nginx配置ssh证书"></a>3、nginx配置ssh证书</h1><p>在nginx.conf文件里修改配置位置：</p>
 <pre><code>server {
     listen       443;
     server_name  localhost;
@@ -262,14 +255,14 @@ You successfully finished the process for your certificate. However your certifi
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Categorías</h3>
   <ul class="entry">
   
     <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
   
     <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/categories/Discover/">Discover</a><small>16</small></li>
+    <li><a href="/categories/Discover/">Discover</a><small>17</small></li>
   
     <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
   
@@ -291,7 +284,7 @@ You successfully finished the process for your certificate. However your certifi
 
   
 <div class="widget tag">
-  <h3 class="title">Tags</h3>
+  <h3 class="title">Etiquetas</h3>
   <ul class="entry">
   
     <li><a href="/tags/API/">API</a><small>1</small></li>
@@ -300,7 +293,7 @@ You successfully finished the process for your certificate. However your certifi
   
     <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/tags/Discover/">Discover</a><small>11</small></li>
+    <li><a href="/tags/Discover/">Discover</a><small>12</small></li>
   
     <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
   
