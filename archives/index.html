@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | ljinkai - Think better. Life better</title>
+  <title>Archivo | ljinkai - Think better. Life better</title>
   <meta name="author" content="ljinkai">
   
   <meta name="description" content="书写一些web前端技术相关的文章，还有个人思考方面的文章，以及一些好玩有趣的内容，努力工作，拼命生活。">
@@ -50,7 +50,50 @@
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title">Archives</h2>
+<h2 class="archive-title">Archivo</h2>
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-03-07T08:29:15.000Z"><a href="/2017/03/07/payment-request-api-guide/">Mar 7 2017</a>
+          
+        </time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/03/07/payment-request-api-guide/">web支付:Payment Request API集成指南</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><em>Dogfood</em>：<code>PaymentRequest</code> 仍处于开发阶段。虽然我们认为其稳定性足以满足实现的要求，但可能仍需作出改动。 我们会持续更新本页，以时刻反映 API 的最新状况（<a href="https://docs.google.com/document/d/1I8ha1ySrPWhx80EB4CVPmThkD4ILFM017AfOA5gEFg4/edit#">M56 变更</a>）。在此期间，为让您免于受到可能不具有向后兼容性的 API 变更的影响，我们提供了可嵌入网站的 shim。这个 shim 可平息两个主流 Chrome 版本的任何 API 差异。<br>在线购物非常方便，但通常存在令人沮丧的体验，在移动设备上购物尤其如此。虽然移动流量在不断增长，但移动购物转化率仅占所有已完成购物活动的三分之一。换言之，移动设备用户的购物放弃率是桌面设备用户的两倍。为何？</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-03-07-1_why_users_abandon.png?imageView2/2/w/600" alt=""><br><em><code>用户放弃移动设备购物单的原因</code></em>`</p>
+<p>在线购物单需要大量用户操作、难以使用，加载和刷新缓慢，并且需要多个步骤才能完成。这是因为在线支付的两大要素（即安全和便利）之间通常互为矛盾，左支右绌。<br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2017/03/07/payment-request-api-guide/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
 
 
   
@@ -467,66 +510,11 @@
 
 
   
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-09-05T04:52:34.000Z"><a href="/2016/09/05/chrome-extention-learning/">Sep 5 2016</a>
-          
-        </time>
-      
-      
-  
-    <h1 class="title"><a href="/2016/09/05/chrome-extention-learning/">Chrome的扩展插件</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="用处"><a href="#用处" class="headerlink" title="用处"></a>用处</h2><p>本质就是web页面，调用web上的原有api还有浏览器提供的一些接口(像右键菜单、桌面通知、覆盖页面等等)。做一些工具性的插件。</p>
-<h3 id="manifest-json"><a href="#manifest-json" class="headerlink" title="manifest.json"></a><strong>manifest.json</strong></h3><pre><code>{
-    &quot;name&quot;: &quot;My Extension&quot;,
-    &quot;version&quot;: &quot;2.1&quot;,
-    &quot;description&quot;: &quot;Gets information from Google.&quot;,
-    &quot;icons&quot;: { &quot;128&quot;: &quot;icon_128.png&quot; },
-    &quot;background_page&quot;: &quot;bg.html&quot;,
-    &quot;permissions&quot;: [&quot;http://*.google.com/&quot;, &quot;https://        *.google.com/&quot;],
-    &quot;browser_action&quot;: {
-        &quot;default_title&quot;: &quot;&quot;,
-        &quot;default_icon&quot;: &quot;icon_19.png&quot;,
-        &quot;default_popup&quot;: &quot;popup.html&quot;
-    }
-}
-</code></pre><p><a href="http://open.chrome.360.cn/extension_dev/manifest.html">参数说明</a><br>
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2016/09/05/chrome-extention-learning/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-
-  
 
   <nav id="pagination">
   
   
-    <a href="/archives/page/2/" class="alignright next">Next</a>
+    <a href="/archives/page/2/" class="alignright next">Siguiente</a>
   
   <div class="clearfix"></div>
 </nav>
@@ -559,14 +547,14 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">Categorías</h3>
   <ul class="entry">
   
     <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
   
     <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
   
-    <li><a href="/categories/Discover/">Discover</a><small>22</small></li>
+    <li><a href="/categories/Discover/">Discover</a><small>23</small></li>
   
     <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
   
@@ -588,7 +576,7 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Tags</h3>
+  <h3 class="title">Etiquetas</h3>
   <ul class="entry">
   
     <li><a href="/tags/API/">API</a><small>1</small></li>
@@ -611,7 +599,7 @@
   
     <li><a href="/tags/个人/">个人</a><small>1</small></li>
   
-    <li><a href="/tags/前端/">前端</a><small>15</small></li>
+    <li><a href="/tags/前端/">前端</a><small>16</small></li>
   
     <li><a href="/tags/思考/">思考</a><small>3</small></li>
   
