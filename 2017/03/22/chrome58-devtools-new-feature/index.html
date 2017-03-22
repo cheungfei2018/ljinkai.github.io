@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Chrome58 DevTools开发者工具新特性 | ljinkai</title>
+  <meta name="author" content="ljinkai">
+  
+  <meta name="description" content="书写一些web前端技术相关的文章，还有个人思考方面的文章，以及一些好玩有趣的内容，努力工作，拼命生活。">
+  
+  <meta name="keywords" content="chrome开发者工具,chrome58,console,web前端开发,devtools">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Chrome58 DevTools开发者工具新特性"/>
+  <meta property="og:site_name" content="ljinkai"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <meta name="google-site-verification" content="iIzqxT8FAfRGM8f4sr97VvjhDsk3QJQ-a2LMdn0DtXU" />
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="ljinkai" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/styleNew.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">ljinkai</a></h1>
+  <h2><a href="/">Brave &amp; Discover &amp; Move</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/2015/03/13/DemoHub/">Demo</a></li>
+    
+      <li><a href="/2015/03/01/link-friends/">Link</a></li>
+    
+      <li><a href="/2015/02/28/new/">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-03-22T01:02:58.000Z"><a href="/2017/03/22/chrome58-devtools-new-feature/">Mar 22 2017</a>
+          
+            <div style="height: 18px;line-height: 18px;min-width: 36px;padding:0px 6px;display: inline-block;margin-left: 10px;text-align: center;border: 1px solid #9e9e9e;color: #8c8c8c;border-radius: 10px;">
+                  译
+            </div>
+          
+        </time>
+      
+      
+  
+    <h1 class="title">Chrome58 DevTools开发者工具新特性</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h2><ul>
+<li>Timeline面板改名为Performace面板</li>
+<li>Profiles面板改名为Memory面板</li>
+<li>Cookie值可编辑</li>
+<li>当内存溢出错误发生时 ，DevTools可自动停止</li>
+</ul>
+<a id="more"></a>
+<h2 id="新特性"><a href="#新特性" class="headerlink" title="新特性"></a>新特性</h2><h3 id="可编辑cookie值"><a href="#可编辑cookie值" class="headerlink" title="可编辑cookie值"></a>可编辑cookie值</h3><p>在Cookies标签，双击单元格可编辑对应的<strong>Cookie</strong>值。</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-03-21-1editable-cookies.png?imageView2/2/w/600" alt=""></p>
+<p><em>图例：编辑一个cookie</em></p>
+<h3 id="在Syles嵌入面板，检查并编辑CSS变量"><a href="#在Syles嵌入面板，检查并编辑CSS变量" class="headerlink" title="在Syles嵌入面板，检查并编辑CSS变量"></a>在Syles嵌入面板，检查并编辑CSS变量</h3><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-03-21-WechatIMG2.jpeg?imageView2/2/w/600" alt=""></p>
+<p>你可以在Styles嵌入面板来检查并编辑CSS变量。通过<a href="https://googlechrome.github.io/devtools-samples/author/css-vars" target="_blank" rel="external">CSS Variables Demo</a>可以实际的操作下。</p>
+<h3 id="内存溢出断点"><a href="#内存溢出断点" class="headerlink" title="内存溢出断点"></a>内存溢出断点</h3><p>当应用在短时间内占用了大量的内存时，DevTools现在可以自动停止并增加堆栈的限制。这些能帮助你来检查堆栈，在Console里执行命令来释放内存，并继续调试问题。查看<a href="https://v8project.blogspot.com/2017/02/one-small-step-for-chrome-one-giant.html" target="_blank" rel="external">Chrome的一小步，V8引擎的一大步</a>了解更多信息。</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-03-21-2out-of-memory-breakpoint.png?imageView2/2/w/600" alt=""></p>
+<p><em>图例：内存溢出断点自动停止</em></p>
+<h3 id="画布创建的断点"><a href="#画布创建的断点" class="headerlink" title="画布创建的断点"></a>画布创建的断点</h3><p>你可以创建<a href="https://developers.google.com/web/tools/chrome-devtools/javascript/breakpoints#event-listeners" target="_blank" rel="external">事件监听断点</a>，并在画布上下文被创建的时候触发。</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-03-21-3canvas-breakpoint.png?imageView2/2/w/600" alt=""></p>
+<p>图例3：画布创建的断点通过在<strong>Event Listener Breakpoints</strong>嵌入面板内的复选框<strong>Create canvas context</strong></p>
+<h3 id="Timing选显卡下的开始时间统计"><a href="#Timing选显卡下的开始时间统计" class="headerlink" title="Timing选显卡下的开始时间统计"></a>Timing选显卡下的开始时间统计</h3><p>在<strong>Timing</strong>选显卡的头部，你可以看见一个请求的等待时间和开始时间。</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-03-21-4request-timing.png?imageView2/2/w/600" alt=""></p>
+<p><em>图例4：Timing选显卡的开始时间统计</em></p>
+<h3 id="Timing选显卡下的Server情况统计"><a href="#Timing选显卡下的Server情况统计" class="headerlink" title="Timing选显卡下的Server情况统计"></a>Timing选显卡下的Server情况统计</h3><p>你可以插入自定义server统计信息到Timing选项卡里。查看<a href="https://gist.github.com/paulirish/a76ac17fc211b019e538c09d8d827691" target="_blank" rel="external">server时间值例子</a>了解更多</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-03-21-5server-state.png?imageView2/2/w/600" alt=""></p>
+<p><em>图例5：Timing选显卡的Server情况</em></p>
+<h2 id="更改"><a href="#更改" class="headerlink" title="更改"></a>更改</h2><h3 id="TImeline面板是现在的Performance面板"><a href="#TImeline面板是现在的Performance面板" class="headerlink" title="TImeline面板是现在的Performance面板"></a>TImeline面板是现在的Performance面板</h3><p>Timeline面板已经重命名为Performance面板，为了更好的表达其功能目的。</p>
+<h3 id="Profiles面板是现象的Memory面板"><a href="#Profiles面板是现象的Memory面板" class="headerlink" title="Profiles面板是现象的Memory面板"></a>Profiles面板是现象的Memory面板</h3><p>Profiles面板重命名为Memory面板，为了更好的见词达意。</p>
+<h3 id="CPU分析器在隐藏面板之后"><a href="#CPU分析器在隐藏面板之后" class="headerlink" title="CPU分析器在隐藏面板之后"></a>CPU分析器在隐藏面板之后</h3><p>现在Profile面板改名为Memory面板后，已经不太适合CPU分析器在里面了，长期的目标是希望用户通过Performance面板来分析。同时，你仍然可以通过下面的方式来访问旧的CPU分析器。<strong>Setting > More Tools > JavaScropt Profiler</strong></p>
+<p>查看<a href="https://developers.google.com/web/updates/2016/12/devtools-javascript-cpu-profile-migration" target="_blank" rel="external">Chrome DevTools: JavaScript CPU Profiling in Chrome 58</a>来详细了解在Performance面板里的CPU分析器。</p>
+<h3 id="新的Console交互"><a href="#新的Console交互" class="headerlink" title="新的Console交互"></a>新的Console交互</h3><p>Console面板和折叠区已经做了一些界面的改变。不被经常使用的特性已经移到了更隐藏的地方，经常使用的特性现在已经更容易被访问到。</p>
+<ul>
+<li>点击<strong>Console Setting</strong>进入对Console的设置</li>
+<li><strong>Preserve log</strong>现在已经隐藏到<strong>Console Settings</strong></li>
+<li><strong>Filters</strong>按钮和面板去掉了。使用下拉菜单替代</li>
+<li>过滤日志记录的文本框会一直显示。之前它是被隐藏在<strong>Filters</strong>嵌入面板中。</li>
+<li>去掉<strong>Hide violations</strong>复选框。在<strong>Verbose</strong>里可以查看日志等级的下拉列表。</li>
+<li>在<strong>Console Setting</strong>新的界面，旧的取消选中<strong>Show all messages</strong>复选框，等同于现在的选中<strong>Selected context only</strong>复选框</li>
+</ul>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-03-21-6console.png?imageView2/2/w/600" alt=""></p>
+<p><em>图例6：新的Console界面</em></p>
+<h3 id="WebGL事件监听断点已经被转移"><a href="#WebGL事件监听断点已经被转移" class="headerlink" title="WebGL事件监听断点已经被转移"></a>WebGL事件监听断点已经被转移</h3><p>WebGL事件监听断点已经从<strong>WebGL</strong>分类移到<strong>Canvas</strong>类别下。原先的<strong>WebGL</strong>分类已经移除。</p>
+<h3 id="站内推荐阅读"><a href="#站内推荐阅读" class="headerlink" title="站内推荐阅读"></a><em>站内推荐阅读</em></h3><p><a href="http://liujinkai.com/2015/12/26/chrome-dev-tools/" target="_blank" rel="external">Chrome开发者工具的实用技巧(译)</a><br><a href="http://liujinkai.com/2015/05/25/chrome-notification/" target="_blank" rel="external">Chrome Notification</a><br><a href="http://liujinkai.com/2015/06/16/chrome-dev-skill/" target="_blank" rel="external">15个必须知道的chrome开发者技巧(GIF)</a><br><a href="http://liujinkai.com/2015/10/23/front-develper-10-tools/" target="_blank" rel="external">积攒10款前端开发工具，就可以召唤神龙了</a><br><a href="http://ljinkai.github.io/2017/03/07/payment-request-api-guide/">web支付:Payment Request API集成指南</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/Tools/">Tools</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="ads" style="padding: 0px 20px 0px 20px;margin-top: -25px;margin-bottom: 20px;position: relative;text-align: center;">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- article_bottom -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:728px;height:90px"
+         data-ad-client="ca-pub-3671825610688339"
+         data-ad-slot="2963848809"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</section>
+
+
+
+
+<section id="comment">
+    <style>
+        #ds-thread #ds-reset .ds-login-buttons .ds-social-links {width: 250px;}
+        #ds-thread #ds-reset .ds-login-buttons .ds-service-list li:nth-child(3){ display: none}
+    </style>
+
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2017/03/22/chrome58-devtools-new-feature/" data-title="Chrome58 DevTools开发者工具新特性" data-url=""></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"ljinkai"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget tag">
+  <h3 class="title">About</h3>
+  <ul class="entry">
+    <li>前端工程师一枚，这是我个人的Blog。记录一些web端的技术、发现，和对生活、人生的思考。</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">凯凯刘</a></li>
+    <li>微信公众号：<br>[前端开发知识] - HTML5、CSS3、JS、Node.js</li>
+    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/h5_qrcode_for_gh_0fd5deb0e08b_430.jpg' width='160px' style="margin-left: -10px;display: block;"></li>
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/categories/Discover/">Discover</a><small>25</small></li>
+  
+    <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/categories/Info/">Info</a><small>1</small></li>
+  
+    <li><a href="/categories/JS/">JS</a><small>7</small></li>
+  
+    <li><a href="/categories/Summary/">Summary</a><small>4</small></li>
+  
+    <li><a href="/categories/Think/">Think</a><small>3</small></li>
+  
+    <li><a href="/categories/Tools/">Tools</a><small>4</small></li>
+  
+    <li><a href="/categories/木工/">木工</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/API/">API</a><small>1</small></li>
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/tags/Discover/">Discover</a><small>20</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/tags/JS/">JS</a><small>8</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/tags/Tools/">Tools</a><small>7</small></li>
+  
+    <li><a href="/tags/个人/">个人</a><small>1</small></li>
+  
+    <li><a href="/tags/前端/">前端</a><small>16</small></li>
+  
+    <li><a href="/tags/思考/">思考</a><small>3</small></li>
+  
+    <li><a href="/tags/木工/">木工</a><small>2</small></li>
+  
+    <li><a href="/tags/汇总/">汇总</a><small>1</small></li>
+  
+    <li><a href="/tags/设计/">设计</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015-2017 ljinkai
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;Powered by <a href="http://hexo.io/">Hexo</a>
+</div>
+<div class="clearfix"></div>
+
+<!--<script>-->
+    <!--var _hmt = _hmt || [];-->
+    <!--(function() {-->
+        <!--var hm = document.createElement("script");-->
+        <!--hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";-->
+        <!--var s = document.getElementsByTagName("script")[0];-->
+        <!--s.parentNode.insertBefore(hm, s);-->
+    <!--})();-->
+<!--</script>-->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85358197-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+</footer>
+  <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--<script src="<- config.root >js/jquery.imagesloaded.min.js"></script>-->
+<!--<script src="<- config.root >js/gallery.js"></script>-->
+
+
+
+
+</body>
+</html>
