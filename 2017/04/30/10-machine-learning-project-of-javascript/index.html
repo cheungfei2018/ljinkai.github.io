@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>10个基于JavaScript的机器学习案例(译) | ljinkai</title>
+  <meta name="author" content="ljinkai">
+  
+  <meta name="description" content="书写一些web前端技术相关的文章，还有个人思考方面的文章，以及一些好玩有趣的内容，努力工作，拼命生活。">
+  
+  <meta name="keywords" content="机器学习,JavaScript,深度学习,Node.js,web">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="10个基于JavaScript的机器学习案例(译)"/>
+  <meta property="og:site_name" content="ljinkai"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <meta name="google-site-verification" content="iIzqxT8FAfRGM8f4sr97VvjhDsk3QJQ-a2LMdn0DtXU" />
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="ljinkai" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/styleNew.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">ljinkai</a></h1>
+  <h2><a href="/">Brave &amp; Discover &amp; Move</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/2015/03/13/DemoHub/">Demo</a></li>
+    
+      <li><a href="/2015/03/01/link-friends/">Link</a></li>
+    
+      <li><a href="/2015/02/28/new/">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+<section id="ads" style="padding: 10px 25px 10px 25px;min-height:100px;margin-bottom: 20px;
+position: relative;text-align: center;background-color: white;float: left;">
+    <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+    <!--&lt;!&ndash; article_bottom &ndash;&gt;-->
+    <!--<ins class="adsbygoogle"-->
+         <!--style="display:inline-block;width:728px;height:90px"-->
+         <!--data-ad-client="ca-pub-3671825610688339"-->
+         <!--data-ad-slot="2963848809"></ins>-->
+    <!--<script>-->
+        <!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+    <!--</script>-->
+    <!--<script type="text/javascript">-->
+        <!--/*760*90 创建于 2017-4-20*/-->
+        <!--var cpro_id = "u2959953";-->
+    <!--</script>-->
+    <!--<script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/c.js"></script>-->
+    <style>
+        .product_item {color: black;}
+        .product_item:hover {color: #f50;}
+        .product_price {color: #f50;font-weight: normal;}
+        .product_block {width: 25%;min-height: 100px;}
+        @media (max-width: 520px) {
+            .product_block {
+                width: 50%;
+            }
+            .product_block_3, .product_block_4 {display: none;}
+        }
+    </style>
+
+    <div class="product_block" style="float: left;">
+        <a href="https://s.click.taobao.com/9sTeFow" target="_blank">
+            <img src="https://gd4.alicdn.com/imgextra/i3/0/TB1LyfJQFXXXXcfXpXXXXXXXXXX_!!0-item_pic.jpg_400x400.jpg" style="width: 100px;height: 100px;float: left;">
+            <div class="product_item" style="float:left;width: 100px;padding: 0px 6px;text-align: left;">
+                <div style="font-size: 12px;float: left;width: 100%;">声波电动牙刷成人家用无需充电式自动牙刷软毛,领券￥49</div>
+                <div class="product_price" style="float: left;width: 100%;margin-top: 8px;">￥69.00</div>
+            </div>
+
+        </a>
+    </div>
+
+    <div class="product_block" style="float: left;">
+        <a href="https://s.click.taobao.com/gJCbGow" target="_blank">
+            <img src="https://img.alicdn.com/bao/uploaded/i3/TB11ixUOXXXXXcYXXXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg" style="width: 100px;height: 100px;float: left;">
+            <div class="product_item" style="float:left;width: 100px;padding: 0px 6px;text-align: left;">
+                <div style="font-size: 12px;float: left;width: 100%;">多乐都乐电脑椅家用办公椅人体工学椅网布转椅搁脚老板椅子职员椅</div>
+                <div class="product_price" style="float: left;width: 100%;margin-top: 8px;">￥155.00</div>
+            </div>
+
+        </a>
+    </div>
+    <div class="product_block product_block_3" style="float: left;">
+        <a href="https://s.click.taobao.com/HS4bGow" target="_blank">
+            <img src="https://img.alicdn.com/bao/uploaded/i2/TB1HdRjQXXXXXcIXXXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg" style="width: 100px;height: 100px;float: left;">
+            <div class="product_item" style="float:left;width: 100px;padding: 0px 6px;text-align: left;">
+                <div style="font-size: 12px;float: left;width: 100%;">眷恋电脑椅家用办公椅网布座椅可躺转椅老板椅子午休椅游戏电竞椅</div>
+                <div class="product_price" style="float: left;width: 100%;margin-top: 8px;">￥169.00</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="product_block product_block_4" style="float: left;width: 25%;">
+        <a href="https://s.click.taobao.com/0LGeFow" target="_blank">
+            <img src="https://img.alicdn.com/bao/uploaded/i1/TB11hoGQpXXXXXBXFXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg" style="width: 100px;height: 100px;float: left;">
+            <div class="product_item" style="float:left;width: 100px;padding: 0px 6px;text-align: left;">
+                <div style="font-size: 12px;float: left;width: 100%;">耳乐保隔音耳塞防噪音睡眠防呼噜睡觉男女专业静音学习用超强抗噪</div>
+                <div class="product_price" style="float: left;width: 100%;margin-top: 8px;">￥12.8</div>
+            </div>
+
+        </a>
+    </div>
+
+</section>
+<div style="clear: both;"></div>
+
+
+
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-04-30T04:09:33.000Z"><a href="/2017/04/30/10-machine-learning-project-of-javascript/">Apr 30 2017</a>
+          
+        </time>
+      
+      
+  
+    <h1 class="title">10个基于JavaScript的机器学习案例(译)</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>在过去的几年里，机器学习的开发库增长很快，可用性也变得越来越可靠，而且没有减慢的趋势。一直以来Python作为机器学习的主力语言，现在神经网络可以应用任何语言了，包括JavaScript!</p>
+<p>web生态系统虽然最近一直在取得进步，但是在机器学习领域JavaScropt和Node.js相对Python和Java来说还是稍弱，但是现在它们已经有足够的能力来处理机器学习方法的问题了。Web语言也有一个优势，就是你所有的JavaScript机器学习工程只需要浏览器支持。</p>
+<a id="more"></a>
+<p>现在大部分JavaScript机器学习的库都比较新而且有的还一直在开发中，但是已经实现并且可以尝试使用了。这篇文章我们将一起来了解这些库，一些比较酷的AI的web应用你也可以上手试试。</p>
+<h1 id="1-Brain"><a href="#1-Brain" class="headerlink" title="1. Brain"></a>1. <a href="https://github.com/harthur-org/brain.js/" target="_blank" rel="external">Brain</a></h1><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-04-30-brain.jpg?imageView2/2/w/600" alt=""></p>
+<p>Brain是一个容易创建神经网络的库，你可以基于它的输入/输出数据来训练。因为训练需要大量的数据资源，虽然有CDN的链接可以通过网络直接加载到网页上。但还是推荐使用Node.js的环境来运行这个库。这里是一个<a href="http://brainjs.com/" target="_blank" rel="external">例子</a>，在它们的网站上，被训练来识别颜色的对比。</p>
+<h1 id="2-Deep-playground"><a href="#2-Deep-playground" class="headerlink" title="2. Deep playground"></a>2. <a href="https://github.com/tensorflow/playground" target="_blank" rel="external">Deep playground</a></h1><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-04-30-deep-playground.jpg?imageView2/2/w/600" alt=""></p>
+<p>带有教育性质的web应用让你参与神经网络的世界，并探索它们不同的组件。它有一个不错的UI, 让你来控制数据的输入，神经元的数量，用什么样的算法，还有其它大量的可调参数来影响最终的结果。还有大量的可以从应用中的场景中学习的东西 — 代码是开源的，而且用了一个可定义的<a href="#">机器学习库</a>(<a href="https://github.com/tensorflow/playground/blob/master/src/nn.ts" target="_blank" rel="external">https://github.com/tensorflow/playground/blob/master/src/nn.ts</a>), 这个库是基于TypeScript并且有丰富的文档可查阅。</p>
+<h1 id="3-FlappyLearning"><a href="#3-FlappyLearning" class="headerlink" title="3.FlappyLearning"></a>3.<a href="https://github.com/xviniette/FlappyLearning" target="_blank" rel="external">FlappyLearning</a></h1><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-04-30-flappy-learning.jpg?imageView2/2/w/600" alt=""></p>
+<p>FlappyLearning是一个JavaScript项目，大概仅仅800行未合并压缩的代码，创建了一个机器学习的库来实现了一个很好玩的例子来玩<a href="https://en.wikipedia.org/wiki/Flappy_Bird" target="_blank" rel="external">Flappy Bird</a>。这个库里用的人工智能技术叫<a href="http://www.scholarpedia.org/article/Neuroevolution" target="_blank" rel="external">Neuroevolution</a>应用了比较自然的一些神经系统算法，根据每次迭代的成功和失败来动态的学习。这个例子非常容易运行— 用浏览器打开index.html文件就可以了。</p>
+<h1 id="4-Synaptic"><a href="#4-Synaptic" class="headerlink" title="4.Synaptic"></a>4.<a href="https://github.com/cazala/synaptic" target="_blank" rel="external">Synaptic</a></h1><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-04-30-synaptic.jpg?imageView2/2/w/600" alt=""></p>
+<p>可能是这个列表里最活跃的项目了， Synaptic是一个Node.js和浏览器可用的库，它是一个不可知结构，允许开发者构建任何类型的神经网络。它有一些构建好的结构，来让它可以更快速的测试和对比不同的机器学习算法。同样有比较完善的介绍和文档，一些练习的例子，还有很多非常棒的指导来理解机器学习是怎么工作的。</p>
+<h1 id="5-Land-Lines"><a href="#5-Land-Lines" class="headerlink" title="5.Land Lines"></a>5.<a href="https://lines.chromeexperiments.com/" target="_blank" rel="external">Land Lines</a></h1><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-04-30-land-lines.jpg?imageView2/2/w/600" alt=""></p>
+<p>Land Lines是一个非常有趣的Chrome Web尝试，来找到地球的卫星图片。类似让用户来涂鸦。这个应用没有任何的服务端请求：它整个都运行在浏览器，要多亏机器学习的聪明使用，和WebGL的非常棒的性能表现，甚至在移动设备上。你可以在这里找到源码<a href="https://github.com/ofZach/landlines" target="_blank" rel="external">GitHub</a>或阅读整个<a href="https://developers.google.com/web/showcase/2016/land-lines" target="_blank" rel="external">案例</a>。</p>
+<h1 id="6-ConvNetJS"><a href="#6-ConvNetJS" class="headerlink" title="6.ConvNetJS"></a>6.<a href="https://github.com/karpathy/convnetjs" target="_blank" rel="external">ConvNetJS</a></h1><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-04-30-convnetjs.png?imageView2/2/w/600" alt=""></p>
+<p>虽然不再积极的被维护了，ConvNetJS是最深入的JavaScript学习库。最初在斯坦福大学里被开发，ConvNetJS在GitHub上变得非常流行，许多社区开始驱动新的特性和指导手册。它直接在浏览器运行，支持多个学习技术，并且它非常的初级，更适合人们更多的体验神经网络。</p>
+<h1 id="7-Thing-Translator"><a href="#7-Thing-Translator" class="headerlink" title="7.Thing Translator"></a>7.<a href="https://github.com/dmotz/thing-translator" target="_blank" rel="external">Thing Translator</a></h1><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-04-30-thing-translator.jpg?imageView2/2/w/600" alt=""></p>
+<p>Thing Translator是一个网页实验，让你的手机用不同的语言来识别现实对象。这个应用完全应用web技术并且整合了Google的两个机器学习的API - <a href="https://cloud.google.com/vision/" target="_blank" rel="external">Cloud Vision</a>来做图片识别，<a href="https://cloud.google.com/translate/" target="_blank" rel="external">Translate API</a>来做 神经语言翻译。</p>
+<h1 id="8-Neurojs"><a href="#8-Neurojs" class="headerlink" title="8.Neurojs"></a>8.<a href="https://github.com/janhuenermann/neurojs" target="_blank" rel="external">Neurojs</a></h1><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-04-30-neurojs.jpg?imageView2/2/w/600" alt=""></p>
+<p>构建AI系统基于强化学习的框架。可惜的是，这个开源项目并没有合适的文档。但是其中的例子，一个汽车自动驾驶的实验，有对构造神经网络的不同部分的详细描述。这个库是纯JavaScript语言并且应用了webpack和babel。</p>
+<h1 id="9-Machine-Learning"><a href="#9-Machine-Learning" class="headerlink" title="9.Machine Learning"></a>9.<a href="https://github.com/junku901/machine_learning" target="_blank" rel="external">Machine Learning</a></h1><p>另外的一个可以只用JavaScript来构建并训练神经网络的库。非常容易的安装，需要Nodejs和客户端，对于开发人员非常容易上手的API调用。这个库提供了大量的<a href="http://joonku.com/project/machine_learning" target="_blank" rel="external">示例</a>来实现了当下流行的算法，帮助来理解核心的机器学习的原则。</p>
+<h1 id="10-DeepForge"><a href="#10-DeepForge" class="headerlink" title="10.DeepForge"></a>10.<a href="https://github.com/deepforge-dev/deepforge" target="_blank" rel="external">DeepForge</a></h1><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-04-30-deepforge.jpg?imageView2/2/w/600" alt=""></p>
+<p>DeepForge是一个用户友好的开发环境来使用深度学习。允许自己用一些图形接口来设计神经网络，支持远程机器的训练模型，并有版本控制。项目运行在浏览器，并基于Node.js和MongoDB,安装过程对于web开发人员非常熟悉。</p>
+<p><a href="http://burakkanber.com/blog/machine-learning-in-other-languages-introduction/" target="_blank" rel="external">福利：Machine Learning in Javascript</a></p>
+<p>非常优秀的博客文章，由Burank Kanber撰写，主要是关于机器学习的基础原理。非常适合JavaScript开发人员的阅读和学习。如果你想深入了解机器学习，这是一个非常棒的资源，推荐给大家。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>虽然基于JavaScript的机器学习生态并没有充分的开发出来，我们推荐这些是你开始了解机器学习和核心技术的的非常好的资源。文中列出的试验性的项目，你可以仅使用浏览器或者一些JavaScript代码，就能探索出非常多好玩的东西。</p>
+<p><a href="http://tutorialzine.com/2017/04/10-machine-learning-examples-in-javascript/" target="_blank" rel="external">英文</a></p>
+<p><em>推荐阅读</em></p>
+<ul>
+<li><a href="http://liujinkai.com/2017/04/19/deliberate-practice/">刻意练习</a></li>
+<li><a href="http://liujinkai.com/2015/12/26/chrome-dev-tools/">Chrome开发者工具的实用技巧(译)</a></li>
+<li><a href="http://liujinkai.com/2015/08/21/can-i-use/">怎么通过命令来检查浏览器的兼容性(译)</a></li>
+<li><a href="http://liujinkai.com/2015/10/23/front-develper-10-tools/">积攒10款前端开发工具，就可以召唤神龙了</a></li>
+<li><a href="http://liujinkai.com/2016/04/27/progressive-web-app/">什么是Progressive Web App?</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/JavaScript/">JavaScript</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/JavaScript/">JavaScript</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+<section id="comment">
+    <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+    <script>
+        var cloudTieConfig = {
+            url: document.location.href,
+            sourceId: "",
+            productKey: "a65a1e5ea58d4c3a8ea1fef77d0371db",
+            target: "cloud-tie-wrapper"
+        };
+        var yunManualLoad = true;
+        Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+    </script>
+
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget tag">
+  <h3 class="title">About</h3>
+  <ul class="entry">
+    <li>前端工程师一枚，这是我个人的Blog。记录一些web端的技术、发现，和对生活、人生的思考。</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">凯凯刘</a></li>
+    <li>微信公众号：<br>[前端开发知识] - HTML5、CSS3、JS、Node.js</li>
+    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/h5_qrcode_for_gh_0fd5deb0e08b_430.jpg' width='160px' style="margin-left: -10px;display: block;"></li>
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/categories/Discover/">Discover</a><small>28</small></li>
+  
+    <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/categories/Info/">Info</a><small>1</small></li>
+  
+    <li><a href="/categories/JS/">JS</a><small>7</small></li>
+  
+    <li><a href="/categories/JavaScript/">JavaScript</a><small>1</small></li>
+  
+    <li><a href="/categories/Summary/">Summary</a><small>4</small></li>
+  
+    <li><a href="/categories/Think/">Think</a><small>4</small></li>
+  
+    <li><a href="/categories/Tools/">Tools</a><small>4</small></li>
+  
+    <li><a href="/categories/木工/">木工</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/API/">API</a><small>1</small></li>
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>1</small></li>
+  
+    <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
+  
+    <li><a href="/tags/Discover/">Discover</a><small>22</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
+  
+    <li><a href="/tags/JS/">JS</a><small>8</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>1</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>1</small></li>
+  
+    <li><a href="/tags/Tools/">Tools</a><small>7</small></li>
+  
+    <li><a href="/tags/个人/">个人</a><small>1</small></li>
+  
+    <li><a href="/tags/前端/">前端</a><small>16</small></li>
+  
+    <li><a href="/tags/变现/">变现</a><small>1</small></li>
+  
+    <li><a href="/tags/思考/">思考</a><small>4</small></li>
+  
+    <li><a href="/tags/木工/">木工</a><small>2</small></li>
+  
+    <li><a href="/tags/汇总/">汇总</a><small>1</small></li>
+  
+    <li><a href="/tags/设计/">设计</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015-2017 ljinkai
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;Powered by <a href="http://hexo.io/">Hexo</a>
+</div>
+<div class="clearfix"></div>
+
+<!--<script>-->
+    <!--var _hmt = _hmt || [];-->
+    <!--(function() {-->
+        <!--var hm = document.createElement("script");-->
+        <!--hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";-->
+        <!--var s = document.getElementsByTagName("script")[0];-->
+        <!--s.parentNode.insertBefore(hm, s);-->
+    <!--})();-->
+<!--</script>-->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85358197-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+</footer>
+  <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--<script src="<- config.root >js/jquery.imagesloaded.min.js"></script>-->
+<!--<script src="<- config.root >js/gallery.js"></script>-->
+
+
+
+
+</body>
+</html>
