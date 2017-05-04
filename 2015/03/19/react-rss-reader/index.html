@@ -50,7 +50,73 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-03-19T02:52:15.000Z"><a href="/2015/03/19/react-rss-reader/">Mar 19 2015</a>
+          
+        </time>
+      
+      
+  
+    <h1 class="title">React.js基础学习之实现移动RSS阅读器实例</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 align="center"><br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_屏幕快照 2015-03-12 下午5.36.56.png" alt="示例"><br></h2>
+
+<h3 id="React-js基础说明"><a href="#React-js基础说明" class="headerlink" title="React.js基础说明"></a>React.js基础说明</h3><p><a href="http://facebook.github.io/react/index.html" target="_blank" rel="external">React</a> 是”一个用于构建用户界面的 JavaScript 类库”.对应到前端框架MVC的话，是V这一层，只专注于视图这一层，也就是对于数据经常变化而影响视图变化的解决方案。</p>
+<p>React 使用的是特殊的 JavaScript 语法, 叫做 JSX.<br>主要的目标是提供一个能表示 React 内部的 DOM 的符合直觉的语法糖,用更简单封装更好的语法来些React.<br>React 关于<a href="http://facebook.github.io/react/docs/jsx-in-depth.html" target="_blank" rel="external">JSX官方教程</a> 上其他的用法也很好懂.<br><a id="more"></a></p>
+<p>最终 JSX 代码会被编译到平常的 JavaScript.</p>
+<p>React 不依赖第三方的类库(比如 jQuery)</p>
+<p>React 当中, components 是构建应用核心的组成.<br>component 是各自独立的, 模块化, 在应用当中是动态的 HTML 的表示.<br>component 经常会是其他 React component 的子模块.</p>
+<h3 id="RSS阅读器实现思路"><a href="#RSS阅读器实现思路" class="headerlink" title="RSS阅读器实现思路"></a>RSS阅读器实现思路</h3><p>需要三个东西来构建：</p>
+<ul>
+<li>react.js构建页面布局和数据渲染</li>
+<li><a href="http://goratchet.com" target="_blank" rel="external">Ratchet</a>来实现Mobile风格样式,reatchet是一个支持ios、android风格样式的样式库</li>
+<li>用Yahoo来实现RSS订阅的解析，因为google被墙，所以就只能退而求其次</li>
+</ul>
+<p>最后组合起来构成一个相对完整的Mobile风格的可以阅读的RSS阅读器</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>react部分的主要的代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div></pre></td><td class="code"><pre><div class="line">//顶部导航条</div><div class="line">var Header = React.createClass(&#123;</div><div class="line">    render: function () &#123;</div><div class="line">        return (</div><div class="line">            &lt;header className=&quot;bar bar-nav&quot;&gt;</div><div class="line">                &lt;a href=&quot;#&quot; className=&#123;&quot;icon icon-left-nav pull-left&quot; + (this.props.back===&quot;true&quot;?&quot;&quot;:&quot; hidden&quot;)&#125;&gt;&lt;/a&gt;</div><div class="line">                &lt;h1 className=&quot;title&quot;&gt;&#123;this.props.text&#125;&lt;/h1&gt;</div><div class="line">            &lt;/header&gt;</div><div class="line">            );</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">//滚动列表元素</div><div class="line">var ListItem = React.createClass(&#123;</div><div class="line">    render: function () &#123;</div><div class="line">        return (</div><div class="line">            &lt;li className=&quot;table-view-cell media&quot;&gt;</div><div class="line">                &lt;a href=&#123;this.props.employee.link&#125; target=&quot;_blank&quot; class=&quot;navigate-right&quot;&gt;</div><div class="line">                    &#123;this.props.employee.title&#125;&lt;small&gt; [&#123;this.props.employee.label&#125;]&lt;/small&gt;</div><div class="line">                    &lt;p&gt;&#123;this.props.employee.des&#125;&lt;/p&gt;</div><div class="line">                &lt;/a&gt;</div><div class="line">            &lt;/li&gt;</div><div class="line">            );</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">//滚动列表布局</div><div class="line">var List = React.createClass(&#123;</div><div class="line">    render: function () &#123;</div><div class="line">        var items = this.props.employees.map(function (employee) &#123;</div><div class="line">            return (</div><div class="line">                &lt;ListItem key=&#123;employee.id&#125; employee=&#123;employee&#125; /&gt;</div><div class="line">                );</div><div class="line">        &#125;);</div><div class="line">        return (</div><div class="line">            &lt;ul  className=&quot;table-view&quot;&gt;</div><div class="line">                &#123;items&#125;</div><div class="line">            &lt;/ul&gt;</div><div class="line">            );</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">//首页布局</div><div class="line">var HomePage = React.createClass(&#123;</div><div class="line">    render: function () &#123;</div><div class="line">        return (</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;Header text=&quot;今天极客新闻&quot; back=&quot;false&quot;/&gt;</div><div class="line">                &lt;div className=&quot;content&quot;&gt;</div><div class="line">                    &lt;List employees=&#123;this.props.employees&#125;/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            );</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">//创建App对象</div><div class="line">var App = React.createClass(&#123;</div><div class="line">    //react内部方法，初始化对象变量，返回值可以通过this.state调用</div><div class="line">    getInitialState: function() &#123;</div><div class="line">        return &#123;</div><div class="line">            searchKey: &apos;&apos;,</div><div class="line">            employees: [</div><div class="line">            ],</div><div class="line">            page: null</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    //react内部方法,初始化完成后立即调用一次</div><div class="line">    componentDidMount: function() &#123;</div><div class="line">        var rssArray = [</div><div class="line">            &#123;&quot;title&quot;:&quot;业界资讯&quot;,&quot;des&quot;:&quot;业界资讯&quot;,&quot;url&quot;:&quot;http://cnbeta.feedsportal.com/c/34306/f/624776/index.rss&quot;,&quot;type&quot;:&quot;rss&quot;,&quot;label&quot;:&quot;咨询&quot;&#125;,</div><div class="line">            &#123;&quot;title&quot;:&quot;36氪&quot;,&quot;des&quot;:&quot;36氪&quot;,&quot;url&quot;:&quot;http://www.36kr.com/feed/&quot;,&quot;type&quot;:&quot;rss&quot;,&quot;label&quot;:&quot;创业&quot;&#125;,</div><div class="line">            &#123;&quot;title&quot;:&quot;techcrunch&quot;,&quot;des&quot;:&quot;IT新闻&quot;,&quot;url&quot;:&quot;http://techcrunch.cn/feed/&quot;,&quot;type&quot;:&quot;rss&quot;,&quot;label&quot;:&quot;IT&quot;&#125;,</div><div class="line">            &#123;&quot;title&quot;:&quot;品玩&quot;,&quot;des&quot;:&quot;品味把玩&quot;,&quot;url&quot;:&quot;http://www.pingwest.com/feed/&quot;,&quot;type&quot;:&quot;rss&quot;,&quot;label&quot;:&quot;品玩&quot;&#125;,</div><div class="line">            &#123;&quot;title&quot;:&quot;极客公园&quot;,&quot;des&quot;:&quot;极客早知道&quot;,&quot;url&quot;:&quot;http://www.geekpark.net/rss&quot;,&quot;type&quot;:&quot;rss&quot;,&quot;label&quot;:&quot;极客&quot;&#125;,</div><div class="line">            &#123;&quot;title&quot;:&quot;爱范儿&quot;,&quot;des&quot;:&quot;爱范儿&quot;,&quot;url&quot;:&quot;http://www.ifanr.com/feed&quot;,&quot;type&quot;:&quot;rss&quot;,&quot;label&quot;:&quot;爱范儿&quot;&#125;</div><div class="line">        ];</div><div class="line">        var res = [];</div><div class="line">        for (var i = 0; i &lt; rssArray.length;i++) &#123;</div><div class="line">            var url = rssArray[i].url;</div><div class="line">            // 利用Yahoo的rss解析api获取json返回值</div><div class="line">            var yahoo = &apos;select * from feed where url=&quot;&apos; + encodeURIComponent(url) + &apos;&quot; | truncate(count=10)&apos;;</div><div class="line">            var api = &quot;https://query.yahooapis.com/v1/public/yql?q=&quot; + yahoo + &quot;&amp;format=json&amp;diagnostics=true&amp;num=4&amp;callback=&quot;;</div><div class="line">            var _self = this;</div><div class="line"></div><div class="line">            // Send request</div><div class="line">            (function(label) &#123;</div><div class="line">                $.getJSON(api, function(data)&#123;</div><div class="line">                    if (data) &#123;</div><div class="line">                        var item = data.query.results.item;</div><div class="line">                        for (var j = 0; j &lt; item.length;j++) &#123;</div><div class="line">                            var des = &quot;&quot;;</div><div class="line">                            try &#123;</div><div class="line">                                des = $(item[j].description).text();</div><div class="line">                            &#125; catch (err) &#123;</div><div class="line">                                des = item[j].description;</div><div class="line">                            &#125;</div><div class="line">                            des = des.length &gt; 40 ? des.substring(0,40) + &quot;..&quot; : &quot;&quot;;</div><div class="line">                            des = des.replace(/&lt;strong&gt;/, &apos;&apos;).replace(/&lt;\/strong&gt;/, &apos;&apos;);</div><div class="line">                            var temp = &#123;&quot;title&quot;:item[j].title,&quot;link&quot;:item[j].link,&quot;des&quot;:des,&quot;label&quot;:label&#125;;</div><div class="line">                            res.push(temp);</div><div class="line">                        &#125;</div><div class="line">                    &#125; else &#123;</div><div class="line">                        _self.setState(&#123;&quot;employees&quot;:[]&#125;);</div><div class="line">                    &#125;;</div><div class="line">                    _self.setState(&#123;&quot;employees&quot;:res&#125;);</div><div class="line">                &#125;)</div><div class="line">            &#125;)(rssArray[i].title);</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    render: function() &#123;</div><div class="line">        return &lt;HomePage employees=&#123;this.state.employees&#125;/&gt;;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">//渲染入口</div><div class="line">React.render(&lt;App/&gt;, document.body);</div></pre></td></tr></table></figure>
+<p>###说明<br>可以看到按react的方式，一个列表页面可以分成几个组件：</p>
+<ul>
+<li>Header</li>
+<li>ListItem</li>
+<li>List</li>
+<li>HomePage</li>
+</ul>
+<p>最后通过App对象将这些组件组合在一起,具体app内的方法说明可以查看代码注释.</p>
+<h4 id="在线DEMO-源码下载"><a href="#在线DEMO-源码下载" class="headerlink" title="在线DEMO 源码下载"></a><a href="http://liujinkai.com/demo/rssReader/index.html">在线DEMO</a> <a href="http://7u2qrr.com1.z0.glb.clouddn.com/blog_demo_rssReader.zip" target="_blank" rel="external">源码下载</a></h4>
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/JS/">JS</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/JS/">JS</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
 <section id="ads" style="padding: 10px 25px 10px 25px;min-height:100px;margin-bottom: 20px;
 position: relative;text-align: center;background-color: white;float: left;">
     <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
@@ -124,74 +190,6 @@ position: relative;text-align: center;background-color: white;float: left;">
 
 </section>
 <div style="clear: both;"></div>
-
-
-
-<article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2015-03-19T02:52:15.000Z"><a href="/2015/03/19/react-rss-reader/">Mar 19 2015</a>
-          
-        </time>
-      
-      
-  
-    <h1 class="title">React.js基础学习之实现移动RSS阅读器实例</h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 align="center"><br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_屏幕快照 2015-03-12 下午5.36.56.png" alt="示例"><br></h2>
-
-<h3 id="React-js基础说明"><a href="#React-js基础说明" class="headerlink" title="React.js基础说明"></a>React.js基础说明</h3><p><a href="http://facebook.github.io/react/index.html" target="_blank" rel="external">React</a> 是”一个用于构建用户界面的 JavaScript 类库”.对应到前端框架MVC的话，是V这一层，只专注于视图这一层，也就是对于数据经常变化而影响视图变化的解决方案。</p>
-<p>React 使用的是特殊的 JavaScript 语法, 叫做 JSX.<br>主要的目标是提供一个能表示 React 内部的 DOM 的符合直觉的语法糖,用更简单封装更好的语法来些React.<br>React 关于<a href="http://facebook.github.io/react/docs/jsx-in-depth.html" target="_blank" rel="external">JSX官方教程</a> 上其他的用法也很好懂.<br><a id="more"></a></p>
-<p>最终 JSX 代码会被编译到平常的 JavaScript.</p>
-<p>React 不依赖第三方的类库(比如 jQuery)</p>
-<p>React 当中, components 是构建应用核心的组成.<br>component 是各自独立的, 模块化, 在应用当中是动态的 HTML 的表示.<br>component 经常会是其他 React component 的子模块.</p>
-<h3 id="RSS阅读器实现思路"><a href="#RSS阅读器实现思路" class="headerlink" title="RSS阅读器实现思路"></a>RSS阅读器实现思路</h3><p>需要三个东西来构建：</p>
-<ul>
-<li>react.js构建页面布局和数据渲染</li>
-<li><a href="http://goratchet.com" target="_blank" rel="external">Ratchet</a>来实现Mobile风格样式,reatchet是一个支持ios、android风格样式的样式库</li>
-<li>用Yahoo来实现RSS订阅的解析，因为google被墙，所以就只能退而求其次</li>
-</ul>
-<p>最后组合起来构成一个相对完整的Mobile风格的可以阅读的RSS阅读器</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>react部分的主要的代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div></pre></td><td class="code"><pre><div class="line">//顶部导航条</div><div class="line">var Header = React.createClass(&#123;</div><div class="line">    render: function () &#123;</div><div class="line">        return (</div><div class="line">            &lt;header className=&quot;bar bar-nav&quot;&gt;</div><div class="line">                &lt;a href=&quot;#&quot; className=&#123;&quot;icon icon-left-nav pull-left&quot; + (this.props.back===&quot;true&quot;?&quot;&quot;:&quot; hidden&quot;)&#125;&gt;&lt;/a&gt;</div><div class="line">                &lt;h1 className=&quot;title&quot;&gt;&#123;this.props.text&#125;&lt;/h1&gt;</div><div class="line">            &lt;/header&gt;</div><div class="line">            );</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">//滚动列表元素</div><div class="line">var ListItem = React.createClass(&#123;</div><div class="line">    render: function () &#123;</div><div class="line">        return (</div><div class="line">            &lt;li className=&quot;table-view-cell media&quot;&gt;</div><div class="line">                &lt;a href=&#123;this.props.employee.link&#125; target=&quot;_blank&quot; class=&quot;navigate-right&quot;&gt;</div><div class="line">                    &#123;this.props.employee.title&#125;&lt;small&gt; [&#123;this.props.employee.label&#125;]&lt;/small&gt;</div><div class="line">                    &lt;p&gt;&#123;this.props.employee.des&#125;&lt;/p&gt;</div><div class="line">                &lt;/a&gt;</div><div class="line">            &lt;/li&gt;</div><div class="line">            );</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">//滚动列表布局</div><div class="line">var List = React.createClass(&#123;</div><div class="line">    render: function () &#123;</div><div class="line">        var items = this.props.employees.map(function (employee) &#123;</div><div class="line">            return (</div><div class="line">                &lt;ListItem key=&#123;employee.id&#125; employee=&#123;employee&#125; /&gt;</div><div class="line">                );</div><div class="line">        &#125;);</div><div class="line">        return (</div><div class="line">            &lt;ul  className=&quot;table-view&quot;&gt;</div><div class="line">                &#123;items&#125;</div><div class="line">            &lt;/ul&gt;</div><div class="line">            );</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">//首页布局</div><div class="line">var HomePage = React.createClass(&#123;</div><div class="line">    render: function () &#123;</div><div class="line">        return (</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;Header text=&quot;今天极客新闻&quot; back=&quot;false&quot;/&gt;</div><div class="line">                &lt;div className=&quot;content&quot;&gt;</div><div class="line">                    &lt;List employees=&#123;this.props.employees&#125;/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            );</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">//创建App对象</div><div class="line">var App = React.createClass(&#123;</div><div class="line">    //react内部方法，初始化对象变量，返回值可以通过this.state调用</div><div class="line">    getInitialState: function() &#123;</div><div class="line">        return &#123;</div><div class="line">            searchKey: &apos;&apos;,</div><div class="line">            employees: [</div><div class="line">            ],</div><div class="line">            page: null</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    //react内部方法,初始化完成后立即调用一次</div><div class="line">    componentDidMount: function() &#123;</div><div class="line">        var rssArray = [</div><div class="line">            &#123;&quot;title&quot;:&quot;业界资讯&quot;,&quot;des&quot;:&quot;业界资讯&quot;,&quot;url&quot;:&quot;http://cnbeta.feedsportal.com/c/34306/f/624776/index.rss&quot;,&quot;type&quot;:&quot;rss&quot;,&quot;label&quot;:&quot;咨询&quot;&#125;,</div><div class="line">            &#123;&quot;title&quot;:&quot;36氪&quot;,&quot;des&quot;:&quot;36氪&quot;,&quot;url&quot;:&quot;http://www.36kr.com/feed/&quot;,&quot;type&quot;:&quot;rss&quot;,&quot;label&quot;:&quot;创业&quot;&#125;,</div><div class="line">            &#123;&quot;title&quot;:&quot;techcrunch&quot;,&quot;des&quot;:&quot;IT新闻&quot;,&quot;url&quot;:&quot;http://techcrunch.cn/feed/&quot;,&quot;type&quot;:&quot;rss&quot;,&quot;label&quot;:&quot;IT&quot;&#125;,</div><div class="line">            &#123;&quot;title&quot;:&quot;品玩&quot;,&quot;des&quot;:&quot;品味把玩&quot;,&quot;url&quot;:&quot;http://www.pingwest.com/feed/&quot;,&quot;type&quot;:&quot;rss&quot;,&quot;label&quot;:&quot;品玩&quot;&#125;,</div><div class="line">            &#123;&quot;title&quot;:&quot;极客公园&quot;,&quot;des&quot;:&quot;极客早知道&quot;,&quot;url&quot;:&quot;http://www.geekpark.net/rss&quot;,&quot;type&quot;:&quot;rss&quot;,&quot;label&quot;:&quot;极客&quot;&#125;,</div><div class="line">            &#123;&quot;title&quot;:&quot;爱范儿&quot;,&quot;des&quot;:&quot;爱范儿&quot;,&quot;url&quot;:&quot;http://www.ifanr.com/feed&quot;,&quot;type&quot;:&quot;rss&quot;,&quot;label&quot;:&quot;爱范儿&quot;&#125;</div><div class="line">        ];</div><div class="line">        var res = [];</div><div class="line">        for (var i = 0; i &lt; rssArray.length;i++) &#123;</div><div class="line">            var url = rssArray[i].url;</div><div class="line">            // 利用Yahoo的rss解析api获取json返回值</div><div class="line">            var yahoo = &apos;select * from feed where url=&quot;&apos; + encodeURIComponent(url) + &apos;&quot; | truncate(count=10)&apos;;</div><div class="line">            var api = &quot;https://query.yahooapis.com/v1/public/yql?q=&quot; + yahoo + &quot;&amp;format=json&amp;diagnostics=true&amp;num=4&amp;callback=&quot;;</div><div class="line">            var _self = this;</div><div class="line"></div><div class="line">            // Send request</div><div class="line">            (function(label) &#123;</div><div class="line">                $.getJSON(api, function(data)&#123;</div><div class="line">                    if (data) &#123;</div><div class="line">                        var item = data.query.results.item;</div><div class="line">                        for (var j = 0; j &lt; item.length;j++) &#123;</div><div class="line">                            var des = &quot;&quot;;</div><div class="line">                            try &#123;</div><div class="line">                                des = $(item[j].description).text();</div><div class="line">                            &#125; catch (err) &#123;</div><div class="line">                                des = item[j].description;</div><div class="line">                            &#125;</div><div class="line">                            des = des.length &gt; 40 ? des.substring(0,40) + &quot;..&quot; : &quot;&quot;;</div><div class="line">                            des = des.replace(/&lt;strong&gt;/, &apos;&apos;).replace(/&lt;\/strong&gt;/, &apos;&apos;);</div><div class="line">                            var temp = &#123;&quot;title&quot;:item[j].title,&quot;link&quot;:item[j].link,&quot;des&quot;:des,&quot;label&quot;:label&#125;;</div><div class="line">                            res.push(temp);</div><div class="line">                        &#125;</div><div class="line">                    &#125; else &#123;</div><div class="line">                        _self.setState(&#123;&quot;employees&quot;:[]&#125;);</div><div class="line">                    &#125;;</div><div class="line">                    _self.setState(&#123;&quot;employees&quot;:res&#125;);</div><div class="line">                &#125;)</div><div class="line">            &#125;)(rssArray[i].title);</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    render: function() &#123;</div><div class="line">        return &lt;HomePage employees=&#123;this.state.employees&#125;/&gt;;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">//渲染入口</div><div class="line">React.render(&lt;App/&gt;, document.body);</div></pre></td></tr></table></figure>
-<p>###说明<br>可以看到按react的方式，一个列表页面可以分成几个组件：</p>
-<ul>
-<li>Header</li>
-<li>ListItem</li>
-<li>List</li>
-<li>HomePage</li>
-</ul>
-<p>最后通过App对象将这些组件组合在一起,具体app内的方法说明可以查看代码注释.</p>
-<h4 id="在线DEMO-源码下载"><a href="#在线DEMO-源码下载" class="headerlink" title="在线DEMO 源码下载"></a><a href="http://liujinkai.com/demo/rssReader/index.html">在线DEMO</a> <a href="http://7u2qrr.com1.z0.glb.clouddn.com/blog_demo_rssReader.zip" target="_blank" rel="external">源码下载</a></h4>
-      
-    </div>
-    <footer>
-      
-        
-  
-  <div class="categories">
-    <a href="/categories/JS/">JS</a>
-  </div>
-
-        
-  
-  <div class="tags">
-    <a href="/tags/JS/">JS</a>
-  </div>
-
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
 
 
 
