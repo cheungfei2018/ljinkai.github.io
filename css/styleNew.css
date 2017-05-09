@@ -264,9 +264,10 @@ article header .icon:before {
 article header time {
     color: #999;
     font: 0.9em "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
-    margin-bottom: 5px;
-    display: block;
+    margin-top: 5px;
+    display: inline-block;
     line-height: 1;
+
 }
 article header .title {
     font-weight: normal;
@@ -281,6 +282,7 @@ article header .title a:hover {
 article .entry {
     text-align: justify;
     line-height: 1.6;
+    overflow-wrap: break-word;
 }
 article .entry p,
 article .entry blockquote,
@@ -837,3 +839,22 @@ table tr th {
     border: 1px solid #009688;
     background-color: #009688;
 }
+
+
+/** qrcode **/
+.article_head_extend {position: relative;}
+.qrcode_con {
+    display: inline-block;
+    text-align: right;
+    margin-left: 15px;
+    position: relative;
+}
+
+.qrcode_img {display: none;
+    padding: 10px;
+    background-color: white;
+    border: 1px lightgrey solid;
+}
+.qrcode_text {color: #258fb8;cursor: pointer;}
+.qrcode_con:hover .qrcode_img{display: block;position: absolute;left: 0px;top: 30px;}
+.qrcode_con:hover .qrcode_text {color: black;}
