@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>HTML5 | ljinkai</title>
-  <meta name="author" content="ljinkai">
+  <title>HTML5 | 凯凯刘</title>
+  <meta name="author" content="凯凯刘">
   
   <meta name="description" content="书写一些web前端技术相关的文章，还有个人思考方面的文章，以及一些好玩有趣的内容，努力工作，拼命生活。">
   
   
-  <meta name="keywords" content="ljinkai,前端开发,博客,javascript,css3,html5,node.js,">
+  <meta name="keywords" content="凯凯刘,ljinkai,前端开发,博客,javascript,css3,html5,node.js,">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  <meta property="og:site_name" content="ljinkai"/>
+  <meta property="og:site_name" content="凯凯刘"/>
 
   
     <meta property="og:image" content="undefined"/>
@@ -24,7 +24,7 @@
 
   <link href="/favicon.png" rel="icon">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="alternate" href="/atom.xml" title="ljinkai" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="凯凯刘" type="application/atom+xml">
   <link rel="stylesheet" href="/css/styleNew.css?x=1" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <script src="/js/qrcode.min.js"></script>
@@ -33,19 +33,31 @@
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">ljinkai</a></h1>
+  <h1><a href="/">凯凯刘</a></h1>
   <h2><a href="/">Brave &amp; Discover &amp; Move</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
   <ul>
     
-      <li><a href="/">Home</a></li>
+      <li><a href="/">首页</a></li>
     
-      <li><a href="/2015/03/13/DemoHub/">Demo</a></li>
+      <li><a href="/categories/Web技术/">Web技术</a></li>
     
-      <li><a href="/2015/03/01/link-friends/">Link</a></li>
+      <li><a href="/categories/Web%E5%B7%A5%E5%85%B7/">Web工具</a></li>
     
-      <li><a href="/2015/02/28/new/">About</a></li>
+      <li><a href="/categories/%E8%AE%A4%E7%9F%A5/">认知</a></li>
+    
+      <li><a href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li>
+    
+      <li><a href="/categories/%E6%B5%81%E9%87%8F/">流量</a></li>
+    
+      <li><a href="/categories/%E5%8F%98%E7%8E%B0/">变现</a></li>
+    
+      <li><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a></li>
+    
+      <li><a href="/2015/03/01/link-friends/">友链</a></li>
+    
+      <li><a href="/2015/02/28/new/">关于</a></li>
     
   </ul>
   <div class="clearfix"></div>
@@ -63,24 +75,28 @@
     <header>
       
   
-    <h1 class="title"><a href="/2016/09/05/chrome-extention-learning/">Chrome的扩展插件</a></h1>
+    <h1 class="title"><a href="/2017/01/23/web-develop-efficient-tools-online/">在线web前端工具-效率提升</a></h1>
   
 
       
         <div class="icon"></div>
         <div class="article_head_extend">
-          <time datetime="2016-09-05T04:52:34.000Z"><a href="/2016/09/05/chrome-extention-learning/">Sep 5 2016</a>
+          <time datetime="2017-01-23T09:59:03.000Z"><a href="/2017/01/23/web-develop-efficient-tools-online/">Jan 23 2017</a>
+            
+            <div style="height: 18px;line-height: 18px;min-width: 36px;padding:0px 6px;display: inline-block;margin-left: 10px;text-align: center;border: 1px solid #9e9e9e;color: #8c8c8c;border-radius: 10px;">
+              原创
+            </div>
             
           </time>
           <div class="qrcode_con">
             <div class="qrcode_text">扫描二维码</div>
-            <div id="Mon Sep 05 2016 12:52:34 GMT+0800 (CST)" class="qrcode_img"></div>
+            <div id="Mon Jan 23 2017 17:59:03 GMT+0800 (CST)" class="qrcode_img"></div>
             <script>
-              var qrcode = new QRCode(document.getElementById("Mon Sep 05 2016 12:52:34 GMT+0800 (CST)"), {
+              var qrcode = new QRCode(document.getElementById("Mon Jan 23 2017 17:59:03 GMT+0800 (CST)"), {
                 width : 100,
                 height : 100
               });
-              qrcode.makeCode("http://liujinkai.com//2016/09/05/chrome-extention-learning/");
+              qrcode.makeCode("http://liujinkai.com//2017/01/23/web-develop-efficient-tools-online/?utm_medium=blog&utm_source=qrcode");
             </script>
           </div>
         </div>
@@ -89,28 +105,18 @@
     </header>
     <div class="entry">
       
-        <h2 id="用处"><a href="#用处" class="headerlink" title="用处"></a>用处</h2><p>本质就是web页面，调用web上的原有api还有浏览器提供的一些接口(像右键菜单、桌面通知、覆盖页面等等)。做一些工具性的插件。</p>
-<h3 id="manifest-json"><a href="#manifest-json" class="headerlink" title="manifest.json"></a><strong>manifest.json</strong></h3><pre><code>{
-    &quot;name&quot;: &quot;My Extension&quot;,
-    &quot;version&quot;: &quot;2.1&quot;,
-    &quot;description&quot;: &quot;Gets information from Google.&quot;,
-    &quot;icons&quot;: { &quot;128&quot;: &quot;icon_128.png&quot; },
-    &quot;background_page&quot;: &quot;bg.html&quot;,
-    &quot;permissions&quot;: [&quot;http://*.google.com/&quot;, &quot;https://        *.google.com/&quot;],
-    &quot;browser_action&quot;: {
-        &quot;default_title&quot;: &quot;&quot;,
-        &quot;default_icon&quot;: &quot;icon_19.png&quot;,
-        &quot;default_popup&quot;: &quot;popup.html&quot;
-    }
-}
-</code></pre><p><a href="http://open.chrome.360.cn/extension_dev/manifest.html">参数说明</a><br>
+        <h2 id="在线图片压缩"><a href="#在线图片压缩" class="headerlink" title="在线图片压缩"></a>在线图片压缩</h2><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-01-22-WechatIMG5.jpeg?imageView2/2/w/600" alt=""></p>
+<blockquote>
+<p>site：<a href="https://tinypng.com">tinypng</a></p>
+</blockquote>
+<p>在保证显示质量的前提下，大幅压缩图片大小。普通的5M以下的图片压缩都是免费的，前端开发中的绝大部分图片都可以满足。如果很大图片的压缩需要付费。</p>
       
     </div>
     <footer>
       
         
           <div class="alignleft">
-            <a href="/2016/09/05/chrome-extention-learning/#more" class="more-link">Read More</a>
+            <a href="/2017/01/23/web-develop-efficient-tools-online/#more" class="more-link">Read More</a>
           </div>
         
         
@@ -121,6 +127,346 @@
 </article>
 
 
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title"><a href="/2016/04/27/progressive-web-app/">Web新技术：PWA-Progressive Web App</a></h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2016-04-27T14:27:34.000Z"><a href="/2016/04/27/progressive-web-app/">Apr 27 2016</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Wed Apr 27 2016 22:27:34 GMT+0800 (CST)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Wed Apr 27 2016 22:27:34 GMT+0800 (CST)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2016/04/27/progressive-web-app/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div class="entry">
+      
+        <h2 id="什么是Progressive-Web-App"><a href="#什么是Progressive-Web-App" class="headerlink" title="什么是Progressive Web App?"></a>什么是Progressive Web App?</h2><p>Progressive Web App是一个利用现代浏览器的能力来达到类似APP的用户体验的技术，由Google实现，让浏览器打开的网址像APP一样运行在手机上。让Web App和Native App之间的差距更小。</p>
+<p>概览特性：</p>
+<ul>
+<li>添加到屏幕</li>
+<li>从屏幕点击启动</li>
+<li>加载屏</li>
+<li>支持离线应用</li>
+<li>支持Push Notification</li>
+</ul>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/pwa-general-0-@1x.jpg?imageView2/2/w/600" alt=""></p>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2016/04/27/progressive-web-app/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title"><a href="/2015/08/21/can-i-use/">怎么通过命令来检查浏览器的兼容性(译)</a></h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2015-08-21T06:42:07.000Z"><a href="/2015/08/21/can-i-use/">Aug 21 2015</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Fri Aug 21 2015 14:42:07 GMT+0800 (CST)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Fri Aug 21 2015 14:42:07 GMT+0800 (CST)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2015/08/21/can-i-use/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div class="entry">
+      
+        <p>传统上构建网站涉及很多的技术来解决浏览器的兼容性问题，有一些属性很特殊，甚至根本没有。web开发者会经常登录<a href="http://caniuse.com/">CanIUse</a>上去查看某个功能是否被各浏览器支持。</p>
+<p>CanIUse 保持和采用标准的HTML,CSS,SVG，依据W3C的规范，和每个浏览器的现存的bug相连接。举个栗子，我们可以从下面的图中看到Edge,Firefox,Opera Mini并不支持<a href="https://www.webkit.org/blog/182/css-reflections/">CSS Reflection</a>,有的浏览器已经支持，需要增加前缀以标明。</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_11.png" alt=""></p>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/08/21/can-i-use/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title"><a href="/2015/08/13/http-cache/">HTTP 缓存</a></h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2015-08-13T08:33:37.000Z"><a href="/2015/08/13/http-cache/">Aug 13 2015</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Thu Aug 13 2015 16:33:37 GMT+0800 (CST)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Thu Aug 13 2015 16:33:37 GMT+0800 (CST)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2015/08/13/http-cache/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div class="entry">
+      
+        <p>通过网络获取内容既缓慢，成本又高：大的响应需要在客户端和服务器之间进行多次往返通信，这拖延了浏览器可以使用和处理内容的时间，同时也增加了访问者的数据成本。因此，缓存和重用以前获取的资源的能力成为优化性能很关键的一个方面。</p>
+<h3 id="在这篇指南中"><a href="#在这篇指南中" class="headerlink" title="在这篇指南中"></a>在这篇指南中</h3><ul>
+<li>使用 ETag 验证缓存的响应</li>
+<li>Cache-Control</li>
+<li>定义最优 Cache-Control 策略</li>
+<li>废弃和更新已缓存的响应</li>
+<li>缓存检查表</li>
+</ul>
+<p>好消息是每个浏览器都实现了 HTTP 缓存！ 我们所要做的就是，确保每个服务器响应都提供正确的 HTTP 头指令，以指导浏览器何时可以缓存响应以及可以缓存多久。</p>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/08/13/http-cache/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title"><a href="/2015/07/24/mobile-develope-standard/">移动开发规范概述</a></h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2015-07-24T10:46:16.000Z"><a href="/2015/07/24/mobile-develope-standard/">Jul 24 2015</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Fri Jul 24 2015 18:46:16 GMT+0800 (CST)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Fri Jul 24 2015 18:46:16 GMT+0800 (CST)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2015/07/24/mobile-develope-standard/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div class="entry">
+      
+        <p>以下规范建议，均是<code>Alloyteam</code>在日常开发过程中总结提炼出的经验，规范具备较好的项目实践，强烈推荐使用</p>
+<h2 id="字体设置"><a href="#字体设置" class="headerlink" title="字体设置"></a>字体设置</h2><p>使用无衬线字体</p>
+<pre><code>body {
+    font-family: &quot;Helvetica Neue&quot;, Helvetica, STHeiTi, sans-serif;
+}
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/07/24/mobile-develope-standard/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title"><a href="/2015/06/26/mobile-eating-the-world/">移动正在吞噬这个世界</a></h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2015-06-26T02:25:47.000Z"><a href="/2015/06/26/mobile-eating-the-world/">Jun 26 2015</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Fri Jun 26 2015 10:25:47 GMT+0800 (CST)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Fri Jun 26 2015 10:25:47 GMT+0800 (CST)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2015/06/26/mobile-eating-the-world/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div class="entry">
+      
+        <p>这个演讲稿和视频解释了手机正在急速发展，而占据整个世界的解释。</p>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/qiAtR7qjmJw7Y5" width="650" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe><br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/06/26/mobile-eating-the-world/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title"><a href="/2015/06/06/mobile-web-skill/">移动端web开发技巧</a></h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2015-06-06T10:14:18.000Z"><a href="/2015/06/06/mobile-web-skill/">Jun 6 2015</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Sat Jun 06 2015 18:14:18 GMT+0800 (CST)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Sat Jun 06 2015 18:14:18 GMT+0800 (CST)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2015/06/06/mobile-web-skill/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div class="entry">
+      
+        <p><em><code>这是一个最好的时代，因为我们站在潮流中；但也是一个最坏的时代，因为我们站在潮头上。</code></em></p>
+<h3 id="META相关"><a href="#META相关" class="headerlink" title="META相关"></a>META相关</h3><h4 id="1-添加到主屏后的标题（IOS）"><a href="#1-添加到主屏后的标题（IOS）" class="headerlink" title="1. 添加到主屏后的标题（IOS）"></a>1. 添加到主屏后的标题（IOS）</h4><pre><code>&lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;标题&quot;&gt; 
+</code></pre><h4 id="2-启用-WebApp-全屏模式（IOS）"><a href="#2-启用-WebApp-全屏模式（IOS）" class="headerlink" title="2. 启用 WebApp 全屏模式（IOS）"></a>2. 启用 WebApp 全屏模式（IOS）</h4><p>当网站添加到主屏幕后再点击进行启动时，可隐藏地址栏（从浏览器跳转或输入链接进入并没有此效果）</p>
+<pre><code>&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt; 
+&lt;meta name=&quot;apple-touch-fullscreen&quot; content=&quot;yes&quot; /&gt; 
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/06/06/mobile-web-skill/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
 
 
 
@@ -148,7 +494,7 @@
                 width : 100,
                 height : 100
               });
-              qrcode.makeCode("http://liujinkai.com//2015/06/03/picture-tag/");
+              qrcode.makeCode("http://liujinkai.com//2015/06/03/picture-tag/?utm_medium=blog&utm_source=qrcode");
             </script>
           </div>
         </div>
@@ -177,8 +523,6 @@
 
 
 
-
-
   
     <article class="post">
   
@@ -186,24 +530,28 @@
     <header>
       
   
-    <h1 class="title"><a href="/2015/05/25/chrome-notification/">Chrome Notification</a></h1>
+    <h1 class="title"><a href="/2015/03/30/front-end-developer-chance/">前端开发机遇</a></h1>
   
 
       
         <div class="icon"></div>
         <div class="article_head_extend">
-          <time datetime="2015-05-25T06:26:10.000Z"><a href="/2015/05/25/chrome-notification/">May 25 2015</a>
+          <time datetime="2015-03-30T03:26:05.000Z"><a href="/2015/03/30/front-end-developer-chance/">Mar 30 2015</a>
+            
+            <div style="height: 18px;line-height: 18px;min-width: 36px;padding:0px 6px;display: inline-block;margin-left: 10px;text-align: center;border: 1px solid #9e9e9e;color: #8c8c8c;border-radius: 10px;">
+              原创
+            </div>
             
           </time>
           <div class="qrcode_con">
             <div class="qrcode_text">扫描二维码</div>
-            <div id="Mon May 25 2015 14:26:10 GMT+0800 (CST)" class="qrcode_img"></div>
+            <div id="Mon Mar 30 2015 11:26:05 GMT+0800 (CST)" class="qrcode_img"></div>
             <script>
-              var qrcode = new QRCode(document.getElementById("Mon May 25 2015 14:26:10 GMT+0800 (CST)"), {
+              var qrcode = new QRCode(document.getElementById("Mon Mar 30 2015 11:26:05 GMT+0800 (CST)"), {
                 width : 100,
                 height : 100
               });
-              qrcode.makeCode("http://liujinkai.com//2015/05/25/chrome-notification/");
+              qrcode.makeCode("http://liujinkai.com//2015/03/30/front-end-developer-chance/?utm_medium=blog&utm_source=qrcode");
             </script>
           </div>
         </div>
@@ -212,14 +560,15 @@
     </header>
     <div class="entry">
       
-        <p>Chrome在42+的版本上支持了Notification的功能，这个功能不是基于chrome插件和chrome扩展的，而是基于chrome的<br>service work功能，一个运行在chrome后台的服务，再利用chrome的Google Cloud Messaging for Android、 Cloud Messaging for Chrome<br>提供的服务来实现，用网页也能提醒到用户的通知功能, 也支持android系统的手机，需要安装chrome42+。<br>
+        <p>对HTML 5这项诞生于2008年的标准来说，其正在经历最好的时代。</p>
+<p>随着万维网联盟（W3C）宣布规范制作完成，越来越多的互联网企业将目光头向了HTML5，这一被苹果前CEO乔布斯所热捧的标准。<br>游戏开发者则更早地进入这一领域。有研究报告显示，2014年第四季度以来，有60%的游戏行业从业者已经投入或准备投入开发HTML5为基础的游戏，并对其前景表示乐观的态度。<br>
       
     </div>
     <footer>
       
         
           <div class="alignleft">
-            <a href="/2015/05/25/chrome-notification/#more" class="more-link">Read More</a>
+            <a href="/2015/03/30/front-end-developer-chance/#more" class="more-link">Read More</a>
           </div>
         
         
@@ -231,8 +580,6 @@
 
 
 
-
-
   
     <article class="post">
   
@@ -240,24 +587,24 @@
     <header>
       
   
-    <h1 class="title"><a href="/2015/03/09/HTML5学习路线图/">HTML5学习路线图</a></h1>
+    <h1 class="title"><a href="/2015/03/13/DemoHub/">HTML5在线Demo汇总</a></h1>
   
 
       
         <div class="icon"></div>
         <div class="article_head_extend">
-          <time datetime="2015-03-09T10:05:52.000Z"><a href="/2015/03/09/HTML5学习路线图/">Mar 9 2015</a>
+          <time datetime="2015-03-13T02:00:01.000Z"><a href="/2015/03/13/DemoHub/">Mar 13 2015</a>
             
           </time>
           <div class="qrcode_con">
             <div class="qrcode_text">扫描二维码</div>
-            <div id="Mon Mar 09 2015 18:05:52 GMT+0800 (CST)" class="qrcode_img"></div>
+            <div id="Fri Mar 13 2015 10:00:01 GMT+0800 (CST)" class="qrcode_img"></div>
             <script>
-              var qrcode = new QRCode(document.getElementById("Mon Mar 09 2015 18:05:52 GMT+0800 (CST)"), {
+              var qrcode = new QRCode(document.getElementById("Fri Mar 13 2015 10:00:01 GMT+0800 (CST)"), {
                 width : 100,
                 height : 100
               });
-              qrcode.makeCode("http://liujinkai.com//2015/03/09/HTML5学习路线图/");
+              qrcode.makeCode("http://liujinkai.com//2015/03/13/DemoHub/?utm_medium=blog&utm_source=qrcode");
             </script>
           </div>
         </div>
@@ -266,20 +613,20 @@
     </header>
     <div class="entry">
       
-        <h3 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h3><ul>
-<li><a href="http://www.w3school.com.cn/html5/index.asp">html5教程</a></li>
+        <ul>
+<li><a href="/demo/html5-svg-cuckoo/index.html">布谷鸟时钟</a> <small>SVG、CSS3实现</small></li>
+<li><a href="/demo/animatetree/index.html">动画树-SVG</a> <small>SVG、CSS3实现</small></li>
+<li><a href="/demo/luoye/index.html">落叶动画-CSS3、JS</a> <small>JS、CSS3实现</small></li>
+<li><a href="/demo/firework/index.html">放烟花</a> <small>JS、CSS3</small></li>
+<li><a href="/demo/rssReader/index.html">今天极客新闻-WebAPP</a> <small>React.js、jqueryFeed、RSS</small></li>
+<li><a href="/demo/happyvalentinesday/index.html">你是那么与众不同-CSS3、JS</a> <small>JS、CSS3实现</small></li>
+<li><a href="/demo/spring/index.html">春在动，心已远</a> <small>春在动-心已远</small></li>
 </ul>
-<h3 id="提高"><a href="#提高" class="headerlink" title="提高"></a>提高</h3><ul>
-<li><a href="http://book.douban.com/subject/5402708/">《HTML5高级程序设计》</a> <small><a href="http://pan.baidu.com/s/1i3Dw03j">pdf下载</a></small></li>
-<li><a href="https://github.com/remy/html5demos">HTML5 app demos</a>
+
       
     </div>
     <footer>
       
-        
-          <div class="alignleft">
-            <a href="/2015/03/09/HTML5学习路线图/#more" class="more-link">Read More</a>
-          </div>
         
         
       
@@ -287,8 +634,6 @@
     </footer>
   </div>
 </article>
-
-
 
 
 
@@ -297,14 +642,16 @@
   <nav id="pagination">
   
   
+    <a href="/tags/HTML5/page/2/" class="alignright next">下一页</a>
+  
   <div class="clearfix"></div>
 </nav>
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="widget tag">
-  <h3 class="title">About</h3>
+  <h3 class="title">关于</h3>
   <ul class="entry">
-    <li>前端工程师一枚，这是我个人的Blog。记录一些web端的技术、发现，和对生活、人生的思考。</li>
+    <li>前端工程师，这是我个人的Blog。记录一些web端的技术、发现，和对生活、人生的思考。欢迎大家留言交流:)</li>
     <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">凯凯刘</a></li>
     <li>微信公众号：<br>[前端开发知识] - HTML5、CSS3、JS、Node.js</li>
     <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/h5_qrcode_for_gh_0fd5deb0e08b_430.jpg' width='160px' style="margin-left: -10px;display: block;"></li>
@@ -328,30 +675,22 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Categories</h3>
+  <h3 class="title">分类</h3>
   <ul class="entry">
   
-    <li><a href="/categories/CSS3/">CSS3</a><small>1</small></li>
+    <li><a href="/categories/Web工具/">Web工具</a><small>8</small></li>
   
-    <li><a href="/categories/Demo/">Demo</a><small>1</small></li>
+    <li><a href="/categories/Web技术/">Web技术</a><small>45</small></li>
   
-    <li><a href="/categories/Discover/">Discover</a><small>28</small></li>
+    <li><a href="/categories/变现/">变现</a><small>1</small></li>
   
-    <li><a href="/categories/HTML5/">HTML5</a><small>4</small></li>
+    <li><a href="/categories/流量/">流量</a><small>2</small></li>
   
-    <li><a href="/categories/Info/">Info</a><small>1</small></li>
+    <li><a href="/categories/生活/">生活</a><small>6</small></li>
   
-    <li><a href="/categories/JS/">JS</a><small>7</small></li>
+    <li><a href="/categories/认知/">认知</a><small>7</small></li>
   
-    <li><a href="/categories/JavaScript/">JavaScript</a><small>1</small></li>
-  
-    <li><a href="/categories/Summary/">Summary</a><small>4</small></li>
-  
-    <li><a href="/categories/Think/">Think</a><small>5</small></li>
-  
-    <li><a href="/categories/Tools/">Tools</a><small>4</small></li>
-  
-    <li><a href="/categories/木工/">木工</a><small>2</small></li>
+    <li><a href="/categories/读书/">读书</a><small>2</small></li>
   
   </ul>
 </div>
@@ -359,44 +698,60 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Tags</h3>
+  <h3 class="title">标签</h3>
   <ul class="entry">
   
-    <li><a href="/tags/API/">API</a><small>1</small></li>
+    <li><a href="/tags/CSS3/">CSS3</a><small>4</small></li>
   
-    <li><a href="/tags/CSS3/">CSS3</a><small>1</small></li>
+    <li><a href="/tags/Chrome/">Chrome</a><small>6</small></li>
   
-    <li><a href="/tags/Demo/">Demo</a><small>1</small></li>
+    <li><a href="/tags/Facebook/">Facebook</a><small>1</small></li>
   
-    <li><a href="/tags/Discover/">Discover</a><small>22</small></li>
+    <li><a href="/tags/Google/">Google</a><small>6</small></li>
   
-    <li><a href="/tags/HTML5/">HTML5</a><small>4</small></li>
+    <li><a href="/tags/HTML5/">HTML5</a><small>14</small></li>
   
-    <li><a href="/tags/JS/">JS</a><small>8</small></li>
+    <li><a href="/tags/HTTPS/">HTTPS</a><small>2</small></li>
   
-    <li><a href="/tags/JavaScript/">JavaScript</a><small>1</small></li>
+    <li><a href="/tags/Hybrid-App/">Hybrid App</a><small>2</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>9</small></li>
   
     <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
   
-    <li><a href="/tags/Node-js/">Node.js</a><small>1</small></li>
+    <li><a href="/tags/Node-js/">Node.js</a><small>2</small></li>
   
-    <li><a href="/tags/Tools/">Tools</a><small>7</small></li>
+    <li><a href="/tags/PWA/">PWA</a><small>1</small></li>
   
-    <li><a href="/tags/个人/">个人</a><small>1</small></li>
+    <li><a href="/tags/github/">github</a><small>1</small></li>
   
-    <li><a href="/tags/前端/">前端</a><small>16</small></li>
+    <li><a href="/tags/临界知识/">临界知识</a><small>1</small></li>
   
-    <li><a href="/tags/变现/">变现</a><small>1</small></li>
+    <li><a href="/tags/人工智能/">人工智能</a><small>1</small></li>
   
-    <li><a href="/tags/思考/">思考</a><small>4</small></li>
+    <li><a href="/tags/健康/">健康</a><small>2</small></li>
   
-    <li><a href="/tags/木工/">木工</a><small>2</small></li>
+    <li><a href="/tags/增长/">增长</a><small>2</small></li>
   
-    <li><a href="/tags/汇总/">汇总</a><small>1</small></li>
+    <li><a href="/tags/工具/">工具</a><small>2</small></li>
   
-    <li><a href="/tags/认知/">认知</a><small>1</small></li>
+    <li><a href="/tags/插件/">插件</a><small>2</small></li>
   
-    <li><a href="/tags/设计/">设计</a><small>1</small></li>
+    <li><a href="/tags/方法论/">方法论</a><small>8</small></li>
+  
+    <li><a href="/tags/木匠/">木匠</a><small>2</small></li>
+  
+    <li><a href="/tags/框架/">框架</a><small>6</small></li>
+  
+    <li><a href="/tags/概念/">概念</a><small>1</small></li>
+  
+    <li><a href="/tags/游戏/">游戏</a><small>2</small></li>
+  
+    <li><a href="/tags/资源/">资源</a><small>6</small></li>
+  
+    <li><a href="/tags/路线图/">路线图</a><small>2</small></li>
+  
+    <li><a href="/tags/面试题/">面试题</a><small>1</small></li>
   
   </ul>
 </div>
@@ -406,7 +761,7 @@
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2015-2017 ljinkai
+  &copy; 2015-2017 凯凯刘
   
   &nbsp;&nbsp;&nbsp;&nbsp;Powered by <a href="http://hexo.io/">Hexo</a>
 </div>
