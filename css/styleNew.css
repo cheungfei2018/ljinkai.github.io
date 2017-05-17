@@ -175,6 +175,7 @@ article .post-content {
     article .post-content {
         padding-left: 20px;
     }
+
 }
 article .gallery {
     overflow: hidden;
@@ -858,3 +859,12 @@ table tr th {
 .qrcode_text {color: #258fb8;cursor: pointer;}
 .qrcode_con:hover .qrcode_img{display: block;position: absolute;left: 0px;top: 30px;}
 .qrcode_con:hover .qrcode_text {color: black;}
+
+/** links **/
+.links {background-color: white;padding: 15px 15px 15px 80px;margin-bottom:20px;line-height: 22px;}
+.links_title {font-size: 20px;width: 100%;margin-bottom: 12px;}
+@media screen and (max-width: 600px) {
+    .links {
+        padding-left: 20px;
+    }
+}
