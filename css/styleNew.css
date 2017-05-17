@@ -868,3 +868,9 @@ table tr th {
         padding-left: 20px;
     }
 }
+/** about **/
+.about_profile {text-align: center;}
+.about_img {width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    margin-top: 15px;}
