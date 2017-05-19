@@ -874,3 +874,5 @@ table tr th {
     height: 60px;
     border-radius: 60px;
     margin-top: 15px;}
+/** hot **/
+.hot li {margin-bottom: 6px;}
