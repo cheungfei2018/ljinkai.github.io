@@ -876,3 +876,10 @@ table tr th {
     margin-top: 15px;}
 /** hot **/
 .hot li {margin-bottom: 6px;}
+/** ads **/
+.article_ads {width: 850px;}
+@media screen and (max-width: 600px) {
+    .article_ads {
+        width: 300px;
+    }
+}
