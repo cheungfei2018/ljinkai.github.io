@@ -878,8 +878,10 @@ table tr th {
 .hot li {margin-bottom: 6px;}
 /** ads **/
 .article_ads {width: 850px;}
+.nav_zhibo:hover {text-decoration: underline;}
 @media screen and (max-width: 600px) {
     .article_ads {
         width: 300px;
     }
+    .nav_zhibo {top: 180px !important;}
 }
