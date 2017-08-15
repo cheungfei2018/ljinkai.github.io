@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>OSGI插件开发示例 - 凯凯刘</title>
+  <title>依据GAFATA理论获利64%, GAFATA是什么? - 凯凯刘</title>
   <meta name="author" content="凯凯刘">
   
-  <meta name="description" content="OSGi（Open Service Gateway Initiative）有双重含义。 一方面它指OSGi Alliance组织；另一方面指该组织制定的一个基于Java语言的服务（业务）规范——OSGi服务平台（Service Platform）">
+  <meta name="description" content="总体来说，按照GAFATA的理论来操作，“它们很可能会在未来的相当长一段时间里，成长性极强”">
   
-  <meta name="keywords" content="OSGI,插件开发,osgi框架,osgi是什么,osgi教程,osgi入门,eclipse">
+  <meta name="keywords" content="GAFATA,李笑来,美股,买美股,国内买美股,买美股APP,美豹金融,美股实操">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="OSGI插件开发示例"/>
+  <meta property="og:title" content="依据GAFATA理论获利64%, GAFATA是什么?"/>
   <meta property="og:site_name" content="凯凯刘"/>
 
   
@@ -90,24 +90,28 @@
     <header>
       
   
-    <h1 class="title">OSGI插件开发示例</h1>
+    <h1 class="title">依据GAFATA理论获利64%, GAFATA是什么?</h1>
   
 
       
         <div class="icon"></div>
         <div class="article_head_extend">
-          <time datetime="2015-03-03T08:51:32.000Z"><a href="/2015/03/03/OSGI插件开发示例/">Mar 3 2015</a>
+          <time datetime="2017-08-15T00:38:58.000Z"><a href="/2017/08/15/what-is-gafata/">Aug 15 2017</a>
+            
+            <div style="height: 18px;line-height: 18px;min-width: 36px;padding:0px 6px;display: inline-block;margin-left: 10px;text-align: center;border: 1px solid #9e9e9e;color: #8c8c8c;border-radius: 10px;">
+              原创
+            </div>
             
           </time>
           <div class="qrcode_con">
             <div class="qrcode_text">扫描二维码</div>
-            <div id="Tue Mar 03 2015 16:51:32 GMT+0800 (CST)" class="qrcode_img"></div>
+            <div id="Tue Aug 15 2017 08:38:58 GMT+0800 (CST)" class="qrcode_img"></div>
             <script>
-              var qrcode = new QRCode(document.getElementById("Tue Mar 03 2015 16:51:32 GMT+0800 (CST)"), {
+              var qrcode = new QRCode(document.getElementById("Tue Aug 15 2017 08:38:58 GMT+0800 (CST)"), {
                 width : 100,
                 height : 100
               });
-              qrcode.makeCode("http://liujinkai.com//2015/03/03/OSGI插件开发示例/?utm_medium=blog&utm_source=qrcode");
+              qrcode.makeCode("http://liujinkai.com//2017/08/15/what-is-gafata/?utm_medium=blog&utm_source=qrcode");
             </script>
           </div>
         </div>
@@ -117,96 +121,31 @@
     <div></div>
     <div class="entry">
       
-        <h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><ul>
-<li>eclipse  开发工具</li>
-<li><p><a href="http://mirror.olnevhost.net/pub/apache//felix/org.apache.felix.main.distribution-4.6.0.tar.gz" target="_blank" rel="external">Felix Framework</a> <code>OSGI插件运行环境</code><br>  安装运行步骤:</p>
-<ul>
-<li><p>下载felix</p>
-<a id="more"></a>
-<p>  wget <a href="http://mirror.olnevhost.net/pub/apache//felix/" target="_blank" rel="external">http://mirror.olnevhost.net/pub/apache//felix/</a>        org.apache.felix.main.distribution-4.6.0.tar.gz</p>
-</li>
-<li><p>解压文件</p>
-<p>  tar -zxvf org.apache.felix.main.distribution-4.6.0.tar.gz</p>
-</li>
-<li><p>运行felix</p>
-<p>  cd felix-framework-4.6.0<br>  java -jar bin/felix.jar</p>
-<p><strong>显示: “Welcome to Apache Felix Gogo” 表明安装成功.</strong><br>至此,环境搭建完毕.</p>
-<h3 id="开发步骤"><a href="#开发步骤" class="headerlink" title="开发步骤"></a>开发步骤</h3></li>
-</ul>
-</li>
-</ul>
-<ol>
-<li><p>创建plugin project</p>
-<pre><code>![image](http://7wy48o.com1.z0.glb.clouddn.com/plugin-create.png-blogpic)
-创建成功后，会生成如下目录：
-
-    SampleOne                    //工程名
-        ├── META-INF
-        │   └── MANIFEST.MF    //plugin配置文件，负现包目录的导入与导出，以及第三方jar的加载
-        ├── bin                    //编译目录
-        │   └── sampleone
-        │       └── Activator.class
-        ├── build.properties
-        └── src                    //源代码目录
-                 └── sampleone
-                └── Activator.java
-</code></pre></li>
-<li><p>编辑源码及配置文件：</p>
-<ul>
-<li><p>编辑<code>Activator.java</code><br>此文件为插件装载启动或停止时，调用对应的start及stop方法。可以start方法中执行一些服务注册或初始化工作，以及在stop方法中。</p>
-<pre><code>public class Activator implements BundleActivator {
-
-    private static BundleContext context;
-
-    static BundleContext getContext() {
-        return context;
-    }
-</code></pre></li>
-</ul>
-</li>
-</ol>
-<pre><code>    public void start(BundleContext bundleContext) throws Exception {
-        Activator.context = bundleContext;
-
-        while(true){
-            System.out.println(&quot;current time:&quot;+new Date());
-
-            Thread.sleep(1000);
-        }
-    }
-
-
-    public void stop(BundleContext bundleContext) throws Exception {
-        Activator.context = null;
-    }
-}
-</code></pre><ul>
-<li><p>编辑配置文件</p>
-<pre><code>  Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: SampleOne
-Bundle-SymbolicName: SampleOne
-Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: sampleone.Activator    //注册初始化加载类，需要扩展实现BundleActivator.非必须配置
-Import-Package: org.osgi.framework;version=&quot;1.3.0&quot;
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-</code></pre></li>
-</ul>
-<ol>
-<li>打包</li>
-</ol>
-<ul>
-<li>选择打包的工程，右击export</li>
-<li>在弹出的窗口，选中要打包的工程，填写jar包所要生成的目录</li>
-<li><p>点击finish,打包完成.<br>注：<code>打包过程，会在选择目录中生成一个plugins文件夹，而生成的jar就在此文件夹中。</code></p>
-<h3 id="示例运行"><a href="#示例运行" class="headerlink" title="示例运行"></a>示例运行</h3><ul>
-<li>将上述生成的jar复制到felix-framework-4.6.0/bundle文件夹中</li>
-<li><p>运行osgi容器</p>
-<pre><code>java -jar bin/felix.jar
-</code></pre></li>
-</ul>
-</li>
-</ul>
+        <p>先放一张图，这是我在美豹金融上2017年8月9日的实际截图</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-08-12-135452.jpg?imageView2/2/w/400" alt=""></p>
+<p>是不是不知所以？没关系，下面我就细细道来。<br><a id="more"></a></p>
+<h1 id="先说说标题中的GAFATA-什么是GAFATA"><a href="#先说说标题中的GAFATA-什么是GAFATA" class="headerlink" title="先说说标题中的GAFATA, 什么是GAFATA?"></a>先说说标题中的GAFATA, 什么是GAFATA?</h1><p>李笑来在得到上的文章“你真的没有机会吗？”里首次提到了GAFATA的理论。</p>
+<blockquote>
+<p>Facebook 在 2016 年 6 月底，月活用户数量达到了 16.5 亿——这几乎是全球人口总数的 1/5 以上。在地球的另外一端，微信，在 2016 年 6 月底，月活用户数量达到了 8.03 亿，这接近是全中国人口总数的 3/5。<br>互联网迅猛发展的这些年里，有若干家公司已然成了巨头，我随便给它们杜撰了一个缩写——GAFATA（上网搜索了一下，Google 竟然有个字体的名字叫做“Gafata”……）：<br>Google<br>Amazon<br>Facebook<br>Apple<br>Tencent<br>Alibaba<br>打个比方，如果，互联网是个“终于建成了的新世界”的话，那么GAFATA就是这个“新世界”里的“房地产巨头公司们”，它们提供一切互联网上商业运转的基础设施与服务，包括数据、云、计算、支付、交易、社交……所以，它们中的每一个都已经彻底占据了“垄断性优势”。于是，在相当长一段时间里，它们的赚钱能力就是最强，弄不好越来越强……<br>那，这个事实和“机会”，尤其是“财富机会”，有什么关系呢？<br>首先，这些公司的股票都已经在金融市场上公开交易，也就是说，无论是谁，都可以直接去购买（投资）这些公司的股票；其次，这些公司的股票都是“大盘股”，所以，流动性极强，若是你购买了它们的股票，实际上任何时候都可以“变现”；更重要的是，它们很可能会在未来的相当长一段时间里，成长性极强——至于理由么，上面已经尽量完整说明了。<br>然而，投资 GAFATA的相对风险较低也确实是一个清楚的结论——并且，持有周期越长，系统风险可能越低。<br>但关于上面那句话里的“每个人”我几乎是确定的——只不过，我相信绝大多数人即便是有人这么告诉他了，他们依然会因为这样那样的原因，或者即便是事后想起来自己都不理解的原因，对这个“机会”视而不见，听而不闻，等反应过来的时候，只好慨叹一下：“唉，都是命啊！”</p>
+</blockquote>
+<h1 id="64-增长过程"><a href="#64-增长过程" class="headerlink" title="64%增长过程"></a>64%增长过程</h1><p>上面引用的这段文字写于2017年1月2日。当我看到这篇文章之后，现在回想起来，当时也并不确定是否可行，只是觉得可以试试。然后自己花了点时间，研究了下怎么买美股，但是如果用国外的券商可能到开户差不多得几个月时间，还需要英文资料等的邮寄，甚是麻烦。其它的券商的交易费又很高。最后发现了美豹金融，有手机端APP，2015年04月，美豹金融团队创立，算是一个比较新的公司。它能满足我现在的基本需求，手机端操作、支付宝微信转入、可以买美股、港股, 0佣金。获得投资人薛蛮子数千万投资。当然它也不是一点钱不赚，靠转入转出资金收取固定费率，相对而言，比较合适我。</p>
+<p>然后我在2017年1月27购买了腾讯的100股票，当时一股是199港币左右。<br><strong>在2017年3月26日，增长比例为12.41%</strong></p>
+<blockquote>
+<p>以下均为我手机APP的历史截图存档</p>
+</blockquote>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-03-26-WechatIMG20.jpeg?imageView2/2/w/400" alt=""></p>
+<p><strong>2017年5月25日, 增长比例为27.09%</strong><br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-05-11-WechatIMG1.jpeg?imageView2/2/w/400" alt=""></p>
+<p><strong>2017年6月28日，增长了比例为43.76%</strong><br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-06-27-WechatIMG23.jpeg?imageView2/2/w/400" alt=""></p>
+<p><strong>2017年8月9日, 增长比例为64.82%</strong><br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-08-12-135452.jpg?imageView2/2/w/400" alt=""></p>
+<p>上面就是我购买腾讯股票的简单过程，7个月左右的时间可以看到大幅的增长, 中间过程也有价格降低，不过大方向上是持续增长的。你说这仅仅是一只股票，那其它的呢？好，我统计了一下2017年1月6日到2017年8月4日这段时间内GAFATA的股票涨幅比。<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-08-12-gafata-rate.png?imageView2/2/w/600" alt=""></p>
+<p>可以明显的看到，在我统计的这个区间里，阿里巴巴是涨幅最高的，超过了腾讯。但毫无疑问，如果你买了GAFATA的股票，在7个月的时间里，加起来的平均涨幅是38%左右。年收益是多少呢? 也许到年底我可以再写一篇文章来统计下。</p>
+<p>总体来说，按照GAFATA的理论来操作，“它们很可能会在未来的相当长一段时间里，成长性极强”。但还是那句话，股票有风险，投资需谨慎。如果有这方面考虑的朋友可以亲身体验下，美豹金融有推荐奖励机制，可以使用下面我的推荐，我可以得到一些奖励，同时新用户开户有100元开户金。可以扫描下方二维码(或者注册时填写邀请码：U25653)</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-08-12-144455.jpg?imageView2/2/w/400" alt=""></p>
+<p><strong>且慢，你以为这样就完了吗？当然不是，下面的才是最重要的的。</strong></p>
+<h1 id="归纳法和演绎法"><a href="#归纳法和演绎法" class="headerlink" title="归纳法和演绎法"></a>归纳法和演绎法</h1><p>今天这篇文章其实最主要的目的不是说GAFATA的，起那样一个标题其实就是标题党，让你进来看我下面的<strong>最重要的内容</strong>，如果我写一个这样的标题“演绎法的思维逻辑”，估计你直接会选择性忽略，如果你有更好的标题，欢迎评论下方留言。上面的所写只是一个例子，你有没有想过，上面这样的GAFATA理论是一种什么样的思维方式？我们一般人为什么就想不到呢？</p>
+<p>人类习惯了一种思维方式，就是根据以往的经验来决定当下的事情，还有预测未来的事情。比如：人们认为太阳以前从东方升起，现在从东方升起，那么明天太阳也会从东方升起。看到了亚洲的天鹅是白色的，美洲的天鹅是白色，那么全世界的天鹅都是白色的。这就是我们一直起来的思维方式，总结式，经验式的。大部分人买股票也是这样，前些天一直在涨，今天也在涨，那么将来也是涨的，赶紧买，结果将来是亏的一塌糊涂。这种思维方式的问题是抓不住表象下面的那个规律，你觉得一会向东是对的，一会向西也是对的，好像都可以，又好像都不可以。我们将这种的思维方式叫归纳法。</p>
+<p>还有另外一种思考方式，就是演绎法。根据公理，原则来决定未来。牛顿的f=ma将力和质量、速度整合起来，可以解释宏观的所有现象，我们目力所及的这些运动的物体，目力所不及的天体运动，都可以用一个数学公式来解释。多么美妙的一件事。这跟归纳法是截然不同的思考方式，<strong>演绎法是找到事物底层的那个规律，然后按照这个规律去决定未来</strong>。上面GAFATA就是先有理论再按理论来行事，并达到预期效果的实际例子。依此演绎法的思考方式来思考你所做的事，会有“底”很多，这就是我们不再找东找西的根本所在。</p>
+<p>演绎法是更科学的来对待我们面前这个世界的方式，转变思维方式不容易，但是一旦你尝试几次，并刻意练习，体会到它的美妙，你会进化成一个新的物种，看到不一样的世界，到那时，很明显的，你不会再人云亦云，随波逐流了。</p>
 
       
     </div>
@@ -215,13 +154,13 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
         
   
   <div class="categories">
-    <a href="/categories/Web技术/">Web技术</a>
+    <a href="/categories/变现/">变现</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/HTML5/">HTML5</a>
+    <a href="/tags/方法论/">方法论</a>
   </div>
 
         
@@ -232,6 +171,19 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 </article>
 
 
+    
+    <div class="links">
+        <div class="links_title">推荐阅读</div>
+    
+            <li ><a href="/2017/08/09/first-half-year-2017/" title="致已经逝去的2017上半年">致已经逝去的2017上半年</a></li>
+       
+            <li ><a href="/2017/08/05/knowledge-list-july/" title="成为巴菲特、第一性原理、区块链 - 7月份知识清单">成为巴菲特、第一性原理、区块链 - 7月份知识清单</a></li>
+       
+            <li ><a href="/2017/07/22/find-niche-market/" title="雷达探测，4种方式找到你的小众市场">雷达探测，4种方式找到你的小众市场</a></li>
+       
+            <li ><a href="/2017/07/04/scott-cheap-flights/" title="Scott&#39;s Cheap Flights案例 - 月收入美元320k">Scott&#39;s Cheap Flights案例 - 月收入美元320k</a></li>
+       
+    </div>
     
 
 
