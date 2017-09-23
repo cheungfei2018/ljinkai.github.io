@@ -879,9 +879,28 @@ table tr th {
 /** ads **/
 .article_ads {width: 850px;}
 .nav_zhibo:hover {text-decoration: underline;}
+
+.menu_rss {
+    padding:9px;
+    background:url('/rss_64px.png') no-repeat center;
+    background-size: 14px;
+}
+.menu_rss:hover {opacity: 0.8;}
+.menu_rss_bottom {
+    padding: 0px 9px;
+    background-size: 12px;
+    background-position: center 1px;
+}
+.ads_banner {width: 100%;margin-bottom: 20px;}
 @media screen and (max-width: 600px) {
     .article_ads {
         width: 300px;
     }
     .nav_zhibo {top: 180px !important;}
+
+    #header {margin-bottom: 30px;}
+
+    #header #main-nav {padding-top: 30px;}
+
+    #header #main-nav ul li {margin-right: 30px;margin-left: 0px;}
 }
