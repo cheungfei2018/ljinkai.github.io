@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>凯凯刘</title>
+  <icon>https://www.gravatar.com/avatar/677eb62e5e10128b74345ac17857a09d</icon>
+  <subtitle>web前端、认知升级、技术变现</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://liujinkai.com/"/>
+  <updated>2017-09-20T12:33:44.000Z</updated>
+  <id>http://liujinkai.com/</id>
+  
+  <author>
+    <name>凯凯刘</name>
+    <email>ljinkai@126.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你我的痛 - 时间碎片化学习问题</title>
+    <link href="http://liujinkai.com/2017/09/20/fragment-time/"/>
+    <id>http://liujinkai.com/2017/09/20/fragment-time/</id>
+    <published>2017-09-20T12:23:53.000Z</published>
+    <updated>2017-09-20T12:33:44.000Z</updated>
+    
+    <summary type="html">
+    
+      你也有类似的碎片化时间学习的焦虑症状出现。在这个信息像蝗虫泛滥的时代里，很难不被各种信息裹挟。裹挟不可怕，可怕的是不自知。幸运的是，一把小刀就可以解决问题，下面就讲讲我用的这把小刀。
+    
+    </summary>
+    
+      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
+    
+    
+      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>隐藏的维度 、多元思维模型、如何白手起家赚到100万？ - 8月份知识清单</title>
+    <link href="http://liujinkai.com/2017/09/12/knowledge-list-august/"/>
+    <id>http://liujinkai.com/2017/09/12/knowledge-list-august/</id>
+    <published>2017-09-12T00:27:32.000Z</published>
+    <updated>2017-09-12T00:33:03.000Z</updated>
+    
+    <summary type="html">
+    
+      分形理论(Fractal Theory)是当今十分风靡和活跃的新理论、新学科。分形的概念是美籍数学家本华·曼德博（法语：Benoit B. Mandelbrot）首先提出的。
+    
+    </summary>
+    
+      <category term="清单" scheme="http://liujinkai.com/categories/%E6%B8%85%E5%8D%95/"/>
+    
+    
+      <category term="资源" scheme="http://liujinkai.com/tags/%E8%B5%84%E6%BA%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>区块链币种简介(一)</title>
+    <link href="http://liujinkai.com/2017/08/30/blockchain-cion-intro-one/"/>
+    <id>http://liujinkai.com/2017/08/30/blockchain-cion-intro-one/</id>
+    <published>2017-08-30T11:47:19.000Z</published>
+    <updated>2017-08-30T11:51:46.000Z</updated>
+    
+    <summary type="html">
+    
+      此篇为币种简介的第一部分，对于区块链交易所常见的币种，ZEC、1SŦ、GNT、ANS等等，我们并不太了解相关的币种到底背后是做什么的？每个币种之间有什么区别？这次简介能帮助你扫盲这些币种。
+    
+    </summary>
+    
+      <category term="区块链" scheme="http://liujinkai.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="比特币" scheme="http://liujinkai.com/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>比特币的挖矿与共识</title>
+    <link href="http://liujinkai.com/2017/08/16/bitcoin-mining-consensus/"/>
+    <id>http://liujinkai.com/2017/08/16/bitcoin-mining-consensus/</id>
+    <published>2017-08-16T14:22:15.000Z</published>
+    <updated>2017-08-16T14:38:25.000Z</updated>
+    
+    <summary type="html">
+    
+      很多人知道比特币，区块链。但是整个网络是怎么保证这个去中心化的？可能很多人并不了解，或者说想了解但是不知道从何入手。其实从挖矿这个角度去理解区块链会更能抓住重点，了解了挖矿，你就了解了区块链，了解了去中心化
+    
+    </summary>
+    
+      <category term="区块链" scheme="http://liujinkai.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="比特币" scheme="http://liujinkai.com/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>依据GAFATA理论获利64%, GAFATA是什么?</title>
+    <link href="http://liujinkai.com/2017/08/15/what-is-gafata/"/>
+    <id>http://liujinkai.com/2017/08/15/what-is-gafata/</id>
+    <published>2017-08-15T00:38:58.000Z</published>
+    <updated>2017-08-15T00:48:45.000Z</updated>
+    
+    <summary type="html">
+    
+      总体来说，按照GAFATA的理论来操作，“它们很可能会在未来的相当长一段时间里，成长性极强”
+    
+    </summary>
+    
+      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
+    
+    
+      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>致已经逝去的2017上半年</title>
+    <link href="http://liujinkai.com/2017/08/09/first-half-year-2017/"/>
+    <id>http://liujinkai.com/2017/08/09/first-half-year-2017/</id>
+    <published>2017-08-09T00:32:57.000Z</published>
+    <updated>2017-08-09T00:52:35.000Z</updated>
+    
+    <summary type="html">
+    
+      混沌大学的一次演讲，李善友的“第一性原理”。2天的课程，以演绎法的方式来思考，对思考任何事情都是一个世界观的改变
+    
+    </summary>
+    
+      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
+    
+    
+      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>成为巴菲特、第一性原理、区块链 - 7月份知识清单</title>
+    <link href="http://liujinkai.com/2017/08/05/knowledge-list-july/"/>
+    <id>http://liujinkai.com/2017/08/05/knowledge-list-july/</id>
+    <published>2017-08-05T04:17:02.000Z</published>
+    <updated>2017-08-09T00:43:52.000Z</updated>
+    
+    <summary type="html">
+    
+      混沌大学的一次演讲，李善友的“第一性原理”。2天的课程，以演绎法的方式来思考，对思考任何事情都是一个世界观的改变
+    
+    </summary>
+    
+      <category term="清单" scheme="http://liujinkai.com/categories/%E6%B8%85%E5%8D%95/"/>
+    
+    
+      <category term="资源" scheme="http://liujinkai.com/tags/%E8%B5%84%E6%BA%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>雷达探测，4种方式找到你的小众市场</title>
+    <link href="http://liujinkai.com/2017/07/22/find-niche-market/"/>
+    <id>http://liujinkai.com/2017/07/22/find-niche-market/</id>
+    <published>2017-07-22T03:27:35.000Z</published>
+    <updated>2017-08-09T00:43:17.000Z</updated>
+    
+    <summary type="html">
+    
+      发现需求而不是创造需求，这一点很重要。有一双善于发现需求的眼睛，找到它，可以说就成功了一半。创造需求是大公司的事，个人微型创业初期，一定要发现需求。
+    
+    </summary>
+    
+      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
+    
+    
+      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+      <category term="案例" scheme="http://liujinkai.com/tags/%E6%A1%88%E4%BE%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小密圈助手 - 一个Chrome插件的产生过程</title>
+    <link href="http://liujinkai.com/2017/07/14/xiaomiqian-assistant-create/"/>
+    <id>http://liujinkai.com/2017/07/14/xiaomiqian-assistant-create/</id>
+    <published>2017-07-14T00:17:58.000Z</published>
+    <updated>2017-08-09T00:44:07.000Z</updated>
+    
+    <summary type="html">
+    
+      我花了2个晚上做了一个“小密圈助手”的Chrome插件。这个事虽然不大，但是我觉得是个比较好的小例子，来完整的介绍一下把知识转化为行动的过程
+    
+    </summary>
+    
+      <category term="Web工具" scheme="http://liujinkai.com/categories/Web%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="插件" scheme="http://liujinkai.com/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Scott&#39;s Cheap Flights案例 - 月收入$320k</title>
+    <link href="http://liujinkai.com/2017/07/04/scott-cheap-flights/"/>
+    <id>http://liujinkai.com/2017/07/04/scott-cheap-flights/</id>
+    <published>2017-07-04T14:12:38.000Z</published>
+    <updated>2017-07-04T23:29:28.000Z</updated>
+    
+    <summary type="html">
+    
+      从一个边缘的小项目变成了一个爆发增长的项目，提供特价机票信息服务，有超过60万的订阅用户，月收入$320k, 每年超过4百万的收入
+    
+    </summary>
+    
+      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
+    
+    
+      <category term="增长" scheme="http://liujinkai.com/tags/%E5%A2%9E%E9%95%BF/"/>
+    
+      <category term="案例" scheme="http://liujinkai.com/tags/%E6%A1%88%E4%BE%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小密圈助手 - Chrome插件</title>
+    <link href="http://liujinkai.com/2017/07/04/xiaomiquan-assistant/"/>
+    <id>http://liujinkai.com/2017/07/04/xiaomiquan-assistant/</id>
+    <published>2017-07-03T23:56:33.000Z</published>
+    <updated>2017-07-04T13:58:07.000Z</updated>
+    
+    <summary type="html">
+    
+      chrome插件，帮助PC web端用户浏览小密圈时，快速浏览文中链接，并可进入相应主题
+    
+    </summary>
+    
+      <category term="Web工具" scheme="http://liujinkai.com/categories/Web%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="插件" scheme="http://liujinkai.com/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《知道做到》- 知道那么多，为什么做不到？</title>
+    <link href="http://liujinkai.com/2017/06/15/know-can-do/"/>
+    <id>http://liujinkai.com/2017/06/15/know-can-do/</id>
+    <published>2017-06-15T00:12:38.000Z</published>
+    <updated>2017-06-15T00:27:54.000Z</updated>
+    
+    <summary type="html">
+    
+      随着科技的发展，我们接触的信息越来越多，但由信息转化成有价值的行为改变却越来越少。就像一满杯水，一直在往里面倒水，但溢出的也越多。如何解决这个问题？这本书《知道做到》给了我们清晰的答案，希望能给在信息泛滥时代有些不知所措的我们以指引。
+    
+    </summary>
+    
+      <category term="读书" scheme="http://liujinkai.com/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么HTML会将“chucknorris”认成红色？</title>
+    <link href="http://liujinkai.com/2017/06/08/html-chucknorris/"/>
+    <id>http://liujinkai.com/2017/06/08/html-chucknorris/</id>
+    <published>2017-06-07T23:54:59.000Z</published>
+    <updated>2017-06-15T00:18:05.000Z</updated>
+    
+    <summary type="html">
+    
+      在Stackoverflow上有个5441标星推荐的问题，很有意思。这个问题创建于2011年，几年来一直被人们讨论着。
+    
+    </summary>
+    
+      <category term="Web技术" scheme="http://liujinkai.com/categories/Web%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="HTML5" scheme="http://liujinkai.com/tags/HTML5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南</title>
+    <link href="http://liujinkai.com/2017/06/01/start-small-stay-small/"/>
+    <id>http://liujinkai.com/2017/06/01/start-small-stay-small/</id>
+    <published>2017-05-31T22:38:38.000Z</published>
+    <updated>2017-06-15T00:16:40.000Z</updated>
+    
+    <summary type="html">
+    
+      如果你是个人开发者或者是几个人的小团队尝试做一些项目，这本书能帮助你发现一个好的想法，验证市场可行性等。目标读者比较适合开发者。
+    
+    </summary>
+    
+      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
+    
+    
+      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+      <category term="增长" scheme="http://liujinkai.com/tags/%E5%A2%9E%E9%95%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>运营界大牛的10年经验干货，拨开运营的谜团</title>
+    <link href="http://liujinkai.com/2017/05/18/operation-method/"/>
+    <id>http://liujinkai.com/2017/05/18/operation-method/</id>
+    <published>2017-05-18T00:21:48.000Z</published>
+    <updated>2017-08-05T04:30:02.000Z</updated>
+    
+    <summary type="html">
+    
+      但随着互联网的发展，对运营是什么？如何做运营？产生了很大的兴趣。一是感觉到公司里运营的份量越来越重要，二是现在自媒体时代里，如何让自己个人的产品，一个博客、一个公众号、甚至是一篇文章触达到更多的用户，运营至关重要。
+    
+    </summary>
+    
+      <category term="读书" scheme="http://liujinkai.com/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+      <category term="增长" scheme="http://liujinkai.com/tags/%E5%A2%9E%E9%95%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3个帮助你思考的临界知识 - 黄金思维圈、系统思考、安全空间</title>
+    <link href="http://liujinkai.com/2017/05/03/3-critical-knowledges/"/>
+    <id>http://liujinkai.com/2017/05/03/3-critical-knowledges/</id>
+    <published>2017-05-03T02:26:05.000Z</published>
+    <updated>2017-05-18T00:51:18.000Z</updated>
+    
+    <summary type="html">
+    
+      《好好学习 - 个人知识管理精进指南》成甲著 这本书主要讲了“临界知识”这个概念，所谓“临界知识”，便是我们经过深度思考后发现的具有普遍指导意义的规律或者定律。3个重要临界知识：黄金思维圈、系统思考、安全空间。
+    
+    </summary>
+    
+      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
+    
+    
+      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+      <category term="临界知识" scheme="http://liujinkai.com/tags/%E4%B8%B4%E7%95%8C%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>10个基于JavaScript的机器学习案例(译)</title>
+    <link href="http://liujinkai.com/2017/04/30/10-machine-learning-project-of-javascript/"/>
+    <id>http://liujinkai.com/2017/04/30/10-machine-learning-project-of-javascript/</id>
+    <published>2017-04-30T04:09:33.000Z</published>
+    <updated>2017-05-17T00:35:00.000Z</updated>
+    
+    <summary type="html">
+    
+      在过去的几年里，机器学习的开发库增长很快，可用性也变得越来越可靠，而且没有减慢的趋势。一直以来Python作为机器学习的主力语言，现在神经网络可以应用任何语言了，包括JavaScript!
+    
+    </summary>
+    
+      <category term="Web技术" scheme="http://liujinkai.com/categories/Web%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="人工智能" scheme="http://liujinkai.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>刻意练习</title>
+    <link href="http://liujinkai.com/2017/04/19/deliberate-practice/"/>
+    <id>http://liujinkai.com/2017/04/19/deliberate-practice/</id>
+    <published>2017-04-19T07:30:05.000Z</published>
+    <updated>2017-05-24T10:02:09.000Z</updated>
+    
+    <summary type="html">
+    
+      本文是我根据《刻意练习》这本书整理的读书笔记，此书解答了我几个疑问？ 为什么到某个阶段会感觉停止不前？高手和低手差别在哪？怎样才能让自己更进一步？
+    
+    </summary>
+    
+      <category term="读书" scheme="http://liujinkai.com/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>想法不值钱</title>
+    <link href="http://liujinkai.com/2017/04/12/idea-can-not-make-money/"/>
+    <id>http://liujinkai.com/2017/04/12/idea-can-not-make-money/</id>
+    <published>2017-04-12T01:15:59.000Z</published>
+    <updated>2017-05-24T10:05:17.000Z</updated>
+    
+    <summary type="html">
+    
+      维基百科 - 想法（Idea），又称意念、点子，是思考在心灵上的产物，包括对事物的看法和意见，以及解决问题的办法。想法可以是形象化的影像，也可以是抽象化的概念。
+    
+    </summary>
+    
+      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
+    
+    
+      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据分析驱动增长</title>
+    <link href="http://liujinkai.com/2017/04/04/engagement-data-growth/"/>
+    <id>http://liujinkai.com/2017/04/04/engagement-data-growth/</id>
+    <published>2017-04-04T03:54:26.000Z</published>
+    <updated>2017-05-24T10:02:38.000Z</updated>
+    
+    <summary type="html">
+    
+      本文是我个人根据混沌研习社演讲视频整理的读书笔记，对很多的互联网公司来说，数据一直很重要，但是并没有一个可供参考的方法论，这篇会从数据驱动的必要性、LinkedIn数据驱动的底层逻辑、需要关注的指标、如何理解变现等等方面做详细的阐述。以下为笔记内容。
+    
+    </summary>
+    
+      <category term="流量" scheme="http://liujinkai.com/categories/%E6%B5%81%E9%87%8F/"/>
+    
+    
+      <category term="增长" scheme="http://liujinkai.com/tags/%E5%A2%9E%E9%95%BF/"/>
+    
+  </entry>
+  
+</feed>
