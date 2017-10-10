@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2017-09-20T12:33:44.000Z</updated>
+  <updated>2017-10-10T15:22:03.000Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>9月份知识清单(2017) - JavaScript也能创建区块链应用、古腾堡计划、电子居民、EOS需要设置原生公链</title>
+    <link href="http://liujinkai.com/2017/10/10/2017-09-zhishiqingdan/"/>
+    <id>http://liujinkai.com/2017/10/10/2017-09-zhishiqingdan/</id>
+    <published>2017-10-10T15:06:03.000Z</published>
+    <updated>2017-10-10T15:22:03.000Z</updated>
+    
+    <summary type="html">
+    
+      Lisk是去中心化的区块链平台;古腾堡工程(Project Gutenberg，常简写作PG)由志愿者参与，致力于文本著作的电子化、归档以及发布;小马宋写的一本书《朋友圈的尖子生》,书中人物有，李倩、马佳佳、李叫兽、脱不花、冯鑫等11个人的介绍
+    
+    </summary>
+    
+      <category term="清单" scheme="http://liujinkai.com/categories/%E6%B8%85%E5%8D%95/"/>
+    
+    
+      <category term="资源" scheme="http://liujinkai.com/tags/%E8%B5%84%E6%BA%90/"/>
+    
+  </entry>
   
   <entry>
     <title>你我的痛 - 时间碎片化学习问题</title>
@@ -407,26 +427,6 @@
     
     
       <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据分析驱动增长</title>
-    <link href="http://liujinkai.com/2017/04/04/engagement-data-growth/"/>
-    <id>http://liujinkai.com/2017/04/04/engagement-data-growth/</id>
-    <published>2017-04-04T03:54:26.000Z</published>
-    <updated>2017-05-24T10:02:38.000Z</updated>
-    
-    <summary type="html">
-    
-      本文是我个人根据混沌研习社演讲视频整理的读书笔记，对很多的互联网公司来说，数据一直很重要，但是并没有一个可供参考的方法论，这篇会从数据驱动的必要性、LinkedIn数据驱动的底层逻辑、需要关注的指标、如何理解变现等等方面做详细的阐述。以下为笔记内容。
-    
-    </summary>
-    
-      <category term="流量" scheme="http://liujinkai.com/categories/%E6%B5%81%E9%87%8F/"/>
-    
-    
-      <category term="增长" scheme="http://liujinkai.com/tags/%E5%A2%9E%E9%95%BF/"/>
     
   </entry>
   
