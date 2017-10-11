@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2017-10-10T15:34:02.000Z</updated>
+  <updated>2017-10-11T12:19:35.000Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>淘宝购物省钱小妙招 - 返佣金</title>
+    <link href="http://liujinkai.com/2017/10/11/taobao-yongjin/"/>
+    <id>http://liujinkai.com/2017/10/11/taobao-yongjin/</id>
+    <published>2017-10-11T12:10:05.000Z</published>
+    <updated>2017-10-11T12:19:35.000Z</updated>
+    
+    <summary type="html">
+    
+      问了下周围的同事是否知道淘宝上买东西是可以返现的？10个里面有9个竟然不知道，让我大吃一惊。因为我从淘宝买东西返现已经好几年的时间了，这种很简单的事情，这么多人都不知道，真是天理难容啊。顿时感觉，有义务给大家普及一下，于是就有了这篇返现小知识的文章，给大家提个醒，省点钱
+    
+    </summary>
+    
+      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
+    
+    
+      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>9月份知识清单(2017) - JavaScript也能创建区块链应用、古腾堡计划、电子居民、EOS需要设置原生公链</title>
@@ -404,26 +424,6 @@
     </summary>
     
       <category term="读书" scheme="http://liujinkai.com/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>想法不值钱</title>
-    <link href="http://liujinkai.com/2017/04/12/idea-can-not-make-money/"/>
-    <id>http://liujinkai.com/2017/04/12/idea-can-not-make-money/</id>
-    <published>2017-04-12T01:15:59.000Z</published>
-    <updated>2017-05-24T10:05:17.000Z</updated>
-    
-    <summary type="html">
-    
-      维基百科 - 想法（Idea），又称意念、点子，是思考在心灵上的产物，包括对事物的看法和意见，以及解决问题的办法。想法可以是形象化的影像，也可以是抽象化的概念。
-    
-    </summary>
-    
-      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
     
     
       <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
