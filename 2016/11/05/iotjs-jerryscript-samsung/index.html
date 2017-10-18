@@ -25,6 +25,7 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="凯凯刘" type="application/atom+xml">
   <link rel="stylesheet" href="/css/styleNew.css?x=4" media="screen" type="text/css">
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
   <script src="/js/qrcode.min.js"></script>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
@@ -235,15 +236,26 @@ JerryScript和当前多级自适应即时编译（JIT）引擎相比，是一个
         <!--Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);-->
     <!--</script>-->
     <!--PC和WAP自适应版-->
-    <div id="SOHUCS" ></div>
-    <script type="text/javascript">
-        (function(){
-            var appid = 'cyt6v35LM';
-            var conf = 'prod_82a0b7686345b309fbcbcae5ae75c45e';
-            var width = window.innerWidth || document.documentElement.clientWidth;
-            if (width < 960) {
-                window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-
+    <!--<div id="SOHUCS" ></div>-->
+    <!--<script type="text/javascript">-->
+        <!--(function(){-->
+            <!--var appid = 'cyt6v35LM';-->
+            <!--var conf = 'prod_82a0b7686345b309fbcbcae5ae75c45e';-->
+            <!--var width = window.innerWidth || document.documentElement.clientWidth;-->
+            <!--if (width < 960) {-->
+                <!--window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>-->
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+        const gitment = new Gitment({
+            owner: 'ljinkai',
+            repo: 'https://github.com/ljinkai/ljinkai.github.io',
+            oauth: {
+                client_id: 'f109c912c3eb5eb410a2',
+                client_secret: 'd02db97c1fe4bbd747c3a21bed51b8b63d0a58f4',
+            }
+        })
+        gitment.render('comments');
+    </script>
 </section>
 
 </div>
