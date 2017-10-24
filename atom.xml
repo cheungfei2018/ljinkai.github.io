@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2017-10-11T12:19:35.000Z</updated>
+  <updated>2017-10-24T15:44:49.000Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Gitment - 一款基于Github的Issues实现的评论插件</title>
+    <link href="http://liujinkai.com/2017/10/24/gitment-pinglun-chajian/"/>
+    <id>http://liujinkai.com/2017/10/24/gitment-pinglun-chajian/</id>
+    <published>2017-10-24T15:09:32.000Z</published>
+    <updated>2017-10-24T15:44:49.000Z</updated>
+    
+    <summary type="html">
+    
+      最近发现了一个有意思的评论插件Gitment,如果你有个人博客，可以考虑使用；如果你没有个人博客，也可以了解下实现的思路，开开脑洞
+    
+    </summary>
+    
+      <category term="Web技术" scheme="http://liujinkai.com/categories/Web%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="插件" scheme="http://liujinkai.com/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="github" scheme="http://liujinkai.com/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>淘宝购物省钱小妙招 - 返佣金</title>
@@ -407,26 +429,6 @@
     
     
       <category term="人工智能" scheme="http://liujinkai.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>刻意练习</title>
-    <link href="http://liujinkai.com/2017/04/19/deliberate-practice/"/>
-    <id>http://liujinkai.com/2017/04/19/deliberate-practice/</id>
-    <published>2017-04-19T07:30:05.000Z</published>
-    <updated>2017-05-24T10:02:09.000Z</updated>
-    
-    <summary type="html">
-    
-      本文是我根据《刻意练习》这本书整理的读书笔记，此书解答了我几个疑问？ 为什么到某个阶段会感觉停止不前？高手和低手差别在哪？怎样才能让自己更进一步？
-    
-    </summary>
-    
-      <category term="读书" scheme="http://liujinkai.com/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
   </entry>
   
