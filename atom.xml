@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2017-10-24T15:44:49.000Z</updated>
+  <updated>2017-10-28T05:07:06.000Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS挖矿 - 门罗币是如何利用网页挖矿的？</title>
+    <link href="http://liujinkai.com/2017/10/28/js-miner/"/>
+    <id>http://liujinkai.com/2017/10/28/js-miner/</id>
+    <published>2017-10-28T04:55:39.000Z</published>
+    <updated>2017-10-28T05:07:06.000Z</updated>
+    
+    <summary type="html">
+    
+      最近看到一种利用网页Javascript来挖矿的东东，介绍给大家。网页中嵌入Javascript, 一旦用户打开该网站，浏览器便会按照脚本的指令变成一个门罗币挖矿机
+    
+    </summary>
+    
+      <category term="区块链" scheme="http://liujinkai.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="JavaScript" scheme="http://liujinkai.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>Gitment - 一款基于Github的Issues实现的评论插件</title>
@@ -409,26 +429,6 @@
       <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
       <category term="临界知识" scheme="http://liujinkai.com/tags/%E4%B8%B4%E7%95%8C%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>10个基于JavaScript的机器学习案例(译)</title>
-    <link href="http://liujinkai.com/2017/04/30/10-machine-learning-project-of-javascript/"/>
-    <id>http://liujinkai.com/2017/04/30/10-machine-learning-project-of-javascript/</id>
-    <published>2017-04-30T04:09:33.000Z</published>
-    <updated>2017-05-17T00:35:00.000Z</updated>
-    
-    <summary type="html">
-    
-      在过去的几年里，机器学习的开发库增长很快，可用性也变得越来越可靠，而且没有减慢的趋势。一直以来Python作为机器学习的主力语言，现在神经网络可以应用任何语言了，包括JavaScript!
-    
-    </summary>
-    
-      <category term="Web技术" scheme="http://liujinkai.com/categories/Web%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="人工智能" scheme="http://liujinkai.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
   </entry>
   
