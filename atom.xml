@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2017-10-28T05:07:06.000Z</updated>
+  <updated>2017-11-08T11:11:43.000Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EOS众筹领取需要特别注意的坑 &amp; EOS原生公链的绑定说明</title>
+    <link href="http://liujinkai.com/2017/11/08/EOS-contribution-and-register/"/>
+    <id>http://liujinkai.com/2017/11/08/EOS-contribution-and-register/</id>
+    <published>2017-11-08T11:04:54.000Z</published>
+    <updated>2017-11-08T11:11:43.000Z</updated>
+    
+    <summary type="html">
+    
+      最近看到一种利用网页Javascript来挖矿的东东，介绍给大家。网页中嵌入Javascript, 一旦用户打开该网站，浏览器便会按照脚本的指令变成一个门罗币挖矿机
+    
+    </summary>
+    
+      <category term="区块链" scheme="http://liujinkai.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="比特币" scheme="http://liujinkai.com/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
+    
+  </entry>
   
   <entry>
     <title>JS挖矿 - 门罗币是如何利用网页挖矿的？</title>
@@ -407,28 +427,6 @@
       <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
       <category term="增长" scheme="http://liujinkai.com/tags/%E5%A2%9E%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>3个帮助你思考的临界知识 - 黄金思维圈、系统思考、安全空间</title>
-    <link href="http://liujinkai.com/2017/05/03/3-critical-knowledges/"/>
-    <id>http://liujinkai.com/2017/05/03/3-critical-knowledges/</id>
-    <published>2017-05-03T02:26:05.000Z</published>
-    <updated>2017-05-18T00:51:18.000Z</updated>
-    
-    <summary type="html">
-    
-      《好好学习 - 个人知识管理精进指南》成甲著 这本书主要讲了“临界知识”这个概念，所谓“临界知识”，便是我们经过深度思考后发现的具有普遍指导意义的规律或者定律。3个重要临界知识：黄金思维圈、系统思考、安全空间。
-    
-    </summary>
-    
-      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
-    
-    
-      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-      <category term="临界知识" scheme="http://liujinkai.com/tags/%E4%B8%B4%E7%95%8C%E7%9F%A5%E8%AF%86/"/>
     
   </entry>
   
