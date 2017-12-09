@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2017-12-02T06:09:19.000Z</updated>
+  <updated>2017-12-09T09:51:19.000Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>www.gafata.com上线</title>
+    <link href="http://liujinkai.com/2017/12/09/gafata-online/"/>
+    <id>http://liujinkai.com/2017/12/09/gafata-online/</id>
+    <published>2017-12-09T09:32:10.000Z</published>
+    <updated>2017-12-09T09:51:19.000Z</updated>
+    
+    <summary type="html">
+    
+      花了点时间，做了个小网站www.gafata.com。介绍了相关的概念，上面还有一个小工具，可以查询GAFATA这6只股票的增长率，生成动态图表，以便更直观的对比
+    
+    </summary>
+    
+      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
+    
+    
+      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>一夜消失的煎饼店</title>
@@ -403,28 +423,6 @@
     
     
       <category term="HTML5" scheme="http://liujinkai.com/tags/HTML5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南</title>
-    <link href="http://liujinkai.com/2017/06/01/start-small-stay-small/"/>
-    <id>http://liujinkai.com/2017/06/01/start-small-stay-small/</id>
-    <published>2017-05-31T22:38:38.000Z</published>
-    <updated>2017-06-15T00:16:40.000Z</updated>
-    
-    <summary type="html">
-    
-      如果你是个人开发者或者是几个人的小团队尝试做一些项目，这本书能帮助你发现一个好的想法，验证市场可行性等。目标读者比较适合开发者。
-    
-    </summary>
-    
-      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
-    
-    
-      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-      <category term="增长" scheme="http://liujinkai.com/tags/%E5%A2%9E%E9%95%BF/"/>
     
   </entry>
   
