@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2017-12-09T09:51:19.000Z</updated>
+  <updated>2017-12-14T01:08:18.000Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-GDD-shanghai-firstday</title>
+    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/"/>
+    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/</id>
+    <published>2017-12-14T00:59:37.000Z</published>
+    <updated>2017-12-14T01:08:18.000Z</updated>
+    
+    <summary type="html">
+    
+      12月13日是2017Google开发者大会的第一天，地点在上海。天气不错，阳光明媚，温度适当，像北京深秋的感觉。第一天分主题演讲和各分会场的演讲
+    
+    </summary>
+    
+      <category term="Web技术" scheme="http://liujinkai.com/categories/Web%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Google" scheme="http://liujinkai.com/tags/Google/"/>
+    
+  </entry>
   
   <entry>
     <title>www.gafata.com上线</title>
@@ -403,26 +423,6 @@
     
     
       <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么HTML会将“chucknorris”认成红色？</title>
-    <link href="http://liujinkai.com/2017/06/08/html-chucknorris/"/>
-    <id>http://liujinkai.com/2017/06/08/html-chucknorris/</id>
-    <published>2017-06-07T23:54:59.000Z</published>
-    <updated>2017-06-15T00:18:05.000Z</updated>
-    
-    <summary type="html">
-    
-      在Stackoverflow上有个5441标星推荐的问题，很有意思。这个问题创建于2011年，几年来一直被人们讨论着。
-    
-    </summary>
-    
-      <category term="Web技术" scheme="http://liujinkai.com/categories/Web%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="HTML5" scheme="http://liujinkai.com/tags/HTML5/"/>
     
   </entry>
   
