@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2017-12-14T01:13:39.000Z</updated>
+  <updated>2017-12-17T08:36:37.000Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -17,15 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2017上海Google谷歌开发者大会第二天</title>
+    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-secondday/"/>
+    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-secondday/</id>
+    <published>2017-12-14T00:59:37.000Z</published>
+    <updated>2017-12-17T08:36:37.000Z</updated>
+    
+    <summary type="html">
+    
+      12月13日是2017Google开发者大会的第一天，地点在上海。天气不错，阳光明媚，温度适当，像北京深秋的感觉。第一天分主题演讲和各分会场的演讲,我更多的关注web方面的技术，所以下面主要介绍下我感兴趣的技术点。
+    
+    </summary>
+    
+      <category term="Web技术" scheme="http://liujinkai.com/categories/Web%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Google" scheme="http://liujinkai.com/tags/Google/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2017上海Google谷歌开发者大会第一天</title>
     <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/"/>
     <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/</id>
     <published>2017-12-14T00:59:37.000Z</published>
-    <updated>2017-12-14T01:13:39.000Z</updated>
+    <updated>2017-12-14T01:16:31.000Z</updated>
     
     <summary type="html">
     
-      12月13日是2017Google开发者大会的第一天，地点在上海。天气不错，阳光明媚，温度适当，像北京深秋的感觉。第一天分主题演讲和各分会场的演讲
+      12月13日是2017Google开发者大会的第一天，地点在上海。天气不错，阳光明媚，温度适当，像北京深秋的感觉。第一天分主题演讲和各分会场的演讲,我更多的关注web方面的技术，所以下面主要介绍下我感兴趣的技术点。
     
     </summary>
     
@@ -403,26 +423,6 @@
       <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="插件" scheme="http://liujinkai.com/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《知道做到》- 知道那么多，为什么做不到？</title>
-    <link href="http://liujinkai.com/2017/06/15/know-can-do/"/>
-    <id>http://liujinkai.com/2017/06/15/know-can-do/</id>
-    <published>2017-06-15T00:12:38.000Z</published>
-    <updated>2017-06-15T00:27:54.000Z</updated>
-    
-    <summary type="html">
-    
-      随着科技的发展，我们接触的信息越来越多，但由信息转化成有价值的行为改变却越来越少。就像一满杯水，一直在往里面倒水，但溢出的也越多。如何解决这个问题？这本书《知道做到》给了我们清晰的答案，希望能给在信息泛滥时代有些不知所措的我们以指引。
-    
-    </summary>
-    
-      <category term="读书" scheme="http://liujinkai.com/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
   </entry>
   
