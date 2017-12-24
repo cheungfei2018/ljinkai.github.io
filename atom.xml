@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2017-12-17T08:36:37.000Z</updated>
+  <updated>2017-12-24T06:49:54.139Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dapp已来</title>
+    <link href="http://liujinkai.com/2017/12/24/dapp-is-coming/"/>
+    <id>http://liujinkai.com/2017/12/24/dapp-is-coming/</id>
+    <published>2017-12-24T06:18:48.000Z</published>
+    <updated>2017-12-24T06:49:54.139Z</updated>
+    
+    <summary type="html">
+    
+      12月13日是2017Google开发者大会的第一天，地点在上海。天气不错，阳光明媚，温度适当，像北京深秋的感觉。第一天分主题演讲和各分会场的演讲,我更多的关注web方面的技术，所以下面主要介绍下我感兴趣的技术点。
+    
+    </summary>
+    
+      <category term="区块链" scheme="http://liujinkai.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="EOS" scheme="http://liujinkai.com/tags/EOS/"/>
+    
+  </entry>
   
   <entry>
     <title>2017上海Google谷歌开发者大会第二天</title>
@@ -401,28 +421,6 @@
       <category term="增长" scheme="http://liujinkai.com/tags/%E5%A2%9E%E9%95%BF/"/>
     
       <category term="案例" scheme="http://liujinkai.com/tags/%E6%A1%88%E4%BE%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小密圈助手 - Chrome插件</title>
-    <link href="http://liujinkai.com/2017/07/04/xiaomiquan-assistant/"/>
-    <id>http://liujinkai.com/2017/07/04/xiaomiquan-assistant/</id>
-    <published>2017-07-03T23:56:33.000Z</published>
-    <updated>2017-07-04T13:58:07.000Z</updated>
-    
-    <summary type="html">
-    
-      chrome插件，帮助PC web端用户浏览小密圈时，快速浏览文中链接，并可进入相应主题
-    
-    </summary>
-    
-      <category term="Web工具" scheme="http://liujinkai.com/categories/Web%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="插件" scheme="http://liujinkai.com/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
