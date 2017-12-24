@@ -874,6 +874,8 @@ table tr th {
     height: 60px;
     border-radius: 60px;
     margin-top: 15px;}
+.about_fix {position: fixed;top: 0px;display: block;}
+.about_fix_none {position: fixed;top: 0px;display: none;}
 /** hot **/
 .hot li {margin-bottom: 6px;}
 /** ads **/
@@ -892,6 +894,9 @@ table tr th {
     background-position: center 1px;
 }
 .ads_banner {width: 100%;margin-bottom: 20px;}
+@media screen and (max-width: 900px) {
+    .about_fix{display: none;}
+}
 @media screen and (max-width: 600px) {
     .article_ads {
         width: 300px;

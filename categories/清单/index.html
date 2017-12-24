@@ -25,7 +25,7 @@
   <link href="/favicon.png" rel="icon">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="凯凯刘" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/styleNew.css?x=4" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/styleNew.css?x=5" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/gitment.css">
   <script src="/js/qrcode.min.js"></script>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -347,7 +347,15 @@
 </div>
 
 
-  <div class="widget tag">
+  <div class="widget tag" id="about_fix">
+
+  <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
+    <li>微信公众号：凯凯而谈</li>
+    <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
+    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='180px' style="margin: 0px auto;display: block;"></li>
+  </ul>
+</div>
+<div class="widget tag">
   <div class="about_banner">
     <div class="about_profile">
       <a href="/2015/02/28/new/">
@@ -360,7 +368,32 @@
     <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
     <li>微信公众号：凯凯而谈</li>
     <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li>web、区块链开发；美股、区块链投资</li>
   </ul>
+  <script>
+    function getPageTopLeft(el) {
+      var rect = el.getBoundingClientRect();
+      var docEl = document.documentElement;
+      return {
+        left: rect.left + (window.pageXOffset || docEl.scrollLeft || 0),
+        top: rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+      };
+    }
+    window.addEventListener('scroll',function() {
+      var winWid = document.body.clientWidth;
+      if (winWid > 900) {
+        var anchorTop = getPageTopLeft(document.getElementById("anchorTop")).top;
+        var scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+        console.log(anchorTop, scrollTop);
+
+        if (anchorTop < scrollTop) {
+          document.getElementById("about_fix").className = "widget tag about_fix";
+        } else {
+          document.getElementById("about_fix").className = "widget tag about_fix_none";
+        }
+      }
+    });
+  </script>
 </div>
 
 
@@ -465,13 +498,13 @@
   <div class="widget hot">
   <h3 class="title">热文推荐</h3>
   <ul class="entry">
-    <li><a href="/2017/05/03/3-critical-knowledges/" title="3个帮助你思考的临界知识 - 黄金思维圈、系统思考、安全空间">3个帮助你思考的临界知识 - 黄金思维圈、系统思考、安全空间</a></li>
+    <li><a href="/2017/06/01/start-small-stay-small/" title="《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南">《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南</a></li>
     <li><a href="/2017/02/08/how-to-read-a-book/" title="怎样读一本书V5.0 ?(译)">怎样读一本书V5.0 ?(译)</a></li>
     <li><a href="/2015/06/06/mobile-web-skill/" title="移动端web开发技巧">移动端web开发技巧</a></li>
-    <li><a href="/2015/07/30/front-end-interview/" title="web前端面试题集锦">web前端面试题集锦</a></li>
+    <li><a href="/2017/12/09/gafata-online/" title="www.gafata.com上线">www.gafata.com上线</a></li>
     <li><a href="/2017/04/19/deliberate-practice/" title="刻意练习">刻意练习</a></li>
     <li><a href="/2016/04/27/progressive-web-app/" title="Web新技术：PWA-Progressive Web App">Web新技术：PWA-Progressive Web App</a></li>
-    <li><a href="/2015/10/23/front-develper-10-tools/" title="积攒10款前端开发工具，就可以召唤神龙了">积攒10款前端开发工具，就可以召唤神龙了</a></li>
+    <li><a href="/2017/08/16/bitcoin-mining-consensus/" title="比特币的挖矿与共识">比特币的挖矿与共识</a></li>
   </ul>
 </div>
 
@@ -486,6 +519,7 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
+    <div id="anchorTop"></div>
 </div>
 
 </aside>
