@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2017-12-24T06:49:54.139Z</updated>
+  <updated>2018-01-28T15:51:36.518Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用myetherwallet申请ENS (Ethereum Name Service)</title>
+    <link href="http://liujinkai.com/2018/01/28/myetherwallet-ens/"/>
+    <id>http://liujinkai.com/2018/01/28/myetherwallet-ens/</id>
+    <published>2018-01-28T15:24:30.000Z</published>
+    <updated>2018-01-28T15:51:36.518Z</updated>
+    
+    <summary type="html">
+    
+      ENS可以帮你解烦忧，ENS是一种ETH上的域名服务，你只需要记住域名，它就会自动帮你映射成对应的一个ETH地址，赶紧操练起来吧
+    
+    </summary>
+    
+      <category term="区块链" scheme="http://liujinkai.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="ETH" scheme="http://liujinkai.com/tags/ETH/"/>
+    
+  </entry>
   
   <entry>
     <title>Dapp已来</title>
@@ -399,28 +419,6 @@
       <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="插件" scheme="http://liujinkai.com/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Scott&#39;s Cheap Flights案例 - 月收入$320k</title>
-    <link href="http://liujinkai.com/2017/07/04/scott-cheap-flights/"/>
-    <id>http://liujinkai.com/2017/07/04/scott-cheap-flights/</id>
-    <published>2017-07-04T14:12:38.000Z</published>
-    <updated>2017-07-04T23:29:28.000Z</updated>
-    
-    <summary type="html">
-    
-      从一个边缘的小项目变成了一个爆发增长的项目，提供特价机票信息服务，有超过60万的订阅用户，月收入$320k, 每年超过4百万的收入
-    
-    </summary>
-    
-      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
-    
-    
-      <category term="增长" scheme="http://liujinkai.com/tags/%E5%A2%9E%E9%95%BF/"/>
-    
-      <category term="案例" scheme="http://liujinkai.com/tags/%E6%A1%88%E4%BE%8B/"/>
     
   </entry>
   
