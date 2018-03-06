@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2018-01-28T15:51:36.518Z</updated>
+  <updated>2018-03-06T06:24:45.440Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>虚拟世界用处多</title>
+    <link href="http://liujinkai.com/2018/03/06/virtual-world/"/>
+    <id>http://liujinkai.com/2018/03/06/virtual-world/</id>
+    <published>2018-03-06T06:17:09.000Z</published>
+    <updated>2018-03-06T06:24:45.440Z</updated>
+    
+    <summary type="html">
+    
+      利用感性脑和和理性脑可以帮助我们，当想办法说服别人的时候，你要利用感性脑，用情感、共鸣、感动等来说服别人；而要防止被别人忽悠，就要启用你的理性脑，用理性、逻辑、推理等来判断一个事实
+    
+    </summary>
+    
+      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
+    
+    
+      <category term="认知" scheme="http://liujinkai.com/tags/%E8%AE%A4%E7%9F%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>用myetherwallet申请ENS (Ethereum Name Service)</title>
@@ -57,11 +77,11 @@
   </entry>
   
   <entry>
-    <title>2017上海Google谷歌开发者大会第二天</title>
-    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-secondday/"/>
-    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-secondday/</id>
+    <title>2017上海Google谷歌开发者大会第一天</title>
+    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/"/>
+    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/</id>
     <published>2017-12-14T00:59:37.000Z</published>
-    <updated>2017-12-17T08:36:37.000Z</updated>
+    <updated>2017-12-14T01:16:31.000Z</updated>
     
     <summary type="html">
     
@@ -77,11 +97,11 @@
   </entry>
   
   <entry>
-    <title>2017上海Google谷歌开发者大会第一天</title>
-    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/"/>
-    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/</id>
+    <title>2017上海Google谷歌开发者大会第二天</title>
+    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-secondday/"/>
+    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-secondday/</id>
     <published>2017-12-14T00:59:37.000Z</published>
-    <updated>2017-12-14T01:16:31.000Z</updated>
+    <updated>2017-12-17T08:36:37.000Z</updated>
     
     <summary type="html">
     
@@ -397,28 +417,6 @@
       <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
       <category term="案例" scheme="http://liujinkai.com/tags/%E6%A1%88%E4%BE%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小密圈助手 - 一个Chrome插件的产生过程</title>
-    <link href="http://liujinkai.com/2017/07/14/xiaomiqian-assistant-create/"/>
-    <id>http://liujinkai.com/2017/07/14/xiaomiqian-assistant-create/</id>
-    <published>2017-07-14T00:17:58.000Z</published>
-    <updated>2017-08-09T00:44:07.000Z</updated>
-    
-    <summary type="html">
-    
-      我花了2个晚上做了一个“小密圈助手”的Chrome插件。这个事虽然不大，但是我觉得是个比较好的小例子，来完整的介绍一下把知识转化为行动的过程
-    
-    </summary>
-    
-      <category term="Web工具" scheme="http://liujinkai.com/categories/Web%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="插件" scheme="http://liujinkai.com/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
