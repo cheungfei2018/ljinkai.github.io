@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Package.json详解 - 凯凯刘</title>
+  <title>科学的做事 - 致自己的2017~2018 - 凯凯刘</title>
   <meta name="author" content="凯凯刘">
   
-  <meta name="description" content="每个项目的根目录下面，一般都有一个`package.json`文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）">
+  <meta name="description" content="总结过去并不是一件轻松的事，但好处是显而易见的，能从中获取经验和更多信心；科学合理的做事更不轻松，却是前进中最好的舵手。祝各位2018年有所突破，成就更伟大的自己！">
   
-  <meta name="keywords" content="Package.json,package.json作用,package.json生成,package.json详解,package.json install,package.json scripts,npm package.json更新,package.json版本,package.json文件">
+  <meta name="keywords" content="科学的做事，输出倒逼输入，人类的崛起">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Package.json详解"/>
+  <meta property="og:title" content="科学的做事 - 致自己的2017~2018"/>
   <meta property="og:site_name" content="凯凯刘"/>
 
   
@@ -119,24 +119,24 @@
     <header>
       
   
-    <h1 class="title">Package.json详解</h1>
+    <h1 class="title">科学的做事 - 致自己的2017~2018</h1>
   
 
       
         <div class="icon"></div>
         <div class="article_head_extend">
-          <time datetime="2016-11-03T16:18:42.000Z"><a href="/2016/11/04/package-json-explain/">Nov 4 2016</a>
+          <time datetime="2018-03-10T09:45:25.000Z"><a href="/2018/03/10/scientific-do-thing/">Mar 10 2018</a>
             
           </time>
           <div class="qrcode_con">
             <div class="qrcode_text">扫描二维码</div>
-            <div id="Fri Nov 04 2016 00:18:42 GMT+0800 (CST)" class="qrcode_img"></div>
+            <div id="Sat Mar 10 2018 17:45:25 GMT+0800 (CST)" class="qrcode_img"></div>
             <script>
-              var qrcode = new QRCode(document.getElementById("Fri Nov 04 2016 00:18:42 GMT+0800 (CST)"), {
+              var qrcode = new QRCode(document.getElementById("Sat Mar 10 2018 17:45:25 GMT+0800 (CST)"), {
                 width : 100,
                 height : 100
               });
-              qrcode.makeCode("http://liujinkai.com//2016/11/04/package-json-explain/?utm_medium=blog&utm_source=qrcode");
+              qrcode.makeCode("http://liujinkai.com//2018/03/10/scientific-do-thing/?utm_medium=blog&utm_source=qrcode");
             </script>
           </div>
         </div>
@@ -146,134 +146,26 @@
     <div></div>
     <div class="entry">
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>每个项目的根目录下面，一般都有一个<code>package.json</code>文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）。<code>npm install</code>命令根据这个配置文件，自动下载所需的模块，也就是配置项目所需的运行和开发环境。</p>
-<p>下面是一个最简单的package.json文件，只定义两项元数据：项目名称和项目版本。</p>
-<pre><code>{
-     &quot;name&quot; : &quot;xxx&quot;,
-      &quot;version&quot; : &quot;0.0.0&quot;,
-}
-</code></pre><p>上面代码说明，<code>package.json</code>文件内部就是一个JSON对象，该对象的每一个成员就是当前项目的一项设置。比如<code>name</code>就是项目名称，<code>version</code>是版本（遵守“大版本.次要版本.小版本”的格式）。<br><a id="more"></a></p>
-<p>下面是一个更完整的package.json文件。</p>
-<pre><code>{
-    &quot;name&quot;: &quot;Hello World&quot;,
-    &quot;version&quot;: &quot;0.0.1&quot;,
-    &quot;author&quot;: &quot;张三&quot;,
-    &quot;description&quot;: &quot;第一个node.js程序&quot;,
-    &quot;keywords&quot;:[&quot;node.js&quot;,&quot;javascript&quot;],
-    &quot;repository&quot;: {
-        &quot;type&quot;: &quot;git&quot;,
-        &quot;url&quot;: &quot;https://path/to/url&quot;
-    },
-    &quot;license&quot;:&quot;MIT&quot;,
-    &quot;engines&quot;: {&quot;node&quot;: &quot;0.10.x&quot;},
-    &quot;bugs&quot;:{&quot;url&quot;:&quot;http://path/to/bug&quot;,&quot;email&quot;:&quot;bug@example.com&quot;},
-    &quot;contributors&quot;:[{&quot;name&quot;:&quot;李四&quot;,&quot;email&quot;:&quot;lisi@example.com&quot;}],
-    &quot;scripts&quot;: {
-        &quot;start&quot;: &quot;node index.js&quot;
-    },
-    &quot;dependencies&quot;: {
-        &quot;express&quot;: &quot;latest&quot;,
-        &quot;mongoose&quot;: &quot;~3.8.3&quot;,
-        &quot;handlebars-runtime&quot;: &quot;~1.0.12&quot;,
-        &quot;express3-handlebars&quot;: &quot;~0.5.0&quot;,
-        &quot;MD5&quot;: &quot;~1.2.0&quot;
-    },
-    &quot;devDependencies&quot;: {
-        &quot;bower&quot;: &quot;~1.2.8&quot;,
-        &quot;grunt&quot;: &quot;~0.4.1&quot;,
-        &quot;grunt-contrib-concat&quot;: &quot;~0.3.0&quot;,
-        &quot;grunt-contrib-jshint&quot;: &quot;~0.7.2&quot;,
-        &quot;grunt-contrib-uglify&quot;: &quot;~0.2.7&quot;,
-        &quot;grunt-contrib-clean&quot;: &quot;~0.5.0&quot;,
-        &quot;browserify&quot;: &quot;2.36.1&quot;,
-        &quot;grunt-browserify&quot;: &quot;~1.3.0&quot;,
-    }
-}
-</code></pre><p>下面详细解释package.json文件的各个字段。</p>
-<h2 id="scripts字段"><a href="#scripts字段" class="headerlink" title="scripts字段"></a>scripts字段</h2><p><code>scripts</code>指定了运行脚本命令的npm命令行缩写，比如start指定了运行<code>npm run start</code>时，所要执行的命令。</p>
-<p>下面的设置指定了<code>npm run preinstall</code>、<code>npm run postinstall</code>、<code>npm run start</code>、<code>npm run test</code>时，所要执行的命令。</p>
-<pre><code>&quot;scripts&quot;: {
-    &quot;preinstall&quot;: &quot;echo here it comes!&quot;,
-    &quot;postinstall&quot;: &quot;echo there it goes!&quot;,
-    &quot;start&quot;: &quot;node index.js&quot;,
-    &quot;test&quot;: &quot;tap test/*.js&quot;
-}
-</code></pre><h2 id="dependencies字段，devDependencies字段"><a href="#dependencies字段，devDependencies字段" class="headerlink" title="dependencies字段，devDependencies字段"></a>dependencies字段，devDependencies字段</h2><p><code>dependencies</code>字段指定了项目运行所依赖的模块，<code>devDependencies</code>指定项目开发所需要的模块。</p>
-<p>它们都指向一个对象。该对象的各个成员，分别由模块名和对应的版本要求组成，表示依赖的模块及其版本范围。</p>
-<pre><code>{
-  &quot;devDependencies&quot;: {
-    &quot;browserify&quot;: &quot;~13.0.0&quot;,
-    &quot;karma-browserify&quot;: &quot;~5.0.1&quot;
-  }
-}
-</code></pre><p>对应的版本可以加上各种限定，主要有以下几种：</p>
+        <p>2017年初的时候，我给自己定下的目标是践行。希望自己能在提升认知的过程中，与实际应用结合起来，做一些实实在在的事情。一年之中，做过千聊和知乎的直播、读英文原版书籍、更新公众号文章(凯凯而谈)、维护博客(www.liujinkai.com)、上线www.gafata.com、投资区块链和美股等等，一年过去有得到也有失去，给自己打分的话，#75分吧。以下从个人成长方面，一是总结自己过去一年的心得，二是为自己的2018定个小目标。<br><a id="more"></a></p>
+<h1 id="2017年的一些心得"><a href="#2017年的一些心得" class="headerlink" title="2017年的一些心得"></a>2017年的一些心得</h1><h2 id="健康的小体魄，是大目标实现的土壤"><a href="#健康的小体魄，是大目标实现的土壤" class="headerlink" title="健康的小体魄，是大目标实现的土壤"></a>健康的小体魄，是大目标实现的土壤</h2><p>我们每个人都知道身体健康的重要性，思想上是严重认同的。但实际情况是该吃肉的吃肉，该喝汤的喝汤，该睡懒觉的睡懒觉。嘴上说的，跟腿上动的不一样。我也跟大家一样，想着每天跑跑步，锻炼锻炼身体，但北京的实际情况是，动不动的就雾霾，三天两头的刮风，不过2017年的冬天却没有下第一场雪。于是，我就变通了下，每天早上起床做15分钟的室内微运动。做做第七套广播体操，俯卧撑，仰卧起坐等，交替进行，到达稍微出汗的程度，一天的精神状态都会比较好，而且一年下来，基本上没有感冒，我个人从中受益良多，与其等待一大块的时间去锻炼，不如马上做起短时间的微运动，保持一个身体和精神的健康状态。健康比什么都重要。这个原则也可应用到其它事情上：<strong>以大化小，从小做大</strong>。</p>
+<h2 id="输出倒逼输入"><a href="#输出倒逼输入" class="headerlink" title="输出倒逼输入"></a>输出倒逼输入</h2><p>这一年认真回忆下，吸收东西最快的那段时间就是自己践行输出倒逼输入的时候。那段时间通过每周的做直播活动，倒逼自己汲取知识，通过自己学习到的知识，整理并思考成文，然后以直播的形式和社群里的同学交流。这每一步都加深了理解，也锻炼了自己的书写和说话的能力。从原先的不敢说，到思考怎么说，再到怎么说的更好，这一步步都是自己成长的过程，虽然中间也是遇到各种困难，但是自己的收获非常大，<strong>输出和分享对自己的要求更高，在成长的路上也更高效</strong>。</p>
+<h2 id="不得不说的区块链和美股"><a href="#不得不说的区块链和美股" class="headerlink" title="不得不说的区块链和美股"></a>不得不说的区块链和美股</h2><p>2017年不能不说区块链。区块链在这一年里经历了牛熊，也有9.4事情的发生。币圈一天，人间一年的形容并不过分。</p>
+<p>区块链带给我最大的感受是：</p>
 <ul>
-<li><strong>指定版本</strong>：比如<code>1.2.2</code>，遵循“大版本.次要版本.小版本”的格式规定，安装时只安装指定版本。</li>
-<li><strong>波浪号（tilde）+指定版本</strong>：比如<code>~1.2.2</code>，表示安装1.2.x的最新版本（不低于1.2.2），但是不安装1.3.x，也就是说安装时不改变大版本号和次要版本号。</li>
-<li><strong>插入号（caret）+指定版本</strong>：比如&#710;1.2.2，表示安装1.x.x的最新版本（不低于1.2.2），但是不安装2.x.x，也就是说安装时不改变大版本号。需要注意的是，如果大版本号为0，则插入号的行为与波浪号相同，这是因为此时处于开发阶段，即使是次要版本号变动，也可能带来程序的不兼容。</li>
-<li><strong>latest</strong>：安装最新版本。</li>
+<li>区块链将重置生成关系</li>
+<li>坚持价值投资</li>
 </ul>
-<p>package.json文件可以手工编写，也可以使用<code>npm init</code>命令自动生成。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm init</div></pre></td></tr></table></figure>
-<p>这个命令采用互动方式，要求用户回答一些问题，然后在当前目录生成一个基本的package.json文件。所有问题之中，只有项目名称（name）和项目版本（version）是必填的，其他都是选填的。</p>
-<p>有了package.json文件，直接使用npm install命令，就会在当前目录中安装所需要的模块。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure>
-<p>如果一个模块不在<code>package.json</code>文件之中，可以单独安装这个模块，并使用相应的参数，将其写入<code>package.json</code>文件之中。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install express --save</div><div class="line">$ npm install express --save-dev</div></pre></td></tr></table></figure>
-<p>上面代码表示单独安装express模块，<code>--save</code>参数表示将该模块写入<code>dependencies</code>属性，<code>--save-dev</code>表示将该模块写入<code>devDependencies</code>属性。</p>
-<h2 id="peerDependencies"><a href="#peerDependencies" class="headerlink" title="peerDependencies"></a>peerDependencies</h2><p>有时，你的项目和所依赖的模块，都会同时依赖另一个模块，但是所依赖的版本不一样。比如，你的项目依赖A模块和B模块的1.0版，而A模块本身又依赖B模块的2.0版。</p>
-<p>大多数情况下，这不构成问题，B模块的两个版本可以并存，同时运行。但是，有一种情况，会出现问题，就是这种依赖关系将暴露给用户。</p>
-<p>最典型的场景就是插件，比如A模块是B模块的插件。用户安装的B模块是1.0版本，但是A插件只能和2.0版本的B模块一起使用。这时，用户要是将1.0版本的B的实例传给A，就会出现问题。因此，需要一种机制，在模板安装的时候提醒用户，如果A和B一起安装，那么B必须是2.0模块。</p>
-<p><code>peerDependencies</code>字段，就是用来供插件指定其所需要的主工具的版本。</p>
-<pre><code>{
-  &quot;name&quot;: &quot;chai-as-promised&quot;,
-  &quot;peerDependencies&quot;: {
-    &quot;chai&quot;: &quot;1.x&quot;
-  }
-}
-</code></pre><p>上面代码指定，安装<code>chai-as-promised</code>模块时，主程序<code>chai</code>必须一起安装，而且<code>chai</code>的版本必须是<code>1.x</code>。如果你的项目指定的依赖是<code>chai</code>的2.0版本，就会报错。</p>
-<p>注意，从npm 3.0版开始，<code>peerDependencies</code>不再会默认安装了。</p>
-<h2 id="bin字段"><a href="#bin字段" class="headerlink" title="bin字段"></a>bin字段</h2><p>bin项用来指定各个内部命令对应的可执行文件的位置。</p>
-<pre><code>&quot;bin&quot;: {
-  &quot;someTool&quot;: &quot;./bin/someTool.js&quot;
-}
-</code></pre><p>上面代码指定，someTool 命令对应的可执行文件为 bin 子目录下的 someTool.js。Npm会寻找这个文件，在<code>node_modules/.bin/</code>目录下建立符号链接。在上面的例子中，someTool.js会建立符号链接<code>npm_modules/.bin/someTool</code>。由于<code>node_modules/.bin/</code>目录会在运行时加入系统的PATH变量，因此在运行npm时，就可以不带路径，直接通过命令来调用这些脚本。</p>
-<p>因此，像下面这样的写法可以采用简写。</p>
-<pre><code>scripts: {
-  start: &apos;./node_modules/someTool/someTool.js build&apos;
-}
+<p>未来的区块链世界无法想象，我想到的类比是互联网刚刚普及的时候，大概我上大学的时候，还是诺基亚的时代，翻盖手机。而现在移动互联网的发展程度，当时的我不可能想到会发展到现在的样子。<strong>世界比你想象的变化快</strong>。基于区块链打开的新世界的大门，同样，也是我们无法想象的。</p>
+<p>关于区块链的投资，每个人都有每个人的原则，有的是定投，有的是对冲，有的是不了解的不投等等。只要有自己的原则就已经超过90%的人了，可怕的就是没有原则的投资，非常危险。这里可以分享下我的原则，就是<strong>只选定头部资产的投资</strong>，看好EOS和NAS。</p>
+<p>关于美股，我是受GAFATA的影响，这是是我之前介绍GAFATA的文章：xxx。这种投资理念非常有智慧。而我们个人就是缺少这种投资理念，别人说出来，你才会发线它一直就在那里。投资的目的不仅仅是一种金钱上的行为，更是一种个人认知的锻炼，<strong>合理的投资观念才会产生合理的投资收益</strong>。投资看似是投资金钱，其实是投资自己的成长。</p>
+<h2 id="打铁还需自身硬"><a href="#打铁还需自身硬" class="headerlink" title="打铁还需自身硬"></a>打铁还需自身硬</h2><p>其实这里想表达一个观点，人与人之间的交流、学习、互相吸引的前提是自己有一定的“硬货”。在网络时代，我们很想认识或者与那些牛人交朋友。也会在微信上主动加好友，这种方式能帮助我们看到他们的分享，简单的交流。但这里需要让自己转变一下观念，我们要努力做那个”被加”的人。<strong>把注意力多放在让自己实现这个目标的实现上</strong>，有了自己的成果之后，被别人关注就变成了自然而然的事。这个道理也适用追女朋友这件事上，一直主动献殷勤，并不能换来对方对你的关注。而你自己如果是一个足够优秀的人，你自己就变成了焦点，剩下就是自然而然的事。</p>
+<h1 id="2018的原则-科学的做事"><a href="#2018的原则-科学的做事" class="headerlink" title="2018的原则 - 科学的做事"></a>2018的原则 - 科学的做事</h1><p>通过2017年的几点总结，你会发现，以上这些都是点，我也一直在思考串联这些点的那根有价值的线是什么呢？直到我看到了《原则》里的解释，恍然大悟，是<strong>科学的方法</strong>，当我看到的那一刻，如获至宝。</p>
+<p>而且2017年我发现一个问题，做的很多事情会半途而废，自己一开始想的很好，也努力去做，做一段时间，各种原因会导致无疾而终，最终效果差强人意。我也因此一直而困扰。相信你也遇到过跟我一样的问题，那么我们一起来看看Ray Dallo是怎么解决这样问题的。</p>
+<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2018-03-08-WX20180308-105806@2x.png?imageView2/2/w/600" alt=""></p>
+<p>它里面所说的个人进化过程分成5个步骤，而这5个步骤贯彻了我们做事的完整过程，如果能把5件事都做好，你几乎肯定可以成功。<br><strong>1、 有明确的目标</strong><br><strong> 2、 找到阻碍你实现这些目标的问题，并且不容忍问题</strong><br><strong> 3、 准确诊断问题，找到问题的根源</strong><br><strong> 4、 规划可以解决问题的答案</strong><br><strong> 5、 做一切必要的事来践行这些方案，实现成果</strong></p>
+<p>上面5个步骤是一个循环，不断的循环迭代这个过程，你就会走在正确的方向上。我们需要站在更高的维度来审视这个过程，有的时候我们陷入在具体事情当中，反而忽略了需要站在这个循环之外来对待自己面临的问题。一旦你觉得不够清醒或者情绪化的时候，退后一步来审察自己，暂时停下来，直到恢复清醒的思考能力。必要时，向冷静、善于思考的人请教。</p>
+<p>一根小小的柱子，一截细细的链子，拴得住一头千斤重的大象，这不荒谬吗？可这荒谬的场景在印度和秦国随处可见。那些驯象人，在大象还是小象的时候，就用一条铁链将它绑在水泥柱或钢柱上，无论小象怎么挣扎都无法挣脱。小象渐渐地习惯了不挣扎，直到长成了大象，可以轻而易举地挣脱链子时，也不挣扎。<strong>小象是被链子绑住，而大象则是被习惯绑住。</strong>在个人进化的过程中，不断的突破自己，打破小小的链子才会发现更精彩的世界，总结过去并不是一件轻松的事，但好处是显而易见的，能从中获取经验和更多信心；科学合理的做事更不轻松，却是前进中最好的舵手。祝各位2018年有所突破，成就更伟大的自己！</p>
 
-// 简写为
-
-scripts: {
-  start: &apos;someTool build&apos;
-}
-</code></pre><p>所有<code>node_modules/.bin/</code>目录下的命令，都可以用<code>npm run [命令]</code>的格式运行。在命令行下，键入<code>npm run</code>，然后按tab键，就会显示所有可以使用的命令。</p>
-<h2 id="main字段"><a href="#main字段" class="headerlink" title="main字段"></a>main字段</h2><p><code>main</code>字段指定了加载该模块时的入门文件，默认是模块根目录下面的<code>index.js</code>。</p>
-<h2 id="config字段"><a href="#config字段" class="headerlink" title="config字段"></a>config字段</h2><p>config字段用于向环境变量输出值。</p>
-<p>下面是一个package.json文件。</p>
-<pre><code>{
-  &quot;name&quot; : &quot;foo&quot;,
-  &quot;config&quot; : { &quot;port&quot; : &quot;8080&quot; },
-  &quot;scripts&quot; : { &quot;start&quot; : &quot;node server.js&quot; }
-}
-</code></pre><p>然后，在<code>server.js</code>脚本就可以引用config字段的值。</p>
-<pre><code>http.createServer(...).listen(process.env.npm_package_config_port)
-</code></pre><p>用户可以改变这个值。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm config <span class="built_in">set</span> foo:port 80</div></pre></td></tr></table></figure>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="browser字段"><a href="#browser字段" class="headerlink" title="browser字段"></a>browser字段</h3><p>browser指定该模板供浏览器使用的版本。Browserify这样的浏览器打包工具，通过它就知道该打包那个文件。</p>
-<pre><code>&quot;browser&quot;: {
-  &quot;tipso&quot;: &quot;./node_modules/tipso/src/tipso.js&quot;
-},
-</code></pre><h3 id="engines字段"><a href="#engines字段" class="headerlink" title="engines字段"></a>engines字段</h3><p>engines指明了该项目所需要的node.js版本。</p>
-<h3 id="man字段"><a href="#man字段" class="headerlink" title="man字段"></a>man字段</h3><p>man用来指定当前模块的man文档的位置。</p>
-<pre><code>&quot;man&quot; :[ &quot;./doc/calc.1&quot; ]
-</code></pre><h3 id="preferGlobal字段"><a href="#preferGlobal字段" class="headerlink" title="preferGlobal字段"></a>preferGlobal字段</h3><p>preferGlobal的值是布尔值，表示当用户不将该模块安装为全局模块时（即不用–global参数），要不要显示警告，表示该模块的本意就是安装为全局模块。</p>
-<h3 id="style字段"><a href="#style字段" class="headerlink" title="style字段"></a>style字段</h3><p>style指定供浏览器使用时，样式文件所在的位置。样式文件打包工具parcelify，通过它知道样式文件的打包位置。</p>
-<pre><code>&quot;style&quot;: [
-  &quot;./node_modules/tipso/src/tipso.css&quot;
-]
-</code></pre>
       
     </div>
     <footer>
@@ -281,13 +173,13 @@ scripts: {
         
   
   <div class="categories">
-    <a href="/categories/Web技术/">Web技术</a>
+    <a href="/categories/生活/">生活</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/JavaScript/">JavaScript</a>, <a href="/tags/Node-js/">Node.js</a>
+    <a href="/tags/认知/">认知</a>
   </div>
 
         
@@ -298,6 +190,19 @@ scripts: {
 </article>
 
 
+    
+    <div class="links">
+        <div class="links_title">推荐阅读</div>
+    
+            <li ><a href="/2018/03/06/virtual-world/" title="虚拟世界用处多">虚拟世界用处多</a></li>
+       
+            <li ><a href="/2018/01/28/myetherwallet-ens/" title="用myetherwallet申请ENS(Ethereum Name Service)">用myetherwallet申请ENS(Ethereum Name Service)</a></li>
+       
+            <li ><a href="/2017/12/24/dapp-is-coming/" title="Dapp已来">Dapp已来</a></li>
+       
+            <li ><a href="/2017/11/08/EOS-contribution-and-register/" title="EOS众筹领取需要特别注意的坑 &amp; EOS原生公链的绑定说明">EOS众筹领取需要特别注意的坑 &amp; EOS原生公链的绑定说明</a></li>
+       
+    </div>
     
 
 
