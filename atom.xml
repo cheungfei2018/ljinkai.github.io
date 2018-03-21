@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2018-03-10T09:50:38.275Z</updated>
+  <updated>2018-03-21T23:38:23.303Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>不可能什么都做，只把最重要的做好</title>
+    <link href="http://liujinkai.com/2018/03/22/do-the-most-importent/"/>
+    <id>http://liujinkai.com/2018/03/22/do-the-most-importent/</id>
+    <published>2018-03-21T23:34:19.000Z</published>
+    <updated>2018-03-21T23:38:23.303Z</updated>
+    
+    <summary type="html">
+    
+      我们每个人的精力有限、财力有限、生命有限，做最重要的事，把它做到极致，就会产生复利效应，产生巨大的效果。而那些不那么重要的，放下也许是最好的选择。
+    
+    </summary>
+    
+      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
+    
+    
+      <category term="认知" scheme="http://liujinkai.com/tags/%E8%AE%A4%E7%9F%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>科学的做事 - 致自己的2017~2018</title>
@@ -395,26 +415,6 @@
     
     
       <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>成为巴菲特、第一性原理、区块链 - 7月份知识清单</title>
-    <link href="http://liujinkai.com/2017/08/05/knowledge-list-july/"/>
-    <id>http://liujinkai.com/2017/08/05/knowledge-list-july/</id>
-    <published>2017-08-05T04:17:02.000Z</published>
-    <updated>2017-08-09T00:43:52.000Z</updated>
-    
-    <summary type="html">
-    
-      混沌大学的一次演讲，李善友的“第一性原理”。2天的课程，以演绎法的方式来思考，对思考任何事情都是一个世界观的改变
-    
-    </summary>
-    
-      <category term="清单" scheme="http://liujinkai.com/categories/%E6%B8%85%E5%8D%95/"/>
-    
-    
-      <category term="资源" scheme="http://liujinkai.com/tags/%E8%B5%84%E6%BA%90/"/>
     
   </entry>
   
