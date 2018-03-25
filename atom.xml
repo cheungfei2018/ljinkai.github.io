@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2018-03-21T23:41:17.867Z</updated>
+  <updated>2018-03-25T00:31:18.469Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>凯凯刘战友社区</title>
+    <link href="http://liujinkai.com/2018/03/25/kaikailiu-zhanyou-shequ/"/>
+    <id>http://liujinkai.com/2018/03/25/kaikailiu-zhanyou-shequ/</id>
+    <published>2018-03-25T00:22:26.000Z</published>
+    <updated>2018-03-25T00:31:18.469Z</updated>
+    
+    <summary type="html">
+    
+      为了更好的分享交流，我建立了【凯凯刘战友社区】知识星球，里面会分享我发现、遇到有价值的好东西，不限于好文、有趣的人、利器工具、区块链投资、美股投资等等。
+    
+    </summary>
+    
+      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
+    
+    
+      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>不可能什么都做，只把最重要的做好</title>
@@ -392,26 +412,6 @@
     </summary>
     
       <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
-    
-    
-      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>致已经逝去的2017上半年</title>
-    <link href="http://liujinkai.com/2017/08/09/first-half-year-2017/"/>
-    <id>http://liujinkai.com/2017/08/09/first-half-year-2017/</id>
-    <published>2017-08-09T00:32:57.000Z</published>
-    <updated>2017-08-09T00:52:35.000Z</updated>
-    
-    <summary type="html">
-    
-      混沌大学的一次演讲，李善友的“第一性原理”。2天的课程，以演绎法的方式来思考，对思考任何事情都是一个世界观的改变
-    
-    </summary>
-    
-      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
     
     
       <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
