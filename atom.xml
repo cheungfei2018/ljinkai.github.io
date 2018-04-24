@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2018-04-14T03:01:41.151Z</updated>
+  <updated>2018-04-24T15:48:50.018Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>币乎助手 - Chrome插件</title>
+    <link href="http://liujinkai.com/2018/04/24/bihu-zhushou/"/>
+    <id>http://liujinkai.com/2018/04/24/bihu-zhushou/</id>
+    <published>2018-04-24T15:31:11.000Z</published>
+    <updated>2018-04-24T15:48:50.018Z</updated>
+    
+    <summary type="html">
+    
+      币乎文章自动点赞、评论，收益得不停
+    
+    </summary>
+    
+      <category term="Web工具" scheme="http://liujinkai.com/categories/Web%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>做到三角，再也不担心我的懒癌症了</title>
@@ -157,11 +177,11 @@
   </entry>
   
   <entry>
-    <title>2017上海Google谷歌开发者大会第二天</title>
-    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-secondday/"/>
-    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-secondday/</id>
+    <title>2017上海Google谷歌开发者大会第一天</title>
+    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/"/>
+    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/</id>
     <published>2017-12-14T00:59:37.000Z</published>
-    <updated>2017-12-17T08:36:37.000Z</updated>
+    <updated>2017-12-14T01:16:31.000Z</updated>
     
     <summary type="html">
     
@@ -177,11 +197,11 @@
   </entry>
   
   <entry>
-    <title>2017上海Google谷歌开发者大会第一天</title>
-    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/"/>
-    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/</id>
+    <title>2017上海Google谷歌开发者大会第二天</title>
+    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-secondday/"/>
+    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-secondday/</id>
     <published>2017-12-14T00:59:37.000Z</published>
-    <updated>2017-12-14T01:16:31.000Z</updated>
+    <updated>2017-12-17T08:36:37.000Z</updated>
     
     <summary type="html">
     
@@ -388,26 +408,6 @@
     <summary type="html">
     
       此篇为币种简介的第一部分，对于区块链交易所常见的币种，ZEC、1SŦ、GNT、ANS等等，我们并不太了解相关的币种到底背后是做什么的？每个币种之间有什么区别？这次简介能帮助你扫盲这些币种。
-    
-    </summary>
-    
-      <category term="区块链" scheme="http://liujinkai.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-    
-    
-      <category term="比特币" scheme="http://liujinkai.com/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>比特币的挖矿与共识</title>
-    <link href="http://liujinkai.com/2017/08/16/bitcoin-mining-consensus/"/>
-    <id>http://liujinkai.com/2017/08/16/bitcoin-mining-consensus/</id>
-    <published>2017-08-16T14:22:15.000Z</published>
-    <updated>2017-08-16T14:38:25.000Z</updated>
-    
-    <summary type="html">
-    
-      很多人知道比特币，区块链。但是整个网络是怎么保证这个去中心化的？可能很多人并不了解，或者说想了解但是不知道从何入手。其实从挖矿这个角度去理解区块链会更能抓住重点，了解了挖矿，你就了解了区块链，了解了去中心化
     
     </summary>
     
