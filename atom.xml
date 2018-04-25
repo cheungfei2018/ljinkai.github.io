@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2018-04-24T15:48:50.018Z</updated>
+  <updated>2018-04-25T03:38:25.587Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>是时候了解下币乎了</title>
+    <link href="http://liujinkai.com/2018/04/25/bihu-toknow/"/>
+    <id>http://liujinkai.com/2018/04/25/bihu-toknow/</id>
+    <published>2018-04-25T03:31:58.000Z</published>
+    <updated>2018-04-25T03:38:25.587Z</updated>
+    
+    <summary type="html">
+    
+      币乎社区产品正式上线，很多人开始在上面写文章赚KEY，币乎算是“通证经济”的一个典型应用，里面的作者靠写文章月人30万的确实存在。
+    
+    </summary>
+    
+      <category term="区块链" scheme="http://liujinkai.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="概念" scheme="http://liujinkai.com/tags/%E6%A6%82%E5%BF%B5/"/>
+    
+  </entry>
   
   <entry>
     <title>币乎助手 - Chrome插件</title>
@@ -177,11 +197,11 @@
   </entry>
   
   <entry>
-    <title>2017上海Google谷歌开发者大会第一天</title>
-    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/"/>
-    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/</id>
+    <title>2017上海Google谷歌开发者大会第二天</title>
+    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-secondday/"/>
+    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-secondday/</id>
     <published>2017-12-14T00:59:37.000Z</published>
-    <updated>2017-12-14T01:16:31.000Z</updated>
+    <updated>2017-12-17T08:36:37.000Z</updated>
     
     <summary type="html">
     
@@ -197,11 +217,11 @@
   </entry>
   
   <entry>
-    <title>2017上海Google谷歌开发者大会第二天</title>
-    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-secondday/"/>
-    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-secondday/</id>
+    <title>2017上海Google谷歌开发者大会第一天</title>
+    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/"/>
+    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/</id>
     <published>2017-12-14T00:59:37.000Z</published>
-    <updated>2017-12-17T08:36:37.000Z</updated>
+    <updated>2017-12-14T01:16:31.000Z</updated>
     
     <summary type="html">
     
@@ -395,26 +415,6 @@
     
     
       <category term="资源" scheme="http://liujinkai.com/tags/%E8%B5%84%E6%BA%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>区块链币种简介(一)</title>
-    <link href="http://liujinkai.com/2017/08/30/blockchain-cion-intro-one/"/>
-    <id>http://liujinkai.com/2017/08/30/blockchain-cion-intro-one/</id>
-    <published>2017-08-30T11:47:19.000Z</published>
-    <updated>2017-08-30T11:51:46.000Z</updated>
-    
-    <summary type="html">
-    
-      此篇为币种简介的第一部分，对于区块链交易所常见的币种，ZEC、1SŦ、GNT、ANS等等，我们并不太了解相关的币种到底背后是做什么的？每个币种之间有什么区别？这次简介能帮助你扫盲这些币种。
-    
-    </summary>
-    
-      <category term="区块链" scheme="http://liujinkai.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-    
-    
-      <category term="比特币" scheme="http://liujinkai.com/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
     
   </entry>
   
