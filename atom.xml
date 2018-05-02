@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2018-04-25T03:38:25.588Z</updated>
+  <updated>2018-05-02T00:33:30.178Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>发现有趣的人</title>
+    <link href="http://liujinkai.com/2018/05/02/funny-guy/"/>
+    <id>http://liujinkai.com/2018/05/02/funny-guy/</id>
+    <published>2018-05-02T00:26:14.000Z</published>
+    <updated>2018-05-02T00:33:30.178Z</updated>
+    
+    <summary type="html">
+    
+      前两天发现一个有意思的事，通过无线蓝牙键盘，连接到手机进行代码的调试，web开发者利器。
+    
+    </summary>
+    
+      <category term="生活" scheme="http://liujinkai.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>是时候了解下币乎了</title>
@@ -395,26 +415,6 @@
     
     
       <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>隐藏的维度 、多元思维模型、如何白手起家赚到100万？ - 8月份知识清单</title>
-    <link href="http://liujinkai.com/2017/09/12/knowledge-list-august/"/>
-    <id>http://liujinkai.com/2017/09/12/knowledge-list-august/</id>
-    <published>2017-09-12T00:27:32.000Z</published>
-    <updated>2017-09-12T00:33:03.000Z</updated>
-    
-    <summary type="html">
-    
-      分形理论(Fractal Theory)是当今十分风靡和活跃的新理论、新学科。分形的概念是美籍数学家本华·曼德博（法语：Benoit B. Mandelbrot）首先提出的。
-    
-    </summary>
-    
-      <category term="清单" scheme="http://liujinkai.com/categories/%E6%B8%85%E5%8D%95/"/>
-    
-    
-      <category term="资源" scheme="http://liujinkai.com/tags/%E8%B5%84%E6%BA%90/"/>
     
   </entry>
   
