@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2018-05-08T22:44:20.932Z</updated>
+  <updated>2018-06-12T01:07:41.407Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>趋势的力量</title>
+    <link href="http://liujinkai.com/2018/06/12/trend-power/"/>
+    <id>http://liujinkai.com/2018/06/12/trend-power/</id>
+    <published>2018-06-12T00:57:11.000Z</published>
+    <updated>2018-06-12T01:07:41.407Z</updated>
+    
+    <summary type="html">
+    
+      “趋势”就在我们的周围，影响着一切的一切，像水一样，每天都在流动、雕琢，如果只看一天，几乎没有变化，但是拉长时间，你再看，就是翻天覆地。
+    
+    </summary>
+    
+      <category term="生活" scheme="http://liujinkai.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="认知" scheme="http://liujinkai.com/tags/%E8%AE%A4%E7%9F%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>一个实例DApp讲解来参与星云开发奖励</title>
@@ -395,26 +415,6 @@
     
     
       <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>9月份知识清单(2017) - JavaScript也能创建区块链应用、古腾堡计划、电子居民、EOS需要设置原生公链</title>
-    <link href="http://liujinkai.com/2017/10/10/2017-09-zhishiqingdan/"/>
-    <id>http://liujinkai.com/2017/10/10/2017-09-zhishiqingdan/</id>
-    <published>2017-10-10T15:06:03.000Z</published>
-    <updated>2017-10-10T15:34:02.000Z</updated>
-    
-    <summary type="html">
-    
-      Lisk是去中心化的区块链平台;古腾堡工程(Project Gutenberg，常简写作PG)由志愿者参与，致力于文本著作的电子化、归档以及发布;小马宋写的一本书《朋友圈的尖子生》,书中人物有，李倩、马佳佳、李叫兽、脱不花、冯鑫等11个人的介绍
-    
-    </summary>
-    
-      <category term="清单" scheme="http://liujinkai.com/categories/%E6%B8%85%E5%8D%95/"/>
-    
-    
-      <category term="资源" scheme="http://liujinkai.com/tags/%E8%B5%84%E6%BA%90/"/>
     
   </entry>
   
