@@ -817,7 +817,6 @@ _   底线
       if (winWid > 900) {
         var anchorTop = getPageTopLeft(document.getElementById("anchorTop")).top;
         var scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
-        console.log(anchorTop, scrollTop);
 
         if (anchorTop < scrollTop) {
           document.getElementById("about_fix").className = "widget tag about_fix";
