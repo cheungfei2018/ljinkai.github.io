@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2018-06-14T06:36:38.870Z</updated>
+  <updated>2018-07-09T23:59:57.671Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>价值投资的正确姿势</title>
+    <link href="http://liujinkai.com/2018/07/10/value-investing/"/>
+    <id>http://liujinkai.com/2018/07/10/value-investing/</id>
+    <published>2018-07-09T23:52:43.000Z</published>
+    <updated>2018-07-09T23:59:57.671Z</updated>
+    
+    <summary type="html">
+    
+      这两天李笑来的录音门事件，搅动了币圈。里面的各种币圈“套路”让我们了解到了更多的表面背后的东西。对于我们普通人来说，长期来看，做价值投资绝对是正确的。
+    
+    </summary>
+    
+      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
+    
+    
+      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>写文章为什么能持续赚钱</title>
@@ -393,28 +413,6 @@
     
     
       <category term="JavaScript" scheme="http://liujinkai.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gitment - 一款基于Github的Issues实现的评论插件</title>
-    <link href="http://liujinkai.com/2017/10/24/gitment-pinglun-chajian/"/>
-    <id>http://liujinkai.com/2017/10/24/gitment-pinglun-chajian/</id>
-    <published>2017-10-24T15:09:32.000Z</published>
-    <updated>2017-10-24T15:44:49.000Z</updated>
-    
-    <summary type="html">
-    
-      最近发现了一个有意思的评论插件Gitment,如果你有个人博客，可以考虑使用；如果你没有个人博客，也可以了解下实现的思路，开开脑洞
-    
-    </summary>
-    
-      <category term="Web技术" scheme="http://liujinkai.com/categories/Web%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="插件" scheme="http://liujinkai.com/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-      <category term="github" scheme="http://liujinkai.com/tags/github/"/>
     
   </entry>
   
