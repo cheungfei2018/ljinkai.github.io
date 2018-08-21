@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2018-07-25T04:43:25.849Z</updated>
+  <updated>2018-08-21T01:12:53.285Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>帮助开发者选择最佳颜色的工具 &amp; github辅助文件查看器</title>
+    <link href="http://liujinkai.com/2018/08/21/colorless-and-octotree/"/>
+    <id>http://liujinkai.com/2018/08/21/colorless-and-octotree/</id>
+    <published>2018-08-21T01:07:33.000Z</published>
+    <updated>2018-08-21T01:12:53.285Z</updated>
+    
+    <summary type="html">
+    
+      帮助开发者选择最佳颜色的工具：colorless， github辅助文件查看器：actotree
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>相见恨晚的背单词方法Anki - 工具篇</title>
@@ -393,26 +411,6 @@
     
     
       <category term="认知" scheme="http://liujinkai.com/tags/%E8%AE%A4%E7%9F%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EOS众筹领取需要特别注意的坑 &amp; EOS原生公链的绑定说明</title>
-    <link href="http://liujinkai.com/2017/11/08/EOS-contribution-and-register/"/>
-    <id>http://liujinkai.com/2017/11/08/EOS-contribution-and-register/</id>
-    <published>2017-11-08T11:04:54.000Z</published>
-    <updated>2017-11-08T11:11:43.000Z</updated>
-    
-    <summary type="html">
-    
-      最近看到一种利用网页Javascript来挖矿的东东，介绍给大家。网页中嵌入Javascript, 一旦用户打开该网站，浏览器便会按照脚本的指令变成一个门罗币挖矿机
-    
-    </summary>
-    
-      <category term="区块链" scheme="http://liujinkai.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-    
-    
-      <category term="比特币" scheme="http://liujinkai.com/tags/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
     
   </entry>
   
