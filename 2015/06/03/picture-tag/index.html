@@ -155,13 +155,13 @@
 <h4 id="视窗的选择"><a href="#视窗的选择" class="headerlink" title="视窗的选择"></a><strong>视窗的选择</strong></h4><p>图片是否一直填充在视窗的一部分？相对于视窗的图片加载</p>
 <h4 id="图片格式的选择"><a href="#图片格式的选择" class="headerlink" title="图片格式的选择"></a><strong>图片格式的选择</strong></h4><p>浏览器是否支持更小的图片类型？加载可替换的图片类型如：WebP</p>
 <h4 id="为美的设计而用"><a href="#为美的设计而用" class="headerlink" title="为美的设计而用"></a><strong>为美的设计而用</strong></h4><p>最普遍的应用<picture>元素是在响应式设计中的美术设计。代替一张图片缩放来适应窗口的大小的方式，用多张图片的设计来适应浏览器的窗口。</picture></p>
-<p> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_CE74F3E2-BFFC-4CBD-8206-97DC41130370.png" alt=""></p>
+<p> <img src="http://qiniu.gafata.com/blog_CE74F3E2-BFFC-4CBD-8206-97DC41130370.png" alt=""></p>
 <p><small>用一张图片来适应不同屏幕窗口的大小</small></p>
-<p> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_A6392683-7986-41DD-B891-6A2531B31516.png" alt=""></p>
+<p> <img src="http://qiniu.gafata.com/blog_A6392683-7986-41DD-B891-6A2531B31516.png" alt=""></p>
 <p><small>用多张不同的图片来适应不同窗口的大小</small></p>
 <h4 id="提高资源的加载性能"><a href="#提高资源的加载性能" class="headerlink" title="提高资源的加载性能"></a><strong>提高资源的加载性能</strong></h4><p>当用<picture>或者用<img>的srcset和sizes属性，浏览器仅仅会下载对应明确的适合的图片。这种本地实现的方式可以很好的被解析并最好的使用浏览器级的缓存和预加载。</picture></p>
 <h3 id="查看在线示例"><a href="#查看在线示例" class="headerlink" title="查看在线示例"></a>查看在线示例</h3><p>事实上网络被创建用于加载一张猫的图片。用<picture>我们可以模拟难以想象的猫的能力来适应空间，不管网页多大或者多小。</picture></p>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_40A94162-65F6-41A7-86F6-FA54772B0357.png" width="400px"></p>
+<p><img src="http://qiniu.gafata.com/blog_40A94162-65F6-41A7-86F6-FA54772B0357.png" width="400px"></p>
 <p><a href="http://googlechrome.github.io/samples/picture-element/" target="_blank" rel="external">打开示例</a>页面用chrome38以上的版本。调整浏览器的视窗大小。<br>作为一个开始，这个例子仅仅突出了<picture>的最小的特性。让我们深入的开始钻研下吧。</picture></p>
 <h4 id="lt-picture-gt-语法"><a href="#lt-picture-gt-语法" class="headerlink" title="&lt;picture&gt;语法"></a><code>&lt;picture&gt;</code>语法</h4><p>下面的HTML和CSS的片段就是这个例子的代码实现：</p>
 <pre><code>&lt;style&gt;
@@ -218,7 +218,7 @@
              lighthouse-640.jpg 640w,
              lighthouse-1280.jpg 1280w&quot;&gt;
 </code></pre><p>浏览器将会用这些提示来选择最恰当的图片源来适应窗口宽度和硬件显示：</p>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_6DDAC5A4-2199-48B9-A229-E69DA486B662.png" width="550px;"></p>
+<p><img src="http://qiniu.gafata.com/blog_6DDAC5A4-2199-48B9-A229-E69DA486B662.png" width="550px;"></p>
 <p><small><br>如图，左边的浏览器窗口大约800px.浏览器将会加载lighthouse-640.jpg，除非设备分辨率是2x—in，lighthouse-1280.jpg 图片才会被加载</small></p>
 <p>增加<code>&lt;picture&gt;</code>元素，sizes属性被用到了<code>&lt;img&gt;</code>和<code>&lt;source&gt;</code>元素：</p>
 <pre><code>&lt;picture&gt;
@@ -235,7 +235,7 @@
                lighthouse-1280.jpg 1280w&quot;&gt;
 &lt;/picture&gt;
 </code></pre><p>在上面的例子中，当窗口在800px并且大于时，浏览器将会加载对应版本的图片：</p>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_500CE83D-809F-4C00-9928-1C64658061AE.png" width="550px"></p>
+<p><img src="http://qiniu.gafata.com/blog_500CE83D-809F-4C00-9928-1C64658061AE.png" width="550px"></p>
 <p><small>左边的时大于800px的窗口，所以对应版本的图片将显示出来</small></p>
 <h4 id="加载可改变的图片格式"><a href="#加载可改变的图片格式" class="headerlink" title="加载可改变的图片格式"></a><strong>加载可改变的图片格式</strong></h4><p><code>&lt;source&gt;</code>元素的type属性可以用来加载可变图片文件格式，不过这并不是所有图片都支持。举个例子，你可以在支持的浏览器里使用<a href="https://developers.google.com/speed/webp/" target="_blank" rel="external">WebP</a>格式，在不支持的浏览器使用JPEG格式：</p>
 <pre><code>&lt;picture&gt;
@@ -246,7 +246,7 @@
 <h3 id="现在就试试吧"><a href="#现在就试试吧" class="headerlink" title="现在就试试吧"></a>现在就试试吧</h3><p><code>&lt;picture&gt;</code>元素在Chrome38就可以使用了，用chrome的开发者工具模拟器开始尝试吧。</p>
 <p><a href="http://www.html5rocks.com/en/tutorials/responsive/picture-element/#disqus_thread" target="_blank" rel="external">英文原文</a></p>
 <p>欢迎关注微信订阅号：</p>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_qrcode_for_gh_0fd5deb0e08b_430.jpg" alt=""></p>
+<p><img src="http://qiniu.gafata.com/blog_qrcode_for_gh_0fd5deb0e08b_430.jpg" alt=""></p>
 
       
     </div>
@@ -375,14 +375,14 @@
   <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
     <li>微信公众号：凯凯而谈</li>
     <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
-    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='180px' style="margin: 0px auto;display: block;"></li>
+    <li><img src='http://qiniu.gafata.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='180px' style="margin: 0px auto;display: block;"></li>
   </ul>
 </div>
 <div class="widget tag">
   <div class="about_banner">
     <div class="about_profile">
       <a href="/2015/02/28/new/">
-        <img class="about_img" src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-05-17-WechatIMG1.jpeg?imageView2/2/w/200">
+        <img class="about_img" src="http://qiniu.gafata.com/2017-05-17-WechatIMG1.jpeg?imageView2/2/w/200">
       </a>
     </div>
   </div>
@@ -390,7 +390,7 @@
     <li>认知、技术、变现</li>
     <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
     <li>微信公众号：凯凯而谈</li>
-    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li><img src='http://qiniu.gafata.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='160px' style="margin: 0px auto;display: block;"></li>
     <li>web、区块链开发；美股、区块链投资</li>
   </ul>
   <script>

@@ -156,22 +156,22 @@
 <ul>
 <li>这个小的放大镜图标指向这个元素的CSS的属性最终是在哪个CSS文件里定义。举例子来说，选择“检查”在页面上的任意DOM元素，并切换到“Computed”的子标签。找到你关心的CSS属性并点击放大镜图标，就会直接进入对应的css文件(当你的项目是个很大的web应用时，这个功能是非常有用的).</li>
 </ul>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_E946B381-7979-4384-9884-48B61BE0D963.png?imageView2/2/w/800" alt=""></p>
+<p><img src="http://qiniu.gafata.com/blog_E946B381-7979-4384-9884-48B61BE0D963.png?imageView2/2/w/800" alt=""></p>
 <a id="more"></a>
 <ul>
-<li><p>如果想看到XHRs的请求信息，可以选中“Log XMLHttpRequests”的复选框，在“Setting”频道下的Console部分。在知道这个功能之前，我得设置浏览器代理像Burp来完成这样的功能。当然，使用代理你可以有机会来修改XHRs在真正到达服务器之前，这是一个很好的方式来完成安全测试。类似的更简便的方式是使用“Sources::XHR Breakpoints”并启用“Any XHR”断点。<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_D6007D5D-8E1A-4CA6-91B9-F826BFFF45B2.png?imageView2/2/w/800" alt=""></p>
+<li><p>如果想看到XHRs的请求信息，可以选中“Log XMLHttpRequests”的复选框，在“Setting”频道下的Console部分。在知道这个功能之前，我得设置浏览器代理像Burp来完成这样的功能。当然，使用代理你可以有机会来修改XHRs在真正到达服务器之前，这是一个很好的方式来完成安全测试。类似的更简便的方式是使用“Sources::XHR Breakpoints”并启用“Any XHR”断点。<br><img src="http://qiniu.gafata.com/blog_D6007D5D-8E1A-4CA6-91B9-F826BFFF45B2.png?imageView2/2/w/800" alt=""></p>
 </li>
-<li><p>现在，假设你工作的web应用正在有规律的发送XHR请求(举例子，保持当前页面为最新)并想知道这个定时器在哪里（即什么地方调用setTimeout()或setInterval())。弄明白这些，你需要切换到“Sources”标签，并选中“Async”复选框。这会让你所有的堆栈继续执行当遇到setTimeout()的时候，甚至是多层次的嵌套。对于像requestAnimationFrame()和addEventListener()等同样使用。你可以找到设置的地方如下：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_17F3E8E4-B23E-41C8-8163-7BB635859441.png?imageView2/2/w/800" alt=""></p>
+<li><p>现在，假设你工作的web应用正在有规律的发送XHR请求(举例子，保持当前页面为最新)并想知道这个定时器在哪里（即什么地方调用setTimeout()或setInterval())。弄明白这些，你需要切换到“Sources”标签，并选中“Async”复选框。这会让你所有的堆栈继续执行当遇到setTimeout()的时候，甚至是多层次的嵌套。对于像requestAnimationFrame()和addEventListener()等同样使用。你可以找到设置的地方如下：<br><img src="http://qiniu.gafata.com/blog_17F3E8E4-B23E-41C8-8163-7BB635859441.png?imageView2/2/w/800" alt=""></p>
 </li>
-<li><p>想快速的找到你点击某个特定的按钮或者链接的运行代码，只需要在你点击按钮前启用“Event listener breakpoint” Mouse::Click(另外一个在大型web应用时会用到的杀手级的特性)：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_766FF3F0-DD84-4EDE-B8BC-8C521445C342.png?imageView2/2/w/800" alt=""></p>
+<li><p>想快速的找到你点击某个特定的按钮或者链接的运行代码，只需要在你点击按钮前启用“Event listener breakpoint” Mouse::Click(另外一个在大型web应用时会用到的杀手级的特性)：<br><img src="http://qiniu.gafata.com/blog_766FF3F0-DD84-4EDE-B8BC-8C521445C342.png?imageView2/2/w/800" alt=""></p>
 </li>
-<li><p>当你使用“Event listener breakpoint :: Mouse :: Click”的时候，你很可能会进入到第三方的代码库像jQuery,这时候你就需要花费一些调试的时间来到达真正的事件处理函数。最好的方法是标记“Blackbox Script”避免进入到第三方的脚本。调试时就再不会进入第三方的脚本库了，代码会一直运行到没有标记blackboxed的文件为止。你可以blackbox脚本通过右击调用栈里的第三方库的文件，并从上下文菜单中选择“Blackbox Script”即可：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_929E9896-4E6D-4B09-96F1-388C0CC4C0A3.png?imageView2/2/w/800" alt=""></p>
+<li><p>当你使用“Event listener breakpoint :: Mouse :: Click”的时候，你很可能会进入到第三方的代码库像jQuery,这时候你就需要花费一些调试的时间来到达真正的事件处理函数。最好的方法是标记“Blackbox Script”避免进入到第三方的脚本。调试时就再不会进入第三方的脚本库了，代码会一直运行到没有标记blackboxed的文件为止。你可以blackbox脚本通过右击调用栈里的第三方库的文件，并从上下文菜单中选择“Blackbox Script”即可：<br><img src="http://qiniu.gafata.com/blog_929E9896-4E6D-4B09-96F1-388C0CC4C0A3.png?imageView2/2/w/800" alt=""></p>
 </li>
-<li>你可以跳转到特定的文件，通过文件名，使用“ctrl-p”（像atom中一样）<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_450D4A71-AFD9-4252-997A-CDD4359C16A6.png?imageView2/2/w/800" alt=""></li>
-<li>你可以跳转到一个方法，通过方法名(只在当前打开的文件中)，使用“ctrl-shift-p”:<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_50808B7B-3AD8-4CF2-9617-3A874642007A.png?imageView2/2/w/800" alt=""></li>
-<li>你可以全文搜索通过”ctrl-shift-f”:<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_C85CE0E2-EF15-443D-BD46-CE53D04DE3D7.png?imageView2/2/w/800" alt=""></li>
-<li>你可以使用多个选择提示来编辑，选中一些字符并按下“ctrl-d”,会根据你按下的次数来选中相应的字符(就像atom那样).对于像重命名变量非常有用。<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_devtools-multiple-cursors-ctrl-d.gif" alt=""></li>
-<li>网站的代码可以本地存储，并在开发模式编辑然后可以直接存储到本地磁盘。实现这个功能，切换到源码标签，右键点击“Add Folder to Workspace”，并最后选择你工程项目的存储位置即可。此外，右键点击本地映射文件，选择“Map to Network Resource…”就会加载相应的“网络”文件了<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_C9E493A2-3866-4AF3-9251-61BB2AE423DE.png?imageView2/2/w/800" alt=""></li>
+<li>你可以跳转到特定的文件，通过文件名，使用“ctrl-p”（像atom中一样）<br><img src="http://qiniu.gafata.com/blog_450D4A71-AFD9-4252-997A-CDD4359C16A6.png?imageView2/2/w/800" alt=""></li>
+<li>你可以跳转到一个方法，通过方法名(只在当前打开的文件中)，使用“ctrl-shift-p”:<br><img src="http://qiniu.gafata.com/blog_50808B7B-3AD8-4CF2-9617-3A874642007A.png?imageView2/2/w/800" alt=""></li>
+<li>你可以全文搜索通过”ctrl-shift-f”:<br><img src="http://qiniu.gafata.com/blog_C85CE0E2-EF15-443D-BD46-CE53D04DE3D7.png?imageView2/2/w/800" alt=""></li>
+<li>你可以使用多个选择提示来编辑，选中一些字符并按下“ctrl-d”,会根据你按下的次数来选中相应的字符(就像atom那样).对于像重命名变量非常有用。<br><img src="http://qiniu.gafata.com/blog_devtools-multiple-cursors-ctrl-d.gif" alt=""></li>
+<li>网站的代码可以本地存储，并在开发模式编辑然后可以直接存储到本地磁盘。实现这个功能，切换到源码标签，右键点击“Add Folder to Workspace”，并最后选择你工程项目的存储位置即可。此外，右键点击本地映射文件，选择“Map to Network Resource…”就会加载相应的“网络”文件了<br><img src="http://qiniu.gafata.com/blog_C9E493A2-3866-4AF3-9251-61BB2AE423DE.png?imageView2/2/w/800" alt=""></li>
 </ul>
 <h3 id="其它小贴士："><a href="#其它小贴士：" class="headerlink" title="其它小贴士："></a>其它小贴士：</h3><ul>
 <li>$0 在console的时候，代表你在页面选中的元素。</li>
@@ -315,14 +315,14 @@
   <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
     <li>微信公众号：凯凯而谈</li>
     <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
-    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='180px' style="margin: 0px auto;display: block;"></li>
+    <li><img src='http://qiniu.gafata.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='180px' style="margin: 0px auto;display: block;"></li>
   </ul>
 </div>
 <div class="widget tag">
   <div class="about_banner">
     <div class="about_profile">
       <a href="/2015/02/28/new/">
-        <img class="about_img" src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-05-17-WechatIMG1.jpeg?imageView2/2/w/200">
+        <img class="about_img" src="http://qiniu.gafata.com/2017-05-17-WechatIMG1.jpeg?imageView2/2/w/200">
       </a>
     </div>
   </div>
@@ -330,7 +330,7 @@
     <li>认知、技术、变现</li>
     <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
     <li>微信公众号：凯凯而谈</li>
-    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li><img src='http://qiniu.gafata.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='160px' style="margin: 0px auto;display: block;"></li>
     <li>web、区块链开发；美股、区块链投资</li>
   </ul>
   <script>

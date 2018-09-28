@@ -152,13 +152,13 @@
 <p>好处是在浏览器关闭的时候你的网站也能发送通知到用户，这样就能让你的用户再次点击打开你的网站，是不是很酷？</p>
 <p>下面我们就看看怎么来实现这样一个通知功能，首先需要一些准备工作。</p>
 <p><b>1、 在<a href="https://console.developers.google.com/" target="_blank" rel="external">Google Developer Console</a> 创建一个项目，获得这个project number</b></p>
- <center><br> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_1.png" alt="project number"><br> </center>
+ <center><br> <img src="http://qiniu.gafata.com/blog_1.png" alt="project number"><br> </center>
 
 <p><b>2、 在API &amp; auth- &gt; api 启用 Google Cloud Messaging for Android、Cloud Messaging for Chrome.</b></p>
- <center><br> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_2.png" alt="api"><br> </center>
+ <center><br> <img src="http://qiniu.gafata.com/blog_2.png" alt="api"><br> </center>
 
 <p><b>3、 在 Credentials 下创建一个key,并选择server类型</b></p>
-<p> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_3.png" alt="api"></p>
+<p> <img src="http://qiniu.gafata.com/blog_3.png" alt="api"></p>
 <p><b>4、 <a href="https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications" target="_blank" rel="external">下载官方实例代码</a></b></p>
 <ul>
 <li>复制一份<code>config.sample.js</code> 并重命名为 config.js</li>
@@ -167,18 +167,18 @@
 <li>在 <code>manifest.json</code> 文件中，替换 “<your project="" number="" ...="">“ 为1步骤中的key</your></li>
 </ul>
 <p><b>5、本地用localhost方式打开，正常打开的话，并Enable Push Message会显示如下：</b></p>
- <center><br>  <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_屏幕快照 2015-05-25 下午2.52.04.png" alt=""><br> </center>
+ <center><br>  <img src="http://qiniu.gafata.com/blog_屏幕快照 2015-05-25 下午2.52.04.png" alt=""><br> </center>
 
 <p><b>6、然后拷贝提示的给你的命令，我这的是</b></p>
 <p><code>curl --header &quot;Authorization: key=AIzaSyAYEz9hsORDlEAiOPJZoLbA_YWLYsVxr6g&quot; --header Content-Type:&quot;application/json&quot; https://android.googleapis.com/gcm/send -d &quot;{\&quot;registration_ids\&quot;:[\&quot;APA91bE359pv1hrC97l3avpCCfEVOC2H_JVC5eltBtbF6UcKbirzJjcbABu1Upp93O3I7dPI7INuR7eXQJbITNSC_gbMEyfJVvR_5ahe3Keyy9b6-xuP_a6WPfOGbZNclRcdl8ZbrNgLSKws3sQNKHpOlPagRm4MQnwQ-McbVILrZ4Ac8Wz6lDQ\&quot;]}&quot;</code></p>
 <p>拷贝你自己的命令在一个<b>可以翻墙的服务器</b>里面执行，原因你懂得</p>
- <center><br> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_9C8765A4-3C52-48EB-B8A5-C336A18F6C13.png" alt=""><br> </center>
+ <center><br> <img src="http://qiniu.gafata.com/blog_9C8765A4-3C52-48EB-B8A5-C336A18F6C13.png" alt=""><br> </center>
 
 <p><b>7、 然后就可以看到屏幕的右上角会pop出一个提示，就说明成功了</b></p>
- <center><br> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_屏幕快照 2015-05-25 上午11.29.21.png" alt=""><br> </center>
+ <center><br> <img src="http://qiniu.gafata.com/blog_屏幕快照 2015-05-25 上午11.29.21.png" alt=""><br> </center>
 
 <p><b>注意：<br>google的提醒服务是需要安全地址的，所以它要求如下：</b></p>
- <center><br> <img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_屏幕快照 2015-05-25 下午12.37.06.png" alt=""><br> </center>
+ <center><br> <img src="http://qiniu.gafata.com/blog_屏幕快照 2015-05-25 下午12.37.06.png" alt=""><br> </center>
 
 <p>参考：</p>
 <ul>
@@ -315,14 +315,14 @@
   <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
     <li>微信公众号：凯凯而谈</li>
     <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
-    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='180px' style="margin: 0px auto;display: block;"></li>
+    <li><img src='http://qiniu.gafata.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='180px' style="margin: 0px auto;display: block;"></li>
   </ul>
 </div>
 <div class="widget tag">
   <div class="about_banner">
     <div class="about_profile">
       <a href="/2015/02/28/new/">
-        <img class="about_img" src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-05-17-WechatIMG1.jpeg?imageView2/2/w/200">
+        <img class="about_img" src="http://qiniu.gafata.com/2017-05-17-WechatIMG1.jpeg?imageView2/2/w/200">
       </a>
     </div>
   </div>
@@ -330,7 +330,7 @@
     <li>认知、技术、变现</li>
     <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
     <li>微信公众号：凯凯而谈</li>
-    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li><img src='http://qiniu.gafata.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='160px' style="margin: 0px auto;display: block;"></li>
     <li>web、区块链开发；美股、区块链投资</li>
   </ul>
   <script>

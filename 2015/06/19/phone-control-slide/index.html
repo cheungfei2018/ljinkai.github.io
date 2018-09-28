@@ -148,13 +148,13 @@
     <div></div>
     <div class="entry">
       
-        <p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_smartphone-remote-control-for-your-presentation.png" alt=""></p>
+        <p><img src="http://qiniu.gafata.com/blog_smartphone-remote-control-for-your-presentation.png" alt=""></p>
 <h3 id="Demo-nbsp-nbsp-nbsp-Download"><a href="#Demo-nbsp-nbsp-nbsp-Download" class="headerlink" title="Demo  &nbsp;&nbsp;&nbsp;Download"></a><a href="http://tz-smartphone-remote-control.herokuapp.com/" target="_blank" rel="external">Demo</a>  &nbsp;&nbsp;&nbsp;<a href="http://cdn.demo.tutorialzine.com/2015/02/smartphone-remote-control-for-presentations/smartphone-remote-control-presentation.zip" target="_blank" rel="external">Download</a></h3><p>用手机来实现远程控制是不是很酷？你不需要去写一个APP应用来实现这种功能-现在的手机浏览器已经支出了web socket技术，这提供了很多的可能。<br>这篇文章我们将用Node.js和<a href="http://socket.io/" target="_blank" rel="external">Socket.io</a>来实现手机控制PC的效果。<br><a id="more"></a></p>
 <p>我们不必到处寻找基于HTML5的这种应用库。我们将使用<a href="https://github.com/hakimel/reveal.js/" target="_blank" rel="external">Reveal.js</a>-它来处理幻灯片动画效果，并支持键盘和触摸事件。</p>
 <p>我们不必自己来实现远程控制的接口，我们将实现手机和电脑的同步。这样不仅能控制进度，也能同步的显示在你的手机上。</p>
 <h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>技术上很简单。Reveal.js让当前的幻灯片序号在URL的hash上(e.g. <code>http://example.com/#/1</code>).我们将这个hash发送到所有连接的设备上，<br>对应的将会根据这个hash来自动的显示响应幻灯片。这样的话，别人可以方便的直接通过url来直接访问到显示的页面，所有我们需要输入一个验证码<br>在连接之前进行验证。</p>
 <p>要说的是Reveal.js已经有一套API,我们可以直接调用来同步。但是hash变化的技术很简单，我们可以直接来实现。</p>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/blog_rsz_slideshow-1024x573.jpg" alt=""></p>
+<p><img src="http://qiniu.gafata.com/blog_rsz_slideshow-1024x573.jpg" alt=""></p>
 <h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>你可以本地运行示例，或者部署到能提供node.js环境的服务器上。本地运行更简单些，但是必须本地有node.js并执行<code>npm install</code>.</p>
 <h3 id="运行本地代码"><a href="#运行本地代码" class="headerlink" title="运行本地代码"></a>运行本地代码</h3><ul>
 <li>下载示例代码</li>
@@ -484,14 +484,14 @@ console.log(&apos;Your presentation is running on http://localhost:&apos; + port
   <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
     <li>微信公众号：凯凯而谈</li>
     <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
-    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='180px' style="margin: 0px auto;display: block;"></li>
+    <li><img src='http://qiniu.gafata.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='180px' style="margin: 0px auto;display: block;"></li>
   </ul>
 </div>
 <div class="widget tag">
   <div class="about_banner">
     <div class="about_profile">
       <a href="/2015/02/28/new/">
-        <img class="about_img" src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-05-17-WechatIMG1.jpeg?imageView2/2/w/200">
+        <img class="about_img" src="http://qiniu.gafata.com/2017-05-17-WechatIMG1.jpeg?imageView2/2/w/200">
       </a>
     </div>
   </div>
@@ -499,7 +499,7 @@ console.log(&apos;Your presentation is running on http://localhost:&apos; + port
     <li>认知、技术、变现</li>
     <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
     <li>微信公众号：凯凯而谈</li>
-    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li><img src='http://qiniu.gafata.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='160px' style="margin: 0px auto;display: block;"></li>
     <li>web、区块链开发；美股、区块链投资</li>
   </ul>
   <script>

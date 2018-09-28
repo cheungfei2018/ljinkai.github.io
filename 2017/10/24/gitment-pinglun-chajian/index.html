@@ -151,13 +151,13 @@
         <p>最近发现了一个有意思的评论插件<strong>Gitment</strong>, 从实现和效果上都不错，给大家介绍一下。如果你有个人博客，可以考虑使用；如果你没有个人博客，也可以了解下实现的思路，开开脑洞。</p>
 <p>之前普遍使用的多说评论关闭了，相信很多人的博客都受到了影响。我个人的博客评论也因此换过Discuz, 网易评论插件，畅言评论插件，都不甚理想。这次看到Gitment还是有些惊喜。</p>
 <p>实现的最终效果如图：</p>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-10-22-WX20171018-200818@2x.png?imageView2/2/w/600" alt=""></p>
+<p><img src="http://qiniu.gafata.com/2017-10-22-WX20171018-200818@2x.png?imageView2/2/w/600" alt=""></p>
 <a id="more"></a>
 <p>基本原理是<strong>利用Github项目上的Issues功能来实现内容的存储，使用github的账号登录体系。和自己的博客集成起来也比较简单，一个css文件，一个js文件，一段初始化代码就可以了。</strong></p>
 <h1 id="1、首先Github上，注册-OAuth-Application"><a href="#1、首先Github上，注册-OAuth-Application" class="headerlink" title="1、首先Github上，注册 OAuth Application"></a>1、首先Github上，注册 OAuth Application</h1><p>可以通过<a href="https://github.com/settings/applications/new" target="_blank" rel="external">这个地址</a>来注册一个应用，按提示填写即可。</p>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-10-24-WX20171022-102800%402x.png?imageView2/2/w/600" alt=""></p>
+<p><img src="http://qiniu.gafata.com/2017-10-24-WX20171022-102800%402x.png?imageView2/2/w/600" alt=""></p>
 <p>成功之后会得到一个client ID 和一个 client secret，在后面的初始化插件时会用到。</p>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-10-22-WX20171018-195426@2x.png?imageView2/2/w/600" alt=""></p>
+<p><img src="http://qiniu.gafata.com/2017-10-22-WX20171018-195426@2x.png?imageView2/2/w/600" alt=""></p>
 <h1 id="2、页面集成Gitment"><a href="#2、页面集成Gitment" class="headerlink" title="2、页面集成Gitment"></a>2、页面集成Gitment</h1><p>加载对应的css文件、js文件、初始化代码到要显示的页面</p>
 <pre><code>&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;https://imsun.github.io/gitment/style/default.css&quot;&gt;
@@ -178,16 +178,16 @@
 <blockquote>
 <p><a href="https://github.com/imsun/gitment#options" target="_blank" rel="external">https://github.com/imsun/gitment#options</a></p>
 </blockquote>
-<h2 id="2-2-可能遇到的问题一"><a href="#2-2-可能遇到的问题一" class="headerlink" title="2.2 可能遇到的问题一"></a>2.2 可能遇到的问题一</h2><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-10-22-WX20171022-113635@2x.png?imageView2/2/w/600" alt=""><br>如果你遇到这样的报错，说明你的<code>gitment.render(&#39;container’); //container为你要显示评论的id</code> 里的id在页面上没有对应上，请仔细检查。</p>
-<h2 id="2-3-可能遇到的问题二"><a href="#2-3-可能遇到的问题二" class="headerlink" title="2.3 可能遇到的问题二"></a>2.3 可能遇到的问题二</h2><p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-10-22-1508327482195.jpg?imageView2/2/w/600" alt=""></p>
+<h2 id="2-2-可能遇到的问题一"><a href="#2-2-可能遇到的问题一" class="headerlink" title="2.2 可能遇到的问题一"></a>2.2 可能遇到的问题一</h2><p><img src="http://qiniu.gafata.com/2017-10-22-WX20171022-113635@2x.png?imageView2/2/w/600" alt=""><br>如果你遇到这样的报错，说明你的<code>gitment.render(&#39;container’); //container为你要显示评论的id</code> 里的id在页面上没有对应上，请仔细检查。</p>
+<h2 id="2-3-可能遇到的问题二"><a href="#2-3-可能遇到的问题二" class="headerlink" title="2.3 可能遇到的问题二"></a>2.3 可能遇到的问题二</h2><p><img src="http://qiniu.gafata.com/2017-10-22-1508327482195.jpg?imageView2/2/w/600" alt=""></p>
 <p>如果遇到这样的问题，很可能是你初始化的repo地址没有写对，repo一定要写成对应的id，而不是http的地址，图中的id是我自己Github上的一个项目，也就是要存储评论内容的项目，如图：</p>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-10-22-WX20171022-125636@2x.png?imageView2/2/w/600" alt=""></p>
+<p><img src="http://qiniu.gafata.com/2017-10-22-WX20171022-125636@2x.png?imageView2/2/w/600" alt=""></p>
 <h1 id="3、初始化评论"><a href="#3、初始化评论" class="headerlink" title="3、初始化评论"></a>3、初始化评论</h1><p>集成成功后你就可以看见显示的评论插件内容了。这时候还需要一步就是登陆自己的gihub账号，点击图中的<strong>Initilize Comments</strong></p>
-<p><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-10-22-WX20171018-195812@2x.png?imageView2/2/w/600" alt=""></p>
+<p><img src="http://qiniu.gafata.com/2017-10-22-WX20171018-195812@2x.png?imageView2/2/w/600" alt=""></p>
 <blockquote>
 <p>注意：每一篇文章都需要初始化</p>
 </blockquote>
-<p>最后你可以在Isuues部分看到的评论存储为：<br><img src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-10-22-WX20171022-130535@2x.png?imageView2/2/w/600" alt=""></p>
+<p>最后你可以在Isuues部分看到的评论存储为：<br><img src="http://qiniu.gafata.com/2017-10-22-WX20171022-130535@2x.png?imageView2/2/w/600" alt=""></p>
 <h1 id="4、自定义和个性化"><a href="#4、自定义和个性化" class="headerlink" title="4、自定义和个性化"></a>4、自定义和个性化</h1><p>你也可以自定义样式和布局，更多说明请参考：<a href="https://github.com/imsun/gitment#customize" target="_blank" rel="external">https://github.com/imsun/gitment#customize</a></p>
 <p><strong>最后总结一下</strong>，这款Gitment的优点是集成简单，自定义比较方便，自带github账号登录；缺点就是仅支持github账号登录，每次发布的新文章要点击按钮来初始化，略麻烦；目前手机端适配还并不理想。如果你对评论插件的要求不是那么严格，可以考虑使用这款插件。</p>
 <blockquote>
@@ -334,14 +334,14 @@
   <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
     <li>微信公众号：凯凯而谈</li>
     <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
-    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='180px' style="margin: 0px auto;display: block;"></li>
+    <li><img src='http://qiniu.gafata.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='180px' style="margin: 0px auto;display: block;"></li>
   </ul>
 </div>
 <div class="widget tag">
   <div class="about_banner">
     <div class="about_profile">
       <a href="/2015/02/28/new/">
-        <img class="about_img" src="http://7u2qrr.com1.z0.glb.clouddn.com/2017-05-17-WechatIMG1.jpeg?imageView2/2/w/200">
+        <img class="about_img" src="http://qiniu.gafata.com/2017-05-17-WechatIMG1.jpeg?imageView2/2/w/200">
       </a>
     </div>
   </div>
@@ -349,7 +349,7 @@
     <li>认知、技术、变现</li>
     <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
     <li>微信公众号：凯凯而谈</li>
-    <li><img src='http://7u2qrr.com1.z0.glb.clouddn.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li><img src='http://qiniu.gafata.com/2017-07-09-qrcode_for_gh_0fd5deb0e08b_430.jpg' width='160px' style="margin: 0px auto;display: block;"></li>
     <li>web、区块链开发；美股、区块链投资</li>
   </ul>
   <script>
