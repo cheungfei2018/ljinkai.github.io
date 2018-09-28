@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2018-08-21T01:12:53.285Z</updated>
+  <updated>2018-09-28T00:07:10.175Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>集中思维和发散思维</title>
+    <link href="http://liujinkai.com/2018/09/28/jizhong-fasan/"/>
+    <id>http://liujinkai.com/2018/09/28/jizhong-fasan/</id>
+    <published>2018-09-28T00:00:19.000Z</published>
+    <updated>2018-09-28T00:07:10.175Z</updated>
+    
+    <summary type="html">
+    
+      集中思维还是主要的思考方式，在解决大部分问题的时候是适用的，如果遇到某些问题不得的时候，要主动用发散思维来考虑问题
+    
+    </summary>
+    
+    
+      <category term="概念" scheme="http://liujinkai.com/tags/%E6%A6%82%E5%BF%B5/"/>
+    
+  </entry>
   
   <entry>
     <title>帮助开发者选择最佳颜色的工具 &amp; github辅助文件查看器</title>
@@ -391,26 +409,6 @@
     
     
       <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一夜消失的煎饼店</title>
-    <link href="http://liujinkai.com/2017/12/02/yiye-xiaoshi-de-jianbingdian/"/>
-    <id>http://liujinkai.com/2017/12/02/yiye-xiaoshi-de-jianbingdian/</id>
-    <published>2017-12-02T05:02:56.000Z</published>
-    <updated>2018-04-14T02:47:46.232Z</updated>
-    
-    <summary type="html">
-    
-      往山上推石头和站在山顶往下推石头是完全不一样的，山顶只要一个推力就可以了，剩下的就是自然而然的事了。聪明人是借力使力，一旦你觉得一件事非常费劲，就要思考下是否你的方向有问题。
-    
-    </summary>
-    
-      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
-    
-    
-      <category term="认知" scheme="http://liujinkai.com/tags/%E8%AE%A4%E7%9F%A5/"/>
     
   </entry>
   
