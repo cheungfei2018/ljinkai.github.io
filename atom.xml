@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2018-09-28T05:48:53.444Z</updated>
+  <updated>2018-10-15T06:18:09.226Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -17,17 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>极客小报 (1) - React的工作面试、真实的Google Cloud、Walt 写WebAssembly的开源项目</title>
+    <link href="http://liujinkai.com/2018/10/15/geek-paper-one/"/>
+    <id>http://liujinkai.com/2018/10/15/geek-paper-one/</id>
+    <published>2018-10-15T06:11:02.000Z</published>
+    <updated>2018-10-15T06:18:09.226Z</updated>
+    
+    <summary type="html">
+    
+      极客小报每天推荐一篇英文，内容不限于极客、技术、产品，凡有趣有料的都可能会出现在推荐列表里。鼓励大家阅读英文原文，一起用英文看世界。
+    
+    </summary>
+    
+      <category term="极客小报" scheme="http://liujinkai.com/categories/%E6%9E%81%E5%AE%A2%E5%B0%8F%E6%8A%A5/"/>
+    
+    
+      <category term="极客小报" scheme="http://liujinkai.com/tags/%E6%9E%81%E5%AE%A2%E5%B0%8F%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
     <title>集中思维和发散思维</title>
     <link href="http://liujinkai.com/2018/09/28/jizhong-fasan/"/>
     <id>http://liujinkai.com/2018/09/28/jizhong-fasan/</id>
     <published>2018-09-28T00:00:19.000Z</published>
-    <updated>2018-09-28T05:48:53.444Z</updated>
+    <updated>2018-10-15T06:12:12.010Z</updated>
     
     <summary type="html">
     
       集中思维还是主要的思考方式，在解决大部分问题的时候是适用的，如果遇到某些问题不得的时候，要主动用发散思维来考虑问题
     
     </summary>
+    
+      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
     
     
       <category term="概念" scheme="http://liujinkai.com/tags/%E6%A6%82%E5%BF%B5/"/>
@@ -389,26 +411,6 @@
     
     
       <category term="Google" scheme="http://liujinkai.com/tags/Google/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>www.gafata.com上线</title>
-    <link href="http://liujinkai.com/2017/12/09/gafata-online/"/>
-    <id>http://liujinkai.com/2017/12/09/gafata-online/</id>
-    <published>2017-12-09T09:32:10.000Z</published>
-    <updated>2018-09-28T05:48:51.132Z</updated>
-    
-    <summary type="html">
-    
-      花了点时间，做了个小网站www.gafata.com。介绍了相关的概念，上面还有一个小工具，可以查询GAFATA这6只股票的增长率，生成动态图表，以便更直观的对比
-    
-    </summary>
-    
-      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
-    
-    
-      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
   </entry>
   
