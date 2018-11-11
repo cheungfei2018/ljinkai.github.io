@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2018-10-29T01:05:54.073Z</updated>
+  <updated>2018-11-11T09:30:19.600Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>极客小报「 2 」- 如何通过帮助中心来黑掉数百家公司、前Google工程师对中国审查制度的评价、不用代码让我的副业每个月收入几百美金</title>
-    <link href="http://liujinkai.com/2018/10/29/geek-paper-week-two/"/>
-    <id>http://liujinkai.com/2018/10/29/geek-paper-week-two/</id>
-    <published>2018-10-29T01:00:28.000Z</published>
-    <updated>2018-10-29T01:05:54.073Z</updated>
+    <title>极客番茄「 3 」- 洗屁屁的用到头上，外国小哥火遍了全世界</title>
+    <link href="http://liujinkai.com/2018/11/11/geektomato-week-3/"/>
+    <id>http://liujinkai.com/2018/11/11/geektomato-week-3/</id>
+    <published>2018-11-11T09:19:46.000Z</published>
+    <updated>2018-11-11T09:30:19.600Z</updated>
     
     <summary type="html">
     
@@ -29,30 +29,50 @@
     
     </summary>
     
-      <category term="极客小报" scheme="http://liujinkai.com/categories/%E6%9E%81%E5%AE%A2%E5%B0%8F%E6%8A%A5/"/>
+      <category term="极客番茄" scheme="http://liujinkai.com/categories/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
     
     
-      <category term="极客小报" scheme="http://liujinkai.com/tags/%E6%9E%81%E5%AE%A2%E5%B0%8F%E6%8A%A5/"/>
+      <category term="极客番茄" scheme="http://liujinkai.com/tags/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
     
   </entry>
   
   <entry>
-    <title>极客小报「 1 」- React的工作面试、真实的Google Cloud、Walt 写WebAssembly的开源项目</title>
-    <link href="http://liujinkai.com/2018/10/15/geek-paper-one/"/>
-    <id>http://liujinkai.com/2018/10/15/geek-paper-one/</id>
-    <published>2018-10-15T06:11:02.000Z</published>
-    <updated>2018-10-15T06:25:49.064Z</updated>
+    <title>极客番茄「 2 」- 如何通过帮助中心来黑掉数百家公司、前Google工程师对中国审查制度的评价、不用代码让我的副业每个月收入几百美金</title>
+    <link href="http://liujinkai.com/2018/10/29/geek-paper-week-two/"/>
+    <id>http://liujinkai.com/2018/10/29/geek-paper-week-two/</id>
+    <published>2018-10-29T01:00:28.000Z</published>
+    <updated>2018-11-11T09:23:35.810Z</updated>
     
     <summary type="html">
     
-      极客小报每天推荐一篇英文，内容不限于极客、技术、产品，凡有趣有料的都可能会出现在推荐列表里。鼓励大家阅读英文原文，一起用英文看世界。
+      如何通过帮助中心来黑掉数百家公司、前Google工程师对中国审查制度的评价、不用代码让我的副业每个月收入几百美金
     
     </summary>
     
-      <category term="极客小报" scheme="http://liujinkai.com/categories/%E6%9E%81%E5%AE%A2%E5%B0%8F%E6%8A%A5/"/>
+      <category term="极客番茄" scheme="http://liujinkai.com/categories/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
     
     
-      <category term="极客小报" scheme="http://liujinkai.com/tags/%E6%9E%81%E5%AE%A2%E5%B0%8F%E6%8A%A5/"/>
+      <category term="极客番茄" scheme="http://liujinkai.com/tags/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>极客番茄「 1 」- React的工作面试、真实的Google Cloud、Walt 写WebAssembly的开源项目</title>
+    <link href="http://liujinkai.com/2018/10/15/geek-paper-one/"/>
+    <id>http://liujinkai.com/2018/10/15/geek-paper-one/</id>
+    <published>2018-10-15T06:11:02.000Z</published>
+    <updated>2018-11-11T09:23:36.728Z</updated>
+    
+    <summary type="html">
+    
+      极客番茄每天推荐一篇英文，内容不限于极客、技术、产品，凡有趣有料的都可能会出现在推荐列表里。鼓励大家阅读英文原文，一起用英文看世界。
+    
+    </summary>
+    
+      <category term="极客番茄" scheme="http://liujinkai.com/categories/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
+    
+    
+      <category term="极客番茄" scheme="http://liujinkai.com/tags/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
     
   </entry>
   
@@ -391,26 +411,6 @@
     
     
       <category term="EOS" scheme="http://liujinkai.com/tags/EOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017上海Google谷歌开发者大会第一天</title>
-    <link href="http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/"/>
-    <id>http://liujinkai.com/2017/12/14/2017-GDD-shanghai-firstday/</id>
-    <published>2017-12-14T00:59:37.000Z</published>
-    <updated>2018-09-28T05:48:51.122Z</updated>
-    
-    <summary type="html">
-    
-      12月13日是2017Google开发者大会的第一天，地点在上海。天气不错，阳光明媚，温度适当，像北京深秋的感觉。第一天分主题演讲和各分会场的演讲,我更多的关注web方面的技术，所以下面主要介绍下我感兴趣的技术点。
-    
-    </summary>
-    
-      <category term="Web技术" scheme="http://liujinkai.com/categories/Web%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Google" scheme="http://liujinkai.com/tags/Google/"/>
     
   </entry>
   
