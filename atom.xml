@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2018-11-11T09:30:19.600Z</updated>
+  <updated>2018-11-28T05:49:17.317Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>极客番茄「 4 」- 最好的报复就是巨大的成功</title>
+    <link href="http://liujinkai.com/2018/11/28/geektomato-week-4/"/>
+    <id>http://liujinkai.com/2018/11/28/geektomato-week-4/</id>
+    <published>2018-11-28T05:43:35.000Z</published>
+    <updated>2018-11-28T05:49:17.317Z</updated>
+    
+    <summary type="html">
+    
+      The best revenge is massive success (最好的报复就是巨大的成功)，软件工程师犯的3个销售错误，如何让我的第一个应用盈利？
+    
+    </summary>
+    
+      <category term="极客番茄" scheme="http://liujinkai.com/categories/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
+    
+    
+      <category term="极客番茄" scheme="http://liujinkai.com/tags/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
+    
+  </entry>
   
   <entry>
     <title>极客番茄「 3 」- 洗屁屁的用到头上，外国小哥火遍了全世界</title>
@@ -391,26 +411,6 @@
     
     
       <category term="ETH" scheme="http://liujinkai.com/tags/ETH/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Dapp已来</title>
-    <link href="http://liujinkai.com/2017/12/24/dapp-is-coming/"/>
-    <id>http://liujinkai.com/2017/12/24/dapp-is-coming/</id>
-    <published>2017-12-24T06:18:48.000Z</published>
-    <updated>2018-09-28T05:48:51.117Z</updated>
-    
-    <summary type="html">
-    
-      12月13日是2017Google开发者大会的第一天，地点在上海。天气不错，阳光明媚，温度适当，像北京深秋的感觉。第一天分主题演讲和各分会场的演讲,我更多的关注web方面的技术，所以下面主要介绍下我感兴趣的技术点。
-    
-    </summary>
-    
-      <category term="区块链" scheme="http://liujinkai.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-    
-    
-      <category term="EOS" scheme="http://liujinkai.com/tags/EOS/"/>
     
   </entry>
   
