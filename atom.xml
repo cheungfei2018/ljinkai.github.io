@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2018-11-28T05:49:17.317Z</updated>
+  <updated>2018-12-25T06:16:35.420Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ant Design圣诞节彩蛋变大锅！</title>
+    <link href="http://liujinkai.com/2018/12/25/chrimtmas-easter-egg/"/>
+    <id>http://liujinkai.com/2018/12/25/chrimtmas-easter-egg/</id>
+    <published>2018-12-25T06:05:56.000Z</published>
+    <updated>2018-12-25T06:16:35.420Z</updated>
+    
+    <summary type="html">
+    
+      2018年12月25日这一天，注定是不平凡的一天，圣诞节被离职
+    
+    </summary>
+    
+      <category term="Web技术" scheme="http://liujinkai.com/categories/Web%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="http://liujinkai.com/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>极客番茄「 4 」- 最好的报复就是巨大的成功</title>
@@ -391,26 +411,6 @@
     
     
       <category term="认知" scheme="http://liujinkai.com/tags/%E8%AE%A4%E7%9F%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用myetherwallet申请ENS (Ethereum Name Service)</title>
-    <link href="http://liujinkai.com/2018/01/28/myetherwallet-ens/"/>
-    <id>http://liujinkai.com/2018/01/28/myetherwallet-ens/</id>
-    <published>2018-01-28T15:24:30.000Z</published>
-    <updated>2018-09-28T05:48:51.123Z</updated>
-    
-    <summary type="html">
-    
-      ENS可以帮你解烦忧，ENS是一种ETH上的域名服务，你只需要记住域名，它就会自动帮你映射成对应的一个ETH地址，赶紧操练起来吧
-    
-    </summary>
-    
-      <category term="区块链" scheme="http://liujinkai.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-    
-    
-      <category term="ETH" scheme="http://liujinkai.com/tags/ETH/"/>
     
   </entry>
   
