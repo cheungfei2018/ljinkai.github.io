@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>凯凯刘</title>
   <icon>https://www.gravatar.com/avatar/677eb62e5e10128b74345ac17857a09d</icon>
-  <subtitle>web前端、认知升级、技术变现</subtitle>
+  <subtitle>Indie Maker、认知、技术、变现</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2019-03-06T04:45:37.288Z</updated>
+  <updated>2019-03-17T01:09:34.040Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Indie Maker 一个人的创业</title>
+    <link href="http://liujinkai.com/2019/03/17/indie-maker/"/>
+    <id>http://liujinkai.com/2019/03/17/indie-maker/</id>
+    <published>2019-03-17T01:03:00.000Z</published>
+    <updated>2019-03-17T01:09:34.040Z</updated>
+    
+    <summary type="html">
+    
+      Indie Maker 一个人的创业，并不容易，但是，容易的事又有什么意思呢？以色列犹太人信奉一句话“难做的事容易成”
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
   
   <entry>
     <title>「微信群合影」小工具女神节主题和功能更新</title>
@@ -391,26 +411,6 @@
     
     
       <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不可能什么都做，只把最重要的做好</title>
-    <link href="http://liujinkai.com/2018/03/22/do-the-most-importent/"/>
-    <id>http://liujinkai.com/2018/03/22/do-the-most-importent/</id>
-    <published>2018-03-21T23:34:19.000Z</published>
-    <updated>2018-09-28T05:48:51.143Z</updated>
-    
-    <summary type="html">
-    
-      我们每个人的精力有限、财力有限、生命有限，做最重要的事，把它做到极致，就会产生复利效应，产生巨大的效果。而那些不那么重要的，放下也许是最好的选择。
-    
-    </summary>
-    
-      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
-    
-    
-      <category term="认知" scheme="http://liujinkai.com/tags/%E8%AE%A4%E7%9F%A5/"/>
     
   </entry>
   
