@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2019-03-17T01:09:34.040Z</updated>
+  <updated>2019-03-21T06:03:42.727Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IndieMaker:一个月收入$50000美金什么感觉？</title>
+    <link href="http://liujinkai.com/2019/03/21/indie-maker-revenue-month/"/>
+    <id>http://liujinkai.com/2019/03/21/indie-maker-revenue-month/</id>
+    <published>2019-03-21T05:55:41.000Z</published>
+    <updated>2019-03-21T06:03:42.727Z</updated>
+    
+    <summary type="html">
+    
+      Indie Maker 一个人的创业，并不容易，但是，容易的事又有什么意思呢？以色列犹太人信奉一句话“难做的事容易成”
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
   
   <entry>
     <title>Indie Maker 一个人的创业</title>
@@ -388,26 +408,6 @@
     </summary>
     
       <category term="Web工具" scheme="http://liujinkai.com/categories/Web%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>凯凯刘战友社区</title>
-    <link href="http://liujinkai.com/2018/03/25/kaikailiu-zhanyou-shequ/"/>
-    <id>http://liujinkai.com/2018/03/25/kaikailiu-zhanyou-shequ/</id>
-    <published>2018-03-25T00:22:26.000Z</published>
-    <updated>2018-09-28T05:48:51.118Z</updated>
-    
-    <summary type="html">
-    
-      为了更好的分享交流，我建立了【凯凯刘战友社区】知识星球，里面会分享我发现、遇到有价值的好东西，不限于好文、有趣的人、利器工具、区块链投资、美股投资等等。
-    
-    </summary>
-    
-      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
     
     
       <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
