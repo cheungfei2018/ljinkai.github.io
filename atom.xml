@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2019-03-21T06:03:42.727Z</updated>
+  <updated>2019-03-29T02:34:12.470Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IM28第1期 - 早起敲代码</title>
+    <link href="http://liujinkai.com/2019/03/29/indie-maker-im28/"/>
+    <id>http://liujinkai.com/2019/03/29/indie-maker-im28/</id>
+    <published>2019-03-29T02:26:09.000Z</published>
+    <updated>2019-03-29T02:34:12.470Z</updated>
+    
+    <summary type="html">
+    
+      Indie Maker早起28天一起敲代码
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
   
   <entry>
     <title>IndieMaker:一个月收入$50000美金什么感觉？</title>
@@ -384,26 +404,6 @@
     <summary type="html">
     
       币乎文章自动点赞、评论，收益得不停
-    
-    </summary>
-    
-      <category term="Web工具" scheme="http://liujinkai.com/categories/Web%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>做到三角，再也不担心我的懒癌症了</title>
-    <link href="http://liujinkai.com/2018/04/14/done-triangle/"/>
-    <id>http://liujinkai.com/2018/04/14/done-triangle/</id>
-    <published>2018-04-14T02:42:06.000Z</published>
-    <updated>2018-09-28T05:48:51.123Z</updated>
-    
-    <summary type="html">
-    
-      犹如炒菜，食材都一样，但是人跟人的手艺却千差万别，炒出来的口味也不尽相同。同样的一个西红柿炒鸡蛋，对于不会的人来说，很难；对于会的人来说，很容易。这之间的差别就在于是否掌握了其中的方法。
     
     </summary>
     
