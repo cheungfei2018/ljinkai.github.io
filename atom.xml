@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2019-04-06T10:41:06.449Z</updated>
+  <updated>2019-04-06T10:48:12.252Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>「微信群合影qunheying.com」- 会员增值服务2.0版本发布</title>
+    <link href="http://liujinkai.com/2019/04/06/qunehying-version-2/"/>
+    <id>http://liujinkai.com/2019/04/06/qunehying-version-2/</id>
+    <published>2019-04-06T10:44:14.000Z</published>
+    <updated>2019-04-06T10:48:12.252Z</updated>
+    
+    <summary type="html">
+    
+      微信群合影qunheying.com会员增值服务发布：一键生成微信群头像合影、全家福,自定义二维码,上传背景图等
+    
+    </summary>
+    
+      <category term="Web工具" scheme="http://liujinkai.com/categories/Web%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="插件" scheme="http://liujinkai.com/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>极客番茄「20」- 一只死去的老鹰，身上的GPS记录了20年的飞行轨迹</title>
     <link href="http://liujinkai.com/2019/04/06/geektomato-week-20/"/>
     <id>http://liujinkai.com/2019/04/06/geektomato-week-20/</id>
     <published>2019-04-06T10:37:21.000Z</published>
-    <updated>2019-04-06T10:41:06.449Z</updated>
+    <updated>2019-04-06T10:45:23.660Z</updated>
     
     <summary type="html">
     
@@ -391,26 +411,6 @@
     
     
       <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>是时候了解下币乎了</title>
-    <link href="http://liujinkai.com/2018/04/25/bihu-toknow/"/>
-    <id>http://liujinkai.com/2018/04/25/bihu-toknow/</id>
-    <published>2018-04-25T03:31:58.000Z</published>
-    <updated>2018-09-28T05:48:51.132Z</updated>
-    
-    <summary type="html">
-    
-      币乎社区产品正式上线，很多人开始在上面写文章赚KEY，币乎算是“通证经济”的一个典型应用，里面的作者靠写文章月人30万的确实存在。
-    
-    </summary>
-    
-      <category term="区块链" scheme="http://liujinkai.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-    
-    
-      <category term="概念" scheme="http://liujinkai.com/tags/%E6%A6%82%E5%BF%B5/"/>
     
   </entry>
   
