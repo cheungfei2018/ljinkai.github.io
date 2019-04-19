@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2019-04-06T10:48:12.252Z</updated>
+  <updated>2019-04-19T12:57:31.682Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>415事件-曹大的一条群消息引发的朋友圈刷屏</title>
+    <link href="http://liujinkai.com/2019/04/19/415-caoz/"/>
+    <id>http://liujinkai.com/2019/04/19/415-caoz/</id>
+    <published>2019-04-19T12:53:24.000Z</published>
+    <updated>2019-04-19T12:57:31.682Z</updated>
+    
+    <summary type="html">
+    
+      大佬毕竟是大佬，活生生在线给我们上了一堂课：“一条群消息如何刷屏？”，功力能吸收几成，就看我们自己的了。
+    
+    </summary>
+    
+      <category term="流量" scheme="http://liujinkai.com/categories/%E6%B5%81%E9%87%8F/"/>
+    
+    
+      <category term="增长" scheme="http://liujinkai.com/tags/%E5%A2%9E%E9%95%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>「微信群合影qunheying.com」- 会员增值服务2.0版本发布</title>
@@ -391,26 +411,6 @@
     
     
       <category term="JavaScript" scheme="http://liujinkai.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>发现有趣的人</title>
-    <link href="http://liujinkai.com/2018/05/02/funny-guy/"/>
-    <id>http://liujinkai.com/2018/05/02/funny-guy/</id>
-    <published>2018-05-02T00:26:14.000Z</published>
-    <updated>2018-09-28T05:48:51.131Z</updated>
-    
-    <summary type="html">
-    
-      前两天发现一个有意思的事，通过无线蓝牙键盘，连接到手机进行代码的调试，web开发者利器。
-    
-    </summary>
-    
-      <category term="生活" scheme="http://liujinkai.com/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
