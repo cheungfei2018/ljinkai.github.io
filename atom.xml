@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2019-05-06T09:16:02.832Z</updated>
+  <updated>2019-05-16T23:29:34.655Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>「极客番茄geektomato.com上线」 - 每天一篇极客英文，用英语看世界</title>
+    <link href="http://liujinkai.com/2019/05/17/geektomato-launch/"/>
+    <id>http://liujinkai.com/2019/05/17/geektomato-launch/</id>
+    <published>2019-05-16T23:20:06.000Z</published>
+    <updated>2019-05-16T23:29:34.655Z</updated>
+    
+    <summary type="html">
+    
+      「极客番茄」 从2018-9-30这天起，到现在坚持每天读一篇极客英文，并整理分享出来。今天官网http://www.geektomato.com正式上线了
+    
+    </summary>
+    
+      <category term="极客番茄" scheme="http://liujinkai.com/categories/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
+    
+    
+      <category term="极客番茄" scheme="http://liujinkai.com/tags/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
+    
+  </entry>
   
   <entry>
     <title>极客番茄「21」- 一个摄影师被鲸鱼吞进了嘴里</title>
@@ -391,26 +411,6 @@
     
     
       <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>趋势的力量</title>
-    <link href="http://liujinkai.com/2018/06/12/trend-power/"/>
-    <id>http://liujinkai.com/2018/06/12/trend-power/</id>
-    <published>2018-06-12T00:57:11.000Z</published>
-    <updated>2018-09-28T05:48:51.124Z</updated>
-    
-    <summary type="html">
-    
-      “趋势”就在我们的周围，影响着一切的一切，像水一样，每天都在流动、雕琢，如果只看一天，几乎没有变化，但是拉长时间，你再看，就是翻天覆地。
-    
-    </summary>
-    
-      <category term="生活" scheme="http://liujinkai.com/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="认知" scheme="http://liujinkai.com/tags/%E8%AE%A4%E7%9F%A5/"/>
     
   </entry>
   
