@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2019-05-16T23:29:34.655Z</updated>
+  <updated>2019-06-11T00:30:30.956Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我为什么做IndieMaker独立变现社群？</title>
+    <link href="http://liujinkai.com/2019/06/11/why-do-indie-maker/"/>
+    <id>http://liujinkai.com/2019/06/11/why-do-indie-maker/</id>
+    <published>2019-06-11T00:21:14.000Z</published>
+    <updated>2019-06-11T00:30:30.956Z</updated>
+    
+    <summary type="html">
+    
+      我就是想做这样一件事：让小产品的独立变现更简单。
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
   
   <entry>
     <title>「极客番茄geektomato.com上线」 - 每天一篇极客英文，用英语看世界</title>
@@ -384,26 +404,6 @@
     <summary type="html">
     
       这两天李笑来的录音门事件，搅动了币圈。里面的各种币圈“套路”让我们了解到了更多的表面背后的东西。对于我们普通人来说，长期来看，做价值投资绝对是正确的。
-    
-    </summary>
-    
-      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
-    
-    
-      <category term="方法论" scheme="http://liujinkai.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>写文章为什么能持续赚钱</title>
-    <link href="http://liujinkai.com/2018/06/14/earn-money-by-writing/"/>
-    <id>http://liujinkai.com/2018/06/14/earn-money-by-writing/</id>
-    <published>2018-06-14T06:29:42.000Z</published>
-    <updated>2018-09-28T05:48:51.118Z</updated>
-    
-    <summary type="html">
-    
-      写文章的意义非常大，最直接的就是可以转化成钱，而随着时间的推移，效果越明显。而后半句的意义远远大于前半句。
     
     </summary>
     
