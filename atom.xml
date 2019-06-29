@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2019-06-29T00:45:04.714Z</updated>
+  <updated>2019-06-29T01:13:01.881Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>独立开发 - 一张纸条如何改变了我的人生</title>
+    <link href="http://liujinkai.com/2019/06/29/one-paper-changemylife/"/>
+    <id>http://liujinkai.com/2019/06/29/one-paper-changemylife/</id>
+    <published>2019-06-29T00:57:12.000Z</published>
+    <updated>2019-06-29T01:13:01.881Z</updated>
+    
+    <summary type="html">
+    
+      Pat Walls，一名优秀的独立创业者，从负债到持续盈利的的方法，非常值得推荐。
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>一个意外成就了第一，小众产品如何从0到750万？</title>
     <link href="http://liujinkai.com/2019/06/29/accident-to-number-one/"/>
     <id>http://liujinkai.com/2019/06/29/accident-to-number-one/</id>
     <published>2019-06-29T00:35:07.000Z</published>
-    <updated>2019-06-29T00:45:04.714Z</updated>
+    <updated>2019-06-29T01:15:31.797Z</updated>
     
     <summary type="html">
     
@@ -37,15 +57,15 @@
   </entry>
   
   <entry>
-    <title>我的小众产品群合影工具如何从0到1</title>
+    <title>独立开发-我的小众产品群合影工具如何从0到1</title>
     <link href="http://liujinkai.com/2019/06/29/how-from-zero-to-one/"/>
     <id>http://liujinkai.com/2019/06/29/how-from-zero-to-one/</id>
     <published>2019-06-29T00:35:07.000Z</published>
-    <updated>2019-06-29T00:44:03.377Z</updated>
+    <updated>2019-06-29T01:14:46.684Z</updated>
     
     <summary type="html">
     
-      我就是想做这样一件事：让小产品的独立变现更简单。
+      虽然没有赚很多钱，但我想把真实的过程写出来，从0到1的这个过程，相信对于那些没有变现过的小产品还是有帮助的。
     
     </summary>
     
@@ -393,24 +413,6 @@
     
     
       <category term="概念" scheme="http://liujinkai.com/tags/%E6%A6%82%E5%BF%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>帮助开发者选择最佳颜色的工具 &amp; github辅助文件查看器</title>
-    <link href="http://liujinkai.com/2018/08/21/colorless-and-octotree/"/>
-    <id>http://liujinkai.com/2018/08/21/colorless-and-octotree/</id>
-    <published>2018-08-21T01:07:33.000Z</published>
-    <updated>2018-09-28T05:48:50.985Z</updated>
-    
-    <summary type="html">
-    
-      帮助开发者选择最佳颜色的工具：colorless， github辅助文件查看器：actotree
-    
-    </summary>
-    
-    
-      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
