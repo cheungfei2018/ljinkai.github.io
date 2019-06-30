@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2019-06-29T01:13:01.881Z</updated>
+  <updated>2019-06-30T23:49:15.345Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2019年过半，如人生过半</title>
+    <link href="http://liujinkai.com/2019/07/01/2019-half-of-year/"/>
+    <id>http://liujinkai.com/2019/07/01/2019-half-of-year/</id>
+    <published>2019-06-30T23:45:33.000Z</published>
+    <updated>2019-06-30T23:49:15.345Z</updated>
+    
+    <summary type="html">
+    
+      2019年又到了年中，到6月30号，2019年已经走过了50%，可能很多人才意识到这件事，亦或根本没有意识到这件事。
+    
+    </summary>
+    
+      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
+    
+    
+      <category term="认知" scheme="http://liujinkai.com/tags/%E8%AE%A4%E7%9F%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>独立开发 - 一张纸条如何改变了我的人生</title>
@@ -393,26 +413,6 @@
     
     
       <category term="极客番茄" scheme="http://liujinkai.com/tags/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>集中思维和发散思维</title>
-    <link href="http://liujinkai.com/2018/09/28/jizhong-fasan/"/>
-    <id>http://liujinkai.com/2018/09/28/jizhong-fasan/</id>
-    <published>2018-09-28T00:00:19.000Z</published>
-    <updated>2018-10-15T06:12:12.010Z</updated>
-    
-    <summary type="html">
-    
-      集中思维还是主要的思考方式，在解决大部分问题的时候是适用的，如果遇到某些问题不得的时候，要主动用发散思维来考虑问题
-    
-    </summary>
-    
-      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
-    
-    
-      <category term="概念" scheme="http://liujinkai.com/tags/%E6%A6%82%E5%BF%B5/"/>
     
   </entry>
   
