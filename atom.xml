@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2019-06-30T23:49:15.345Z</updated>
+  <updated>2019-07-18T01:11:00.467Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>fullpage.js这个开源项目怎样从免费到每月$15000</title>
+    <link href="http://liujinkai.com/2019/07/18/fullpage-js-open-source-15000/"/>
+    <id>http://liujinkai.com/2019/07/18/fullpage-js-open-source-15000/</id>
+    <published>2019-07-18T01:03:02.000Z</published>
+    <updated>2019-07-18T01:11:00.467Z</updated>
+    
+    <summary type="html">
+    
+      Alvaro Trig的fullpage.js项目，从一开始的免费到盈利，有作者多年的经验分享，也有踩坑总结，对于技术人员做产品的很有帮助。
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
   
   <entry>
     <title>2019年过半，如人生过半</title>
@@ -57,15 +77,15 @@
   </entry>
   
   <entry>
-    <title>一个意外成就了第一，小众产品如何从0到750万？</title>
-    <link href="http://liujinkai.com/2019/06/29/accident-to-number-one/"/>
-    <id>http://liujinkai.com/2019/06/29/accident-to-number-one/</id>
+    <title>独立开发-我的小众产品群合影工具如何从0到1</title>
+    <link href="http://liujinkai.com/2019/06/29/how-from-zero-to-one/"/>
+    <id>http://liujinkai.com/2019/06/29/how-from-zero-to-one/</id>
     <published>2019-06-29T00:35:07.000Z</published>
-    <updated>2019-06-29T01:15:31.797Z</updated>
+    <updated>2019-06-29T01:14:46.684Z</updated>
     
     <summary type="html">
     
-      从2014年到2019年的6月份，NomadList的公开的总收入是$1095300(约750万人民币左右)
+      虽然没有赚很多钱，但我想把真实的过程写出来，从0到1的这个过程，相信对于那些没有变现过的小产品还是有帮助的。
     
     </summary>
     
@@ -77,15 +97,15 @@
   </entry>
   
   <entry>
-    <title>独立开发-我的小众产品群合影工具如何从0到1</title>
-    <link href="http://liujinkai.com/2019/06/29/how-from-zero-to-one/"/>
-    <id>http://liujinkai.com/2019/06/29/how-from-zero-to-one/</id>
+    <title>一个意外成就了第一，小众产品如何从0到750万？</title>
+    <link href="http://liujinkai.com/2019/06/29/accident-to-number-one/"/>
+    <id>http://liujinkai.com/2019/06/29/accident-to-number-one/</id>
     <published>2019-06-29T00:35:07.000Z</published>
-    <updated>2019-06-29T01:14:46.684Z</updated>
+    <updated>2019-06-29T01:15:31.797Z</updated>
     
     <summary type="html">
     
-      虽然没有赚很多钱，但我想把真实的过程写出来，从0到1的这个过程，相信对于那些没有变现过的小产品还是有帮助的。
+      从2014年到2019年的6月份，NomadList的公开的总收入是$1095300(约750万人民币左右)
     
     </summary>
     
@@ -386,26 +406,6 @@
     <summary type="html">
     
       如何通过帮助中心来黑掉数百家公司、前Google工程师对中国审查制度的评价、不用代码让我的副业每个月收入几百美金
-    
-    </summary>
-    
-      <category term="极客番茄" scheme="http://liujinkai.com/categories/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
-    
-    
-      <category term="极客番茄" scheme="http://liujinkai.com/tags/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>极客番茄「 1 」- React的工作面试、真实的Google Cloud、Walt 写WebAssembly的开源项目</title>
-    <link href="http://liujinkai.com/2018/10/15/geek-paper-one/"/>
-    <id>http://liujinkai.com/2018/10/15/geek-paper-one/</id>
-    <published>2018-10-15T06:11:02.000Z</published>
-    <updated>2018-11-11T09:23:36.728Z</updated>
-    
-    <summary type="html">
-    
-      极客番茄每天推荐一篇英文，内容不限于极客、技术、产品，凡有趣有料的都可能会出现在推荐列表里。鼓励大家阅读英文原文，一起用英文看世界。
     
     </summary>
     
