@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2019-08-05T00:27:24.591Z</updated>
+  <updated>2019-08-16T10:20:10.836Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>背单词神器- 当Anki遇上麦克米伦7000</title>
+    <link href="http://liujinkai.com/2019/08/16/anki-macmillan-7000/"/>
+    <id>http://liujinkai.com/2019/08/16/anki-macmillan-7000/</id>
+    <published>2019-08-16T09:26:10.000Z</published>
+    <updated>2019-08-16T10:20:10.836Z</updated>
+    
+    <summary type="html">
+    
+      Anki是一个使记忆变得容易的学习软件。从哪里可以获取到这7000个基础词汇呢？《麦克米伦高阶英语词典》里就有最常用的7500个基础词汇。
+    
+    </summary>
+    
+      <category term="Web工具" scheme="http://liujinkai.com/categories/Web%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>被动收入：什么也不做也能每年收入40000美金</title>
@@ -393,26 +413,6 @@
     
     
       <category term="插件" scheme="http://liujinkai.com/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ant Design圣诞节彩蛋变大锅！</title>
-    <link href="http://liujinkai.com/2018/12/25/chrimtmas-easter-egg/"/>
-    <id>http://liujinkai.com/2018/12/25/chrimtmas-easter-egg/</id>
-    <published>2018-12-25T06:05:56.000Z</published>
-    <updated>2018-12-27T08:28:53.687Z</updated>
-    
-    <summary type="html">
-    
-      2018年12月25日这一天，注定是不平凡的一天，圣诞节被离职
-    
-    </summary>
-    
-      <category term="Web技术" scheme="http://liujinkai.com/categories/Web%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="JavaScript" scheme="http://liujinkai.com/tags/JavaScript/"/>
     
   </entry>
   
