@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2019-08-16T10:24:21.475Z</updated>
+  <updated>2019-09-05T15:38:15.185Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>硬核独立变现：从被开除到月收入$10000</title>
+    <link href="http://liujinkai.com/2019/09/05/reilly-indie-maker/"/>
+    <id>http://liujinkai.com/2019/09/05/reilly-indie-maker/</id>
+    <published>2019-09-05T15:32:47.000Z</published>
+    <updated>2019-09-05T15:38:15.185Z</updated>
+    
+    <summary type="html">
+    
+      在2019年的1月份设定了一个目标：一年内达到月收入$10000。并在自己的网站上公开收入情况
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
   
   <entry>
     <title>背单词神器- 当Anki遇上麦克米伦7000</title>
@@ -386,26 +406,6 @@
     <summary type="html">
     
       微信群合影qunheying.com：一键生成微信群头像合影、全家福
-    
-    </summary>
-    
-      <category term="Web工具" scheme="http://liujinkai.com/categories/Web%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="插件" scheme="http://liujinkai.com/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微信群合影qunheying.com -  多彩的主题，有趣的头像</title>
-    <link href="http://liujinkai.com/2019/01/31/weixin-qunheying/"/>
-    <id>http://liujinkai.com/2019/01/31/weixin-qunheying/</id>
-    <published>2019-01-31T00:37:57.000Z</published>
-    <updated>2019-01-31T01:01:50.331Z</updated>
-    
-    <summary type="html">
-    
-      微信群合影qunheying.com：是一个基于微信网页版的Chrome插件，有丰富的背景主题，将微信里群成员头像组合成有趣的图片
     
     </summary>
     
