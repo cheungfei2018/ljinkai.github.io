@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2019-09-05T15:38:15.185Z</updated>
+  <updated>2019-09-20T00:25:43.583Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>辞职后一年做了7个App</title>
+    <link href="http://liujinkai.com/2019/09/20/indie-maker-andrey/"/>
+    <id>http://liujinkai.com/2019/09/20/indie-maker-andrey/</id>
+    <published>2019-09-20T00:18:16.000Z</published>
+    <updated>2019-09-20T00:25:43.583Z</updated>
+    
+    <summary type="html">
+    
+      Andrey的独立创业变现经历是很多人的缩影，从有了自己的产品，过程中经历了痛苦的挣扎，在经历了很多的尝试之后，也终于迎来了自己的收入增长，完成了自己的目标
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
   
   <entry>
     <title>硬核独立变现：从被开除到月收入$10000</title>
@@ -177,15 +197,15 @@
   </entry>
   
   <entry>
-    <title>独立开发-我的小众产品群合影工具如何从0到1</title>
-    <link href="http://liujinkai.com/2019/06/29/how-from-zero-to-one/"/>
-    <id>http://liujinkai.com/2019/06/29/how-from-zero-to-one/</id>
+    <title>一个意外成就了第一，小众产品如何从0到750万？</title>
+    <link href="http://liujinkai.com/2019/06/29/accident-to-number-one/"/>
+    <id>http://liujinkai.com/2019/06/29/accident-to-number-one/</id>
     <published>2019-06-29T00:35:07.000Z</published>
-    <updated>2019-06-29T01:14:46.684Z</updated>
+    <updated>2019-06-29T01:15:31.797Z</updated>
     
     <summary type="html">
     
-      虽然没有赚很多钱，但我想把真实的过程写出来，从0到1的这个过程，相信对于那些没有变现过的小产品还是有帮助的。
+      从2014年到2019年的6月份，NomadList的公开的总收入是$1095300(约750万人民币左右)
     
     </summary>
     
@@ -197,15 +217,15 @@
   </entry>
   
   <entry>
-    <title>一个意外成就了第一，小众产品如何从0到750万？</title>
-    <link href="http://liujinkai.com/2019/06/29/accident-to-number-one/"/>
-    <id>http://liujinkai.com/2019/06/29/accident-to-number-one/</id>
+    <title>独立开发-我的小众产品群合影工具如何从0到1</title>
+    <link href="http://liujinkai.com/2019/06/29/how-from-zero-to-one/"/>
+    <id>http://liujinkai.com/2019/06/29/how-from-zero-to-one/</id>
     <published>2019-06-29T00:35:07.000Z</published>
-    <updated>2019-06-29T01:15:31.797Z</updated>
+    <updated>2019-06-29T01:14:46.684Z</updated>
     
     <summary type="html">
     
-      从2014年到2019年的6月份，NomadList的公开的总收入是$1095300(约750万人民币左右)
+      虽然没有赚很多钱，但我想把真实的过程写出来，从0到1的这个过程，相信对于那些没有变现过的小产品还是有帮助的。
     
     </summary>
     
@@ -393,26 +413,6 @@
     
     
       <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>「微信群合影」小工具女神节主题和功能更新</title>
-    <link href="http://liujinkai.com/2019/03/06/qunheying-nvshen-jie/"/>
-    <id>http://liujinkai.com/2019/03/06/qunheying-nvshen-jie/</id>
-    <published>2019-03-06T04:39:58.000Z</published>
-    <updated>2019-03-06T04:45:37.288Z</updated>
-    
-    <summary type="html">
-    
-      微信群合影qunheying.com：一键生成微信群头像合影、全家福
-    
-    </summary>
-    
-      <category term="Web工具" scheme="http://liujinkai.com/categories/Web%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="插件" scheme="http://liujinkai.com/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
