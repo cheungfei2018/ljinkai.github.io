@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2019-11-08T10:00:23.614Z</updated>
+  <updated>2020-02-13T14:30:04.232Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Chrome浏览器扩展插件的8种获利方式</title>
+    <link href="http://liujinkai.com/2020/02/13/how-to-monetise-a-chrome-extension/"/>
+    <id>http://liujinkai.com/2020/02/13/how-to-monetise-a-chrome-extension/</id>
+    <published>2020-02-13T14:24:53.000Z</published>
+    <updated>2020-02-13T14:30:04.232Z</updated>
+    
+    <summary type="html">
+    
+      如果你已经构建了一个Chrome扩展插件，已经有了成千上万的用户，那面临的一个问题是如何利用这个产品来获利
+    
+    </summary>
+    
+      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
+    
+    
+      <category term="插件" scheme="http://liujinkai.com/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>一个网页设计师到年入170万美金 - 人物志</title>
@@ -61,11 +81,11 @@
     <link href="http://liujinkai.com/2019/10/16/indie-maker-nathan-convertkit/"/>
     <id>http://liujinkai.com/2019/10/16/indie-maker-nathan-convertkit/</id>
     <published>2019-10-16T00:27:30.000Z</published>
-    <updated>2019-10-16T00:35:40.088Z</updated>
+    <updated>2019-11-12T14:55:08.432Z</updated>
     
     <summary type="html">
     
-      Andrey的独立创业变现经历是很多人的缩影，从有了自己的产品，过程中经历了痛苦的挣扎，在经历了很多的尝试之后，也终于迎来了自己的收入增长，完成了自己的目标
+      这是一个真实的产品成长过程，在网上也能查到所有的收入记录，能做到一直专注，并且在最迷茫的时候，Nathan Barry不是放弃，而是加倍投入去做，仅从这一点来说就已经超过了绝大部分的人。
     
     </summary>
     
@@ -393,26 +413,6 @@
     
     
       <category term="插件" scheme="http://liujinkai.com/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>极客番茄「20」- 一只死去的老鹰，身上的GPS记录了20年的飞行轨迹</title>
-    <link href="http://liujinkai.com/2019/04/06/geektomato-week-20/"/>
-    <id>http://liujinkai.com/2019/04/06/geektomato-week-20/</id>
-    <published>2019-04-06T10:37:21.000Z</published>
-    <updated>2019-04-06T10:45:23.660Z</updated>
-    
-    <summary type="html">
-    
-      一个年轻人在阿拉伯境内发现一只死去的老鹰，这只老鹰身上有一个定位GPS, 这个GPS是由俄罗斯制作的，而且这个装置是20年前被安装的。
-    
-    </summary>
-    
-      <category term="极客番茄" scheme="http://liujinkai.com/categories/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
-    
-    
-      <category term="极客番茄" scheme="http://liujinkai.com/tags/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
     
   </entry>
   
