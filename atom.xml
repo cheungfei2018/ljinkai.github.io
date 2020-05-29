@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2020-05-15T05:49:35.099Z</updated>
+  <updated>2020-05-29T06:06:50.404Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>70招助你提升用户转化率(上篇)</title>
+    <link href="http://liujinkai.com/2020/05/29/70-ways-to-optimize-conversion-rates-one/"/>
+    <id>http://liujinkai.com/2020/05/29/70-ways-to-optimize-conversion-rates-one/</id>
+    <published>2020-05-29T05:56:32.000Z</published>
+    <updated>2020-05-29T06:06:50.404Z</updated>
+    
+    <summary type="html">
+    
+      给大家介绍经过A/B测试数据验证过，才得出的70个好的提升转化率的设计，全部内容共上、下两篇。
+    
+    </summary>
+    
+      <category term="产品" scheme="http://liujinkai.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+    
+      <category term="产品" scheme="http://liujinkai.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
   
   <entry>
     <title>如何在Shopify上赚钱？</title>
@@ -297,15 +317,15 @@
   </entry>
   
   <entry>
-    <title>一个意外成就了第一，小众产品如何从0到750万？</title>
-    <link href="http://liujinkai.com/2019/06/29/accident-to-number-one/"/>
-    <id>http://liujinkai.com/2019/06/29/accident-to-number-one/</id>
+    <title>独立开发-我的小众产品群合影工具如何从0到1</title>
+    <link href="http://liujinkai.com/2019/06/29/how-from-zero-to-one/"/>
+    <id>http://liujinkai.com/2019/06/29/how-from-zero-to-one/</id>
     <published>2019-06-29T00:35:07.000Z</published>
-    <updated>2019-06-29T01:15:31.797Z</updated>
+    <updated>2019-06-29T01:14:46.684Z</updated>
     
     <summary type="html">
     
-      从2014年到2019年的6月份，NomadList的公开的总收入是$1095300(约750万人民币左右)
+      虽然没有赚很多钱，但我想把真实的过程写出来，从0到1的这个过程，相信对于那些没有变现过的小产品还是有帮助的。
     
     </summary>
     
@@ -317,15 +337,15 @@
   </entry>
   
   <entry>
-    <title>独立开发-我的小众产品群合影工具如何从0到1</title>
-    <link href="http://liujinkai.com/2019/06/29/how-from-zero-to-one/"/>
-    <id>http://liujinkai.com/2019/06/29/how-from-zero-to-one/</id>
+    <title>一个意外成就了第一，小众产品如何从0到750万？</title>
+    <link href="http://liujinkai.com/2019/06/29/accident-to-number-one/"/>
+    <id>http://liujinkai.com/2019/06/29/accident-to-number-one/</id>
     <published>2019-06-29T00:35:07.000Z</published>
-    <updated>2019-06-29T01:14:46.684Z</updated>
+    <updated>2019-06-29T01:15:31.797Z</updated>
     
     <summary type="html">
     
-      虽然没有赚很多钱，但我想把真实的过程写出来，从0到1的这个过程，相信对于那些没有变现过的小产品还是有帮助的。
+      从2014年到2019年的6月份，NomadList的公开的总收入是$1095300(约750万人民币左右)
     
     </summary>
     
@@ -393,26 +413,6 @@
     
     
       <category term="极客番茄" scheme="http://liujinkai.com/tags/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>415事件-曹大的一条群消息引发的朋友圈刷屏</title>
-    <link href="http://liujinkai.com/2019/04/19/415-caoz/"/>
-    <id>http://liujinkai.com/2019/04/19/415-caoz/</id>
-    <published>2019-04-19T12:53:24.000Z</published>
-    <updated>2019-04-19T13:05:17.224Z</updated>
-    
-    <summary type="html">
-    
-      大佬毕竟是大佬，活生生在线给我们上了一堂课：“一条群消息如何刷屏？”，功力能吸收几成，就看我们自己的了。
-    
-    </summary>
-    
-      <category term="流量" scheme="http://liujinkai.com/categories/%E6%B5%81%E9%87%8F/"/>
-    
-    
-      <category term="增长" scheme="http://liujinkai.com/tags/%E5%A2%9E%E9%95%BF/"/>
     
   </entry>
   
