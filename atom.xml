@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2020-06-02T05:48:31.719Z</updated>
+  <updated>2020-08-12T09:52:11.215Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Chrome扩展插件数次审核被拒的惨痛经历</title>
+    <link href="http://liujinkai.com/2020/08/12/chrome-extension-reject/"/>
+    <id>http://liujinkai.com/2020/08/12/chrome-extension-reject/</id>
+    <published>2020-08-12T09:44:33.000Z</published>
+    <updated>2020-08-12T09:52:11.215Z</updated>
+    
+    <summary type="html">
+    
+      给大家介绍经过A/B测试数据验证过，才得出的70个好的提升转化率的设计，全部内容共上、下两篇。
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Chrome" scheme="http://liujinkai.com/tags/Chrome/"/>
+    
+  </entry>
   
   <entry>
     <title>70招助你提升用户转化率(下篇)</title>
@@ -337,15 +357,15 @@
   </entry>
   
   <entry>
-    <title>一个意外成就了第一，小众产品如何从0到750万？</title>
-    <link href="http://liujinkai.com/2019/06/29/accident-to-number-one/"/>
-    <id>http://liujinkai.com/2019/06/29/accident-to-number-one/</id>
+    <title>独立开发-我的小众产品群合影工具如何从0到1</title>
+    <link href="http://liujinkai.com/2019/06/29/how-from-zero-to-one/"/>
+    <id>http://liujinkai.com/2019/06/29/how-from-zero-to-one/</id>
     <published>2019-06-29T00:35:07.000Z</published>
-    <updated>2019-06-29T01:15:31.797Z</updated>
+    <updated>2019-06-29T01:14:46.684Z</updated>
     
     <summary type="html">
     
-      从2014年到2019年的6月份，NomadList的公开的总收入是$1095300(约750万人民币左右)
+      虽然没有赚很多钱，但我想把真实的过程写出来，从0到1的这个过程，相信对于那些没有变现过的小产品还是有帮助的。
     
     </summary>
     
@@ -357,15 +377,15 @@
   </entry>
   
   <entry>
-    <title>独立开发-我的小众产品群合影工具如何从0到1</title>
-    <link href="http://liujinkai.com/2019/06/29/how-from-zero-to-one/"/>
-    <id>http://liujinkai.com/2019/06/29/how-from-zero-to-one/</id>
+    <title>一个意外成就了第一，小众产品如何从0到750万？</title>
+    <link href="http://liujinkai.com/2019/06/29/accident-to-number-one/"/>
+    <id>http://liujinkai.com/2019/06/29/accident-to-number-one/</id>
     <published>2019-06-29T00:35:07.000Z</published>
-    <updated>2019-06-29T01:14:46.684Z</updated>
+    <updated>2019-06-29T01:15:31.797Z</updated>
     
     <summary type="html">
     
-      虽然没有赚很多钱，但我想把真实的过程写出来，从0到1的这个过程，相信对于那些没有变现过的小产品还是有帮助的。
+      从2014年到2019年的6月份，NomadList的公开的总收入是$1095300(约750万人民币左右)
     
     </summary>
     
@@ -393,26 +413,6 @@
     
     
       <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>「极客番茄geektomato.com上线」 - 每天一篇极客英文，用英语看世界</title>
-    <link href="http://liujinkai.com/2019/05/17/geektomato-launch/"/>
-    <id>http://liujinkai.com/2019/05/17/geektomato-launch/</id>
-    <published>2019-05-16T23:20:06.000Z</published>
-    <updated>2019-05-16T23:29:34.655Z</updated>
-    
-    <summary type="html">
-    
-      「极客番茄」 从2018-9-30这天起，到现在坚持每天读一篇极客英文，并整理分享出来。今天官网http://www.geektomato.com正式上线了
-    
-    </summary>
-    
-      <category term="极客番茄" scheme="http://liujinkai.com/categories/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
-    
-    
-      <category term="极客番茄" scheme="http://liujinkai.com/tags/%E6%9E%81%E5%AE%A2%E7%95%AA%E8%8C%84/"/>
     
   </entry>
   
