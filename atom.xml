@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2020-08-12T09:52:11.215Z</updated>
+  <updated>2020-08-21T00:37:20.635Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>10个最好用的在线配色网站推荐</title>
+    <link href="http://liujinkai.com/2020/08/21/top-10-color-palette/"/>
+    <id>http://liujinkai.com/2020/08/21/top-10-color-palette/</id>
+    <published>2020-08-21T00:30:36.000Z</published>
+    <updated>2020-08-21T00:37:20.635Z</updated>
+    
+    <summary type="html">
+    
+      给大家整理了市面上10个最好用的在线配色站，都是免费的，需要的时候直接使用就好了
+    
+    </summary>
+    
+      <category term="工具" scheme="http://liujinkai.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>Chrome扩展插件数次审核被拒的惨痛经历</title>
@@ -386,26 +406,6 @@
     <summary type="html">
     
       从2014年到2019年的6月份，NomadList的公开的总收入是$1095300(约750万人民币左右)
-    
-    </summary>
-    
-      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
-    
-    
-      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我为什么做IndieMaker独立变现社群？</title>
-    <link href="http://liujinkai.com/2019/06/11/why-do-indie-maker/"/>
-    <id>http://liujinkai.com/2019/06/11/why-do-indie-maker/</id>
-    <published>2019-06-11T00:21:14.000Z</published>
-    <updated>2019-06-29T00:25:58.077Z</updated>
-    
-    <summary type="html">
-    
-      我就是想做这样一件事：让小产品的独立变现更简单。
     
     </summary>
     
