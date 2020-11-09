@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2020-08-29T12:11:50.359Z</updated>
+  <updated>2020-11-09T13:07:08.905Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《The 7 Day Startup》7天构建一个赚钱产品</title>
+    <link href="http://liujinkai.com/2020/11/09/the-7-day-startup/"/>
+    <id>http://liujinkai.com/2020/11/09/the-7-day-startup/</id>
+    <published>2020-11-09T13:00:51.000Z</published>
+    <updated>2020-11-09T13:07:08.905Z</updated>
+    
+    <summary type="html">
+    
+      《The 7 Day Startup》是Dan Norris写的一本关于从0到1构建盈利产品的书，亚马逊评分4.5
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
   
   <entry>
     <title>30个网站产品落地页免费模板(附下载)</title>
@@ -386,26 +406,6 @@
     <summary type="html">
     
       Pat Walls，一名优秀的独立创业者，从负债到持续盈利的的方法，非常值得推荐。
-    
-    </summary>
-    
-      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
-    
-    
-      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>独立开发-我的小众产品群合影工具如何从0到1</title>
-    <link href="http://liujinkai.com/2019/06/29/how-from-zero-to-one/"/>
-    <id>http://liujinkai.com/2019/06/29/how-from-zero-to-one/</id>
-    <published>2019-06-29T00:35:07.000Z</published>
-    <updated>2019-06-29T01:14:46.684Z</updated>
-    
-    <summary type="html">
-    
-      虽然没有赚很多钱，但我想把真实的过程写出来，从0到1的这个过程，相信对于那些没有变现过的小产品还是有帮助的。
     
     </summary>
     
