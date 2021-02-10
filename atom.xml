@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2021-02-02T05:55:23.489Z</updated>
+  <updated>2021-02-10T04:14:58.343Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sahil创建十亿美金公司的失败反思 - 人物志22篇</title>
+    <link href="http://liujinkai.com/2021/02/10/indie-maker-sahil-lavingia/"/>
+    <id>http://liujinkai.com/2021/02/10/indie-maker-sahil-lavingia/</id>
+    <published>2021-02-10T03:55:09.000Z</published>
+    <updated>2021-02-10T04:14:58.343Z</updated>
+    
+    <summary type="html">
+    
+      Sahil是Pintrest的2号员工，后来离开Pintrest创立了Gumroad，并融资几百万美金。前期高速发展，风光一时，但却遇到了至暗时刻
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
   
   <entry>
     <title>Chrome扩展插件开发-构建自己的效率工具和盈利产品（在线课程）</title>
@@ -380,26 +400,6 @@
     <id>http://liujinkai.com/2019/08/05/tech-lead-4000-dollar/</id>
     <published>2019-08-05T00:23:28.000Z</published>
     <updated>2019-08-05T00:27:24.591Z</updated>
-    
-    <summary type="html">
-    
-      Alvaro Trig的fullpage.js项目，从一开始的免费到盈利，有作者多年的经验分享，也有踩坑总结，对于技术人员做产品的很有帮助。
-    
-    </summary>
-    
-      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
-    
-    
-      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Doka.js找到利基市场每月3千美元</title>
-    <link href="http://liujinkai.com/2019/07/29/doka-js-earn-3000/"/>
-    <id>http://liujinkai.com/2019/07/29/doka-js-earn-3000/</id>
-    <published>2019-07-29T12:37:50.000Z</published>
-    <updated>2019-07-29T12:41:55.090Z</updated>
     
     <summary type="html">
     
